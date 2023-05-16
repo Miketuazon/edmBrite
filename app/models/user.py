@@ -1,7 +1,7 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from .likes import likes
+from .like import likes
 
 
 class User(db.Model, UserMixin):
@@ -17,7 +17,7 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
 
     #Likes on events relationship
-    event_likes = db.relationship(
+    user_likes = db.relationship(
         "Event",
         secondary=likes,
         back_populates="user_likes"
@@ -44,5 +44,5 @@ class User(db.Model, UserMixin):
             'username': self.username,
             'email': self.email,
             'events_liked': [event.id for event in self.event_likes],
-            'events_owned': [event.id for event in self.event_owner]
+            'events_owned': [event.to_dict() for event in self.event_owner]
         }
