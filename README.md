@@ -1,6 +1,6 @@
 # edmBrite
 
-Welcome to edmBrite, an app that enables users to create events relating to EDM (Electronic Dance Music).
+Welcome to edmBrite, an app that enables users to create, search and attend events relating to EDM (Electronic Dance Music).
 <hr>
 
 ## Technologies Used

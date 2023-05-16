@@ -21,8 +21,9 @@
 
 * event_id (integer, primary key)
 * event_name (string)
-* event_description (text)
-* event_category_id (integer, foreign key to Categories table)
+* event_summary (string)
+* event_description (string)
+* event_genre_id (integer, foreign key to Genres table)
 * event_start_date (timestamp)
 * event_end_date (timestamp)
 * event_location (string)
@@ -41,10 +42,10 @@
 
 <hr>
 
-## Categories Table:
+## Genres Table:
 
-* category_id (primary key)
-* category_name (string)
+* genre_id (primary key)
+* genre_name (string)
 
 <hr>
 

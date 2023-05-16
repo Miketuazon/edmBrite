@@ -25,8 +25,6 @@
 <hr>
 
 ### Genres
-- **Create** genres for events
-  - Allow users to create new genres for events.
 - **View** genres for events
   - Allow users to see genres for events.
 - **Update** genres for events

@@ -32,8 +32,8 @@
 
 ## Genres
 
-### Create Genres
-* As an event owner, I want to create genres for my event.
+### Input Genres
+* As an event owner, I want to append genres for my event.
 ### View Genres
 * As a guest or logged in user, I want to view genres of an event.
 ### Update Genres
