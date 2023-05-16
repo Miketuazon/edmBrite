@@ -1,5 +1,6 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 
+# Many to many linking table between users and events
 likes = db.Table(
     "likes",
     db.Column(

@@ -28,6 +28,7 @@ class Event(db.Model):
     # Event to user relationship
     event_organizer_id = db.relationship('User', back_populates='event_owner')
 
+    # function to return itself
     def to_dict(self):
         return {
             "id": self.id,
