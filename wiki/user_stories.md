@@ -44,7 +44,7 @@
 
 ## Bonus features
 ### Search
-* As a guest or logged in user, I want to be able to search for events based on location, date, category, and event name.
+* As a guest or logged in user, I want to be able to search for events based on location, date, genre, and event name.
 ### Google Maps integration
 * As a guest or logged in user, I want to be able to see the event locations on a map.
 * As an event owner, I want to display my event on a map.

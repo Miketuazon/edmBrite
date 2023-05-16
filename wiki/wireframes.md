@@ -133,6 +133,7 @@
     - Get tickets Button
     - Note: position always sticky
 ## Description
+![](https://imgur.com/wyYxKLt.png)
 - ### About this event
 - ### Time | Type of ticket
 - Length of event | Type of ticket

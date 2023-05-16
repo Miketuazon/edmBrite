@@ -48,7 +48,7 @@
 ## Additional features
 ### Search
 - **Implement** a search feature
-  - Allow users to search for events based on location, date, category, and event name
+  - Allow users to search for events based on location, date, genre, and event name
 ### Google maps integration
 - **Implement** Google Maps API
   - Allow users to have location search functionality
