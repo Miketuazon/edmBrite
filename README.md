@@ -24,3 +24,5 @@ Welcome to edmBrite, an app that enables users to create, search and attend even
 ## Additional features
 - ### Search
 - ### Google maps integration
+- ### [edmtrain](https://edmtrain.com/) API integration
+  - Primarily used their [API](https://edmtrain.com/api-documentation) to get actual events into database
