@@ -1,0 +1,5868 @@
+{
+    "data": [
+      {
+        "id": 256954,
+        "link": "https://edmtrain.com/orlando-fl/ruvlo-256954?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-18",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-10T01:43:28Z",
+        "venue": {
+          "id": 11675,
+          "name": "Bounce House",
+          "location": "Orlando, FL",
+          "address": "12100 Challenger Pkwy, Orlando, FL 32826, USA",
+          "state": "Florida",
+          "latitude": 28.573,
+          "longitude": -81.207
+        },
+        "artistList": [
+          {
+            "id": 10683,
+            "name": "Ruvlo",
+            "link": "https://edmtrain.com/tours/ruvlo-10683?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256995,
+        "link": "https://edmtrain.com/orlando-fl/alliance-presents-barnacle-boi-256995?utm_source=2120&utm_medium=api",
+        "name": "Alliance Presents",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-18",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-10T02:49:17Z",
+        "venue": {
+          "id": 586,
+          "name": "The Social Orlando",
+          "location": "Orlando, FL",
+          "address": "54 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.543,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 8147,
+            "name": "barnacle boi",
+            "link": "https://edmtrain.com/tours/barnacle-boi-8147?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12317,
+            "name": "Brothel.",
+            "link": "https://edmtrain.com/tours/brothel-12317?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21375,
+            "name": "Skeler",
+            "link": "https://edmtrain.com/tours/skeler-21375?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268220,
+        "link": "https://edmtrain.com/orlando-fl/the-red-room-gus-gudno-268220?utm_source=2120&utm_medium=api",
+        "name": "The Red Room",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-18",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-15T11:55:17Z",
+        "venue": {
+          "id": 13084,
+          "name": "Parlay Orlando",
+          "location": "Orlando, FL",
+          "address": "39 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.543,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 48624,
+            "name": "Gus Gudno",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 29903,
+            "name": "CrooklynSoul",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 56254,
+            "name": "curlyheads",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 56255,
+            "name": "rimax",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259112,
+        "link": "https://edmtrain.com/orlando-fl/john-digweed-259112?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-19",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-23T00:34:42Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 338,
+            "name": "John Digweed",
+            "link": "https://edmtrain.com/tours/john-digweed-338?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 263952,
+        "link": "https://edmtrain.com/orlando-fl/dlmt-263952?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-19",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-19T23:55:06Z",
+        "venue": {
+          "id": 14709,
+          "name": "Fixtion",
+          "location": "Orlando, FL",
+          "address": "15 S Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 15203,
+            "name": "DLMT",
+            "link": "https://edmtrain.com/tours/dlmt-15203?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265552,
+        "link": "https://edmtrain.com/orlando-fl/dubstep-night-hexxa-265552?utm_source=2120&utm_medium=api",
+        "name": "Dubstep Night",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-19",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-28T13:09:07Z",
+        "venue": {
+          "id": 9364,
+          "name": "Grumpy's Underground",
+          "location": "Orlando, FL",
+          "address": "1018 N Mills Ave, Orlando, FL 32803, USA",
+          "state": "Florida",
+          "latitude": 28.559,
+          "longitude": -81.365
+        },
+        "artistList": [
+          {
+            "id": 28984,
+            "name": "Hexxa",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 28932,
+            "name": "Chelley",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55205,
+            "name": "Thoughtaboutit",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 49545,
+            "name": "H3llo",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 27532,
+            "name": "Loudex",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 249270,
+        "link": "https://edmtrain.com/atlantic-city-nj/wuki-249270?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-20",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-31T21:26:16Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 1267,
+            "name": "Wuki",
+            "link": "https://edmtrain.com/tours/wuki-1267?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259524,
+        "link": "https://edmtrain.com/orlando-fl/the-orlando-house-music-party-259524?utm_source=2120&utm_medium=api",
+        "name": "The Orlando House Music Party",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-20",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-24T23:20:24Z",
+        "venue": {
+          "id": 6039,
+          "name": "Iron Cow Cafe",
+          "location": "Orlando, FL",
+          "address": "2438A E Robinson St, Orlando, FL 32803, USA",
+          "state": "Florida",
+          "latitude": 28.546,
+          "longitude": -81.35
+        },
+        "artistList": []
+      },
+      {
+        "id": 262924,
+        "link": "https://edmtrain.com/atlantic-city-nj/cheat-codes-262924?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-20",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-13T02:12:45Z",
+        "venue": {
+          "id": 369,
+          "name": "The Pool at Harrah's",
+          "location": "Atlantic City, NJ",
+          "address": "777 Harrah's Blvd, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.385,
+          "longitude": -74.43
+        },
+        "artistList": [
+          {
+            "id": 5137,
+            "name": "Cheat Codes",
+            "link": "https://edmtrain.com/tours/cheat-codes-5137?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265328,
+        "link": "https://edmtrain.com/orlando-fl/space-motion-265328?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-20",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T05:01:02Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 22773,
+            "name": "Space Motion",
+            "link": "https://edmtrain.com/tours/space-motion-22773?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268217,
+        "link": "https://edmtrain.com/new-jersey/lost-in-noise-alexander-technique-268217?utm_source=2120&utm_medium=api",
+        "name": "Lost in Noise",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-20",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-15T11:53:29Z",
+        "venue": {
+          "id": 14875,
+          "name": "Barça City Cafe & Bar",
+          "location": "New Brunswick, NJ",
+          "address": "47 Easton Ave, New Brunswick, NJ 08901, USA",
+          "state": "New Jersey",
+          "latitude": 40.498,
+          "longitude": -74.449
+        },
+        "artistList": [
+          {
+            "id": 5566,
+            "name": "Alexander Technique",
+            "link": "https://edmtrain.com/tours/alexander-technique-5566?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 56249,
+            "name": "Trilago",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 56250,
+            "name": "Masaharu",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 9931,
+            "name": "Ciisnero",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 56251,
+            "name": "Knostalgia",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 56252,
+            "name": "Sleepy Club",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256289,
+        "link": "https://edmtrain.com/orlando-fl/jeremy-olander-256289?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-21",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-08T01:34:55Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 331,
+            "name": "Jeremy Olander",
+            "link": "https://edmtrain.com/tours/jeremy-olander-331?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262470,
+        "link": "https://edmtrain.com/live-streams/arcadia-online-3-262470?utm_source=2120&utm_medium=api",
+        "name": "ARCADIA Online 3",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": true,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-22",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-11T12:50:50Z",
+        "venue": {
+          "id": 8784,
+          "name": "Live Stream",
+          "location": "Virtual",
+          "address": null,
+          "state": null,
+          "latitude": null,
+          "longitude": null
+        },
+        "artistList": []
+      },
+      {
+        "id": 248578,
+        "link": "https://edmtrain.com/orlando-fl/the-trailblazer-tour-hippie-sabotage-248578?utm_source=2120&utm_medium=api",
+        "name": "The Trailblazer Tour",
+        "ages": "All Ages",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-23",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-27T23:43:21Z",
+        "venue": {
+          "id": 375,
+          "name": "House of Blues Orlando",
+          "location": "Orlando, FL",
+          "address": "1490 Buena Vista Dr, Orlando, FL 32830, USA",
+          "state": "Florida",
+          "latitude": 28.371,
+          "longitude": -81.522
+        },
+        "artistList": [
+          {
+            "id": 4606,
+            "name": "Hippie Sabotage",
+            "link": "https://edmtrain.com/tours/hippie-sabotage-4606?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 29021,
+            "name": "Daisy Guttridge",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262471,
+        "link": "https://edmtrain.com/live-streams/arcadia-online-3-262471?utm_source=2120&utm_medium=api",
+        "name": "ARCADIA Online 3",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": true,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-24",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-11T12:57:43Z",
+        "venue": {
+          "id": 8784,
+          "name": "Live Stream",
+          "location": "Virtual",
+          "address": null,
+          "state": null,
+          "latitude": null,
+          "longitude": null
+        },
+        "artistList": []
+      },
+      {
+        "id": 267797,
+        "link": "https://edmtrain.com/orlando-fl/deepwater-showcase-ii-derek-fereal-267797?utm_source=2120&utm_medium=api",
+        "name": "Deepwater Showcase II",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-25",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-11T01:07:10Z",
+        "venue": {
+          "id": 14750,
+          "name": "Cool Kats Club",
+          "location": "Orlando, FL",
+          "address": "11 S Court Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.378
+        },
+        "artistList": [
+          {
+            "id": 24298,
+            "name": "Derek Fereal",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 21755,
+            "name": "DUKE",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 16525,
+            "name": "YARI",
+            "link": "https://edmtrain.com/tours/yari-16525?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 25675,
+            "name": "Evan Cavallini",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 35062,
+            "name": "Greg Amunategui",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 254266,
+        "link": "https://edmtrain.com/atlantic-city-nj/deerock-254266?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-26",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-24T21:00:33Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 11143,
+            "name": "Deerock",
+            "link": "https://edmtrain.com/tours/deerock-11143?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257874,
+        "link": "https://edmtrain.com/orlando-fl/ida-engberg-257874?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-26",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-16T01:26:52Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 321,
+            "name": "Ida Engberg",
+            "link": "https://edmtrain.com/tours/ida-engberg-321?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260657,
+        "link": "https://edmtrain.com/orlando-fl/rafa-barrios-technasia-260657?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-26",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-01T19:40:19Z",
+        "venue": {
+          "id": 5097,
+          "name": "Celine",
+          "location": "Orlando, FL",
+          "address": "22 S Magnolia Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.378
+        },
+        "artistList": [
+          {
+            "id": 5986,
+            "name": "Rafa Barrios",
+            "link": "https://edmtrain.com/tours/rafa-barrios-5986?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3552,
+            "name": "Technasia",
+            "link": "https://edmtrain.com/tours/technasia-3552?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265598,
+        "link": "https://edmtrain.com/atlantic-city-nj/crespo-265598?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-26",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-28T13:54:43Z",
+        "venue": {
+          "id": 369,
+          "name": "The Pool at Harrah's",
+          "location": "Atlantic City, NJ",
+          "address": "777 Harrah's Blvd, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.385,
+          "longitude": -74.43
+        },
+        "artistList": [
+          {
+            "id": 979,
+            "name": "Crespo",
+            "link": "https://edmtrain.com/tours/crespo-979?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 252677,
+        "link": "https://edmtrain.com/atlantic-city-nj/fisher-252677?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-16T09:56:35Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 8140,
+            "name": "Fisher",
+            "link": "https://edmtrain.com/tours/fisher-8140?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 254138,
+        "link": "https://edmtrain.com/atlantic-city-nj/cedric-gervais-254138?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-24T01:01:35Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 158,
+            "name": "Cedric Gervais",
+            "link": "https://edmtrain.com/tours/cedric-gervais-158?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 254959,
+        "link": "https://edmtrain.com/atlantic-city-nj/troyboi-254959?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-01T03:24:55Z",
+        "venue": {
+          "id": 369,
+          "name": "The Pool at Harrah's",
+          "location": "Atlantic City, NJ",
+          "address": "777 Harrah's Blvd, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.385,
+          "longitude": -74.43
+        },
+        "artistList": [
+          {
+            "id": 3646,
+            "name": "TroyBoi",
+            "link": "https://edmtrain.com/tours/troyboi-3646?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259056,
+        "link": "https://edmtrain.com/new-jersey/dj-pauly-d-259056?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-23T00:24:42Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 8732,
+            "name": "DJ Pauly D",
+            "link": "https://edmtrain.com/tours/dj-pauly-d-8732?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262732,
+        "link": "https://edmtrain.com/orlando-fl/dom-dolla-262732?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-12T02:15:46Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 6455,
+            "name": "Dom Dolla",
+            "link": "https://edmtrain.com/tours/dom-dolla-6455?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267396,
+        "link": "https://edmtrain.com/new-jersey/james-kennedy-267396?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:23:33Z",
+        "venue": {
+          "id": 6236,
+          "name": "Asbury Ale House",
+          "location": "Asbury Park, NJ",
+          "address": "531 Cookman Ave, Asbury Park, NJ 07712, USA",
+          "state": "New Jersey",
+          "latitude": 40.216,
+          "longitude": -74.01
+        },
+        "artistList": [
+          {
+            "id": 11738,
+            "name": "James Kennedy",
+            "link": "https://edmtrain.com/tours/james-kennedy-11738?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268107,
+        "link": "https://edmtrain.com/new-jersey/matoma-268107?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-12T20:05:16Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 2600,
+            "name": "Matoma",
+            "link": "https://edmtrain.com/tours/matoma-2600?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 253109,
+        "link": "https://edmtrain.com/atlantic-city-nj/loud-luxury-253109?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-18T02:06:27Z",
+        "venue": {
+          "id": 3250,
+          "name": "Borgata Premier",
+          "location": "Atlantic City, NJ",
+          "address": "1 Borgata Way, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.377,
+          "longitude": -74.436
+        },
+        "artistList": [
+          {
+            "id": 2274,
+            "name": "Loud Luxury",
+            "link": "https://edmtrain.com/tours/loud-luxury-2274?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256762,
+        "link": "https://edmtrain.com/atlantic-city-nj/hugel-256762?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-10T00:13:32Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 13351,
+            "name": "HUGEL",
+            "link": "https://edmtrain.com/tours/hugel-13351?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256765,
+        "link": "https://edmtrain.com/atlantic-city-nj/imanbek-256765?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-10T00:13:40Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 25807,
+            "name": "Imanbek",
+            "link": "https://edmtrain.com/tours/imanbek-25807?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257836,
+        "link": "https://edmtrain.com/orlando-fl/cocodrills-257836?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-15T22:03:57Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 918,
+            "name": "Cocodrills",
+            "link": "https://edmtrain.com/tours/cocodrills-918?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260234,
+        "link": "https://edmtrain.com/new-jersey/disco-lines-260234?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T00:22:25Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 21183,
+            "name": "Disco Lines",
+            "link": "https://edmtrain.com/tours/disco-lines-21183?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262472,
+        "link": "https://edmtrain.com/live-streams/arcadia-online-3-262472?utm_source=2120&utm_medium=api",
+        "name": "ARCADIA Online 3",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": true,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-05-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-11T12:57:50Z",
+        "venue": {
+          "id": 8784,
+          "name": "Live Stream",
+          "location": "Virtual",
+          "address": null,
+          "state": null,
+          "latitude": null,
+          "longitude": null
+        },
+        "artistList": [
+          {
+            "id": 12317,
+            "name": "Brothel.",
+            "link": "https://edmtrain.com/tours/brothel-12317?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 29940,
+            "name": "Pholo",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 21506,
+            "name": "SBU",
+            "link": "https://edmtrain.com/tours/sbu-21506?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21802,
+            "name": "Bendel",
+            "link": "https://edmtrain.com/tours/bendel-21802?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12319,
+            "name": "WEVLTH",
+            "link": "https://edmtrain.com/tours/wevlth-12319?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 252452,
+        "link": "https://edmtrain.com/orlando-fl/san-holo-252452?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-15T19:11:04Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 5205,
+            "name": "San Holo",
+            "link": "https://edmtrain.com/tours/san-holo-5205?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 254364,
+        "link": "https://edmtrain.com/orlando-fl/miguel-migs-254364?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-25T00:36:54Z",
+        "venue": {
+          "id": 6039,
+          "name": "Iron Cow Cafe",
+          "location": "Orlando, FL",
+          "address": "2438A E Robinson St, Orlando, FL 32803, USA",
+          "state": "Florida",
+          "latitude": 28.546,
+          "longitude": -81.35
+        },
+        "artistList": [
+          {
+            "id": 437,
+            "name": "Miguel Migs",
+            "link": "https://edmtrain.com/tours/miguel-migs-437?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265599,
+        "link": "https://edmtrain.com/atlantic-city-nj/joe-maz-265599?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-28T13:54:45Z",
+        "venue": {
+          "id": 369,
+          "name": "The Pool at Harrah's",
+          "location": "Atlantic City, NJ",
+          "address": "777 Harrah's Blvd, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.385,
+          "longitude": -74.43
+        },
+        "artistList": [
+          {
+            "id": 3855,
+            "name": "Joe Maz",
+            "link": "https://edmtrain.com/tours/joe-maz-3855?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 253360,
+        "link": "https://edmtrain.com/orlando-fl/kyle-walker-253360?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-20T22:46:16Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 8172,
+            "name": "Kyle Walker",
+            "link": "https://edmtrain.com/tours/kyle-walker-8172?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 253683,
+        "link": "https://edmtrain.com/atlantic-city-nj/zeds-dead-253683?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-22T23:08:25Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 638,
+            "name": "Zeds Dead",
+            "link": "https://edmtrain.com/tours/zeds-dead-638?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257702,
+        "link": "https://edmtrain.com/atlantic-city-nj/4b-257702?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-15T06:40:06Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 3474,
+            "name": "4B",
+            "link": "https://edmtrain.com/tours/4b-3474?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257815,
+        "link": "https://edmtrain.com/orlando-fl/insomniac-presents-troyboi-257815?utm_source=2120&utm_medium=api",
+        "name": "Insomniac Presents",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-15T21:56:55Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 3646,
+            "name": "TroyBoi",
+            "link": "https://edmtrain.com/tours/troyboi-3646?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3597,
+            "name": "Stooki Sound",
+            "link": "https://edmtrain.com/tours/stooki-sound-3597?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 453,
+            "name": "Mr. Carmack",
+            "link": "https://edmtrain.com/tours/mr-carmack-453?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264995,
+        "link": "https://edmtrain.com/new-jersey/vavo-264995?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-25T23:45:50Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 9810,
+            "name": "VAVO",
+            "link": "https://edmtrain.com/tours/vavo-9810?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267654,
+        "link": "https://edmtrain.com/new-york-city-ny/the-summer-kick-off-mav-nj-267654?utm_source=2120&utm_medium=api",
+        "name": "The Summer Kick Off",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T23:59:24Z",
+        "venue": {
+          "id": 8853,
+          "name": "Liberty Landing Marina",
+          "location": "Jersey City, NJ",
+          "address": "80 Audrey Zapp Dr, Jersey City, NJ 07305, USA",
+          "state": "New Jersey",
+          "latitude": 40.71,
+          "longitude": -74.042
+        },
+        "artistList": [
+          {
+            "id": 51325,
+            "name": "Mav (NJ)",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55949,
+            "name": "Nghtwulf",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 266085,
+        "link": "https://edmtrain.com/orlando-fl/jesse-calosso-harvard-bass-266085?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-04",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-02T00:10:34Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 3317,
+            "name": "Jesse Calosso",
+            "link": "https://edmtrain.com/tours/jesse-calosso-3317?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2016,
+            "name": "Harvard Bass",
+            "link": "https://edmtrain.com/tours/harvard-bass-2016?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 23983,
+            "name": "Slugg",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267493,
+        "link": "https://edmtrain.com/new-jersey/oscar-g-267493?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-04",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:57:33Z",
+        "venue": {
+          "id": 4524,
+          "name": "Oasis Day Club",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 477,
+            "name": "Oscar G",
+            "link": "https://edmtrain.com/tours/oscar-g-477?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 255781,
+        "link": "https://edmtrain.com/new-york-city-ny/lucky-moon-zooz-moon-hooch-255781?utm_source=2120&utm_medium=api",
+        "name": "Lucky Moon Zooz",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-03T23:18:31Z",
+        "venue": {
+          "id": 4787,
+          "name": "White Eagle Hall",
+          "location": "Jersey City, NJ",
+          "address": "337 Newark Ave, Jersey City, NJ 07302, USA",
+          "state": "New Jersey",
+          "latitude": 40.725,
+          "longitude": -74.052
+        },
+        "artistList": [
+          {
+            "id": 1036,
+            "name": "Moon Hooch",
+            "link": "https://edmtrain.com/tours/moon-hooch-1036?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6132,
+            "name": "Too Many Zooz",
+            "link": "https://edmtrain.com/tours/too-many-zooz-6132?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 51806,
+            "name": "Lucky Chops",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257960,
+        "link": "https://edmtrain.com/orlando-fl/dirtybird-campinn-257960?utm_source=2120&utm_medium=api",
+        "name": "Dirtybird CampINN",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-16T14:48:55Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": [
+          {
+            "id": 295,
+            "name": "Green Velvet",
+            "link": "https://edmtrain.com/tours/green-velvet-295?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 174,
+            "name": "Claude VonStroke",
+            "link": "https://edmtrain.com/tours/claude-vonstroke-174?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 535,
+            "name": "Shermanology",
+            "link": "https://edmtrain.com/tours/shermanology-535?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21774,
+            "name": "DJ E-Clyps",
+            "link": "https://edmtrain.com/tours/dj-e-clyps-21774?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 17705,
+            "name": "Casmalia",
+            "link": "https://edmtrain.com/tours/casmalia-17705?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6895,
+            "name": "Claude VonStroke (Barclay Crenshaw Set)",
+            "link": "https://edmtrain.com/tours/claude-vonstroke-barclay-crenshaw-set-6895?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 299,
+            "name": "GRiZ",
+            "link": "https://edmtrain.com/tours/griz-299?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 387,
+            "name": "Liquid Stranger",
+            "link": "https://edmtrain.com/tours/liquid-stranger-387?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2640,
+            "name": "ZHU",
+            "link": "https://edmtrain.com/tours/zhu-2640?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8085,
+            "name": "J. Worra",
+            "link": "https://edmtrain.com/tours/j-worra-8085?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5709,
+            "name": "Of The Trees",
+            "link": "https://edmtrain.com/tours/of-the-trees-5709?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10796,
+            "name": "VNSSA",
+            "link": "https://edmtrain.com/tours/vnssa-10796?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2472,
+            "name": "Tiga",
+            "link": "https://edmtrain.com/tours/tiga-2472?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 629,
+            "name": "Walker & Royce",
+            "link": "https://edmtrain.com/tours/walker-and-royce-629?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3522,
+            "name": "Maya Jane Coles",
+            "link": "https://edmtrain.com/tours/maya-jane-coles-3522?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7993,
+            "name": "Kyle Watson",
+            "link": "https://edmtrain.com/tours/kyle-watson-7993?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5885,
+            "name": "Alix Perez",
+            "link": "https://edmtrain.com/tours/alix-perez-5885?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 1872,
+            "name": "Ardalan",
+            "link": "https://edmtrain.com/tours/ardalan-1872?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 17260,
+            "name": "Arnold & Lane",
+            "link": "https://edmtrain.com/tours/arnold-and-lane-17260?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7596,
+            "name": "Audiojack",
+            "link": "https://edmtrain.com/tours/audiojack-7596?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 9918,
+            "name": "Black V Neck",
+            "link": "https://edmtrain.com/tours/black-v-neck-9918?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26075,
+            "name": "Boiz House",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 8056,
+            "name": "Bruno Furlan",
+            "link": "https://edmtrain.com/tours/bruno-furlan-8056?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 4315,
+            "name": "Catz 'n Dogz",
+            "link": "https://edmtrain.com/tours/catz-n-dogz-4315?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12897,
+            "name": "Coco & Breezy",
+            "link": "https://edmtrain.com/tours/coco-and-breezy-12897?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21287,
+            "name": "Cour T.",
+            "link": "https://edmtrain.com/tours/cour-t-21287?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 15957,
+            "name": "Danny Goliger",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 23668,
+            "name": "Dipzy",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 1002,
+            "name": "Justin Jay",
+            "link": "https://edmtrain.com/tours/justin-jay-1002?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10546,
+            "name": "Kyle Kinch",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 4806,
+            "name": "Lee Reynolds",
+            "link": "https://edmtrain.com/tours/lee-reynolds-4806?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8954,
+            "name": "Lubelski",
+            "link": "https://edmtrain.com/tours/lubelski-8954?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10396,
+            "name": "Luke Andy",
+            "link": "https://edmtrain.com/tours/luke-andy-10396?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21784,
+            "name": "LYNY",
+            "link": "https://edmtrain.com/tours/lyny-21784?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5528,
+            "name": "Mad Zach",
+            "link": "https://edmtrain.com/tours/mad-zach-5528?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6868,
+            "name": "Marbs",
+            "link": "https://edmtrain.com/tours/marbs-6868?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 901,
+            "name": "Mz Worthy",
+            "link": "https://edmtrain.com/tours/mz-worthy-901?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22284,
+            "name": "n808",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 26127,
+            "name": "Mike Kerrigan",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 16006,
+            "name": "Nala",
+            "link": "https://edmtrain.com/tours/nala-16006?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2086,
+            "name": "Nick Hogan",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 14734,
+            "name": "Nikki Nair",
+            "link": "https://edmtrain.com/tours/nikki-nair-14734?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 48115,
+            "name": "Ninetoes",
+            "link": "https://edmtrain.com/tours/ninetoes-48115?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6869,
+            "name": "Porky",
+            "link": "https://edmtrain.com/tours/porky-6869?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 28716,
+            "name": "RaeCola",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 4109,
+            "name": "Shiny Things",
+            "link": "https://edmtrain.com/tours/shiny-things-4109?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 17735,
+            "name": "Sicaria Sound",
+            "link": "https://edmtrain.com/tours/sicaria-sound-17735?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7766,
+            "name": "Super Future",
+            "link": "https://edmtrain.com/tours/super-future-7766?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 55013,
+            "name": "SVEN LOCHENHOER",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 6135,
+            "name": "Toadface",
+            "link": "https://edmtrain.com/tours/toadface-6135?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 28828,
+            "name": "Victoria Rawlins",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55014,
+            "name": "WRDO",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264337,
+        "link": "https://edmtrain.com/orlando-fl/zapped-orlando-automhate-264337?utm_source=2120&utm_medium=api",
+        "name": "Zapped - Orlando",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-22T04:43:36Z",
+        "venue": {
+          "id": 11587,
+          "name": "Henao Contemporary Center",
+          "location": "Orlando, FL",
+          "address": "5601 Edgewater Dr, Orlando, FL 32810, USA",
+          "state": "Florida",
+          "latitude": 28.609,
+          "longitude": -81.413
+        },
+        "artistList": [
+          {
+            "id": 21681,
+            "name": "Automhate",
+            "link": "https://edmtrain.com/tours/automhate-21681?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22078,
+            "name": "KILL FEED",
+            "link": "https://edmtrain.com/tours/kill-feed-22078?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20728,
+            "name": "Sora",
+            "link": "https://edmtrain.com/tours/sora-20728?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21156,
+            "name": "SQISHI",
+            "link": "https://edmtrain.com/tours/sqishi-21156?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265411,
+        "link": "https://edmtrain.com/orlando-fl/aweminus-al-ross-265411?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T22:11:33Z",
+        "venue": {
+          "id": 11675,
+          "name": "Bounce House",
+          "location": "Orlando, FL",
+          "address": "12100 Challenger Pkwy, Orlando, FL 32826, USA",
+          "state": "Florida",
+          "latitude": 28.573,
+          "longitude": -81.207
+        },
+        "artistList": [
+          {
+            "id": 5222,
+            "name": "Aweminus",
+            "link": "https://edmtrain.com/tours/aweminus-5222?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6817,
+            "name": "Al Ross",
+            "link": "https://edmtrain.com/tours/al-ross-6817?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21535,
+            "name": "uSAYbFLOW",
+            "link": "https://edmtrain.com/tours/usaybflow-21535?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 22943,
+            "name": "Swando",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 20579,
+            "name": "iLLusive",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 32952,
+            "name": "NECKROSIS",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 12468,
+            "name": "Hallucinate",
+            "link": "https://edmtrain.com/tours/hallucinate-12468?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257581,
+        "link": "https://edmtrain.com/orlando-fl/forbidden-kingdom-257581?utm_source=2120&utm_medium=api",
+        "name": "Forbidden Kingdom",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-14T16:13:58Z",
+        "venue": {
+          "id": 7250,
+          "name": "Orlando Amphitheater",
+          "location": "Orlando, FL",
+          "address": "4603 W Colonial Dr, Orlando, FL 32808, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.438
+        },
+        "artistList": [
+          {
+            "id": 54,
+            "name": "12th Planet",
+            "link": "https://edmtrain.com/tours/12th-planet-54?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 16649,
+            "name": "AIRGLO",
+            "link": "https://edmtrain.com/tours/airglo-16649?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21680,
+            "name": "ARTIX!",
+            "link": "https://edmtrain.com/tours/artix-21680?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5344,
+            "name": "ATLiens",
+            "link": "https://edmtrain.com/tours/atliens-5344?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10361,
+            "name": "Audigy",
+            "link": "https://edmtrain.com/tours/audigy-10361?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26568,
+            "name": "beastboi.",
+            "link": "https://edmtrain.com/tours/beastboi-26568?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14413,
+            "name": "Bensley",
+            "link": "https://edmtrain.com/tours/bensley-14413?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 11402,
+            "name": "Justin Hawkes",
+            "link": "https://edmtrain.com/tours/justin-hawkes-11402?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 4992,
+            "name": "Blankface",
+            "link": "https://edmtrain.com/tours/blankface-4992?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 13897,
+            "name": "Decimate",
+            "link": "https://edmtrain.com/tours/decimate-13897?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 5487,
+            "name": "BloodThinnerz",
+            "link": "https://edmtrain.com/tours/bloodthinnerz-5487?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6994,
+            "name": "Boogie T.",
+            "link": "https://edmtrain.com/tours/boogie-t-6994?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 128,
+            "name": "Borgore",
+            "link": "https://edmtrain.com/tours/borgore-128?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 143,
+            "name": "Buku",
+            "link": "https://edmtrain.com/tours/buku-143?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 11757,
+            "name": "Calcium",
+            "link": "https://edmtrain.com/tours/calcium-11757?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21083,
+            "name": "CELO",
+            "link": "https://edmtrain.com/tours/celo-21083?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 1205,
+            "name": "Chase & Status",
+            "link": "https://edmtrain.com/tours/chase-and-status-1205?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7558,
+            "name": "Chibs",
+            "link": "https://edmtrain.com/tours/chibs-7558?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22455,
+            "name": "Chimera",
+            "link": null,
+            "b2bInd": true
+          },
+          {
+            "id": 50059,
+            "name": "Vainz",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 5603,
+            "name": "Codd Dubz",
+            "link": "https://edmtrain.com/tours/codd-dubz-5603?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 41898,
+            "name": "Corey Divine",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 21682,
+            "name": "CYCLOPS",
+            "link": "https://edmtrain.com/tours/cyclops-21682?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 4285,
+            "name": "Dack Janiels",
+            "link": "https://edmtrain.com/tours/dack-janiels-4285?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 9019,
+            "name": "Shaq aka DJ Diesel",
+            "link": "https://edmtrain.com/tours/shaq-aka-dj-diesel-9019?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 16938,
+            "name": "DirtySnatcha",
+            "link": "https://edmtrain.com/tours/dirtysnatcha-16938?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7315,
+            "name": "DMVU",
+            "link": "https://edmtrain.com/tours/dmvu-7315?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 5289,
+            "name": "sfam",
+            "link": "https://edmtrain.com/tours/sfam-5289?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 24332,
+            "name": "Dream Takers",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 10931,
+            "name": "DRINKURWATER",
+            "link": "https://edmtrain.com/tours/drinkurwater-10931?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6555,
+            "name": "Eliminate",
+            "link": "https://edmtrain.com/tours/eliminate-6555?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 19368,
+            "name": "Emorfik",
+            "link": "https://edmtrain.com/tours/emorfik-19368?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 258,
+            "name": "Excision",
+            "link": "https://edmtrain.com/tours/excision-258?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 25442,
+            "name": "Excision (Detox Set)",
+            "link": "https://edmtrain.com/tours/excision-detox-set-25442?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 274,
+            "name": "Flux Pavilion",
+            "link": "https://edmtrain.com/tours/flux-pavilion-274?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14948,
+            "name": "Fury + MC Dino",
+            "link": "https://edmtrain.com/tours/fury-mc-dino-14948?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6844,
+            "name": "Gentlemens Club",
+            "link": "https://edmtrain.com/tours/gentlemens-club-6844?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 23681,
+            "name": "GOON",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 34379,
+            "name": "Grafix",
+            "link": "https://edmtrain.com/tours/grafix-34379?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14310,
+            "name": "Green Matter",
+            "link": "https://edmtrain.com/tours/green-matter-14310?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21537,
+            "name": "HAMRO",
+            "link": "https://edmtrain.com/tours/hamro-21537?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8647,
+            "name": "HEYZ",
+            "link": "https://edmtrain.com/tours/heyz-8647?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7335,
+            "name": "INFEKT",
+            "link": "https://edmtrain.com/tours/infekt-7335?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12049,
+            "name": "Jessica Audiffred",
+            "link": "https://edmtrain.com/tours/jessica-audiffred-12049?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21683,
+            "name": "Jiqui",
+            "link": "https://edmtrain.com/tours/jiqui-21683?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 12557,
+            "name": "SISTO",
+            "link": "https://edmtrain.com/tours/sisto-12557?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21472,
+            "name": "Kumarion",
+            "link": "https://edmtrain.com/tours/kumarion-21472?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20874,
+            "name": "Leotrix",
+            "link": "https://edmtrain.com/tours/leotrix-20874?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 16954,
+            "name": "MARAUDA",
+            "link": "https://edmtrain.com/tours/marauda-16954?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8104,
+            "name": "Mersiv",
+            "link": "https://edmtrain.com/tours/mersiv-8104?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 1190,
+            "name": "Midnight Tyrannosaurus",
+            "link": "https://edmtrain.com/tours/midnight-tyrannosaurus-1190?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3495,
+            "name": "Mija",
+            "link": "https://edmtrain.com/tours/mija-3495?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 4143,
+            "name": "Modestep",
+            "link": "https://edmtrain.com/tours/modestep-4143?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 30947,
+            "name": "moovy",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 26183,
+            "name": "MrOneVibe",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 24840,
+            "name": "MUERTE",
+            "link": "https://edmtrain.com/tours/muerte-24840?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 1183,
+            "name": "MUST DIE!",
+            "link": "https://edmtrain.com/tours/must-die-1183?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12284,
+            "name": "OG Nixin",
+            "link": "https://edmtrain.com/tours/og-nixin-12284?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8388,
+            "name": "PEEKABOO",
+            "link": "https://edmtrain.com/tours/peekaboo-8388?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 489,
+            "name": "Pendulum",
+            "link": "https://edmtrain.com/tours/pendulum-489?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6422,
+            "name": "PhaseOne",
+            "link": "https://edmtrain.com/tours/phaseone-6422?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20012,
+            "name": "Raaket",
+            "link": "https://edmtrain.com/tours/raaket-20012?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12489,
+            "name": "Rated R",
+            "link": "https://edmtrain.com/tours/rated-r-12489?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 9874,
+            "name": "REAPER",
+            "link": "https://edmtrain.com/tours/reaper-9874?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2057,
+            "name": "Riot Ten",
+            "link": "https://edmtrain.com/tours/riot-ten-2057?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 514,
+            "name": "Rusko",
+            "link": "https://edmtrain.com/tours/rusko-514?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6521,
+            "name": "SAYMYNAME",
+            "link": "https://edmtrain.com/tours/saymyname-6521?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14237,
+            "name": "Shanghai Doom",
+            "link": "https://edmtrain.com/tours/shanghai-doom-14237?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22650,
+            "name": "Skellytn",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 20604,
+            "name": "Slippy",
+            "link": "https://edmtrain.com/tours/slippy-20604?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 24023,
+            "name": "Sonorous",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 14201,
+            "name": "Space Wizard",
+            "link": "https://edmtrain.com/tours/space-wizard-14201?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22866,
+            "name": "Steller",
+            "link": "https://edmtrain.com/tours/steller-22866?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21796,
+            "name": "Stoned Level",
+            "link": "https://edmtrain.com/tours/stoned-level-21796?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20894,
+            "name": "Subfiltronik",
+            "link": "https://edmtrain.com/tours/subfiltronik-20894?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 3205,
+            "name": "Point.Blank",
+            "link": "https://edmtrain.com/tours/point-blank-3205?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2593,
+            "name": "Sullivan King",
+            "link": "https://edmtrain.com/tours/sullivan-king-2593?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8307,
+            "name": "SweetTooth",
+            "link": "https://edmtrain.com/tours/sweettooth-8307?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 23117,
+            "name": "Dr. Ushūu",
+            "link": "https://edmtrain.com/tours/dr-ushuu-23117?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10827,
+            "name": "Ternion Sound",
+            "link": "https://edmtrain.com/tours/ternion-sound-10827?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 612,
+            "name": "Truth",
+            "link": "https://edmtrain.com/tours/truth-612?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20371,
+            "name": "Versa",
+            "link": "https://edmtrain.com/tours/versa-20371?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 39756,
+            "name": "VUlllGUR",
+            "link": "https://edmtrain.com/tours/vulllgur-39756?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6667,
+            "name": "Wooli",
+            "link": "https://edmtrain.com/tours/wooli-6667?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14578,
+            "name": "Wreckno",
+            "link": "https://edmtrain.com/tours/wreckno-14578?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 29464,
+            "name": "WYLLO",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 7923,
+            "name": "YDG",
+            "link": "https://edmtrain.com/tours/ydg-7923?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 638,
+            "name": "Zeds Dead",
+            "link": "https://edmtrain.com/tours/zeds-dead-638?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 52801,
+            "name": "And More",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257961,
+        "link": "https://edmtrain.com/orlando-fl/dirtybird-campinn-257961?utm_source=2120&utm_medium=api",
+        "name": "Dirtybird CampINN",
+        "ages": "18+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-16T14:48:55Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": [
+          {
+            "id": 295,
+            "name": "Green Velvet",
+            "link": "https://edmtrain.com/tours/green-velvet-295?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21774,
+            "name": "DJ E-Clyps",
+            "link": "https://edmtrain.com/tours/dj-e-clyps-21774?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 535,
+            "name": "Shermanology",
+            "link": "https://edmtrain.com/tours/shermanology-535?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 17705,
+            "name": "Casmalia",
+            "link": "https://edmtrain.com/tours/casmalia-17705?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259138,
+        "link": "https://edmtrain.com/orlando-fl/late-knight-after-party-afk-259138?utm_source=2120&utm_medium=api",
+        "name": "Late Knight After Party",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-23T18:30:52Z",
+        "venue": {
+          "id": 11587,
+          "name": "Henao Contemporary Center",
+          "location": "Orlando, FL",
+          "address": "5601 Edgewater Dr, Orlando, FL 32810, USA",
+          "state": "Florida",
+          "latitude": 28.609,
+          "longitude": -81.413
+        },
+        "artistList": [
+          {
+            "id": 65,
+            "name": "AFK",
+            "link": "https://edmtrain.com/tours/afk-65?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26118,
+            "name": "GorillaT",
+            "link": "https://edmtrain.com/tours/gorillat-26118?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 52995,
+            "name": "Dark Arts",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 23801,
+            "name": "KaventG",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 29585,
+            "name": "MAI KAI",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 5240,
+            "name": "Grisly",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 50834,
+            "name": "ADVPTIVE",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 23715,
+            "name": "Dabs",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 33673,
+            "name": "Jellbass",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 22717,
+            "name": "Rexii",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 11877,
+            "name": "TREŸN",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265406,
+        "link": "https://edmtrain.com/orlando-fl/festival-after-party-day-1-special-guests-265406?utm_source=2120&utm_medium=api",
+        "name": "Festival After Party Day 1",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T20:43:20Z",
+        "venue": {
+          "id": 6694,
+          "name": "Ace Cafe Orlando",
+          "location": "Orlando, FL",
+          "address": "100 W Livingston St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.547,
+          "longitude": -81.381
+        },
+        "artistList": [
+          {
+            "id": 23986,
+            "name": "Special Guests",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265975,
+        "link": "https://edmtrain.com/orlando-fl/pandora-ghengar-265975?utm_source=2120&utm_medium=api",
+        "name": "Pandora",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-01T18:21:56Z",
+        "venue": {
+          "id": 2893,
+          "name": "Majestic Event Center",
+          "location": "Orlando, FL",
+          "address": "801 John Young Pkwy, Orlando, FL 32804, USA",
+          "state": "Florida",
+          "latitude": 28.554,
+          "longitude": -81.413
+        },
+        "artistList": [
+          {
+            "id": 33450,
+            "name": "GHENGAR",
+            "link": "https://edmtrain.com/tours/ghengar-33450?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 9978,
+            "name": "Jaenga",
+            "link": "https://edmtrain.com/tours/jaenga-9978?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 15254,
+            "name": "Samplifire",
+            "link": "https://edmtrain.com/tours/samplifire-15254?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22887,
+            "name": "SuperAve.",
+            "link": "https://edmtrain.com/tours/superave-22887?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5668,
+            "name": "Tsuruda",
+            "link": "https://edmtrain.com/tours/tsuruda-5668?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8915,
+            "name": "Hyroglifics",
+            "link": "https://edmtrain.com/tours/hyroglifics-8915?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 27588,
+            "name": "MYTHM",
+            "link": "https://edmtrain.com/tours/mythm-27588?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21671,
+            "name": "Rohaan",
+            "link": "https://edmtrain.com/tours/rohaan-21671?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 28793,
+            "name": "RZRKT",
+            "link": "https://edmtrain.com/tours/rzrkt-28793?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 18964,
+            "name": "Vastive",
+            "link": "https://edmtrain.com/tours/vastive-18964?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12095,
+            "name": "BRAINRACK",
+            "link": "https://edmtrain.com/tours/brainrack-12095?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 23043,
+            "name": "parkbreezy",
+            "link": "https://edmtrain.com/tours/parkbreezy-23043?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12689,
+            "name": "Phyphr",
+            "link": "https://edmtrain.com/tours/phyphr-12689?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 33039,
+            "name": "ANTIHERO (Charlotte)",
+            "link": "https://edmtrain.com/tours/antihero-charlotte-33039?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22685,
+            "name": "CHOZEN",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 28430,
+            "name": "Daygo",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55378,
+            "name": "Fieldz",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55379,
+            "name": "Pushan",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 32361,
+            "name": "Raptorum",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 3381,
+            "name": "TINK",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 29540,
+            "name": "NIMBVS",
+            "link": "https://edmtrain.com/tours/nimbvs-29540?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26855,
+            "name": "R3ALZ",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55380,
+            "name": "Zero's End",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268087,
+        "link": "https://edmtrain.com/orlando-fl/fkmf-official-afterparty-ganja-white-night-268087?utm_source=2120&utm_medium=api",
+        "name": "FKMF Official Afterparty",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-09",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-12T19:36:08Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 1161,
+            "name": "Ganja White Night",
+            "link": "https://edmtrain.com/tours/ganja-white-night-1161?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 254148,
+        "link": "https://edmtrain.com/atlantic-city-nj/two-friends-254148?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-24T01:02:40Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 2910,
+            "name": "Two Friends",
+            "link": "https://edmtrain.com/tours/two-friends-2910?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257703,
+        "link": "https://edmtrain.com/atlantic-city-nj/telykast-257703?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-15T06:40:07Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 21186,
+            "name": "TELYKast",
+            "link": "https://edmtrain.com/tours/telykast-21186?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257962,
+        "link": "https://edmtrain.com/orlando-fl/dirtybird-campinn-257962?utm_source=2120&utm_medium=api",
+        "name": "Dirtybird CampINN",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-16T14:48:55Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      },
+      {
+        "id": 259139,
+        "link": "https://edmtrain.com/orlando-fl/knights-of-bass-after-party-autokorekt-259139?utm_source=2120&utm_medium=api",
+        "name": "Knights of Bass After Party",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-23T18:30:59Z",
+        "venue": {
+          "id": 11587,
+          "name": "Henao Contemporary Center",
+          "location": "Orlando, FL",
+          "address": "5601 Edgewater Dr, Orlando, FL 32810, USA",
+          "state": "Florida",
+          "latitude": 28.609,
+          "longitude": -81.413
+        },
+        "artistList": [
+          {
+            "id": 15817,
+            "name": "Autokorekt",
+            "link": "https://edmtrain.com/tours/autokorekt-15817?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3863,
+            "name": "Crowell",
+            "link": "https://edmtrain.com/tours/crowell-3863?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 11759,
+            "name": "Drippy",
+            "link": "https://edmtrain.com/tours/drippy-11759?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12541,
+            "name": "Zubah",
+            "link": "https://edmtrain.com/tours/zubah-12541?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26526,
+            "name": "SYLLA",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 52996,
+            "name": "Aloushi",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 31504,
+            "name": "Bizarre",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 52997,
+            "name": "Dirigata",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 52998,
+            "name": "Haiisii",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 52999,
+            "name": "Near / Far",
+            "link": "https://edmtrain.com/tours/near-far-52999?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 263552,
+        "link": "https://edmtrain.com/orlando-fl/forbidden-kingdom-263552?utm_source=2120&utm_medium=api",
+        "name": "Forbidden Kingdom",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-17T18:10:40Z",
+        "venue": {
+          "id": 7250,
+          "name": "Orlando Amphitheater",
+          "location": "Orlando, FL",
+          "address": "4603 W Colonial Dr, Orlando, FL 32808, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.438
+        },
+        "artistList": [
+          {
+            "id": 16649,
+            "name": "AIRGLO",
+            "link": "https://edmtrain.com/tours/airglo-16649?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21680,
+            "name": "ARTIX!",
+            "link": "https://edmtrain.com/tours/artix-21680?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10361,
+            "name": "Audigy",
+            "link": "https://edmtrain.com/tours/audigy-10361?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14413,
+            "name": "Bensley",
+            "link": "https://edmtrain.com/tours/bensley-14413?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 11402,
+            "name": "Justin Hawkes",
+            "link": "https://edmtrain.com/tours/justin-hawkes-11402?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 3181,
+            "name": "Black Tiger Sex Machine",
+            "link": "https://edmtrain.com/tours/black-tiger-sex-machine-3181?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 128,
+            "name": "Borgore",
+            "link": "https://edmtrain.com/tours/borgore-128?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 143,
+            "name": "Buku",
+            "link": "https://edmtrain.com/tours/buku-143?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 11757,
+            "name": "Calcium",
+            "link": "https://edmtrain.com/tours/calcium-11757?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 21083,
+            "name": "CELO",
+            "link": "https://edmtrain.com/tours/celo-21083?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 1205,
+            "name": "Chase & Status",
+            "link": "https://edmtrain.com/tours/chase-and-status-1205?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 41898,
+            "name": "Corey Divine",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 21593,
+            "name": "Deathpact",
+            "link": "https://edmtrain.com/tours/deathpact-21593?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 16938,
+            "name": "DirtySnatcha",
+            "link": "https://edmtrain.com/tours/dirtysnatcha-16938?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7315,
+            "name": "DMVU",
+            "link": "https://edmtrain.com/tours/dmvu-7315?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 5289,
+            "name": "sfam",
+            "link": "https://edmtrain.com/tours/sfam-5289?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6555,
+            "name": "Eliminate",
+            "link": "https://edmtrain.com/tours/eliminate-6555?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 25442,
+            "name": "Excision (Detox Set)",
+            "link": "https://edmtrain.com/tours/excision-detox-set-25442?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14948,
+            "name": "Fury + MC Dino",
+            "link": "https://edmtrain.com/tours/fury-mc-dino-14948?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 34379,
+            "name": "Grafix",
+            "link": "https://edmtrain.com/tours/grafix-34379?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8647,
+            "name": "HEYZ",
+            "link": "https://edmtrain.com/tours/heyz-8647?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 54594,
+            "name": "Mija (DnB Set)",
+            "link": "https://edmtrain.com/tours/mija-dnb-set-54594?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 26183,
+            "name": "MrOneVibe",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 1183,
+            "name": "MUST DIE!",
+            "link": "https://edmtrain.com/tours/must-die-1183?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12284,
+            "name": "OG Nixin",
+            "link": "https://edmtrain.com/tours/og-nixin-12284?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8388,
+            "name": "PEEKABOO",
+            "link": "https://edmtrain.com/tours/peekaboo-8388?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 489,
+            "name": "Pendulum",
+            "link": "https://edmtrain.com/tours/pendulum-489?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 20012,
+            "name": "Raaket",
+            "link": "https://edmtrain.com/tours/raaket-20012?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 12489,
+            "name": "Rated R",
+            "link": "https://edmtrain.com/tours/rated-r-12489?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 9874,
+            "name": "REAPER",
+            "link": "https://edmtrain.com/tours/reaper-9874?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2057,
+            "name": "Riot Ten",
+            "link": "https://edmtrain.com/tours/riot-ten-2057?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 514,
+            "name": "Rusko",
+            "link": "https://edmtrain.com/tours/rusko-514?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6521,
+            "name": "SAYMYNAME",
+            "link": "https://edmtrain.com/tours/saymyname-6521?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14237,
+            "name": "Shanghai Doom",
+            "link": "https://edmtrain.com/tours/shanghai-doom-14237?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22650,
+            "name": "Skellytn",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 20604,
+            "name": "Slippy",
+            "link": "https://edmtrain.com/tours/slippy-20604?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14201,
+            "name": "Space Wizard",
+            "link": "https://edmtrain.com/tours/space-wizard-14201?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 22866,
+            "name": "Steller",
+            "link": "https://edmtrain.com/tours/steller-22866?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 2593,
+            "name": "Sullivan King",
+            "link": "https://edmtrain.com/tours/sullivan-king-2593?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7694,
+            "name": "SVDDEN DEATH",
+            "link": "https://edmtrain.com/tours/svdden-death-7694?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10827,
+            "name": "Ternion Sound",
+            "link": "https://edmtrain.com/tours/ternion-sound-10827?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 612,
+            "name": "Truth",
+            "link": "https://edmtrain.com/tours/truth-612?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6667,
+            "name": "Wooli",
+            "link": "https://edmtrain.com/tours/wooli-6667?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 638,
+            "name": "Zeds Dead",
+            "link": "https://edmtrain.com/tours/zeds-dead-638?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 638,
+            "name": "Zeds Dead",
+            "link": "https://edmtrain.com/tours/zeds-dead-638?utm_source=2120&utm_medium=api",
+            "b2bInd": true
+          },
+          {
+            "id": 1205,
+            "name": "Chase & Status",
+            "link": "https://edmtrain.com/tours/chase-and-status-1205?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265408,
+        "link": "https://edmtrain.com/orlando-fl/festival-after-party-day-2-265408?utm_source=2120&utm_medium=api",
+        "name": "Festival After Party Day 2",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T21:22:32Z",
+        "venue": {
+          "id": 6694,
+          "name": "Ace Cafe Orlando",
+          "location": "Orlando, FL",
+          "address": "100 W Livingston St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.547,
+          "longitude": -81.381
+        },
+        "artistList": []
+      },
+      {
+        "id": 265976,
+        "link": "https://edmtrain.com/orlando-fl/pandora-265976?utm_source=2120&utm_medium=api",
+        "name": "Pandora",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-01T18:22:11Z",
+        "venue": {
+          "id": 2893,
+          "name": "Majestic Event Center",
+          "location": "Orlando, FL",
+          "address": "801 John Young Pkwy, Orlando, FL 32804, USA",
+          "state": "Florida",
+          "latitude": 28.554,
+          "longitude": -81.413
+        },
+        "artistList": []
+      },
+      {
+        "id": 267451,
+        "link": "https://edmtrain.com/new-jersey/riggi-and-piros-267451?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:40:47Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 507,
+            "name": "Riggi & Piros",
+            "link": "https://edmtrain.com/tours/riggi-and-piros-507?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268088,
+        "link": "https://edmtrain.com/orlando-fl/fkmf-official-afterparty-svdden-death-268088?utm_source=2120&utm_medium=api",
+        "name": "FKMF Official Afterparty",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-12T19:36:22Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 7694,
+            "name": "SVDDEN DEATH",
+            "link": "https://edmtrain.com/tours/svdden-death-7694?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257963,
+        "link": "https://edmtrain.com/orlando-fl/dirtybird-campinn-257963?utm_source=2120&utm_medium=api",
+        "name": "Dirtybird CampINN",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-16T14:48:55Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      },
+      {
+        "id": 265689,
+        "link": "https://edmtrain.com/orlando-fl/ms-mada-265689?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-28T21:13:07Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 1470,
+            "name": "Ms Mada",
+            "link": "https://edmtrain.com/tours/ms-mada-1470?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267494,
+        "link": "https://edmtrain.com/new-jersey/acraze-267494?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:57:35Z",
+        "venue": {
+          "id": 4524,
+          "name": "Oasis Day Club",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 9113,
+            "name": "ACRAZE",
+            "link": "https://edmtrain.com/tours/acraze-9113?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259789,
+        "link": "https://edmtrain.com/new-jersey/the-disco-biscuits-259789?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-15",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-28T01:33:58Z",
+        "venue": {
+          "id": 10882,
+          "name": "Hackensack Meridian Health Theatre",
+          "location": "Red Bank, NJ",
+          "address": "99 Monmouth St, Red Bank, NJ 07701, USA",
+          "state": "New Jersey",
+          "latitude": 40.349,
+          "longitude": -74.07
+        },
+        "artistList": [
+          {
+            "id": 584,
+            "name": "The Disco Biscuits",
+            "link": "https://edmtrain.com/tours/the-disco-biscuits-584?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260279,
+        "link": "https://edmtrain.com/orlando-fl/ben-nicky-260279?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-16",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T00:38:02Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 1375,
+            "name": "Ben Nicky",
+            "link": "https://edmtrain.com/tours/ben-nicky-1375?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265184,
+        "link": "https://edmtrain.com/orlando-fl/nora-en-pure-265184?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-16",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T03:57:48Z",
+        "venue": {
+          "id": 5097,
+          "name": "Celine",
+          "location": "Orlando, FL",
+          "address": "22 S Magnolia Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.378
+        },
+        "artistList": [
+          {
+            "id": 2853,
+            "name": "Nora En Pure",
+            "link": "https://edmtrain.com/tours/nora-en-pure-2853?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267089,
+        "link": "https://edmtrain.com/orlando-fl/marten-horger-267089?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-16",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-08T01:28:39Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 8016,
+            "name": "Marten Hørger",
+            "link": "https://edmtrain.com/tours/marten-horger-8016?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257704,
+        "link": "https://edmtrain.com/atlantic-city-nj/westend-257704?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-17",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-15T06:40:08Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 12830,
+            "name": "WESTEND",
+            "link": "https://edmtrain.com/tours/westend-12830?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264601,
+        "link": "https://edmtrain.com/orlando-fl/as-presents-the-dark-264601?utm_source=2120&utm_medium=api",
+        "name": "AS Presents - The Dark",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-17",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-24T18:13:24Z",
+        "venue": {
+          "id": 14343,
+          "name": "Secret Location",
+          "location": "Orlando, FL",
+          "address": "Orlando, FL, USA",
+          "state": "Florida",
+          "latitude": 28.538,
+          "longitude": -81.379
+        },
+        "artistList": []
+      },
+      {
+        "id": 265907,
+        "link": "https://edmtrain.com/atlantic-city-nj/diplo-265907?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-17",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-01T18:02:01Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 218,
+            "name": "Diplo",
+            "link": "https://edmtrain.com/tours/diplo-218?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256018,
+        "link": "https://edmtrain.com/orlando-fl/sohmi-256018?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-18",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-07T00:01:22Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 14753,
+            "name": "SOHMI",
+            "link": "https://edmtrain.com/tours/sohmi-14753?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 259576,
+        "link": "https://edmtrain.com/atlantic-city-nj/liu-259576?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-23",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-26T11:04:21Z",
+        "venue": {
+          "id": 11670,
+          "name": "Anchor Rock Club",
+          "location": "Atlantic City, NJ",
+          "address": "247 S New York Ave, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.357,
+          "longitude": -74.426
+        },
+        "artistList": [
+          {
+            "id": 39605,
+            "name": "Liu",
+            "link": "https://edmtrain.com/tours/liu-39605?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 263958,
+        "link": "https://edmtrain.com/atlantic-city-nj/rick-wonder-263958?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-23",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-19T23:55:39Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 6454,
+            "name": "Rick Wonder",
+            "link": "https://edmtrain.com/tours/rick-wonder-6454?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264700,
+        "link": "https://edmtrain.com/orlando-fl/dj-pauly-d-264700?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-23",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-25T01:12:22Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 8732,
+            "name": "DJ Pauly D",
+            "link": "https://edmtrain.com/tours/dj-pauly-d-8732?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 255136,
+        "link": "https://edmtrain.com/atlantic-city-nj/tiesto-255136?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-24",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-02T01:35:37Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 5688,
+            "name": "Tiësto",
+            "link": "https://edmtrain.com/tours/tiesto-5688?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260022,
+        "link": "https://edmtrain.com/atlantic-city-nj/matisse-and-sadko-260022?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-24",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-28T20:31:43Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 421,
+            "name": "Matisse & Sadko",
+            "link": "https://edmtrain.com/tours/matisse-and-sadko-421?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265405,
+        "link": "https://edmtrain.com/orlando-fl/club-kaiju-demon-night-265405?utm_source=2120&utm_medium=api",
+        "name": "Club Kaiju (Demon Night)",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-24",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-27T20:26:03Z",
+        "venue": {
+          "id": 6694,
+          "name": "Ace Cafe Orlando",
+          "location": "Orlando, FL",
+          "address": "100 W Livingston St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.547,
+          "longitude": -81.381
+        },
+        "artistList": []
+      },
+      {
+        "id": 267452,
+        "link": "https://edmtrain.com/new-jersey/twinsick-267452?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-24",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:40:49Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 26064,
+            "name": "TWINSICK",
+            "link": "https://edmtrain.com/tours/twinsick-26064?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267495,
+        "link": "https://edmtrain.com/new-jersey/wax-motif-267495?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-25",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:57:36Z",
+        "venue": {
+          "id": 4524,
+          "name": "Oasis Day Club",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 771,
+            "name": "Wax Motif",
+            "link": "https://edmtrain.com/tours/wax-motif-771?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 265068,
+        "link": "https://edmtrain.com/orlando-fl/sippy-265068?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-26",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-26T00:02:09Z",
+        "venue": {
+          "id": 461,
+          "name": "Gilt Nightclub",
+          "location": "Orlando, FL",
+          "address": "740 Bennett Rd, Orlando, FL 32803, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.334
+        },
+        "artistList": [
+          {
+            "id": 18972,
+            "name": "SIPPY",
+            "link": "https://edmtrain.com/tours/sippy-18972?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267313,
+        "link": "https://edmtrain.com/atlantic-city-nj/immersjawn-267313?utm_source=2120&utm_medium=api",
+        "name": "Immersjawn",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-29",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T02:54:08Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": [
+          {
+            "id": 37296,
+            "name": "Taurus",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55830,
+            "name": "Carlo DiPlacido",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 3616,
+            "name": "Brett Rubin",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 4222,
+            "name": "Monikkr",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 28367,
+            "name": "Big Daddy Doug",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55831,
+            "name": "DJ Everyday",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55832,
+            "name": "Bumpy Nuggets",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 24936,
+            "name": "Jackie G",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 12600,
+            "name": "Substance D",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55833,
+            "name": "Strut",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 10702,
+            "name": "IANN",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55834,
+            "name": "DJ Neo25",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55835,
+            "name": "Pete Stone",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55836,
+            "name": "PropurLuv",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55837,
+            "name": "Jaq'n the Boxx",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 36146,
+            "name": "Francois G",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 15918,
+            "name": "DAR",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 8339,
+            "name": "Jeff Omega",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 1274,
+            "name": "Mighty Mike Saga",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55838,
+            "name": "Dak Nathaniel",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 26328,
+            "name": "Nemo",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55839,
+            "name": "Dave Mass",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 17894,
+            "name": "Animal",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 3827,
+            "name": "Tommy Hogunz",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 19815,
+            "name": "Max Muerte",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 55840,
+            "name": "DJ Ghost",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 48398,
+            "name": "Extra Medium",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 13618,
+            "name": "Takimba",
+            "link": "https://edmtrain.com/tours/takimba-13618?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 55841,
+            "name": "Sunsei",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 266453,
+        "link": "https://edmtrain.com/orlando-fl/the-widdler-pushloop-266453?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-30",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-03T22:03:33Z",
+        "venue": {
+          "id": 12043,
+          "name": "5043 Edgewater Dr",
+          "location": "Orlando, FL",
+          "address": "5043 Edgewater Dr, Orlando, FL 32810, USA",
+          "state": "Florida",
+          "latitude": 28.607,
+          "longitude": -81.408
+        },
+        "artistList": [
+          {
+            "id": 591,
+            "name": "The Widdler",
+            "link": "https://edmtrain.com/tours/the-widdler-591?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 7366,
+            "name": "Pushloop",
+            "link": "https://edmtrain.com/tours/pushloop-7366?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 33008,
+            "name": "Soukii",
+            "link": null,
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267175,
+        "link": "https://edmtrain.com/orlando-fl/big-bubble-rave-267175?utm_source=2120&utm_medium=api",
+        "name": "Big Bubble Rave",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-30",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-08T18:02:23Z",
+        "venue": {
+          "id": 375,
+          "name": "House of Blues Orlando",
+          "location": "Orlando, FL",
+          "address": "1490 Buena Vista Dr, Orlando, FL 32830, USA",
+          "state": "Florida",
+          "latitude": 28.371,
+          "longitude": -81.522
+        },
+        "artistList": []
+      },
+      {
+        "id": 267314,
+        "link": "https://edmtrain.com/atlantic-city-nj/immersjawn-267314?utm_source=2120&utm_medium=api",
+        "name": "Immersjawn",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-30",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T02:54:08Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 267461,
+        "link": "https://edmtrain.com/atlantic-city-nj/beatbreaker-dj-toro-267461?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-06-30",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:44:37Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 1836,
+            "name": "BeatBreaker",
+            "link": "https://edmtrain.com/tours/beatbreaker-1836?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 229,
+            "name": "DJ Toro",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 30915,
+            "name": "DJ NYSE",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 26699,
+            "name": "DJ June",
+            "link": "https://edmtrain.com/tours/dj-june-26699?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267315,
+        "link": "https://edmtrain.com/atlantic-city-nj/immersjawn-267315?utm_source=2120&utm_medium=api",
+        "name": "Immersjawn",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-01",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T02:54:08Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 267343,
+        "link": "https://edmtrain.com/atlantic-city-nj/chris-lake-267343?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-01",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T21:26:53Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 164,
+            "name": "Chris Lake",
+            "link": "https://edmtrain.com/tours/chris-lake-164?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267397,
+        "link": "https://edmtrain.com/new-jersey/big-bubble-rave-267397?utm_source=2120&utm_medium=api",
+        "name": "Big Bubble Rave",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-01",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:23:35Z",
+        "venue": {
+          "id": 5495,
+          "name": "Asbury Lanes",
+          "location": "Asbury Park, NJ",
+          "address": "209 4th Ave, Asbury Park, NJ 07712, USA",
+          "state": "New Jersey",
+          "latitude": 40.223,
+          "longitude": -74.002
+        },
+        "artistList": []
+      },
+      {
+        "id": 267462,
+        "link": "https://edmtrain.com/atlantic-city-nj/gattuso-267462?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-01",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:44:38Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 18051,
+            "name": "Gattüso",
+            "link": "https://edmtrain.com/tours/gattuso-18051?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 250544,
+        "link": "https://edmtrain.com/atlantic-city-nj/armnhmr-250544?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-07T17:57:56Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 6837,
+            "name": "ARMNHMR",
+            "link": "https://edmtrain.com/tours/armnhmr-6837?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267316,
+        "link": "https://edmtrain.com/atlantic-city-nj/immersjawn-267316?utm_source=2120&utm_medium=api",
+        "name": "Immersjawn",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T02:54:08Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 267344,
+        "link": "https://edmtrain.com/atlantic-city-nj/steve-aoki-267344?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-02",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T21:27:20Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 561,
+            "name": "Steve Aoki",
+            "link": "https://edmtrain.com/tours/steve-aoki-561?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267295,
+        "link": "https://edmtrain.com/atlantic-city-nj/we-belong-here-john-summit-267295?utm_source=2120&utm_medium=api",
+        "name": "We Belong Here",
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-03",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-09T00:19:57Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 13417,
+            "name": "John Summit",
+            "link": "https://edmtrain.com/tours/john-summit-13417?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 246855,
+        "link": "https://edmtrain.com/orlando-fl/illenium-whethan-246855?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "All Ages",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-20T16:52:47Z",
+        "venue": {
+          "id": 7250,
+          "name": "Orlando Amphitheater",
+          "location": "Orlando, FL",
+          "address": "4603 W Colonial Dr, Orlando, FL 32808, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.438
+        },
+        "artistList": [
+          {
+            "id": 2320,
+            "name": "ILLENIUM",
+            "link": "https://edmtrain.com/tours/illenium-2320?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6447,
+            "name": "Whethan",
+            "link": "https://edmtrain.com/tours/whethan-6447?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5995,
+            "name": "William Black",
+            "link": "https://edmtrain.com/tours/william-black-5995?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256573,
+        "link": "https://edmtrain.com/atlantic-city-nj/above-and-beyond-256573?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-09T04:09:16Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 60,
+            "name": "Above & Beyond",
+            "link": "https://edmtrain.com/tours/above-and-beyond-60?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267453,
+        "link": "https://edmtrain.com/new-jersey/joshwa-267453?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:40:50Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 30858,
+            "name": "Joshwa",
+            "link": "https://edmtrain.com/tours/joshwa-30858?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264635,
+        "link": "https://edmtrain.com/orlando-fl/the-noodle-effect-tour-spag-heddy-264635?utm_source=2120&utm_medium=api",
+        "name": "The Noodle Effect Tour",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-13",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-24T22:15:35Z",
+        "venue": {
+          "id": 5097,
+          "name": "Celine",
+          "location": "Orlando, FL",
+          "address": "22 S Magnolia Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.378
+        },
+        "artistList": [
+          {
+            "id": 4204,
+            "name": "Spag Heddy",
+            "link": "https://edmtrain.com/tours/spag-heddy-4204?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 10618,
+            "name": "Soltan",
+            "link": "https://edmtrain.com/tours/soltan-10618?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 14384,
+            "name": "JEANIE",
+            "link": "https://edmtrain.com/tours/jeanie-14384?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 261115,
+        "link": "https://edmtrain.com/orlando-fl/arty-morgan-page-261115?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-15",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-04T01:04:58Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 88,
+            "name": "Arty",
+            "link": "https://edmtrain.com/tours/arty-88?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 452,
+            "name": "Morgan Page",
+            "link": "https://edmtrain.com/tours/morgan-page-452?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268000,
+        "link": "https://edmtrain.com/new-jersey/dvbbs-268000?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-15",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-12T19:13:21Z",
+        "venue": {
+          "id": 723,
+          "name": "Headliner",
+          "location": "Neptune City, NJ",
+          "address": "1401 NJ-35, Neptune City, NJ 07753, USA",
+          "state": "New Jersey",
+          "latitude": 40.189,
+          "longitude": -74.026
+        },
+        "artistList": [
+          {
+            "id": 241,
+            "name": "DVBBS",
+            "link": "https://edmtrain.com/tours/dvbbs-241?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267366,
+        "link": "https://edmtrain.com/atlantic-city-nj/djslevents-beach-rager-joe-maz-267366?utm_source=2120&utm_medium=api",
+        "name": "Djslevents Beach Rager",
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-16",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:06:50Z",
+        "venue": {
+          "id": 2446,
+          "name": "Bungalow Lounge",
+          "location": "Atlantic City, NJ",
+          "address": "2641 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.353,
+          "longitude": -74.442
+        },
+        "artistList": [
+          {
+            "id": 3855,
+            "name": "Joe Maz",
+            "link": "https://edmtrain.com/tours/joe-maz-3855?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264508,
+        "link": "https://edmtrain.com/atlantic-city-nj/henry-fong-264508?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-21",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-24T17:27:28Z",
+        "venue": {
+          "id": 11670,
+          "name": "Anchor Rock Club",
+          "location": "Atlantic City, NJ",
+          "address": "247 S New York Ave, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.357,
+          "longitude": -74.426
+        },
+        "artistList": [
+          {
+            "id": 310,
+            "name": "Henry Fong",
+            "link": "https://edmtrain.com/tours/henry-fong-310?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 253684,
+        "link": "https://edmtrain.com/atlantic-city-nj/richie-santana-253684?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-22",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-02-22T23:08:28Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 506,
+            "name": "Richie Santana",
+            "link": "https://edmtrain.com/tours/richie-santana-506?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 266604,
+        "link": "https://edmtrain.com/orlando-fl/esn-evolution-360-the-glitch-mob-266604?utm_source=2120&utm_medium=api",
+        "name": "ESN:Evolution 360°",
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-22",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-04T01:46:08Z",
+        "venue": {
+          "id": 742,
+          "name": "Central Florida Fairgrounds",
+          "location": "Orlando, FL",
+          "address": "4603 W Colonial Dr, Orlando, FL 32808, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.438
+        },
+        "artistList": [
+          {
+            "id": 586,
+            "name": "The Glitch Mob",
+            "link": "https://edmtrain.com/tours/the-glitch-mob-586?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 37991,
+            "name": "It Hz",
+            "link": "https://edmtrain.com/tours/it-hz-37991?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8433,
+            "name": "Chee",
+            "link": "https://edmtrain.com/tours/chee-8433?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 19237,
+            "name": "Jon Casey",
+            "link": "https://edmtrain.com/tours/jon-casey-19237?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 8249,
+            "name": "OAKK",
+            "link": "https://edmtrain.com/tours/oakk-8249?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 258366,
+        "link": "https://edmtrain.com/atlantic-city-nj/georgia-sinclair-258366?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-25",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-18T00:34:37Z",
+        "venue": {
+          "id": 14850,
+          "name": "800 N New Hampshire Ave",
+          "location": "Atlantic City, NJ",
+          "address": "800 N New Hampshire Ave, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.377,
+          "longitude": -74.42
+        },
+        "artistList": [
+          {
+            "id": 29139,
+            "name": "Georgia Sinclair",
+            "link": "https://edmtrain.com/tours/georgia-sinclair-29139?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262128,
+        "link": "https://edmtrain.com/orlando-fl/sacha-robotti-dillon-nathaniel-262128?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-28",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-08T00:12:38Z",
+        "venue": {
+          "id": 14709,
+          "name": "Fixtion",
+          "location": "Orlando, FL",
+          "address": "15 S Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.542,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 5423,
+            "name": "Sacha Robotti",
+            "link": "https://edmtrain.com/tours/sacha-robotti-5423?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 6973,
+            "name": "Dillon Nathaniel",
+            "link": "https://edmtrain.com/tours/dillon-nathaniel-6973?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256316,
+        "link": "https://edmtrain.com/atlantic-city-nj/joel-corry-256316?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-29",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-08T01:43:59Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 21610,
+            "name": "Joel Corry",
+            "link": "https://edmtrain.com/tours/joel-corry-21610?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 256766,
+        "link": "https://edmtrain.com/atlantic-city-nj/ship-wrek-256766?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-07-29",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-10T00:13:41Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 7578,
+            "name": "Ship Wrek",
+            "link": "https://edmtrain.com/tours/ship-wrek-7578?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264882,
+        "link": "https://edmtrain.com/orlando-fl/yellow-claw-264882?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-04",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-25T17:23:57Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 635,
+            "name": "Yellow Claw",
+            "link": "https://edmtrain.com/tours/yellow-claw-635?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 261324,
+        "link": "https://edmtrain.com/atlantic-city-nj/crankdat-261324?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-06",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-05T03:15:06Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 6370,
+            "name": "Crankdat",
+            "link": "https://edmtrain.com/tours/crankdat-6370?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260387,
+        "link": "https://edmtrain.com/atlantic-city-nj/matroda-260387?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T20:46:52Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 8054,
+            "name": "Matroda",
+            "link": "https://edmtrain.com/tours/matroda-8054?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260385,
+        "link": "https://edmtrain.com/atlantic-city-nj/gordo-260385?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-12",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T20:46:49Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 23984,
+            "name": "Gordo",
+            "link": "https://edmtrain.com/tours/gordo-23984?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260388,
+        "link": "https://edmtrain.com/atlantic-city-nj/mau-p-260388?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-12",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T20:46:55Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 42075,
+            "name": "Mau P",
+            "link": "https://edmtrain.com/tours/mau-p-42075?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260386,
+        "link": "https://edmtrain.com/atlantic-city-nj/alesso-260386?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-13",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T20:46:51Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 68,
+            "name": "Alesso",
+            "link": "https://edmtrain.com/tours/alesso-68?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 260389,
+        "link": "https://edmtrain.com/atlantic-city-nj/cedric-gervais-260389?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-13",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-30T20:47:21Z",
+        "venue": {
+          "id": 5414,
+          "name": "HQ2 Nightclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 158,
+            "name": "Cedric Gervais",
+            "link": "https://edmtrain.com/tours/cedric-gervais-158?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 267422,
+        "link": "https://edmtrain.com/orlando-fl/tom-and-collins-267422?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-19",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-10T00:36:00Z",
+        "venue": {
+          "id": 4161,
+          "name": "Elixir",
+          "location": "Orlando, FL",
+          "address": "9 W Washington St, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.544,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 22928,
+            "name": "Tom & Collins",
+            "link": "https://edmtrain.com/tours/tom-and-collins-22928?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 262908,
+        "link": "https://edmtrain.com/new-jersey/magic-city-hippies-262908?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "All Ages",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-23",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-13T02:10:23Z",
+        "venue": {
+          "id": 733,
+          "name": "Stone Pony",
+          "location": "Asbury Park, NJ",
+          "address": "913 N Ocean Ave, Asbury Park, NJ 07712, USA",
+          "state": "New Jersey",
+          "latitude": 40.22,
+          "longitude": -74.001
+        },
+        "artistList": [
+          {
+            "id": 15496,
+            "name": "Magic City Hippies",
+            "link": "https://edmtrain.com/tours/magic-city-hippies-15496?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 263164,
+        "link": "https://edmtrain.com/atlantic-city-nj/mitis-263164?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "21+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-08-27",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-14T18:53:53Z",
+        "venue": {
+          "id": 5415,
+          "name": "HQ2 Beachclub",
+          "location": "Atlantic City, NJ",
+          "address": "500 Boardwalk, Atlantic City, NJ 08401, USA",
+          "state": "New Jersey",
+          "latitude": 39.363,
+          "longitude": -74.415
+        },
+        "artistList": [
+          {
+            "id": 1818,
+            "name": "MitiS",
+            "link": "https://edmtrain.com/tours/mitis-1818?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 257217,
+        "link": "https://edmtrain.com/atlantic-city-nj/submersion-festival-257217?utm_source=2120&utm_medium=api",
+        "name": "Submersion Festival",
+        "ages": "21+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-05",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-11T01:44:09Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 257218,
+        "link": "https://edmtrain.com/atlantic-city-nj/submersion-festival-257218?utm_source=2120&utm_medium=api",
+        "name": "Submersion Festival",
+        "ages": "21+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-06",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-11T01:44:10Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 257219,
+        "link": "https://edmtrain.com/atlantic-city-nj/submersion-festival-257219?utm_source=2120&utm_medium=api",
+        "name": "Submersion Festival",
+        "ages": "21+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-07",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-11T01:44:12Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 257220,
+        "link": "https://edmtrain.com/atlantic-city-nj/submersion-festival-257220?utm_source=2120&utm_medium=api",
+        "name": "Submersion Festival",
+        "ages": "21+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-08",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-03-11T01:44:13Z",
+        "venue": {
+          "id": 11947,
+          "name": "Paradise Lakes Campground",
+          "location": "Hammonton, NJ",
+          "address": "500 Paradise Dr, Hammonton, NJ 08037, USA",
+          "state": "New Jersey",
+          "latitude": 39.688,
+          "longitude": -74.726
+        },
+        "artistList": []
+      },
+      {
+        "id": 265959,
+        "link": "https://edmtrain.com/orlando-fl/carl-cox-265959?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "18+",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-13",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-01T18:19:23Z",
+        "venue": {
+          "id": 9063,
+          "name": "The Vanguard Orlando",
+          "location": "Orlando, FL",
+          "address": "578 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.55,
+          "longitude": -81.38
+        },
+        "artistList": [
+          {
+            "id": 152,
+            "name": "Carl Cox",
+            "link": "https://edmtrain.com/tours/carl-cox-152?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 264454,
+        "link": "https://edmtrain.com/orlando-fl/the-midnight-264454?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": null,
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-14",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-04-23T21:50:50Z",
+        "venue": {
+          "id": 496,
+          "name": "The Beacham",
+          "location": "Orlando, FL",
+          "address": "46 N Orange Ave, Orlando, FL 32801, USA",
+          "state": "Florida",
+          "latitude": 28.543,
+          "longitude": -81.379
+        },
+        "artistList": [
+          {
+            "id": 11493,
+            "name": "The Midnight",
+            "link": "https://edmtrain.com/tours/the-midnight-11493?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 268348,
+        "link": "https://edmtrain.com/orlando-fl/clozee-daily-bread-268348?utm_source=2120&utm_medium=api",
+        "name": null,
+        "ages": "All Ages",
+        "festivalInd": false,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-10-14",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-05-15T17:15:58Z",
+        "venue": {
+          "id": 7250,
+          "name": "Orlando Amphitheater",
+          "location": "Orlando, FL",
+          "address": "4603 W Colonial Dr, Orlando, FL 32808, USA",
+          "state": "Florida",
+          "latitude": 28.555,
+          "longitude": -81.438
+        },
+        "artistList": [
+          {
+            "id": 2172,
+            "name": "CloZee",
+            "link": "https://edmtrain.com/tours/clozee-2172?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 5577,
+            "name": "Daily Bread",
+            "link": "https://edmtrain.com/tours/daily-bread-5577?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          },
+          {
+            "id": 15046,
+            "name": "Canvas",
+            "link": null,
+            "b2bInd": false
+          },
+          {
+            "id": 14708,
+            "name": "Floret Loret",
+            "link": "https://edmtrain.com/tours/floret-loret-14708?utm_source=2120&utm_medium=api",
+            "b2bInd": false
+          }
+        ]
+      },
+      {
+        "id": 237828,
+        "link": "https://edmtrain.com/orlando-fl/electric-daisy-carnival-orlando-edc-237828?utm_source=2120&utm_medium=api",
+        "name": "Electric Daisy Carnival Orlando (EDC)",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2022-11-17T17:57:56Z",
+        "venue": {
+          "id": 659,
+          "name": "Tinker Field",
+          "location": "Orlando, FL",
+          "address": "287 S Tampa Ave, Orlando, FL 32805, USA",
+          "state": "Florida",
+          "latitude": 28.537,
+          "longitude": -81.404
+        },
+        "artistList": []
+      },
+      {
+        "id": 246796,
+        "link": "https://edmtrain.com/orlando-fl/home-bass-orlando-246796?utm_source=2120&utm_medium=api",
+        "name": "Home Bass Orlando",
+        "ages": "18+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-10",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-20T01:02:09Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      },
+      {
+        "id": 237829,
+        "link": "https://edmtrain.com/orlando-fl/electric-daisy-carnival-orlando-edc-237829?utm_source=2120&utm_medium=api",
+        "name": "Electric Daisy Carnival Orlando (EDC)",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2022-11-17T17:57:56Z",
+        "venue": {
+          "id": 659,
+          "name": "Tinker Field",
+          "location": "Orlando, FL",
+          "address": "287 S Tampa Ave, Orlando, FL 32805, USA",
+          "state": "Florida",
+          "latitude": 28.537,
+          "longitude": -81.404
+        },
+        "artistList": []
+      },
+      {
+        "id": 246797,
+        "link": "https://edmtrain.com/orlando-fl/home-bass-orlando-246797?utm_source=2120&utm_medium=api",
+        "name": "Home Bass Orlando",
+        "ages": "18+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-11",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-20T01:02:09Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      },
+      {
+        "id": 237830,
+        "link": "https://edmtrain.com/orlando-fl/electric-daisy-carnival-orlando-edc-237830?utm_source=2120&utm_medium=api",
+        "name": "Electric Daisy Carnival Orlando (EDC)",
+        "ages": null,
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-12",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2022-11-17T17:57:56Z",
+        "venue": {
+          "id": 659,
+          "name": "Tinker Field",
+          "location": "Orlando, FL",
+          "address": "287 S Tampa Ave, Orlando, FL 32805, USA",
+          "state": "Florida",
+          "latitude": 28.537,
+          "longitude": -81.404
+        },
+        "artistList": []
+      },
+      {
+        "id": 246798,
+        "link": "https://edmtrain.com/orlando-fl/home-bass-orlando-246798?utm_source=2120&utm_medium=api",
+        "name": "Home Bass Orlando",
+        "ages": "18+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-12",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-20T01:02:09Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      },
+      {
+        "id": 246799,
+        "link": "https://edmtrain.com/orlando-fl/home-bass-orlando-246799?utm_source=2120&utm_medium=api",
+        "name": "Home Bass Orlando",
+        "ages": "18+",
+        "festivalInd": true,
+        "livestreamInd": false,
+        "electronicGenreInd": true,
+        "otherGenreInd": false,
+        "date": "2023-11-13",
+        "startTime": null,
+        "endTime": null,
+        "createdDate": "2023-01-20T01:02:09Z",
+        "venue": {
+          "id": 8983,
+          "name": "Wyndham Orlando Resort I-Drive",
+          "location": "Orlando, FL",
+          "address": "8001 International Dr, Orlando, FL 32819, USA",
+          "state": "Florida",
+          "latitude": 28.449,
+          "longitude": -81.468
+        },
+        "artistList": []
+      }
+    ],
+    "success": true
+  }
