@@ -27,3 +27,8 @@
   - DELETE /api/events/<:eventId>/<:genreId> - delete a genre of an event
 - ## /api/users
   - GET /api/users/current - get your user info
+
+## [edmtrain](https://edmtrain.com/api-documentation) Routes
+- GET https://edmtrain.com/api/events?client={clientkey} - view all events
+- GET https://edmtrain/api/locations?client={clientkey} - view all locations
+- GET https://edmtrain/api/events?latitude=40.713&longitude=-74.006&state=New%20York&client={clientkey} - view nearby events (if longitude, latitude, and state is provided)
