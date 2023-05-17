@@ -5,6 +5,7 @@ from app.models.db import db, environment, SCHEMA
 from .events import seed_events, undo_events
 from .genres import seed_genres, undo_genres
 from .likes import seed_likes, undo_likes
+from .tickets import seed_tickets, undo_tickets
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -23,11 +24,13 @@ def seed():
         undo_events()
         undo_genres()
         undo_likes()
+        undo_tickets()
 
     seed_users()
     seed_events()
     seed_genres()
     seed_likes()
+    seed_tickets()
     # Add other seed functions here
 
 
@@ -38,4 +41,6 @@ def undo():
     undo_events()
     undo_genres()
     undo_likes()
+    undo_tickets()
+
     # Add other undo functions here

@@ -1,6 +1,6 @@
 # Database schema
 
-
+![schema](Schema.png)
 
 <hr>
 
@@ -39,6 +39,7 @@
 * ticket_price (decimal)
 * ticket_quantity (integer)
 * event_id (integer, foreign key to Events table)
+* user_id (integer, foreignkey to Users table)
 
 <hr>
 
