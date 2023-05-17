@@ -2,6 +2,9 @@ from flask.cli import AppGroup
 from .users import seed_users, undo_users
 # from .events import seed_events, undo_events
 from app.models.db import db, environment, SCHEMA
+from .events import seed_events, undo_events
+from .genres import seed_genres, undo_genres
+from .likes import seed_likes, undo_likes
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -17,7 +20,14 @@ def seed():
         # the schema name (see comment in users.py undo_users function).
         # Make sure to add all your other model's undo functions below
         undo_users()
+        undo_events()
+        undo_genres()
+        undo_likes()
+
     seed_users()
+    seed_events()
+    seed_genres()
+    seed_likes()
     # Add other seed functions here
 
 
@@ -25,4 +35,7 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_users()
+    undo_events()
+    undo_genres()
+    undo_likes()
     # Add other undo functions here

@@ -47,7 +47,7 @@ def undo_genres():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.genres RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute(text("DELETE FROM events"))
+        db.session.execute(text("DELETE FROM genres"))
 
 
     db.session.commit()

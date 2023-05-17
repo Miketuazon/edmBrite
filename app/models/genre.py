@@ -11,7 +11,7 @@ class Genre(db.Model):
     name = db.Column(db.String(40), nullable=False)
 
     #Relationship to event
-    events_with_genre = db.relationship('Event', back_populates='genres')
+    # events_with_genre = db.relationship('Event', back_populates='genres')
 
     def to_dict(self):
         return {

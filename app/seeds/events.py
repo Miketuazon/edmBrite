@@ -34,7 +34,7 @@ def seed_events():
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
         event_organizer_id=1,
-        user_likes=2,
+        # user_likes=[2],
     )
     event2 = Event(
         event_name="Tchami x Malaa No Redemption",
@@ -47,7 +47,7 @@ def seed_events():
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
         event_organizer_id=2,
-        user_likes=3,
+        # user_likes=[3],
     )
     event3 = Event(
         event_name="Wax Motif Live",
@@ -60,9 +60,9 @@ def seed_events():
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
         event_organizer_id=3,
-        user_likes=1,
+        # user_likes=[1],
     )
-
+    # event1.user_likes.append(1)
     db.session.add(event1)
     db.session.add(event2)
     db.session.add(event3)

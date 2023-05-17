@@ -18,6 +18,7 @@ class Event(db.Model):
     event_location = db.Column(db.String(100), nullable=False)
     createdAt = db.Column(db.DateTime, default=db.func.now())
     updatedAt = db.Column(db.DateTime, default=db.func.now())
+    event_organizer_id = db.ForeignKey(add_prefix_for_prod('users.id'), nullable=False)
 
     #User Like Event relationship
     user_likes = db.relationship(
@@ -25,8 +26,6 @@ class Event(db.Model):
         secondary=likes,
         back_populates="event_likes"
     )
-    # Event to user relationship
-    event_organizer_id = db.relationship('User', back_populates='event_owner')
 
     # function to return itself
     def to_dict(self):

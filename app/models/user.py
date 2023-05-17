@@ -17,15 +17,15 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
 
     #Likes on events relationship
-    user_likes = db.relationship(
+    event_likes = db.relationship(
         "Event",
         secondary=likes,
         back_populates="user_likes"
     )
 
     # User to Event relationship
-    event_owner = db.relationship('Event', back_populates="event_organizer_id")
-
+    # event_owner = db.relationship('Event', back_populates="event_organizer_id")
+    # events= db.relationship('Event')
     @property
     def password(self):
         return self.hashed_password
