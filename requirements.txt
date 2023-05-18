@@ -3,7 +3,7 @@
 # To regenerate from the project's Pipfile, run:
 #
 #    pipenv lock --requirements
-#
+# added in requests 2.30.0
 
 -i https://pypi.org/simple
 alembic==1.9.2
@@ -23,6 +23,7 @@ markupsafe==2.1.2
 python-dateutil==2.8.2
 python-dotenv==0.21.0
 python-editor==1.0.4
+requests==2.30.0
 six==1.16.0
 sqlalchemy==1.4.46
 werkzeug==2.2.2
