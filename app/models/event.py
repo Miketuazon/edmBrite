@@ -45,5 +45,5 @@ class Event(db.Model):
             "createdAt": self.createdAt,
             "updatedAt": self.updatedAt,
             'event_likes_count': [user.id for user in self.user_likes],
-            'owner': self.owner
+            'owner': self.owner.to_dict()
         }

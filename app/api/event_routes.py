@@ -26,7 +26,6 @@ def get_all_events():
     return_list = []
     for event in events:
         event_dict = event.to_dict()
-        breakpoint
         return_list.append(event_dict)
 
     # breakpoint()
