@@ -3,19 +3,37 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
-
-function Navigation({ isLoaded }){
+import SearchBar from './Searchbar';
+import image from '../../images/logoTitle.png'
+function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
 
 	return (
-		<ul>
-			<li>
-				<NavLink exact to="/">Home</NavLink>
-			</li>
-			{isLoaded && (
-				<li>
-					<ProfileButton user={sessionUser} />
+		<ul className='navBar'>
+			<ul className='left-side-nav'>
+				<li className='homebutton'>
+					<NavLink exact to="/events">
+						<img src={image} style={{ width: '50px', height: '50px' }}></img>
+					</NavLink>
 				</li>
+				<li className='search-bar'>
+					< SearchBar />
+				</li>
+			</ul>
+			{isLoaded && (
+				<ul className='right-side'>
+					<li className="create-an-event-button">
+						<NavLink exact to="/events/new"><i class="fa fa-plus">Create an event</i></NavLink>
+					</li>
+					<li className="go-to-likes-button">
+						<NavLink exact to="/">Likes</NavLink>
+					</li>
+					{/* <NavLink className="createEventButton" to="/events/new">Create an event</NavLink> */}
+					<li>
+						<NavLink exact to ="/">Tickets</NavLink>
+					</li>
+					<ProfileButton user={sessionUser}></ProfileButton>
+				</ul>
 			)}
 		</ul>
 	);
