@@ -21,7 +21,8 @@ export default function edmtrainReducer(state = {}, action) {
     switch (action.type) {
         case GET_EDMTRAIN_EVENTS:
             newState = {...state}
-            action.events.edmtrain_events.data.forEach((event) => newState[event.id] = event)
+            action.events.db_data.forEach((db_event) => newState[db_event.id] = db_event)
+            action.events.edmtrain_events.forEach((event) => newState[event.id] = event)
             return newState
         default:
             return state
