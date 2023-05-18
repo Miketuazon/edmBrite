@@ -17,20 +17,19 @@ def get_all_events():
     edmtrain_response = requests.get(url)
     data_from_edmtrain = edmtrain_response.json()['data']
 
-    # random_events_30 = random.sample(data_from_edmtrain, k=30)
+    random_events_30 = random.sample(data_from_edmtrain, k=30)
     # for event in data_from_edmtrain:
         # print(event)
 
-    # commented out for now, getting a TypeError: Object of type Event is not JSON serializable
+
     events = Event.query.all()
     return_list = []
     for event in events:
         event_dict = event.to_dict()
         return_list.append(event_dict)
 
-    # breakpoint()
     data = {
-        # 'edmtrain_events': random_events_30,
+        'edmtrain_events': random_events_30,
         'db_data': return_list,
     }
     return data
