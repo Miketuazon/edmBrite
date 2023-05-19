@@ -10,13 +10,11 @@ const EventsPage = () => {
     const dispatch = useDispatch()
     const eventsObj = useSelector((state) => state.events)
     const events = Object.values(eventsObj)
-    console.log(events)
+    // console.log(events)
     // console.log(process.env.REACT_APP_EDMTRAIN_KEY) //this is the way to do call it next time
     useEffect(() => {
         dispatch(getEventsThunk())
     }, [dispatch])
-    const dbEvents = useSelector((action) => action.events.db_data)
-    console.log(dbEvents)
 
     const [edmtrainEvents, setEdmtrainEvents] = useState([])
     const [state, setState] = useState("New York")
@@ -24,7 +22,6 @@ const EventsPage = () => {
     const [longitude, setLongitude] = useState(-74.006)
     const [latitude, setLatitude] = useState(40.713)
     const apiKey = process.env.REACT_APP_EDMTRAIN_KEY
-    console.log(apiKey)
     const edmAPI = 'https://edmtrain.com/api'
     useEffect(() => {
         fetch(`${edmAPI}/events?latitude=${latitude}&longitude=${longitude}&state=${state}&client=${apiKey}`)
@@ -32,7 +29,7 @@ const EventsPage = () => {
             .then(data => setEdmtrainEvents(data))
             .catch(err => console.log(err))
     }, [latitude, longitude, state])
-    console.log("edmtrainEvents =>", edmtrainEvents)
+    // console.log("edmtrainEvents =>", edmtrainEvents)
     const apiEvents = edmtrainEvents.data
 
     if (!events.length) return <>Loading.....</>
