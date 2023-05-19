@@ -22,13 +22,13 @@ def seed():
         # Make sure to add all your other model's undo functions below
         undo_tickets()
         undo_likes()
-        undo_genres()
         undo_events()
+        undo_genres()
         undo_users()
 
     seed_users()
-    seed_events()
     seed_genres()
+    seed_events()
     seed_likes()
     seed_tickets()
     # Add other seed functions here
@@ -39,8 +39,8 @@ def seed():
 def undo():
     undo_tickets()
     undo_likes()
-    undo_genres()
     undo_events()
+    undo_genres()
     undo_users()
 
     # Add other undo functions here
