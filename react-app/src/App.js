@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import LandingPage from "./components/LandingPage/LandingPage";
 import EventsPage from "./components/Events/EventsPage";
 import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
+import OneEvent from "./components/Events/OneEvent/OneEvent";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route exact path="/events/new" >
             <CreateEvent />
+          </Route>
+          <Route path="/events/:eventId" >
+            <OneEvent />
           </Route>
           <Route path="/login" >
             <LoginFormPage />

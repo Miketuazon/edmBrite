@@ -1,5 +1,5 @@
 // Events actions and reducer
-// Declare POJO action creators
+// Declare POJO action type
 const GET_EVENTS = 'events/getEvents'
 const CREATE_EVENT = 'events/createEvent'
 const GET_ONE_EVENT = 'events/getOneEvent'
@@ -18,6 +18,13 @@ const createEventAction = (event) => {
     }
 }
 
+const getOneEventAction = (event) => {
+    console.log("HIT THE getOneEventAction ==========>")
+    return {
+        type: GET_ONE_EVENT,
+        event
+    }
+}
 
 // Store - Thunks | events
 // Thunk 1: Get all events
@@ -43,6 +50,19 @@ export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
     }
 }
 
+// Thunk 3: Get one event
+export const getOneEventThunk = (eventId) => async (dispatch) => {
+    console.log("HIT THE getOneEventThunk ==========>")
+    const res = await fetch(`/api/events/${eventId}`)
+    if (res.ok) {
+        debugger
+        const data = await res.json()
+
+        await dispatch(getOneEventAction(data))
+        return data
+    }
+}
+
 
 export default function eventsReducer(state = {}, action) {
     let newState;
@@ -54,8 +74,12 @@ export default function eventsReducer(state = {}, action) {
             return newState
         case CREATE_EVENT:
             newState = {...state}
-            debugger
             newState[action.event.db_data.id] = action.event
+            return newState
+        case GET_ONE_EVENT:
+            console.log("HIT THE REDUCER GET_ONE_EVENT ==========>")
+            newState = {...state}
+            newState.singleEvent = {...action.event}
             return newState
         default:
             return state
