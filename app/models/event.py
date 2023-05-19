@@ -14,7 +14,11 @@ class Event(db.Model):
     event_description = db.Column(db.String(), nullable=False)
     event_start_date = db.Column(db.DateTime, default=db.func.now())
     event_end_date = db.Column(db.DateTime, default=db.func.now())
-    event_location = db.Column(db.String(100), nullable=False)
+    event_venue = db.Column(db.String(100), nullable=False)
+    event_street_address = db.Column(db.String(100), nullable=False)
+    event_city = db.Column(db.String(100), nullable=False)
+    event_state = db.Column(db.String(20), nullable=False)
+    event_zip_code = db.Column(db.Integer(), nullable=False)
     createdAt = db.Column(db.DateTime, default=db.func.now())
     updatedAt = db.Column(db.DateTime, default=db.func.now())
 
@@ -41,7 +45,11 @@ class Event(db.Model):
             "event_genre_id": self.event_genre_id,
             "event_start_date": self.event_start_date,
             "event_end_date": self.event_end_date,
-            "event_location": self.event_location,
+            "event_venue": self.event_venue,
+            "event_street_address": self.event_street_address,
+            "event_city": self.event_city,
+            "event_state": self.event_state,
+            "event_zip_code": self.event_zip_code,
             "createdAt": self.createdAt,
             "updatedAt": self.updatedAt,
             'event_likes_count': [user.id for user in self.user_likes],

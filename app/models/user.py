@@ -43,6 +43,6 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            # 'events_liked': [event.id for event in self.event_likes],
-            # 'events_owned': [event.to_dict() for event in self.event_owner]
+            'events_liked': [event.id for event in self.event_likes],
+            'events_owned': [event.id for event in self.events]
         }
