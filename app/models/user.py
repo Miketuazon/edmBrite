@@ -23,9 +23,9 @@ class User(db.Model, UserMixin):
         back_populates="user_likes"
     )
 
-    # User to Event relationship
-    # event_owner = db.relationship('Event', back_populates="event_organizer_id")
-    # events= db.relationship('Event')
+    # One to Many
+    events = db.relationship('Event', back_populates='owner')
+
     @property
     def password(self):
         return self.hashed_password

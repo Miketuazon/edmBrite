@@ -12,13 +12,15 @@ class Event(db.Model):
     event_name = db.Column(db.String(50), nullable=False)
     event_summary = db.Column(db.String(140), nullable=False)
     event_description = db.Column(db.String(), nullable=False)
-    event_genre_id = db.ForeignKey(add_prefix_for_prod('genres.id'), nullable=False)
     event_start_date = db.Column(db.DateTime, default=db.func.now())
     event_end_date = db.Column(db.DateTime, default=db.func.now())
     event_location = db.Column(db.String(100), nullable=False)
     createdAt = db.Column(db.DateTime, default=db.func.now())
     updatedAt = db.Column(db.DateTime, default=db.func.now())
-    event_organizer_id = db.ForeignKey(add_prefix_for_prod('users.id'), nullable=False)
+
+    # Foreign keys
+    event_organizer_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    event_genre_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('genres.id')), nullable=False)
 
     #User Like Event relationship
     user_likes = db.relationship(
@@ -26,6 +28,8 @@ class Event(db.Model):
         secondary=likes,
         back_populates="event_likes"
     )
+    #Many to one
+    owner = db.relationship('User', back_populates='events')
 
     # function to return itself
     def to_dict(self):
@@ -41,5 +45,5 @@ class Event(db.Model):
             "createdAt": self.createdAt,
             "updatedAt": self.updatedAt,
             'event_likes_count': [user.id for user in self.user_likes],
-            'event_organizer': self.event_organizer_id
+            'owner': self.owner.to_dict()
         }
