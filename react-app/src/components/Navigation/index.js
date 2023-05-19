@@ -13,7 +13,7 @@ function Navigation({ isLoaded }) {
 			<ul className='left-side-nav'>
 				<li className='homebutton'>
 					<NavLink exact to="/events">
-						<img src={image} style={{ width: '50px', height: '50px' }}></img>
+						<img alt="icon" src={image} style={{ width: '50px', height: '50px' }}></img>
 					</NavLink>
 				</li>
 				<li className='search-bar'>

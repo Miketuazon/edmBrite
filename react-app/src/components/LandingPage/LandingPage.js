@@ -18,7 +18,7 @@ const LandingPage = () => {
             <div className='intro'>
                 <h1>Hi there!</h1>
                 <h2>Welcome to</h2>
-                <img src="https://imgur.com/TbXlJSk.png"></img>
+                <img alt='logo' src="https://imgur.com/TbXlJSk.png"></img>
                 <div className="question">Looking for new edm events? Click the button below!</div>
             </div>
             <button className='check-out-events' onClick={onSubmit}>
