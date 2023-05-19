@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: a1de68396afb
+Revision ID: e3c6ea72d0cb
 Revises:
-Create Date: 2023-05-18 21:49:55.884455
+Create Date: 2023-05-18 22:20:58.709954
 
 """
 from alembic import op
@@ -14,7 +14,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
-revision = 'a1de68396afb'
+revision = 'e3c6ea72d0cb'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -27,6 +27,10 @@ def upgrade():
     sa.Column('name', sa.String(length=40), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+    if environment == "production":
+        op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
+
+
     op.create_table('tickets',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('ticket_type', sa.String(), nullable=False),
@@ -34,6 +38,9 @@ def upgrade():
     sa.Column('ticket_quantity', sa.Integer(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+    if environment == "production":
+        op.execute(f"ALTER TABLE tickets SET SCHEMA {SCHEMA};")
+
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=40), nullable=False),
@@ -43,6 +50,9 @@ def upgrade():
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
+    if environment == "production":
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
+
     op.create_table('events',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('event_name', sa.String(length=50), nullable=False),
@@ -59,6 +69,9 @@ def upgrade():
     sa.ForeignKeyConstraint(['event_organizer_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+    if environment == "production":
+        op.execute(f"ALTER TABLE events SET SCHEMA {SCHEMA};")
+
     op.create_table('likes',
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('event_id', sa.Integer(), nullable=False),
@@ -66,12 +79,7 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('user_id', 'event_id')
     )
-
     if environment == "production":
-        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE events SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE tickets SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
 
     # ### end Alembic commands ###
