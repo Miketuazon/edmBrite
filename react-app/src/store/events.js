@@ -1,6 +1,9 @@
-
+// Events actions and reducer
+// Declare POJO action creators
 const GET_EVENTS = 'events/getEvents'
+const CREATE_EVENT = 'events/createEvent'
 
+// Store - action creators | events
 const getEventsAction = (events) => {
     return {
         type: GET_EVENTS,
@@ -8,6 +11,16 @@ const getEventsAction = (events) => {
     }
 }
 
+const createEventAction = (event) => {
+    return {
+        type: CREATE_EVENT,
+        event
+    }
+}
+
+
+// Store - Thunks | events
+// Thunk 1: Get all events
 export const getEventsThunk = () => async (dispatch) => {
     const res = await fetch('/api/events')
     if (res.ok) {
@@ -16,6 +29,21 @@ export const getEventsThunk = () => async (dispatch) => {
     }
 }
 
+// Thunk 2: Create an event
+export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
+    const res = await fetch('/api/events', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(detailsOfEvent)
+    });
+
+    if (res.ok) {
+        const createdEvent = await res.json();
+        return createdEvent;
+    }
+}
+
+
 export default function eventsReducer(state = {}, action) {
     let newState;
     switch (action.type) {
@@ -23,6 +51,10 @@ export default function eventsReducer(state = {}, action) {
             newState = {...state}
             action.events.db_data.forEach((db_event) => newState[db_event.id] = db_event)
             // action.events.edmtrain_events.forEach((event) => newState[event.id] = event)
+            return newState
+        case CREATE_EVENT:
+            newState = {...state}
+            debugger
             return newState
         default:
             return state

@@ -7,6 +7,7 @@ import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import LandingPage from "./components/LandingPage/LandingPage";
 import EventsPage from "./components/Events/EventsPage";
+import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,8 +24,11 @@ function App() {
           <Route exact path="/" >
             <LandingPage />
           </Route>
-          <Route path="/events" >
+          <Route exact path="/events" >
             <EventsPage />
+          </Route>
+          <Route exact path="/events/new" >
+            <CreateEvent />
           </Route>
           <Route path="/login" >
             <LoginFormPage />
