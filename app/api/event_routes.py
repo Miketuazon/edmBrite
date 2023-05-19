@@ -91,7 +91,11 @@ def create_an_event():
             event_description=form.data['event_description'],
             event_start_date=form.data['event_start_date'],
             event_end_date=form.data['event_end_date'],
-            event_location=form.data['event_location'],
+            event_venue=form.data['event_venue'],
+            event_street_address=form.data['event_street_address'],
+            event_city=form.data['event_city'],
+            event_state=form.data['event_state'],
+            event_zip_code=form.data['event_zip_code'],
             event_organizer_id=current_user_dict['id'],
             event_genre_id=form.data['event_genre_id']
         )

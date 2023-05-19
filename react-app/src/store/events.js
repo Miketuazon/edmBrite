@@ -2,7 +2,7 @@
 // Declare POJO action creators
 const GET_EVENTS = 'events/getEvents'
 const CREATE_EVENT = 'events/createEvent'
-
+const GET_ONE_EVENT = 'events/getOneEvent'
 // Store - action creators | events
 const getEventsAction = (events) => {
     return {
@@ -31,7 +31,7 @@ export const getEventsThunk = () => async (dispatch) => {
 
 // Thunk 2: Create an event
 export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
-    const res = await fetch('/api/events', {
+    const res = await fetch('/api/events/create', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(detailsOfEvent)
@@ -55,6 +55,7 @@ export default function eventsReducer(state = {}, action) {
         case CREATE_EVENT:
             newState = {...state}
             debugger
+            newState[action.event.db_data.id] = action.event
             return newState
         default:
             return state
