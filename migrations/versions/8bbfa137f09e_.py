@@ -8,6 +8,9 @@ Create Date: 2023-05-19 11:59:58.949794
 from alembic import op
 import sqlalchemy as sa
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
 revision = '8bbfa137f09e'
@@ -26,6 +29,8 @@ def upgrade():
         batch_op.add_column(sa.Column('event_zip_code', sa.Integer(), nullable=False))
         batch_op.drop_column('event_location')
 
+    if environment == "production":
+        op.execute(f"ALTER TABLE events SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 
