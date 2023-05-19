@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: e3c6ea72d0cb
+Revision ID: 193ceb44ff33
 Revises:
-Create Date: 2023-05-18 22:20:58.709954
+Create Date: 2023-05-19 12:15:14.637490
 
 """
 from alembic import op
@@ -12,9 +12,8 @@ import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
-
 # revision identifiers, used by Alembic.
-revision = 'e3c6ea72d0cb'
+revision = '193ceb44ff33'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -27,9 +26,9 @@ def upgrade():
     sa.Column('name', sa.String(length=40), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
-
 
     op.create_table('tickets',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -38,6 +37,7 @@ def upgrade():
     sa.Column('ticket_quantity', sa.Integer(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE tickets SET SCHEMA {SCHEMA};")
 
@@ -50,6 +50,7 @@ def upgrade():
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
 
@@ -60,7 +61,11 @@ def upgrade():
     sa.Column('event_description', sa.String(), nullable=False),
     sa.Column('event_start_date', sa.DateTime(), nullable=True),
     sa.Column('event_end_date', sa.DateTime(), nullable=True),
-    sa.Column('event_location', sa.String(length=100), nullable=False),
+    sa.Column('event_venue', sa.String(length=100), nullable=False),
+    sa.Column('event_street_address', sa.String(length=100), nullable=False),
+    sa.Column('event_city', sa.String(length=100), nullable=False),
+    sa.Column('event_state', sa.String(length=20), nullable=False),
+    sa.Column('event_zip_code', sa.Integer(), nullable=False),
     sa.Column('createdAt', sa.DateTime(), nullable=True),
     sa.Column('updatedAt', sa.DateTime(), nullable=True),
     sa.Column('event_organizer_id', sa.Integer(), nullable=False),
@@ -69,6 +74,7 @@ def upgrade():
     sa.ForeignKeyConstraint(['event_organizer_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE events SET SCHEMA {SCHEMA};")
 
@@ -79,9 +85,9 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('user_id', 'event_id')
     )
+
     if environment == "production":
         op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
-
     # ### end Alembic commands ###
 
 
