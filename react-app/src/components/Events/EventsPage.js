@@ -10,6 +10,8 @@ const EventsPage = () => {
     const dispatch = useDispatch()
     const eventsObj = useSelector((state) => state.events)
     const events = Object.values(eventsObj)
+
+    // console.log(process.env.REACT_APP_EDMTRAIN_KEY) //this is the way to do call it next time
     useEffect(() => {
         dispatch(getAllEDMTRAINEvents())
     }, [dispatch])
