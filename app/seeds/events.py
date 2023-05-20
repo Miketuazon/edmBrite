@@ -18,13 +18,14 @@ date1 = datetime.datetime.strptime("6/10/2023 10:00pm", "%m/%d/%Y %I:%M%p")
 end_date1 = datetime.datetime.strptime("6/11/2023 02:00am", "%m/%d/%Y %I:%M%p")
 date2 = datetime.datetime.strptime("7/15/2023 10:00pm", "%m/%d/%Y %I:%M%p")
 end_date2 = datetime.datetime.strptime("7/16/2023 02:00am", "%m/%d/%Y %I:%M%p")
-date2 = datetime.datetime.strptime("5/31/2023 10:00pm", "%m/%d/%Y %I:%M%p")
+date3 = datetime.datetime.strptime("5/31/2023 10:00pm", "%m/%d/%Y %I:%M%p")
 end_date3 = datetime.datetime.strptime("6/01/2023 02:00am", "%m/%d/%Y %I:%M%p")
 
 
 def seed_events():
     event1 = Event(
-        event_name="Porter Robinson",
+        event_name="Porter Robinson at the Brooklyn Mirage",
+        event_dj = "Porter Robinson",
         event_summary="Come for a fun time",
         event_description="This is Porter's return back to the Brooklyn Mirage! Get your tickets soon as this will sell out!",
         event_genre_id=1,
@@ -41,7 +42,8 @@ def seed_events():
         # user_likes=[2],
     )
     event2 = Event(
-        event_name="Tchami x Malaa No Redemption",
+        event_name="Tchami x Malaa No Redemption Returns At Echostage",
+        event_dj="Tchami",
         event_summary="Are you ready to dance?",
         event_description="The iconic duo are performing here live! Get your tickets soon as this will sell out!",
         event_genre_id=2,
@@ -59,6 +61,7 @@ def seed_events():
     )
     event3 = Event(
         event_name="Wax Motif Live",
+        event_dj="Wax Motif",
         event_summary="Are you ready to shake that?",
         event_description="Wax Motif is back to the heart of LA! Get your tickets soon as this will sell out!",
         event_genre_id=3,

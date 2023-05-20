@@ -55,7 +55,6 @@ export const getOneEventThunk = (eventId) => async (dispatch) => {
     console.log("HIT THE getOneEventThunk ==========>")
     const res = await fetch(`/api/events/${eventId}`)
     if (res.ok) {
-        debugger
         const data = await res.json()
 
         await dispatch(getOneEventAction(data))
