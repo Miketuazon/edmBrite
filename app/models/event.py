@@ -10,6 +10,7 @@ class Event(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     event_name = db.Column(db.String(50), nullable=False)
+    event_dj = db.Column(db.String(100), nullable=False)
     event_summary = db.Column(db.String(140), nullable=False)
     event_description = db.Column(db.String(), nullable=False)
     event_start_date = db.Column(db.DateTime, default=db.func.now())
@@ -40,6 +41,7 @@ class Event(db.Model):
         return {
             "id": self.id,
             "event_name": self.event_name,
+            "event_dj": self.event_dj,
             "event_summary": self.event_summary,
             "event_description": self.event_description,
             "event_genre_id": self.event_genre_id,

@@ -42,7 +42,9 @@ const EventsPage = () => {
                 {
                     events?.filter(event => event.event_name)?.map((event, index) => (
                         <li key={index} className="user-event">
+                            <Link to={`events/${event.id}`}>
                             <div className="event-id-and-name">{event.id} | {event.event_name}</div>
+                            </Link>
                             <div className="date">{event.start_date}</div>
                             <div className="location">{event.location}</div>
                             <br />
