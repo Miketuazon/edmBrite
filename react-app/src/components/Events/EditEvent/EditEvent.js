@@ -113,7 +113,8 @@ const EditEvent = () => {
         history.push(`/events/${eventId}`)
     }
     console.log("errors => ", errors)
-
+    if (!currentUser || currentUser.id !== event?.event_organizer_id) return <h1 className="unauthorized" style={{color: "red"}}>UNAUTHORIZED. You are either not signed in OR not the owner of this event!</h1>
+    // if (event?.owner.id !== currentUser.id) return <>UNAUTHORIZED! You are NOT the owner of this spot!</>
     // if (!events.length) return <>Loading.....</>
     return (
         <div className="create-event-page">
