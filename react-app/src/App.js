@@ -9,6 +9,8 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import EventsPage from "./components/Events/EventsPage";
 import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
 import OneEvent from "./components/Events/OneEvent/OneEvent";
+import OwnedEventsPage from "./components/Events/OwnedEvents/OwnedEvents";
+import EditEvent from "./components/Events/EditEvent/EditEvent";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,7 +33,13 @@ function App() {
           <Route exact path="/events/new" >
             <CreateEvent />
           </Route>
-          <Route path="/events/:eventId" >
+          <Route exact path="/events/current" >
+            <OwnedEventsPage />
+          </Route>
+          <Route path="/events/:eventId/edit" >
+            <EditEvent />
+          </Route>
+          <Route exact path="/events/:eventId" >
             <OneEvent />
           </Route>
           <Route path="/login" >

@@ -45,7 +45,7 @@ const EventsPage = () => {
                             <Link to={`events/${event.id}`}>
                             <div className="event-id-and-name">{event.id} | {event.event_name}</div>
                             </Link>
-                            <div className="date">{event.start_date}</div>
+                            <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                             <div className="location">{event.location}</div>
                             <br />
                         </li>
@@ -57,7 +57,7 @@ const EventsPage = () => {
                     apiEvents.filter(event => event.name)?.map((event, index) => (
                         <li key={index} className="edmtrain-event">
                             <a className="event-id-and-name" target="_blank" href={`${event.link}`}>{event.id} | {event.name}</a>
-                            <div className="date">{event.date}</div>
+                            <div className="date">{new Date(event.date).toLocaleDateString()}</div>
                             <div className="location">{event.venue.location}</div>
                             <br />
                         </li>

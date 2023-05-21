@@ -3,6 +3,7 @@
 const GET_EVENTS = 'events/getEvents'
 const CREATE_EVENT = 'events/createEvent'
 const GET_ONE_EVENT = 'events/getOneEvent'
+const EDIT_ONE_EVENT = 'events/editEvent'
 // Store - action creators | events
 const getEventsAction = (events) => {
     return {
@@ -22,6 +23,14 @@ const getOneEventAction = (event) => {
     console.log("HIT THE getOneEventAction ==========>")
     return {
         type: GET_ONE_EVENT,
+        event
+    }
+}
+
+const editOneEventAction = (event) => {
+    console.log("HIT THE editOneEventAction ==========>")
+    return {
+        type: EDIT_ONE_EVENT,
         event
     }
 }
@@ -62,6 +71,23 @@ export const getOneEventThunk = (eventId) => async (dispatch) => {
     }
 }
 
+// Thunk 4: Edit one event
+export const editOneEventThunk = (event, eventId) => async (dispatch) => {
+    console.log("HIT THE editOneEventThunk ==========>")
+    console.log("eventId", eventId)
+    console.log("event", event)
+    const res = await fetch(`/api/events/${eventId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(event)
+    })
+    if (res.ok) {
+    console.log("HIT THE editOneEventThunk | RESPONSE IS OK==========>")
+        const editedEvent = await res.json()
+        dispatch(editOneEventAction(editedEvent))
+        return res
+    }
+}
 
 export default function eventsReducer(state = {}, action) {
     let newState;
@@ -79,6 +105,11 @@ export default function eventsReducer(state = {}, action) {
             console.log("HIT THE REDUCER GET_ONE_EVENT ==========>")
             newState = {...state}
             newState.singleEvent = {...action.event}
+            return newState
+        case EDIT_ONE_EVENT:
+            console.log("HIT THE REDUCER EDIT_ONE_EVENT ==========>")
+            newState = {...state}
+            newState[action.event.event.id] = action.event
             return newState
         default:
             return state

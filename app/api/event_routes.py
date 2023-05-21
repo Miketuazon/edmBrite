@@ -97,7 +97,8 @@ def create_an_event():
             event_state=form.data['event_state'],
             event_zip_code=form.data['event_zip_code'],
             event_organizer_id=current_user_dict['id'],
-            event_genre_id=form.data['event_genre_id']
+            event_genre_id=form.data['event_genre_id'],
+            event_dj=form.data['event_dj'],
         )
         db.session.add(new_event)
         db.session.commit()
@@ -105,7 +106,7 @@ def create_an_event():
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
-@event_routes.route('/<int:event_id>', methods=['PUT'])
+@event_routes.route('/<int:event_id>', methods=['GET','PUT'])
 @login_required
 def update_event(event_id):
     """
@@ -127,11 +128,16 @@ def update_event(event_id):
         return {'error': 'You are not the owner of this event. You cannot update it.'}, 403
 
     event.event_name = form.data['event_name']
+    event.event_dj = form.data['event_dj']
     event.event_summary = form.data['event_summary']
     event.event_description = form.data['event_description']
     event.event_start_date = form.data['event_start_date']
     event.event_end_date = form.data['event_end_date']
-    event.event_location = form.data['event_location']
+    event.event_venue = form.data['event_venue']
+    event.event_street_address = form.data['event_street_address']
+    event.event_city = form.data['event_city']
+    event.event_state = form.data['event_state']
+    event.event_zip_code = form.data['event_zip_code']
     event.event_genre_id = form.data['event_genre_id']
     db.session.commit()
     return {'message': 'You updated your event!', 'event': event.to_dict()}
