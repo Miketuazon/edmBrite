@@ -6,6 +6,7 @@ from datetime import *
 
 class EventForm(FlaskForm):
     event_name = StringField('event_name')
+    event_dj = StringField('event_dj', validators=[DataRequired()])
     event_summary = StringField('event_summary', validators=[Length(max=140, min=3, message="Summary must be between 3 and 140 characters")])
     event_description = TextAreaField('event_description', validators=[Length(min=3, message="Event description must be at least 3 characters")])
     event_start_date = DateField('event_start_date', format='%m/%d/%Y', validators=[DataRequired(message="Please provide MM/DD/YYYY format")])
