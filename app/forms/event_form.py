@@ -11,8 +11,8 @@ class EventForm(FlaskForm):
     event_preview_image = StringField('event_preview_image', validators=[DataRequired()])
     event_description_image = StringField('event_description_image', validators=[DataRequired()])
     event_description = TextAreaField('event_description', validators=[Length(min=3, message="Event description must be at least 3 characters")])
-    event_start_date = DateField('event_start_date', format='%m/%d/%Y %I:%M %p', validators=[DataRequired(message="Please provide MM/DD/YYYY HH:MM AM/PM format")])
-    event_end_date = DateField('event_start_date', format='%m/%d/%Y %I:%M %p', default=event_start_date, validators=[DataRequired(message="Please provide MM/DD/YYYY HH:MM AM/PM format")])
+    event_start_date = StringField('event_start_date')
+    event_end_date = StringField('event_start_date', default=event_start_date)
     # event_location = StringField('event_description', validators=[Length(min=3, max=100, message="Location must be between 3 and 100 characters")])
     event_venue = StringField('event_venue', validators=[DataRequired()])
     event_street_address = StringField('event_street_address', validators=[DataRequired()])
@@ -26,6 +26,6 @@ class EventForm(FlaskForm):
         # breakpoint()
         self.event_genre_id.choices = [genre.id for genre in Genre.query.all()]
 
-    def validate_event_end_date(self, event_end_date):
-        if event_end_date.data < self.event_start_date.data:
-            raise ValidationError('Event end date cannot be earlier than the start date.')
+    # def validate_event_end_date(self, event_end_date):
+    #     if event_end_date.data < self.event_start_date.data:
+    #         raise ValidationError('Event end date cannot be earlier than the start date.')
