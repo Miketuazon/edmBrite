@@ -115,3 +115,26 @@ def update_ticket_price_or_quantity(ticket_id, event_id):
 
     db.session.commit()
     return {'message': 'Successfully updated tickets for event', 'ticket': ticket.to_dict()}
+
+@event_routes.route("/<int:event_id>/tickets/<int:ticket_id>/delete", methods=['DELETE'])
+@login_required
+def delete_ticket(ticket_id, event_id):
+    """
+    Delete an event based on the event ID provided in the request
+    """
+
+    if not ticket_id:
+        return {'error': 'Ticket ID is required for updating a ticket!'}, 400
+
+    ticket = Ticket.query.get(ticket_id)
+    if not ticket:
+        return {'error': 'Ticket not found!'}, 404
+
+    current_user_dict = current_user.to_dict()
+    if current_user_dict['id'] != ticket.user_id_ticket_creator:
+        return {'error': 'You are not the creator of this ticket. You cannot update it.'}, 403
+
+    db.session.delete(ticket)
+    db.session.commit()
+
+    return {'message': 'Ticket deleted successfully'}
