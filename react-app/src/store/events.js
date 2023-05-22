@@ -39,7 +39,8 @@ const editOneEventAction = (event) => {
 const deleteEventAction = (event) => {
     console.log("HIT THE deleteEventAction ==========>")
     return {
-        type: DELETE_ONE_EVENT
+        type: DELETE_ONE_EVENT,
+        event
     }
 }
 
@@ -99,7 +100,6 @@ export const editOneEventThunk = (event, eventId) => async (dispatch) => {
 
 // Thunk 5: Delete one event
 export const deleteEventThunk = (eventId) => async (dispatch) => {
-    debugger
     console.log("HIT THE deleteEventThunk ==========>")
     const res = await fetch(`/api/events/${eventId}`, {
         method: 'DELETE'
@@ -134,8 +134,7 @@ export default function eventsReducer(state = {}, action) {
         case DELETE_ONE_EVENT:
             console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")
             newState = {...state}
-            debugger
-            delete newState[action.event.event.id]
+            delete newState[action.event]
             return newState
         default:
             return state

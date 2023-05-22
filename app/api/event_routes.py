@@ -89,6 +89,8 @@ def create_an_event():
             event_name=form.data['event_name'],
             event_summary=form.data['event_summary'],
             event_description=form.data['event_description'],
+            event_preview_image=form.data['event_preview_image'],
+            event_description_image=form.data['event_description_image'],
             event_start_date=form.data['event_start_date'],
             event_end_date=form.data['event_end_date'],
             event_venue=form.data['event_venue'],

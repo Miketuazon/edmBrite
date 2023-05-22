@@ -88,37 +88,44 @@ const OneEvent = () => {
     return (
         <div className="event-details">
             <div className="left-side">
-                <div className="image-on-center-top">Image here shortly..</div>
+                <img className="preview-image" src={event.event_preview_image} alt="preview image"></img>
                 <div className="title-to-location-container">
-                    <div className="month-day">{startMonth} {startDay}</div>
+                    <h3 className="month-day">{startMonth} {startDay}</h3>
                     <h1 className="title">{event.event_name}</h1>
                     <div className="summary">{event.event_summary}</div>
-                    <div className="host">By:
+                    <div className="host">By: &nbsp;
                         {event.owner.username}
                     </div>
                 </div>
                 <div className="when-and-where-container">
-                    <h2>When and where</h2>
-                    <div className="date-and-time">
-                        <h3>Date and time</h3>
-                        {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
-                    </div>
-                    <div className="location">
-                        <h3>Location</h3>
-                        {event.event_venue}
+                    <h2 className="when-where">When and where</h2>
+                    <div className="date-location">
+                        <div className="date-and-time">
+                            <h3>Date and time</h3>
+                            {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
+                        </div>
+                        <div className="location">
+                            <h3>Location</h3>
+                            {event.event_venue} {event.event_street_address}
+                        </div>
                     </div>
                 </div>
                 <div className="about-container">
                     <div className="about-this-event">
-                        <div className="time">{`${tbaOrNot}`} </div>
-                        <div className="type-ticket"> Mobile eTicket</div>
+                        <h3>About this event</h3>
+                        <div className="time-ticket">
+                            <div className="time">{`${tbaOrNot}`} </div>
+                            <div className="type-ticket"> Mobile eTicket</div>
+                        </div>
                     </div>
-                    <div className="venue-photo"></div>
                     <div className="description">
-                        <div className="artist-venue">{event.event_name} at {event.event_venue}</div>
-                        <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
-                        <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
-                        <div className="description">{event.event_description}</div>
+                        <img className="description-image" src={event.event_description_image} alt="description image"></img>
+                        <div className="description-info">
+                            <div className="artist-venue">{event.event_name} at {event.event_venue}</div>
+                            <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
+                            <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
+                            <div className="description">{event.event_description}</div>
+                        </div>
                     </div>
                 </div>
             </div>

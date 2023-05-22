@@ -1,7 +1,7 @@
 import { useDispatch} from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../../context/Modal";
-// import './DeleteEventModal.css'
+import './DeleteEventModal.css'
 import { deleteEventThunk } from "../../../store/events";
 
 function DeleteEventModal({ eventId }) {

@@ -9,6 +9,14 @@
 .left-intro {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.question {
+    background-color: wheat;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px solid black;
 }
 
 .intro-image {

@@ -35,41 +35,43 @@ const EventsPage = () => {
     if (!events.length) return <>Loading.....</>
     return (
         <div className="events-page">
-            <ul className="edmtrain-events-list">
+            <ul className="events-list">
                 <header className="events-data-header">
                 </header>
                 <h2>User created Events</h2>
-                {
-                    events?.filter(event => event.event_name)?.map((event, index) => (
-                        <li key={index} className="user-event">
-                            <Link to={`events/${event.id}`}>
-                            <div className="event-id-and-name">{event.event_name}</div>
-                            </Link>
-                            <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
-                            <div className="location">{event.location}</div>
-                            <br />
-                        </li>
-                    ))
-                }
+                <ul className="user-events-list">
+                    {
+                        events?.filter(event => event.event_name)?.map((event, index) => (
+                            <li key={index} className="user-event">
+                                <Link to={`events/${event.id}`}>
+                                <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
+                                    <div className="event-id-and-name">{event.event_name}</div>
+                                <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
+                                <div className="location">{event.event_city}, {event.event_state}</div>
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
                 <h2>EDMTRAIN Events</h2>
                 <h3 className="location-changer">Located: {state}</h3>
                 <ul className="edmtrain-list">
-                {   edmtrainEvents.success === true ?
-                    apiEvents.filter(event => event.name)?.map((event, index) => (
-                        <li key={index} className="edmtrain-event">
-                            <a className="event-id-and-name" target="_blank" href={`${event.link}`}>
-                                <img src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" style={{maxWidth: 100, maxWidth: 100}}></img>
-                                <br></br>
-                                {event.name}
+                    {edmtrainEvents.success === true ?
+                        apiEvents.filter(event => event.name)?.map((event, index) => (
+                            <li key={index} className="edmtrain-event">
+                                <a className="event-id-and-name" target="_blank" href={`${event.link}`}>
+                                    <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg"></img>
+                                    <br></br>
+                                    {event.name}
+                                <div className="date">{new Date(event.date).toLocaleDateString()}</div>
+                                <div className="location">{event.venue.location}</div>
                                 </a>
-                            <br></br>
-                            <div className="date">{new Date(event.date).toLocaleDateString()}</div>
-                            <div className="location">{event.venue.location}</div>
-                            <br />
-                        </li>
-                    ))
-                    : null
-                }
+                                <br></br>
+                                <br />
+                            </li>
+                        ))
+                        : null
+                    }
                 </ul>
 
             </ul>

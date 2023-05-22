@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import OpenModalButton from "../../OpenModalButton";
 import DeleteEventModal from "../DeleteEventModal/DeleteEventModal";
 import OpenModalDelete from "./OpenModalDelete";
-
+import "./OwnedEvents.css"
 const OwnedEventsPage = () => {
     const dispatch = useDispatch()
     const eventsObj = useSelector((state) => state.events)
@@ -26,9 +26,10 @@ const OwnedEventsPage = () => {
                 <h2>User created Events</h2>
                 {
                     events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
-                        <li key={index} className="user-event">
+                        <li key={index} className="owned-event">
                             {/* <Link to={`events/${event.id}`}> */}
-                                <div className="event-id-and-name">{event.id} | {event.event_name}</div>
+                            <img className="preview-image-events" src={event.event_preview_image}></img>
+                            <div className="event-id-and-name">{event.id} | {event.event_name}</div>
                             {/* </Link> */}
                             <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                             <div className="location">{event.location}</div>
