@@ -5,9 +5,13 @@ import './EditEvent.css'
 import { editOneEventThunk, getOneEventThunk } from "../../../store/events";
 import { useHistory, useParams } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
+import DateTimePicker from "react-datetime-picker"
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
 const EditEvent = () => {
-    // Reminder: Need to learn AWS to serve images
+    // TODO: Need to learn AWS to serve images
     console.log("INSIDE EDIT EVENT COMPONENT")
     const dispatch = useDispatch()
     const { eventId } = useParams()
@@ -51,8 +55,8 @@ const EditEvent = () => {
             setEvent_preview_image(event.event_preview_image)
             setEvent_description_image(event.event_description_image)
             setEvent_description(event.event_description)
-            setEvent_start_date((event.event_start_date))
-            setEvent_end_date(event.event_end_date)
+            setEvent_start_date(new Date(event.event_start_date))
+            setEvent_end_date(new Date(event.event_end_date))
             setEvent_venue(event.event_venue)
             setEvent_street_address(event.event_street_address)
             setEvent_city(event.event_city)
@@ -68,8 +72,8 @@ const EditEvent = () => {
     const updateEvent_preview_image = (e) => setEvent_preview_image(e.target.value)
     const updateEvent_description_image = (e) => setEvent_description_image(e.target.value)
     const updateEvent_description = (e) => setEvent_description(e.target.value)
-    const updateEvent_start_date = (e) => setEvent_start_date(e.target.value)
-    const updateEvent_end_date = (e) => setEvent_end_date(e.target.value)
+    const updateEvent_start_date = (date) => setEvent_start_date(date)
+    const updateEvent_end_date = (date) => setEvent_end_date(date)
     const updateEvent_genre_id = (e) => setEvent_genre_id(e.target.value)
     const updateEvent_venue = (e) => setEvent_venue(e.target.value)
     const updateEvent_street_address = (e) => setEvent_street_address(e.target.value)
@@ -86,8 +90,8 @@ const EditEvent = () => {
         if (event_description.length < 3) e.event_description = ('Event description needs to be at least 3 characters.')
         if (!event_preview_image.length) e.event_preview_image = ('Event preview image is required')
         if (!event_description_image.length) e.event_description_image = ('Event description image is required')
-        // if (!event_start_date.length) e.event_start_date = ('Event start date is required')
-        // if (!event_end_date.length) e.event_end_date = ('Event end date is required')
+        if (!event_start_date) e.event_start_date = ('Event start date is required')
+        if (!event_end_date) e.event_end_date = ('Event end date is required')
         if (!event_genre_id) e.event_genre_id = ('Event Genre is required')
         if (!event_venue.length) e.event_venue = ('Event Venue is required')
         if (!event_street_address.length) e.event_street_address = ('Event Street Address is required')
@@ -112,17 +116,22 @@ const EditEvent = () => {
         if (Object.values(errors).length) {
             return
         }
-
+        setEvent_end_date(event_end_date.toISOString())
+        setEvent_start_date(event_start_date.toISOString())
         const updatedEventDetails = {
             event_name, event_dj, event_summary, event_preview_image,
             event_description_image, event_description, event_start_date,
             event_end_date, event_venue, event_street_address, event_city,
             event_state, event_zip_code, event_genre_id
         }
+        console.log("updatedEventDetails => ", updatedEventDetails)
         dispatch(editOneEventThunk(updatedEventDetails, eventId))
         history.push(`/events/${eventId}`)
     }
     console.log("errors => ", errors)
+    // console.log("event_start_date =>", event_start_date?.toISOString())
+    // console.log("event_end_date => ", event_end_date?.toISOString())
+    console.log()
     if (!event) return <>Loading....</>
     if (!currentUser || currentUser.id !== event?.owner.id) return <h1 className="unauthorized" style={{ color: "red" }}>UNAUTHORIZED. You are either not signed in OR not the owner of this event!</h1>
     // if (event?.owner.id !== currentUser.id) return <>UNAUTHORIZED! You are NOT the owner of this spot!</>
@@ -209,17 +218,19 @@ const EditEvent = () => {
                             <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
                             <label>
                                 Event Start Date
-                                <input
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
-                                />
+                                /> */}
+                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date}/>
                             </label>
                             <label>
                                 Event End Date
-                                <input
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
-                                />
+                                /> */}
+                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date}/>
                             </label>
                             <div className="event-details">
                                 <h2>Event details</h2>

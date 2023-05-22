@@ -68,7 +68,7 @@ const OneEvent = () => {
 
     // Getting hours, mins, day and time of end
     const endDateMonth = months[endDate.getMonth()]
-    const endDay = days[endDate.getDate()]
+    const endDay = endDate.getDate()
     const endDayOfWeek = endDate.getDay()
     const endYear = endDate.getFullYear()
     let endMinutes = endDate.getMinutes()

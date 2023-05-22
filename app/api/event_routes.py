@@ -128,7 +128,6 @@ def update_event(event_id):
 
     if current_user_dict['id'] != event.event_organizer_id:
         return {'error': 'You are not the owner of this event. You cannot update it.'}, 403
-
     event.event_name = form.data['event_name']
     event.event_dj = form.data['event_dj']
     event.event_summary = form.data['event_summary']

@@ -5,6 +5,8 @@ import './CreateEvent.css'
 import { createEventThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
+import moment from "moment";
+import DateTimePicker from "react-datetime-picker";
 const CreateEvent = () => {
     // Reminder: Need to learn AWS to serve images
     const dispatch = useDispatch()
@@ -22,8 +24,8 @@ const CreateEvent = () => {
     const [event_preview_image, setEvent_preview_image] = useState("")
     const [event_description_image, setEvent_description_image] = useState("")
     const [event_description, setEvent_description] = useState("")
-    const [event_start_date, setEvent_start_date] = useState("")
-    const [event_end_date, setEvent_end_date] = useState("")
+    const [event_start_date, setEvent_start_date] = useState(new Date())
+    const [event_end_date, setEvent_end_date] = useState(new Date())
     const [event_venue, setEvent_venue] = useState("")
     const [event_street_address, setEvent_street_address] = useState("")
     const [event_city, setEvent_city] = useState("")
@@ -40,8 +42,8 @@ const CreateEvent = () => {
     const updateEvent_preview_image = (e) => setEvent_preview_image(e.target.value)
     const updateEvent_description_image = (e) => setEvent_description_image(e.target.value)
     const updateEvent_description = (e) => setEvent_description(e.target.value)
-    const updateEvent_start_date = (e) => setEvent_start_date(e.target.value)
-    const updateEvent_end_date = (e) => setEvent_end_date(e.target.value)
+    const updateEvent_start_date = (date) => setEvent_start_date(date)
+    const updateEvent_end_date = (date) => setEvent_end_date(date)
     const updateEvent_genre_id = (e) => setEvent_genre_id(e.target.value)
     const updateEvent_venue = (e) => setEvent_venue(e.target.value)
     const updateEvent_street_address = (e) => setEvent_street_address(e.target.value)
@@ -58,8 +60,6 @@ const CreateEvent = () => {
         if (event_description.length < 3) e.event_description = ('Event description needs to be at least 3 characters.')
         if (!event_preview_image.length) e.event_preview_image = ('Event preview image is required')
         if (!event_description_image.length) e.event_description_image = ('Event description image is required')
-        if (!event_start_date.length) e.event_start_date = ('Event start date is required')
-        if (!event_end_date.length) e.event_end_date = ('Event end date is required')
         if (!event_genre_id) e.event_genre_id = ('Event Genre is required')
         if (!event_venue.length) e.event_venue = ('Event Venue is required')
         if (!event_street_address.length) e.event_street_address = ('Event Street Address is required')
@@ -192,17 +192,19 @@ const CreateEvent = () => {
                             <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
                             <label>
                                 Event Start Date
-                                <input
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
-                                />
+                                /> */}
+                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date}/>
                             </label>
                             <label>
                                 Event End Date
-                                <input
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
-                                />
+                                /> */}
+                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date}/>
                             </label>
                             <div className="event-details">
                                 <h2>Event details</h2>

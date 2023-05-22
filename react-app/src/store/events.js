@@ -85,6 +85,7 @@ export const editOneEventThunk = (event, eventId) => async (dispatch) => {
     console.log("HIT THE editOneEventThunk ==========>")
     console.log("eventId", eventId)
     console.log("event", event)
+    console.log("JSON.stringify", JSON.stringify(event))
     const res = await fetch(`/api/events/${eventId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
