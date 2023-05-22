@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: b7dec21c5006
+Revision ID: 8ceba11ea21c
 Revises:
-Create Date: 2023-05-21 20:04:17.903795
+Create Date: 2023-05-22 01:36:22.711447
 
 """
 from alembic import op
@@ -14,7 +14,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
-revision = 'b7dec21c5006'
+revision = '8ceba11ea21c'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -83,7 +83,7 @@ def upgrade():
     op.create_table('tickets',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('ticket_type', sa.String(), nullable=False),
-    sa.Column('ticket_price', sa.Float(), nullable=False),
+    sa.Column('ticket_price', sa.Integer(), nullable=False),
     sa.Column('ticket_quantity', sa.Integer(), nullable=False),
     sa.Column('event_id', sa.Integer(), nullable=False),
     sa.Column('user_id_ticket_creator', sa.Integer(), nullable=False),
@@ -94,6 +94,7 @@ def upgrade():
 
     if environment == "production":
         op.execute(f"ALTER TABLE tickets SET SCHEMA {SCHEMA};")
+
     # ### end Alembic commands ###
 
 
