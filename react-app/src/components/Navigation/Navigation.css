@@ -38,7 +38,7 @@
   margin-right: 15px;
 }
 
-.profile-dropdown>*:hover {
+.profile-dropdown>*:hover, .right-side > li:hover {
   background-color: bisque;
   border: solid 2px #1A4645;
 }
