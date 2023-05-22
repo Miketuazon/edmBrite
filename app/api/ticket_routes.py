@@ -29,6 +29,7 @@ def get_tickets_for_event(event_id):
     if not tickets_count:
         return {'message': 'Tickets for this event coming soon!'}
     # Get type, price and quantity to show
+    # make a tickets object to store tickets
     tickets = {}
     total_tickets = 0
     # breakpoint() # each ticket in Ticket table
@@ -76,7 +77,41 @@ def create_tickets_for_event(event_id):
             user_id_ticket_creator=current_user_dict['id'],
             event_id=event_id,
         )
+        if Ticket.query.filter_by(ticket_type=form.data['ticket_type'], event_id=event_id).first():
+            return {'error': 'Ticket type already exists for this event'}, 400
+
         db.session.add(new_ticket)
         db.session.commit()
         return {'message': 'Successfully created tickets for event', 'ticket': new_ticket.to_dict()}
+
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+@event_routes.route("/<int:event_id>/tickets/<int:ticket_id>/update", methods=["PUT"])
+@login_required
+def update_ticket_price_or_quantity(ticket_id, event_id):
+    """
+    Query to update ticket price or quantity
+    """
+
+    form = TicketForm()
+    current_user_dict = current_user.to_dict()
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    if not ticket_id:
+        return {'error': 'Ticket ID is required for updating a ticket!'}, 400
+
+    ticket = Ticket.query.get(ticket_id)
+    if not ticket:
+        return {'error': 'Ticket not found!'}, 404
+
+    if current_user_dict['id'] != ticket.user_id_ticket_creator:
+        return {'error': 'You are not the creator of this ticket. You cannot update it.'}, 403
+
+    ticket.ticket_type=form.data['ticket_type']
+    ticket.ticket_price=form.data['ticket_price']
+    ticket.ticket_quantity=form.data['ticket_quantity']
+    ticket.user_id_ticket_creator=current_user_dict['id']
+    ticket.event_id=event_id
+
+    db.session.commit()
+    return {'message': 'Successfully updated tickets for event', 'ticket': ticket.to_dict()}

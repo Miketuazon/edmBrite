@@ -1,5 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
-
+from sqlalchemy import UniqueConstraint
 
 class Ticket(db.Model):
     __tablename__ = 'tickets'
@@ -10,7 +10,7 @@ class Ticket(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     ticket_type = db.Column(db.String, nullable=False)
-    ticket_price = db.Column(db.Float, nullable=False)
+    ticket_price = db.Column(db.Integer, nullable=False)
     ticket_quantity = db.Column(db.Integer, nullable=False)
 
     # Foreign keys

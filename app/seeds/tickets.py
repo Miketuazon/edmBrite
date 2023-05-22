@@ -7,7 +7,7 @@ def seed_tickets():
     Ga1 = Ticket(
         ticket_type="General",
         ticket_price=50,
-        ticket_quantity=1,
+        ticket_quantity=30,
         event_id=2,
         user_id_ticket_creator=1,
     )
@@ -15,31 +15,23 @@ def seed_tickets():
     Ga2 = Ticket(
         ticket_type="General",
         ticket_price=50,
-        ticket_quantity=1,
+        ticket_quantity=20,
         event_id=3,
         user_id_ticket_creator=2,
     )
 
     Ga3 = Ticket(
-        ticket_type="General",
+        ticket_type="General1",
         ticket_price=50,
-        ticket_quantity=1,
+        ticket_quantity=50,
         event_id=1,
         user_id_ticket_creator=3,
     )
 
-    Ga4 = Ticket(
-        ticket_type="General",
-        ticket_price=50,
-        ticket_quantity=1,
-        event_id=3,
-        user_id_ticket_creator=1,
-    )
 
     db.session.add(Ga1)
     db.session.add(Ga2)
     db.session.add(Ga3)
-    db.session.add(Ga4)
     db.session.commit()
 
 
