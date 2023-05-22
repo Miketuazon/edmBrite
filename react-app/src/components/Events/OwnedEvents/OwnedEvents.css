@@ -1,0 +1,55 @@
+.edmtrain-events-list,
+.user-events-list {
+    list-style: none;
+}
+
+.edmtrain-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}
+
+.preview-image-events {
+    max-width: 200px;
+    max-height: 100%;
+    display: block;
+}
+
+
+.preview-image-events-edmtrain {
+    max-width: 20%;
+    width: 20%;
+    max-height: 75%;
+    display: block;
+}
+
+#update-button {
+    padding-right: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #94AF9F;
+    color: black;
+    font-weight: bold;
+}
+
+.delete-button {
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: lightcoral;
+    padding-left: 5px;
+    border-left: 5px;
+    margin-left: 5px;
+}
+
+.user-events-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}

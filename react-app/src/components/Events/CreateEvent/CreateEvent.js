@@ -19,6 +19,8 @@ const CreateEvent = () => {
     const [event_name, setEvent_name] = useState("")
     const [event_dj, setEvent_dj] = useState("")
     const [event_summary, setEvent_summary] = useState("")
+    const [event_preview_image, setEvent_preview_image] = useState("")
+    const [event_description_image, setEvent_description_image] = useState("")
     const [event_description, setEvent_description] = useState("")
     const [event_start_date, setEvent_start_date] = useState("")
     const [event_end_date, setEvent_end_date] = useState("")
@@ -35,6 +37,8 @@ const CreateEvent = () => {
     const updateEvent_name = (e) => setEvent_name(e.target.value)
     const updateEvent_dj = (e) => setEvent_dj(e.target.value)
     const updateEvent_summary = (e) => setEvent_summary(e.target.value)
+    const updateEvent_preview_image = (e) => setEvent_preview_image(e.target.value)
+    const updateEvent_description_image = (e) => setEvent_description_image(e.target.value)
     const updateEvent_description = (e) => setEvent_description(e.target.value)
     const updateEvent_start_date = (e) => setEvent_start_date(e.target.value)
     const updateEvent_end_date = (e) => setEvent_end_date(e.target.value)
@@ -52,6 +56,8 @@ const CreateEvent = () => {
         if (event_name.length < 3 || event_name.length > 50) e.event_name = ('Event name needs at least 3 characters and max of 50')
         if (event_summary.length < 3 || event_summary.length > 140) e.event_summary = ('Event summary needs at least 3 characters and max of 140')
         if (event_description.length < 3) e.event_description = ('Event description needs to be at least 3 characters.')
+        if (!event_preview_image.length) e.event_preview_image = ('Event preview image is required')
+        if (!event_description_image.length) e.event_description_image = ('Event description image is required')
         if (!event_start_date.length) e.event_start_date = ('Event start date is required')
         if (!event_end_date.length) e.event_end_date = ('Event end date is required')
         if (!event_genre_id) e.event_genre_id = ('Event Genre is required')
@@ -68,7 +74,7 @@ const CreateEvent = () => {
         if (today > end) e.event_end_date = ('Event end date is before today.')
         if (today > start) e.event_start_date = ('Event start date is before today.')
 
-    }, [event_name, event_dj, event_summary, event_description, event_start_date, event_end_date, event_genre_id, event_venue, event_street_address, event_city, event_state, event_zip_code,])
+    }, [event_name, event_dj, event_preview_image, event_description_image, event_summary, event_description, event_start_date, event_end_date, event_genre_id, event_venue, event_street_address, event_city, event_state, event_zip_code,])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -92,7 +98,8 @@ const CreateEvent = () => {
         // if (validationErrors.length) return setErrors(validationErrors)
 
         const createdEventDetails = {
-            event_name, event_dj, event_summary, event_description, event_start_date,
+            event_name, event_dj, event_summary, event_preview_image,
+            event_description_image, event_description, event_start_date,
             event_end_date, event_venue, event_street_address, event_city,
             event_state, event_zip_code, event_genre_id
         }
@@ -122,6 +129,14 @@ const CreateEvent = () => {
                             <input
                                 type='text' placeholder='Be clear and descriptive' min='1'
                                 required value={event_name} onChange={updateEvent_name}
+                            />
+                        </label>
+                        <div className="header">Input an amazing image to use as your preview!</div>
+                        <label>
+                            Event Preview Image
+                            <input
+                                type='text' placeholder='.jpeg, .jpg, .png., .img' min='1'
+                                required value={event_preview_image} onChange={updateEvent_preview_image}
                             />
                         </label>
                         <div className="organizer">Organizer: {currentUser?.username}</div>
@@ -174,22 +189,31 @@ const CreateEvent = () => {
                         </label>
                         <div className="date-time">
                             <h2>Date and Time</h2>
+                            <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
                             <label>
                                 Event Start Date
                                 <input
-                                    type='text' placeholder='mm/dd/yyyy' min='1'
+                                    type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
                                 />
                             </label>
                             <label>
                                 Event End Date
                                 <input
-                                    type='text' placeholder='mm/dd/yyyy' min='1'
+                                    type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
                                 />
                             </label>
-                            <div className="location-date-time">
+                            <div className="event-details">
                                 <h2>Event details</h2>
+                                <div className="header">Input an amazing image to go along with your description!</div>
+                                <label>
+                                    Event Preview Image
+                                    <input
+                                        type='text' placeholder='.jpg, .png., .img' min='1'
+                                        required value={event_description_image} onChange={updateEvent_description_image}
+                                    />
+                                </label>
                                 <label>
                                     {hasSubmitted && errors.event_summary && (
                                         <div className='error'>

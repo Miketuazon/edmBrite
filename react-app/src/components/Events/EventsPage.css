@@ -1,0 +1,48 @@
+.edmtrain-events-list, .user-events-list {
+    list-style: none;
+}
+
+.edmtrain-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}
+
+.preview-image-events {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.edmtrain-event, .user-event {
+    /* background: white; */
+    border-radius: 3px #266867 solid;
+    margin: 4px;
+    flex: 0 1 calc(24% - 8px); /* <-- adjusting for margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.preview-image-events-edmtrain {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.edmtrain-event:hover, .user-event:hover {
+    background-color: #F58800;
+    border-radius: 20px #266867 solid;
+}
+
+.user-events-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}

@@ -4,6 +4,7 @@ const GET_EVENTS = 'events/getEvents'
 const CREATE_EVENT = 'events/createEvent'
 const GET_ONE_EVENT = 'events/getOneEvent'
 const EDIT_ONE_EVENT = 'events/editEvent'
+const DELETE_ONE_EVENT = 'events/deleteEvent'
 // Store - action creators | events
 const getEventsAction = (events) => {
     return {
@@ -31,6 +32,14 @@ const editOneEventAction = (event) => {
     console.log("HIT THE editOneEventAction ==========>")
     return {
         type: EDIT_ONE_EVENT,
+        event
+    }
+}
+
+const deleteEventAction = (event) => {
+    console.log("HIT THE deleteEventAction ==========>")
+    return {
+        type: DELETE_ONE_EVENT,
         event
     }
 }
@@ -89,6 +98,17 @@ export const editOneEventThunk = (event, eventId) => async (dispatch) => {
     }
 }
 
+// Thunk 5: Delete one event
+export const deleteEventThunk = (eventId) => async (dispatch) => {
+    console.log("HIT THE deleteEventThunk ==========>")
+    const res = await fetch(`/api/events/${eventId}`, {
+        method: 'DELETE'
+    })
+    if (res.ok) {
+        dispatch(deleteEventAction(eventId))
+    }
+}
+
 export default function eventsReducer(state = {}, action) {
     let newState;
     switch (action.type) {
@@ -110,6 +130,11 @@ export default function eventsReducer(state = {}, action) {
             console.log("HIT THE REDUCER EDIT_ONE_EVENT ==========>")
             newState = {...state}
             newState[action.event.event.id] = action.event
+            return newState
+        case DELETE_ONE_EVENT:
+            console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")
+            newState = {...state}
+            delete newState[action.event]
             return newState
         default:
             return state

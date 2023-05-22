@@ -16,14 +16,19 @@ const LandingPage = () => {
     return (
         <>
             <div className='intro'>
-                <h1>Hi there!</h1>
-                <h2>Welcome to</h2>
-                <img alt='logo' src="https://imgur.com/TbXlJSk.png"></img>
-                <div className="question">Looking for new edm events? Click the button below!</div>
+                <div className="left-intro">
+                    <h1>Hi there!</h1>
+                    <h2>Welcome to</h2>
+                    <img alt='logo' src="https://imgur.com/TbXlJSk.png"></img>
+                    <div className="question">Looking for new edm events? Click the button below!</div>
+                    <button className='check-out-events' onClick={onSubmit}>
+                        Check out events!
+                    </button>
+                </div>
+                <div className="right-intro">
+                    <img src="https://wallpaperset.com/w/full/6/d/e/515404.jpg" alt="intro img" className="intro-image"></img>
+                </div>
             </div>
-            <button className='check-out-events' onClick={onSubmit}>
-                Check out events!
-            </button>
         </>
     )
 }

@@ -11,7 +11,7 @@ function Navigation({ isLoaded }) {
 	return (
 		<ul className='navBar'>
 			<ul className='left-side-nav'>
-				<li className='homebutton'>
+				<li className='homeButton'>
 					<NavLink exact to="/events">
 						<img alt="icon" src={image} style={{ width: '50px', height: '50px' }}></img>
 					</NavLink>
@@ -26,11 +26,11 @@ function Navigation({ isLoaded }) {
 						<NavLink exact to="/events/new"><i class="fa fa-plus">Create an event</i></NavLink>
 					</li>
 					<li className="go-to-likes-button">
-						<NavLink exact to="/">Likes</NavLink>
+						<NavLink exact to="/" style={{"text-decoration": "none"}}>Likes</NavLink>
 					</li>
 					{/* <NavLink className="createEventButton" to="/events/new">Create an event</NavLink> */}
 					<li>
-						<NavLink exact to ="/">Tickets</NavLink>
+						<NavLink exact to ="/" style={{"text-decoration": "none"}}>Tickets</NavLink>
 					</li>
 					<ProfileButton user={sessionUser}></ProfileButton>
 				</ul>

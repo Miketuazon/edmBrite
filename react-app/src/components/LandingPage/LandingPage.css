@@ -1,0 +1,24 @@
+.intro {
+    /* max-width: 1000px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-intro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.question {
+    background-color: wheat;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px solid black;
+}
+
+.intro-image {
+    max-width: 100%;
+}
