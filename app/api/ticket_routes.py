@@ -5,28 +5,53 @@ from app.forms import TicketForm
 from flask_login import current_user, login_required
 from datetime import date
 from app.models import Ticket
+from .event_routes import event_routes
 # import os
 # import requests
 # import random
 
 ticket_routes = Blueprint('tickets', __name__)
 
-@ticket_routes.route('/events/<int:event_id>')
+@event_routes.route('/<int:event_id>/tickets')
 @login_required
 def get_tickets_for_event(event_id):
     """
     Query to get tickets for single event
     """
 
-    current_user = current_user.to_dict()
     event = Event.query.get(event_id)
     if not event:
         return {'error': 'Event not found'}, 404
 
-    return {'message': 'Tickets for this event coming soon!'}
+    tickets_count = sum([ticket.ticket_quantity for ticket in event.tickets_for_event])
+    all_tickets = [ticket for ticket in event.tickets_for_event]
 
+    if not tickets_count:
+        return {'message': 'Tickets for this event coming soon!'}
+    # Get type, price and quantity to show
+    tickets = {}
+    total_tickets = 0
+    # breakpoint() # each ticket in Ticket table
+    for ticket in all_tickets:
+        # breakpoint() # ticket object
+        ticket_type = ticket.ticket_type
+        ticket_price = ticket.ticket_price
+        ticket_quantity = ticket.ticket_quantity
 
-@ticket_routes.route('events/<int:event_id>', methods=['GET','POST'])
+        # breakpoint() # ticket dictionary lookup
+        if ticket_type not in tickets:
+            tickets[ticket_type] = {}
+
+        tickets[ticket_type]['ticket_price'] = ticket_price
+        tickets[ticket_type]['ticket_quantity'] = ticket_quantity
+        total_tickets += ticket_quantity
+
+    return {
+        "tickets": tickets,
+        "total_tickets": total_tickets,
+    }
+
+@event_routes.route('/<int:event_id>/tickets/create', methods=['GET','POST'])
 @login_required
 def create_tickets_for_event(event_id):
     """
