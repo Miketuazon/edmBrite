@@ -113,12 +113,13 @@ const EditEvent = () => {
         history.push(`/events/${eventId}`)
     }
     console.log("errors => ", errors)
-    if (!currentUser || currentUser.id !== event?.event_organizer_id) return <h1 className="unauthorized" style={{color: "red"}}>UNAUTHORIZED. You are either not signed in OR not the owner of this event!</h1>
+    if (!event) return <>Loading....</>
+    if (!currentUser || currentUser.id !== event?.owner.id) return <h1 className="unauthorized" style={{color: "red"}}>UNAUTHORIZED. You are either not signed in OR not the owner of this event!</h1>
     // if (event?.owner.id !== currentUser.id) return <>UNAUTHORIZED! You are NOT the owner of this spot!</>
     // if (!events.length) return <>Loading.....</>
     return (
-        <div className="create-event-page">
-            <h1>Create an event!</h1>
+        <div className="edit-event-page">
+            <h1>Edit an event!</h1>
             <div className="create-form-div">
                 <form className="create-form" onSubmit={handleSubmit}>
                     <div className="Basic-info">

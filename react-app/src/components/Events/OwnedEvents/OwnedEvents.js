@@ -17,7 +17,7 @@ const OwnedEventsPage = () => {
         dispatch(getEventsThunk())
     }, [dispatch])
 
-    if (!events.length) return <>Loading.....</>
+    if (!events.length || !events) return <>Loading.....</>
     return (
         <div className="events-page">
             <ul className="edmtrain-events-list">
@@ -25,7 +25,7 @@ const OwnedEventsPage = () => {
                 </header>
                 <h2>User created Events</h2>
                 {
-                    events?.filter(event => event.owner.id === sessionUser.id)?.map((event, index) => (
+                    events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
                         <li key={index} className="user-event">
                             <Link to={`events/${event.id}`}>
                                 <div className="event-id-and-name">{event.id} | {event.event_name}</div>
