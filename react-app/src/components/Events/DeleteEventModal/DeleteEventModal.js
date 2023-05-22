@@ -1,8 +1,8 @@
 import { useDispatch} from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../../context/Modal";
-// import { deleteSpot } from "../../store/events";
 // import './DeleteEventModal.css'
+import { deleteEventThunk } from "../../../store/events";
 
 function DeleteEventModal({ eventId }) {
     const dispatch = useDispatch()
@@ -11,7 +11,7 @@ function DeleteEventModal({ eventId }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // dispatch(deleteEvent(eventId))
+        dispatch(deleteEventThunk(eventId))
         history.push(`/events/current`)
         closeModal()
     };

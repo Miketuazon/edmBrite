@@ -43,7 +43,7 @@ const EventsPage = () => {
                     events?.filter(event => event.event_name)?.map((event, index) => (
                         <li key={index} className="user-event">
                             <Link to={`events/${event.id}`}>
-                            <div className="event-id-and-name">{event.id} | {event.event_name}</div>
+                            <div className="event-id-and-name">{event.event_name}</div>
                             </Link>
                             <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                             <div className="location">{event.location}</div>
@@ -53,10 +53,16 @@ const EventsPage = () => {
                 }
                 <h2>EDMTRAIN Events</h2>
                 <h3 className="location-changer">Located: {state}</h3>
+                <ul className="edmtrain-list">
                 {   edmtrainEvents.success === true ?
                     apiEvents.filter(event => event.name)?.map((event, index) => (
                         <li key={index} className="edmtrain-event">
-                            <a className="event-id-and-name" target="_blank" href={`${event.link}`}>{event.id} | {event.name}</a>
+                            <a className="event-id-and-name" target="_blank" href={`${event.link}`}>
+                                <img src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" style={{maxWidth: 100, maxWidth: 100}}></img>
+                                <br></br>
+                                {event.name}
+                                </a>
+                            <br></br>
                             <div className="date">{new Date(event.date).toLocaleDateString()}</div>
                             <div className="location">{event.venue.location}</div>
                             <br />
@@ -64,6 +70,7 @@ const EventsPage = () => {
                     ))
                     : null
                 }
+                </ul>
 
             </ul>
         </div>

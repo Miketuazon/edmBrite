@@ -27,9 +27,9 @@ const OwnedEventsPage = () => {
                 {
                     events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
                         <li key={index} className="user-event">
-                            <Link to={`events/${event.id}`}>
+                            {/* <Link to={`events/${event.id}`}> */}
                                 <div className="event-id-and-name">{event.id} | {event.event_name}</div>
-                            </Link>
+                            {/* </Link> */}
                             <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                             <div className="location">{event.location}</div>
                             <div className="update-delete-container">

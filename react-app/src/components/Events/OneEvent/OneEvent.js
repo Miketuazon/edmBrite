@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
-import { useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom";
 import { getOneEventThunk } from "../../../store/events";
 
@@ -9,7 +9,7 @@ const OneEvent = () => {
     console.log("INSIDE ONEEVENT COMPONENT")
     const history = useHistory()
     const dispatch = useDispatch()
-    const {eventId} = useParams();
+    const { eventId } = useParams();
     const event = useSelector((state) => state.events.singleEvent?.event)
     console.log("eventDetails => ", event)
     useEffect(() => {
@@ -87,24 +87,26 @@ const OneEvent = () => {
     tbaOrNot === NaN ? tbaOrNot = 'TBA' : tbaOrNot = tbaOrNot + ' hours'
     return (
         <div className="event-details">
-            Hi!
             <div className="left-side">
-                <div className="image-on-center-top">Image</div>
+                <div className="image-on-center-top">Image here shortly..</div>
                 <div className="title-to-location-container">
                     <div className="month-day">{startMonth} {startDay}</div>
                     <h1 className="title">{event.event_name}</h1>
                     <div className="summary">{event.event_summary}</div>
+                    <div className="host">By:
+                        {event.owner.username}
+                    </div>
                 </div>
                 <div className="when-and-where-container">
                     <h2>When and where</h2>
                     <div className="date-and-time">
                         <h3>Date and time</h3>
                         {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
-                        </div>
+                    </div>
                     <div className="location">
                         <h3>Location</h3>
                         {event.event_venue}
-                        </div>
+                    </div>
                 </div>
                 <div className="about-container">
                     <div className="about-this-event">

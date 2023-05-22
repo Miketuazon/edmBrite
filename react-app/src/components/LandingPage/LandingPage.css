@@ -1,0 +1,16 @@
+.intro {
+    /* max-width: 1000px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-image {
+    max-width: 100%;
+}

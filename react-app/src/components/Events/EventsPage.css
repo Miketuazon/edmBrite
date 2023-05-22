@@ -1,0 +1,27 @@
+.edmtrain-events-list, .edmtrain-event {
+    list-style: none;
+}
+
+.edmtrain-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}
+
+.edmtrain-event {
+    /* background: white; */
+    border-radius: 3px #266867 solid;
+    margin: 4px;
+    flex: 0 1 calc(20% - 8px); /* <-- adjusting for margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.edmtrain-event:hover {
+    background-color: #F58800;
+    border-radius: 2px black solid;
+}
