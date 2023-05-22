@@ -17,6 +17,7 @@ const CreateEvent = () => {
     }, [dispatch])
 
     const [event_name, setEvent_name] = useState("")
+    const [event_dj, setEvent_dj] = useState("")
     const [event_summary, setEvent_summary] = useState("")
     const [event_description, setEvent_description] = useState("")
     const [event_start_date, setEvent_start_date] = useState("")
@@ -32,6 +33,7 @@ const CreateEvent = () => {
     const [hasSubmitted, setHasSubmitted] = useState(false)
 
     const updateEvent_name = (e) => setEvent_name(e.target.value)
+    const updateEvent_dj = (e) => setEvent_dj(e.target.value)
     const updateEvent_summary = (e) => setEvent_summary(e.target.value)
     const updateEvent_description = (e) => setEvent_description(e.target.value)
     const updateEvent_start_date = (e) => setEvent_start_date(e.target.value)
@@ -66,7 +68,7 @@ const CreateEvent = () => {
         if (today > end) e.event_end_date = ('Event end date is before today.')
         if (today > start) e.event_start_date = ('Event start date is before today.')
 
-    }, [event_name, event_summary, event_description, event_start_date, event_end_date, event_genre_id, event_venue, event_street_address, event_city, event_state, event_zip_code,])
+    }, [event_name, event_dj, event_summary, event_description, event_start_date, event_end_date, event_genre_id, event_venue, event_street_address, event_city, event_state, event_zip_code,])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -90,7 +92,7 @@ const CreateEvent = () => {
         // if (validationErrors.length) return setErrors(validationErrors)
 
         const createdEventDetails = {
-            event_name, event_summary, event_description, event_start_date,
+            event_name, event_dj, event_summary, event_description, event_start_date,
             event_end_date, event_venue, event_street_address, event_city,
             event_state, event_zip_code, event_genre_id
         }
@@ -106,129 +108,137 @@ const CreateEvent = () => {
                 <form className="create-form" onSubmit={handleSubmit}>
                     <div className="Basic-info">
                         <ul className="errors">
-                        {hasSubmitted &&
-                            Object.values(errors).map((error, idx) => (
-                                <li key={idx} style={{ color: "red", background: "yellow" }}>
-                                    ERROR!: {error}
-                                </li>
-                            ))}
-                    </ul>
-                    <h2>Basic Info</h2>
-                    <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
-                    <label>
-                        Event Title
-                        <input
-                            type='text' placeholder='Be clear and descriptive' min='1'
-                            required value={event_name} onChange={updateEvent_name}
-                        />
-                    </label>
-                    <div className="organizer">Organizer: {currentUser?.username}</div>
-            </div>
-            <div className="location-date-time">
-                <h2>Location</h2>
-                <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
-                <label>
-                    Venue
-                    <input
-                        type='text' placeholder='e.g. Madison Square Garden' min='1'
-                        required value={event_venue} onChange={updateEvent_venue}
-                    />
-                </label>
-                <label>
-                    Address
-                    <input
-                        type='text' placeholder='e.g. 155 5th' min='1'
-                        required value={event_street_address} onChange={updateEvent_street_address}
-                    />
-                </label>
-                <label>
-                    City
-                    <input
-                        type='text' placeholder='e.g. San Francisco' min='1'
-                        required value={event_city} onChange={updateEvent_city}
-                    />
-                </label>
-                <label>
-                    State
-                    <input
-                        type='text' placeholder='e.g. California' min='1'
-                        required value={event_state} onChange={updateEvent_state}
-                    />
-                </label>
-                <label>
-                    Zip Code
-                    <input
-                        type='number' placeholder='e.g. 07666' pattern="[0-9]*"
-                        required value={event_zip_code} onChange={updateEvent_zip_code}
-                    />
-                </label>
-                <div className="date-time">
-                    <h2>Date and Time</h2>
-                    <label>
-                        Event Start Date
-                        <input
-                            type='text' placeholder='mm/dd/yyyy' min='1'
-                            required value={event_start_date} onChange={updateEvent_start_date}
-                        />
-                    </label>
-                    <label>
-                        Event End Date
-                        <input
-                            type='text' placeholder='mm/dd/yyyy' min='1'
-                            required value={event_end_date} onChange={updateEvent_end_date}
-                        />
-                    </label>
+                            {hasSubmitted &&
+                                Object.values(errors).map((error, idx) => (
+                                    <li key={idx} style={{ color: "red", background: "yellow" }}>
+                                        ERROR!: {error}
+                                    </li>
+                                ))}
+                        </ul>
+                        <h2>Basic Info</h2>
+                        <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
+                        <label>
+                            Event Title
+                            <input
+                                type='text' placeholder='Be clear and descriptive' min='1'
+                                required value={event_name} onChange={updateEvent_name}
+                            />
+                        </label>
+                        <div className="organizer">Organizer: {currentUser?.username}</div>
+                        <label>
+                            DJ
+                            <div className="dj">Let the people know who the main DJ is!</div>
+                            <input
+                                type='text' placeholder='Input who is playing for your show!' min='1'
+                                required value={event_dj} onChange={updateEvent_dj}
+                            />
+                        </label>
+                    </div>
                     <div className="location-date-time">
-                        <h2>Event details</h2>
+                        <h2>Location</h2>
+                        <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
                         <label>
-                            {hasSubmitted && errors.event_summary && (
-                                <div className='error'>
-                                    * {errors.event_summary}
-                                </div>
-                            )}
-                            Summary
+                            Venue
                             <input
-                                type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
-                                required value={event_summary} onChange={updateEvent_summary}
+                                type='text' placeholder='e.g. Madison Square Garden' min='1'
+                                required value={event_venue} onChange={updateEvent_venue}
                             />
                         </label>
                         <label>
-                            {hasSubmitted && errors.event_description && (
-                                <div className='error'>
-                                    * {errors.event_description}
-                                </div>
-                            )}
-                            Description
-                            <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
+                            Address
                             <input
-                                type='textarea' placeholder='' min='1'
-                                required value={event_description} onChange={updateEvent_description}
+                                type='text' placeholder='e.g. 155 5th' min='1'
+                                required value={event_street_address} onChange={updateEvent_street_address}
                             />
                         </label>
                         <label>
-                            {hasSubmitted && errors.event_genre_id && (
-                                <div className='error'>
-                                    * {errors.event_genre_id}
-                                </div>
-                            )}
-                            Genre
-                            <div>Select a genre! If you can't decide, choose the default Electronic!</div>
-                            <select value={event_genre_id} onChange={updateEvent_genre_id}>
-                                {/* need to figure out way to iterate through genres */}
-                                {
-                                    genres.map(genre => (
-                                        <option key={genre.id} value={genre.id}>{genre.name}</option>
-                                    ))
-                                }
-                            </select>
+                            City
+                            <input
+                                type='text' placeholder='e.g. San Francisco' min='1'
+                                required value={event_city} onChange={updateEvent_city}
+                            />
                         </label>
-                        <div>
-                            <button className='btn' type="submit">Create event!</button>
+                        <label>
+                            State
+                            <input
+                                type='text' placeholder='e.g. California' min='1'
+                                required value={event_state} onChange={updateEvent_state}
+                            />
+                        </label>
+                        <label>
+                            Zip Code
+                            <input
+                                type='number' placeholder='e.g. 07666' pattern="[0-9]*"
+                                required value={event_zip_code} onChange={updateEvent_zip_code}
+                            />
+                        </label>
+                        <div className="date-time">
+                            <h2>Date and Time</h2>
+                            <label>
+                                Event Start Date
+                                <input
+                                    type='text' placeholder='mm/dd/yyyy' min='1'
+                                    required value={event_start_date} onChange={updateEvent_start_date}
+                                />
+                            </label>
+                            <label>
+                                Event End Date
+                                <input
+                                    type='text' placeholder='mm/dd/yyyy' min='1'
+                                    required value={event_end_date} onChange={updateEvent_end_date}
+                                />
+                            </label>
+                            <div className="location-date-time">
+                                <h2>Event details</h2>
+                                <label>
+                                    {hasSubmitted && errors.event_summary && (
+                                        <div className='error'>
+                                            * {errors.event_summary}
+                                        </div>
+                                    )}
+                                    Summary
+                                    <input
+                                        type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
+                                        required value={event_summary} onChange={updateEvent_summary}
+                                    />
+                                </label>
+                                <label>
+                                    {hasSubmitted && errors.event_description && (
+                                        <div className='error'>
+                                            * {errors.event_description}
+                                        </div>
+                                    )}
+                                    Description
+                                    <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
+                                    <input
+                                        type='textarea' placeholder='' min='1'
+                                        required value={event_description} onChange={updateEvent_description}
+                                    />
+                                </label>
+                                <label>
+                                    {hasSubmitted && errors.event_genre_id && (
+                                        <div className='error'>
+                                            * {errors.event_genre_id}
+                                        </div>
+                                    )}
+                                    Genre
+                                    <div>Select a genre! If you can't decide, choose the default Electronic!</div>
+                                    <select value={event_genre_id} onChange={updateEvent_genre_id}>
+                                        {/* need to figure out way to iterate through genres */}
+                                        {
+                                            genres.map(genre => (
+                                                <option key={genre.id} value={genre.id}>{genre.name}</option>
+                                            ))
+                                        }
+                                    </select>
+                                </label>
+                                <div>
+                                    <button className='btn' type="submit">Create event!</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </form>
+                </form>
             </div >
         </div >
     );

@@ -36,6 +36,8 @@ class Event(db.Model):
     #Many to one
     owner = db.relationship('User', back_populates='events')
 
+    #One to many
+    tickets_for_event = db.relationship('Ticket', back_populates='ticket_event')
     # function to return itself
     def to_dict(self):
         return {

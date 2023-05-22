@@ -12,8 +12,15 @@ class Ticket(db.Model):
     ticket_type = db.Column(db.String, nullable=False)
     ticket_price = db.Column(db.Float, nullable=False)
     ticket_quantity = db.Column(db.Integer, nullable=False)
-    event_id = db.ForeignKey(add_prefix_for_prod('events.id'), nullable=True)
-    user_id = db.ForeignKey(add_prefix_for_prod('users.id'), nullable=True)
+
+    # Foreign keys
+    event_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('events.id')), nullable=False)
+    user_id_ticket_creator = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+
+
+    # Many to one
+    ticket_event = db.relationship('Event', back_populates='tickets_for_event')
+    ticket_creator = db.relationship('User', back_populates='tickets_created')
 
     def to_dict(self):
         return {
@@ -21,6 +28,6 @@ class Ticket(db.Model):
             "ticket_type": self.ticket_type,
             "ticket_price": self.ticket_price,
             "ticket_quantity": self.ticket_quantity,
+            "user_id_ticket_creator": self.user_id_ticket_creator,
             "event_id": self.event_id,
-            "user_id": self.user_id,
         }
