@@ -1,12 +1,16 @@
 """empty message
 
 Revision ID: b7dec21c5006
-Revises: 
+Revises:
 Create Date: 2023-05-21 20:04:17.903795
 
 """
 from alembic import op
 import sqlalchemy as sa
+
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
@@ -23,6 +27,10 @@ def upgrade():
     sa.Column('name', sa.String(length=40), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE genres SET SCHEMA {SCHEMA};")
+
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=40), nullable=False),
@@ -32,6 +40,10 @@ def upgrade():
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
+
     op.create_table('events',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('event_name', sa.String(length=50), nullable=False),
@@ -53,6 +65,10 @@ def upgrade():
     sa.ForeignKeyConstraint(['event_organizer_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE events SET SCHEMA {SCHEMA};")
+
     op.create_table('likes',
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('event_id', sa.Integer(), nullable=False),
@@ -60,6 +76,10 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('user_id', 'event_id')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
+
     op.create_table('tickets',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('ticket_type', sa.String(), nullable=False),
@@ -71,6 +91,9 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id_ticket_creator'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE tickets SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 
