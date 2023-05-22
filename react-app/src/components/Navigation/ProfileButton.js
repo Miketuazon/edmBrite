@@ -4,6 +4,7 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import {Link} from "react-router-dom"
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function ProfileButton({ user }) {
           <>
             <li>{user.username}</li>
             <li>{user.email}</li>
+            <li><Link to={`/events/current`}>Manage your events</Link></li>
             <li>
               <button onClick={handleLogout}>Log Out</button>
             </li>
