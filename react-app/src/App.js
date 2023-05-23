@@ -11,7 +11,7 @@ import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
 import OneEvent from "./components/Events/OneEvent/OneEvent";
 import OwnedEventsPage from "./components/Events/OwnedEvents/OwnedEvents";
 import EditEvent from "./components/Events/EditEvent/EditEvent";
-
+import TicketsModal from "./components/Tickets/GetTickets/GetTickets";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -47,6 +47,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path = "/events/:eventId/tickets">
+            <TicketsModal />
           </Route>
         </Switch>
       )}

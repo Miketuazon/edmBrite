@@ -13,7 +13,6 @@ from .event_routes import event_routes
 ticket_routes = Blueprint('tickets', __name__)
 
 @event_routes.route('/<int:event_id>/tickets')
-@login_required
 def get_tickets_for_event(event_id):
     """
     Query to get tickets for single event
@@ -48,7 +47,7 @@ def get_tickets_for_event(event_id):
         total_tickets += ticket_quantity
 
     return {
-        "tickets": tickets,
+        "type": tickets,
         "total_tickets": total_tickets,
     }
 
