@@ -24,13 +24,14 @@ const TicketsModal = () => {
 
     let total;
 
-    if (!ticketsObj) return <h1>Tickets coming soon!</h1>
+    if (!ticketsObj || ticketsObj === undefined || ticketsObj === null) return <h1>Tickets coming soon!</h1>
+    // if (ticketsObj === undefined)
     // if (!eventId) return <>Loading....</>
     return (
         <div className="tickets-modal">
             <ul className="ticket-type-price">
                 {
-                    Object.values(ticketsObj.type)?.map((t, index) => (
+                    Object.values(ticketsObj.type).map((t, index) => (
                         <div className="ticket-container">
                             <div className="container">
                                 <div className="type-button">

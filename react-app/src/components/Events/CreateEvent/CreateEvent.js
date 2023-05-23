@@ -82,20 +82,6 @@ const CreateEvent = () => {
         if (Object.keys(errors).length !== 0) {
             return
         }
-        // const validationErrors = [];
-
-        // if (event_name.length < 3 || event_name.length > 50) validationErrors.push('Event name needs at least 3 characters and max of 50')
-        // if (event_summary.length < 3 || event_summary.length > 140) validationErrors.push('Event summary needs at least 3 characters and max of 140')
-        // if (event_description.length < 3) validationErrors.push('Event description needs to be at least 3 characters.')
-        // if (!event_start_date.length) validationErrors.push('Event start date is required')
-        // if (!event_end_date.length) validationErrors.push('Event end date is required')
-        // if (!event_genre_id) validationErrors.push('Event Genre is required')
-        // if (!event_venue.length) validationErrors.push('Event Venue is required')
-        // if (!event_street_address.length) validationErrors.push('Event Street Address is required')
-        // if (!event_city.length) validationErrors.push('City is required')
-        // if (!event_state.length) validationErrors.push('State is required')
-        // if (event_zip_code.length !== 5) validationErrors.push('Zipcode is required and needs 5 numbers')
-        // if (validationErrors.length) return setErrors(validationErrors)
 
         const createdEventDetails = {
             event_name, event_dj, event_summary, event_preview_image,

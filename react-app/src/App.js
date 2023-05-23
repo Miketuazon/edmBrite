@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
@@ -12,6 +12,7 @@ import OneEvent from "./components/Events/OneEvent/OneEvent";
 import OwnedEventsPage from "./components/Events/OwnedEvents/OwnedEvents";
 import EditEvent from "./components/Events/EditEvent/EditEvent";
 import TicketsModal from "./components/Tickets/GetTickets/GetTickets";
+import CreateTicketsForEvent from "./components/Tickets/CreateTickets/CreateTickets";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -49,7 +50,8 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path = "/events/:eventId/tickets">
-            <TicketsModal />
+            {/* <TicketsModal /> */}
+            <CreateTicketsForEvent />
           </Route>
         </Switch>
       )}
