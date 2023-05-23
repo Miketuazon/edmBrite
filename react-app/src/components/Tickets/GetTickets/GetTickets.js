@@ -24,7 +24,7 @@ const TicketsModal = () => {
 
     let total;
 
-    if (!ticketsObj) return <>Loading...</>
+    if (!ticketsObj) return <h1>Tickets coming soon!</h1>
     // if (!eventId) return <>Loading....</>
     return (
         <div className="tickets-modal">
