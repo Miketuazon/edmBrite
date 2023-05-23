@@ -137,7 +137,7 @@ export default function eventsReducer(state = {}, action) {
             return newState
         case DELETE_ONE_EVENT:
             console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")
-            debugger
+            // debugger
             newState = {...state}
             delete newState[action.event]
             return newState
