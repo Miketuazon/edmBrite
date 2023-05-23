@@ -30,3 +30,8 @@
     padding-left: calc(8*var(--base-unit));
     padding-right: calc(8*var(--base-unit));
 }
+
+.event-details {
+    display: flex;
+    justify-content: space-around;
+}
