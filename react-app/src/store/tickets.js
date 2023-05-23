@@ -60,7 +60,7 @@ export default function ticketsReducer(state = {}, action) {
             return newState
         case CREATE_TICKETS:
             console.log("HIT THE ticketsReducer CREATE_TICKETS ==========>")
-            debugger
+            // debugger
             newState = {...state}
             newState[action.ticketsOfEvent] = {...action.tickets}
             return newState

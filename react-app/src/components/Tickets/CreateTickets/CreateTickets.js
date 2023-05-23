@@ -34,7 +34,7 @@ const CreateTicketsForEvent = () => {
         e.preventDefault()
         setHasSubmitted(true)
         if (Object.keys(errors).length !== 0) return
-        debugger
+        // debugger
         const createdTicketDetails = { ticket_type, ticket_price, ticket_quantity }
         dispatch(createTicketsThunk(createdTicketDetails, eventId))
         history.push(`/events`)
