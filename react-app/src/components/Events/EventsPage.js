@@ -38,16 +38,22 @@ const EventsPage = () => {
             <ul className="events-list">
                 <header className="events-data-header">
                 </header>
+                <div classname="image-on-top">
+                <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg"></img>
+                </div>
                 <h2>User created Events</h2>
                 <ul className="user-events-list">
                     {
                         events?.filter(event => event.event_name)?.map((event, index) => (
                             <li key={index} className="user-event">
-                                <Link to={`events/${event.id}`}>
-                                <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
-                                    <div className="event-id-and-name">{event.event_name}</div>
-                                <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
-                                <div className="location">{event.event_city}, {event.event_state}</div>
+                                <Link className="link-to-event"to={`events/${event.id}`}>
+                                    <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
+                                    <div className="event-info">
+                                        <div className="event-id-and-name">{event.event_name}</div>
+                                        <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
+                                        <div className="location">{event.event_city}, {event.event_state}</div>
+                                        <div className="owner">{event.owner.username}</div>
+                                    </div>
                                 </Link>
                             </li>
                         ))
@@ -63,8 +69,8 @@ const EventsPage = () => {
                                     <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg"></img>
                                     <br></br>
                                     {event.name}
-                                <div className="date">{new Date(event.date).toLocaleDateString()}</div>
-                                <div className="location">{event.venue.location}</div>
+                                    <div className="date">{new Date(event.date).toLocaleDateString()}</div>
+                                    <div className="location">{event.venue.location}</div>
                                 </a>
                                 <br></br>
                                 <br />

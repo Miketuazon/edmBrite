@@ -1,6 +1,26 @@
-.edmtrain-events-list, .user-events-list {
-    list-style: none;
+.image-on-top {
+    width: 100%;
+    right: 0;
+    margin-left: auto;
+    height: auto;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
 }
+
+.edmtrain-events-list,
+.user-events-list {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* .edmtrain-events-list li:hover,
+.user-events-list li:hover {
+    background-color: lightgray;
+} */
 
 .edmtrain-list {
     display: flex;
@@ -12,29 +32,57 @@
 }
 
 .preview-image-events {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 221px;
+    max-height: 200px;
+    min-height: 200px;
     display: block;
 }
 
-.edmtrain-event, .user-event {
+.edmtrain-event li .event-id-and-name,
+.user-event li .event-id-and-name {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 14px;
+    color: #F58800;
+}
+
+.location {
+    font-size: 12px;
+}
+
+.edmtrain-event,
+.user-event {
     /* background: white; */
     border-radius: 3px #266867 solid;
     margin: 4px;
-    flex: 0 1 calc(24% - 8px); /* <-- adjusting for margin */
+    flex: 0 1 calc(24% - 8px);
+    /* <-- adjusting for margin */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.link-to-event {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 .preview-image-events-edmtrain {
     max-width: 100%;
     max-height: 100%;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.edmtrain-event:hover, .user-event:hover {
-    background-color: #F58800;
+.edmtrain-event:hover,
+.user-event:hover {
+    box-shadow: 1px 5px 2px 1px lightgray;
     border-radius: 20px #266867 solid;
 }
 
