@@ -22,16 +22,29 @@ function Navigation({ isLoaded }) {
 			</ul>
 			{isLoaded && (
 				<ul className='right-side'>
-					<li className="create-an-event-button">
-						<NavLink exact to="/events/new"><i class="fa fa-plus">Create an event</i></NavLink>
-					</li>
-					<li className="go-to-likes-button">
-						<NavLink exact to="/" style={{"text-decoration": "none"}}>Likes</NavLink>
-					</li>
-					{/* <NavLink className="createEventButton" to="/events/new">Create an event</NavLink> */}
-					<li>
-						<NavLink exact to ="/" style={{"text-decoration": "none"}}>Tickets</NavLink>
-					</li>
+					{
+						sessionUser ?
+							<>
+								<li className="create-an-event-button">
+									<NavLink className="create-an-event-button" exact to="/events/new"><i class="fa fa-plus"></i>
+										<div>Create an event</div>
+									</NavLink>
+								</li>
+								<li className="go-to-likes-button">
+									<NavLink className="go-to-likes-button" exact to="/" style={{ "text-decoration": "none" }}><i class="fa-sharp fa-regular fa-heart"></i>
+										<div>Likes</div>
+									</NavLink>
+								</li>
+								{/* <NavLink className="createEventButton" to="/events/new">Create an event</NavLink> */}
+								<li className='tickets-button'>
+									<NavLink className='tickets-button' exact to="/" style={{ "text-decoration": "none" }}>
+										<i class="fa-solid fa-ticket"></i>
+										<div>Tickets</div>
+									</NavLink>
+								</li>
+							</>
+							: null
+					}
 					<ProfileButton user={sessionUser}></ProfileButton>
 				</ul>
 			)}
