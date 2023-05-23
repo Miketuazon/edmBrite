@@ -4,7 +4,7 @@ from .auth_routes import validation_errors_to_error_messages
 from app.forms import EventForm
 from flask_login import current_user, login_required
 from datetime import date
-from app.models import Event
+from app.models import Event, Ticket
 import os
 import requests
 import random
@@ -155,12 +155,17 @@ def delete_event(event_id):
         return {'error': 'Event ID is required for deleting an event'}, 400
 
     event = Event.query.get(event_id)
+    linked_tickets = Ticket.query.filter_by(event_id=event_id).all()
+
     if not event:
         return {'error': 'Event not found'}, 404
 
     current_user_dict = current_user.to_dict()
     if current_user_dict['id'] != event.event_organizer_id:
         return {'error': 'Unauthorized to delete this event. You are not the owner!'}, 403
+
+    for ticket in linked_tickets:
+        db.session.delete(ticket)
 
     db.session.delete(event)
     db.session.commit()
