@@ -84,7 +84,7 @@ const OneEvent = () => {
     if (endMinutes < 10) endMinutes = '0' + endMinutes
 
     let tbaOrNot = timeOfEvent
-    tbaOrNot === NaN ? tbaOrNot = 'TBA' : tbaOrNot = tbaOrNot + ' hours'
+    tbaOrNot === NaN ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
     return (
         <div className="event-details">
             <div className="left-side">

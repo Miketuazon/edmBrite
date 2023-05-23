@@ -20,10 +20,10 @@ const OwnedEventsPage = () => {
     if (!events.length || !events) return <>Loading.....</>
     return (
         <div className="events-page">
-            <ul className="edmtrain-events-list">
+                <h2>User created Events</h2>
+            <ul className="user-events-list">
                 <header className="events-data-header">
                 </header>
-                <h2>User created Events</h2>
                 {
                     events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
                         <li key={index} className="owned-event">

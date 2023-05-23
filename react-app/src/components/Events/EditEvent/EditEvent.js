@@ -143,7 +143,7 @@ const EditEvent = () => {
                 <form className="create-form" onSubmit={handleSubmit}>
                     <div className="Basic-info">
                         <h2>Basic Info</h2>
-                        <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
+                        <h3 className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</h3>
                         <label>
                             {hasSubmitted &&
                                 Object.values(errors).map((error, idx) => (
@@ -175,9 +175,10 @@ const EditEvent = () => {
                             />
                         </label>
                     </div>
+                    <hr></hr>
                     <div className="location-date-time">
                         <h2>Location</h2>
-                        <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
+                        <h3 className="venue">Help people in the area discover your event and let attendees know where to show up.</h3>
                         <label>
                             Venue
                             <input
@@ -209,72 +210,74 @@ const EditEvent = () => {
                         <label>
                             Zip Code
                             <input
-                                type='number' placeholder='e.g. 07666' pattern="[0-9]*"
+                                type='number' placeholder='e.g. 07666' pattern="[0-9]*" onKeyPress="if(this.value.length==6) return false;"
                                 required value={event_zip_code} onChange={updateEvent_zip_code}
                             />
                         </label>
-                        <div className="date-time">
-                            <h2>Date and Time</h2>
-                            <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
-                            <label>
-                                Event Start Date
-                                {/* <input
+                    </div>
+                    <hr></hr>
+                    <div className="date-time">
+                        <h2>Date and Time</h2>
+                        <h3>Let your attendees know when your event starts and ends!</h3>
+                        <label>
+                            Event Start Date
+                            {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
                                 /> */}
-                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date}/>
-                            </label>
-                            <label>
-                                Event End Date
-                                {/* <input
+                            <DateTimePicker value={event_start_date} onChange={updateEvent_start_date} />
+                        </label>
+                        <label>
+                            Event End Date
+                            {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
                                 /> */}
-                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date}/>
+                            <DateTimePicker value={event_end_date} onChange={updateEvent_end_date} />
+                        </label>
+                    </ div>
+                        <hr></hr>
+                        <div className="event-details">
+                            <h2>Event details</h2>
+                            <h3 className="header">Input an amazing image to go along with your description!</h3>
+                            <label>
+                                Event Preview Image
+                                <input
+                                    type='text' placeholder='.jpg, .png., .img' min='1'
+                                    required value={event_description_image} onChange={updateEvent_description_image}
+                                />
                             </label>
-                            <div className="event-details">
-                                <h2>Event details</h2>
-                                <div className="header">Input an amazing image to go along with your description!</div>
-                                <label>
-                                    Event Preview Image
-                                    <input
-                                        type='text' placeholder='.jpg, .png., .img' min='1'
-                                        required value={event_description_image} onChange={updateEvent_description_image}
-                                    />
-                                </label>
-                                <label>
-                                    Summary
-                                    <input
-                                        type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
-                                        required value={event_summary} onChange={updateEvent_summary}
-                                    />
-                                </label>
-                                <label>
-                                    Description
-                                    <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
-                                    <input
-                                        type='textarea' placeholder='' min='1'
-                                        required value={event_description} onChange={updateEvent_description}
-                                    />
-                                </label>
-                                <label>
-                                    Genre
-                                    <div>Select a genre! If you can't decide, choose the default Electronic!</div>
-                                    <select value={event_genre_id} onChange={updateEvent_genre_id}>
-                                        {/* need to figure out way to iterate through genres */}
-                                        {
-                                            genres.map(genre => (
-                                                <option key={genre.id} value={genre.id}>{genre.name}</option>
-                                            ))
-                                        }
-                                    </select>
-                                </label>
-                                <div>
-                                    <button className='btn' type="submit">Update event!</button>
-                                </div>
+                            <label>
+                                Summary
+                                <input
+                                    type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
+                                    required value={event_summary} onChange={updateEvent_summary}
+                                />
+                            </label>
+                            <label>
+                                Description
+                                <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
+                                <input
+                                    type='textarea' placeholder='' min='1' className="description-input"
+                                    required value={event_description} onChange={updateEvent_description}
+                                />
+                            </label>
+                            <label>
+                                Genre
+                                <div>Select a genre! If you can't decide, choose the default Electronic!</div>
+                                <select value={event_genre_id} onChange={updateEvent_genre_id}>
+                                    {/* need to figure out way to iterate through genres */}
+                                    {
+                                        genres.map(genre => (
+                                            <option key={genre.id} value={genre.id}>{genre.name}</option>
+                                        ))
+                                    }
+                                </select>
+                            </label>
+                            <div>
+                                <button className='btn' type="submit">Update event!</button>
                             </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>

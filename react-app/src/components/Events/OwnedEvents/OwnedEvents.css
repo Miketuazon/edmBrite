@@ -3,13 +3,31 @@
     list-style: none;
 }
 
-.edmtrain-list {
+.user-events-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-left: 10%;
     margin-right: 10%;
     flex-wrap: wrap;
+}
+
+.owned-event {
+    border-radius: 3px #266867 solid;
+    margin: 4px;
+    flex: 0 1 calc(24% - 8px);
+    /* <-- adjusting for margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.owned-event:hover {
+    box-shadow: 1px 5px 2px 1px lightgray;
+    border-radius: 20px #266867 solid;
 }
 
 .preview-image-events {

@@ -52,7 +52,7 @@ const EventsPage = () => {
                                         <div className="event-id-and-name">{event.event_name}</div>
                                         <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         <div className="location">{event.event_city}, {event.event_state}</div>
-                                        <div className="owner">{event.owner.username}</div>
+                                        <div className="owner">Organizer: {event.owner.username}</div>
                                     </div>
                                 </Link>
                             </li>

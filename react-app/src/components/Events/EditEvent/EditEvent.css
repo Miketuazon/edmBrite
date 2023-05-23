@@ -1,0 +1,24 @@
+.create-form-div {
+    display: flex;
+}
+
+.Basic-info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Basic-info>* {
+    margin-top: 5px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.description-input {
+    width: 50%;
+    max-width: 800px;
+    height: 90px;
+}

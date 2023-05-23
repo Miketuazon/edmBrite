@@ -28,7 +28,7 @@
 .left-side-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   padding-left: 0px;
 }
@@ -42,17 +42,49 @@
   /* background-color: lightblue; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:right;
   border-radius: 10px;
   padding-left: 0px;
   margin-right: 15px;
+}
+
+.right-side>* {
+  margin-right: 10px;
+}
+
+/* take out color of visited and other links */
+:visited, a {color: black;}
+
+.create-an-event-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.go-to-likes-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.tickets-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
 }
 
 .profile-dropdown>*:hover, .right-side > li:hover {
   background-color: lightgray;
   /* border: solid 2px #1A4645; */
 }
-
+.navBar > * {
+  flex: 1 1 auto;
+}
 .navBar {
   border: 2px solid lightgray;
   border-radius: 25px;
