@@ -4,6 +4,7 @@ import './OneEvent.css'
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom";
 import { getOneEventThunk } from "../../../store/events";
+import TicketsModal from "../../Tickets/GetTickets/GetTickets";
 
 const OneEvent = () => {
     console.log("INSIDE ONEEVENT COMPONENT")
@@ -130,8 +131,7 @@ const OneEvent = () => {
                 </div>
             </div>
             <div className="tickets-container">
-                <div className="ticket-price"></div>
-                <div className="get-tickets-button"></div>
+                <div className="tickets-modal"><TicketsModal /></div>
             </div>
 
         </div>

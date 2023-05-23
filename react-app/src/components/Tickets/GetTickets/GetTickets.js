@@ -31,7 +31,7 @@ const TicketsModal = () => {
             <ul className="ticket-type-price">
                 {
                     Object.values(ticketsObj.type)?.map((t, index) => (
-                        <div>
+                        <div className="ticket-container">
                             <div className="container">
                                 <div className="type-button">
                                     <div className="type-ticket">{Object.keys(ticketsObj.type)}</div>
