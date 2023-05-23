@@ -28,24 +28,6 @@
             "link": "https://edmtrain.com/alberta?utm_source=2120&utm_medium=api"
         },
         {
-            "id": 106,
-            "city": "Calgary",
-            "state": "Alberta",
-            "stateCode": "AB",
-            "latitude": 51.049,
-            "longitude": -114.071,
-            "link": "https://edmtrain.com/calgary-ab?utm_source=2120&utm_medium=api"
-        },
-        {
-            "id": 112,
-            "city": "Edmonton",
-            "state": "Alberta",
-            "stateCode": "AB",
-            "latitude": 53.544,
-            "longitude": -113.491,
-            "link": "https://edmtrain.com/edmonton-ab?utm_source=2120&utm_medium=api"
-        },
-        {
             "id": 2,
             "city": null,
             "state": "Arizona",
