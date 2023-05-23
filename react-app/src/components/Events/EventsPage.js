@@ -47,7 +47,7 @@ const EventsPage = () => {
                         events?.filter(event => event.event_name)?.map((event, index) => (
                             <li key={index} className="user-event">
                                 <Link className="link-to-event"to={`events/${event.id}`}>
-                                    <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
+                                    <img className="preview-image-events" src={event.event_preview_image} alt="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/EDC%20Vegas%20-%20DJ%20MAG.png.jpg"></img>
                                     <div className="event-info">
                                         <div className="event-id-and-name">{event.event_name}</div>
                                         <div className="date" style={{fontWeight: "bold"}}>{new Date(event.event_start_date).toLocaleDateString()}</div>

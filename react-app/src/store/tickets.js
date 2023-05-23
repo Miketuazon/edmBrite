@@ -23,7 +23,6 @@ export const getTicketsThunk = (eventId) => async (dispatch) => {
     console.log("HIT THE getTicketsThunk ==========>")
     console.log(eventId)
     const res = await fetch(`/api/events/${eventId}/tickets`)
-    // console.log("res of getTicketsThunk => ", res.json())
 
     if (res.ok) {
         const tickets = await res.json()
@@ -41,11 +40,9 @@ export const createTicketsThunk = (ticketDetails,eventId) => async (dispatch) =>
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(ticketDetails)
     })
-    console.log("res here =>", res.json())
 
     if (res.ok) {
         const createdTickets = await res.json()
-        return createdTickets
     }
 }
 
