@@ -206,7 +206,7 @@ const CreateEvent = () => {
                                 /> */}
                                 <DateTimePicker value={event_end_date} onChange={updateEvent_end_date}/>
                             </label>
-                            <div className="event-details">
+                            <div className="create-event-details">
                                 <h2>Event details</h2>
                                 <div className="header">Input an amazing image to go along with your description!</div>
                                 <label>
