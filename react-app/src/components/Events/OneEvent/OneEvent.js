@@ -4,6 +4,7 @@ import './OneEvent.css'
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom";
 import { getOneEventThunk } from "../../../store/events";
+import { getGenresThunk } from "../../../store/genres";
 import TicketsModal from "../../Tickets/GetTickets/GetTickets";
 
 const OneEvent = () => {
@@ -12,9 +13,16 @@ const OneEvent = () => {
     const dispatch = useDispatch()
     const { eventId } = useParams();
     const event = useSelector((state) => state.events.singleEvent?.event)
+    const genresObj = useSelector((state) => state.genres)
+    const genres = Object.values(genresObj)
+    console.log("genres", genres)
+    console.log("event_genre_id => ", event?.event_genre_id)
+    const genreIdOfEvent = genres.find(genre => event?.event_genre_id === genre.id)
+    console.log(genreIdOfEvent)
     console.log("eventDetails => ", event)
     useEffect(() => {
         dispatch(getOneEventThunk(eventId))
+        dispatch(getGenresThunk())
     }, [dispatch, eventId])
 
 
@@ -93,6 +101,7 @@ const OneEvent = () => {
                 <div className="title-to-location-container">
                     <h3 className="month-day">{startMonth} {startDay}</h3>
                     <h1 className="title">{event.event_name}</h1>
+                    <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
                     <div className="summary">{event.event_summary}</div>
                     <div className="host">By: &nbsp;
                         {event.owner.username}

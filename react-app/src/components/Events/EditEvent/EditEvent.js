@@ -237,7 +237,7 @@ const EditEvent = () => {
                         </label>
                     </ div>
                         <hr></hr>
-                        <div className="event-details">
+                        <div className="create-event-details">
                             <h2>Event details</h2>
                             <h3 className="header">Input an amazing image to go along with your description!</h3>
                             <label>
