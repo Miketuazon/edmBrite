@@ -28,7 +28,7 @@ const EventsPage = () => {
             .then(res => res.json())
             .then(data => setEdmtrainEvents(data))
             .catch(err => console.log(err))
-    }, [latitude, longitude, state])
+    }, [latitude, longitude, state, apiKey])
     // console.log("edmtrainEvents =>", edmtrainEvents)
     const apiEvents = edmtrainEvents.data
 
@@ -50,7 +50,7 @@ const EventsPage = () => {
                                     <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
                                     <div className="event-info">
                                         <div className="event-id-and-name">{event.event_name}</div>
-                                        <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
+                                        <div className="date" style={{fontWeight: "bold"}}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         <div className="location">{event.event_city}, {event.event_state}</div>
                                         <div className="owner">Organizer: {event.owner.username}</div>
                                     </div>
@@ -69,7 +69,7 @@ const EventsPage = () => {
                                     <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg"></img>
                                     <br></br>
                                     {event.name}
-                                    <div className="date">{new Date(event.date).toLocaleDateString()}</div>
+                                    <div className="date" style={{fontWeight: "bold"}}>{new Date(event.date).toLocaleDateString()}</div>
                                     <div className="location">{event.venue.location}</div>
                                 </a>
                                 <br></br>
