@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
-import { useParams } from "react-router-dom"
-import { useHistory } from "react-router-dom";
+import { useParams, useHistory , Link } from "react-router-dom"
 import { getOneEventThunk } from "../../../store/events";
 import { getGenresThunk } from "../../../store/genres";
+import { getTicketsThunk } from "../../../store/tickets";
 import TicketsModal from "../../Tickets/GetTickets/GetTickets";
-
 const OneEvent = () => {
     console.log("INSIDE ONEEVENT COMPONENT")
     const history = useHistory()
@@ -15,6 +14,7 @@ const OneEvent = () => {
     const event = useSelector((state) => state.events.singleEvent?.event)
     const genresObj = useSelector((state) => state.genres)
     const genres = Object.values(genresObj)
+    const currentUser = useSelector(state => state?.session?.user)
     console.log("genres", genres)
     console.log("event_genre_id => ", event?.event_genre_id)
     const genreIdOfEvent = genres.find(genre => event?.event_genre_id === genre.id)
@@ -23,9 +23,10 @@ const OneEvent = () => {
     useEffect(() => {
         dispatch(getOneEventThunk(eventId))
         dispatch(getGenresThunk())
+        dispatch(getTicketsThunk(eventId))
     }, [dispatch, eventId])
-
-
+    const ticketsObj = useSelector(state => state?.tickets.ticketsOfEvent)
+    console.log("ticketsObj => ", ticketsObj)
     const months = {
         0: 'January',
         1: 'February',
@@ -91,9 +92,9 @@ const OneEvent = () => {
     }
     // Adding 0 if minutes < 10
     if (endMinutes < 10) endMinutes = '0' + endMinutes
-
     let tbaOrNot = timeOfEvent
     tbaOrNot === NaN ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
+    // debugger
     return (
         <div className="event-details">
             <div className="left-side">
@@ -140,7 +141,18 @@ const OneEvent = () => {
                 </div>
             </div>
             <div className="tickets-container">
-                <div className="tickets-modal"><TicketsModal /></div>
+                {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
+                    !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div> :
+                        <div className="tickets-modal"><TicketsModal /></div>
+                }
+                {   // if there are no tickets and user is event owner, make a link to create events
+                    (!ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
+                        ?
+
+                            <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
+
+                        : <></>
+                }
             </div>
 
         </div>
