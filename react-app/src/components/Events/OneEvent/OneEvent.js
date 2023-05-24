@@ -1,7 +1,7 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
-import { useParams, useHistory , Link } from "react-router-dom"
+import { useParams, useHistory, Link } from "react-router-dom"
 import { getOneEventThunk } from "../../../store/events";
 import { getGenresThunk } from "../../../store/genres";
 import { getTicketsThunk } from "../../../store/tickets";
@@ -142,14 +142,15 @@ const OneEvent = () => {
             </div>
             <div className="tickets-container">
                 {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
-                    !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div> :
-                        <div className="tickets-modal"><TicketsDisplay /></div>
+                    !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div>
+                        : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
+                            : <div className="ticket-alert-owner">You cannot buy tickets to your own event!</div>
                 }
                 {   // if there are no tickets and user is event owner, make a link to create events
                     (!ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
                         ?
 
-                            <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
+                        <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
 
                         : <></>
                 }

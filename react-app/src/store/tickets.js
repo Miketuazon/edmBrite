@@ -58,7 +58,7 @@ export const buyTicketsThunk = (purchaseData, eventId) => async (dispatch) => {
     console.log("HIT THE buyTicketsThunk ==========>")
     console.log("purchaseData => ", purchaseData)
     console.log("eventId => ", eventId)
-    const res = await fetch(`/api/events/${eventId}/tickets/buy`, {
+    const res = await fetch(`/api/events/buy_tickets/${eventId}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(purchaseData)
