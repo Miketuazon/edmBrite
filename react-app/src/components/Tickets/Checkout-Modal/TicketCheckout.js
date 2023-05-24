@@ -68,7 +68,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
             first_name, last_name, email, confirmEmail,
             cardNumber, expirationDate, securityCode, zipCode
         }
-        debugger
+        // debugger
         const successPurchase = await dispatch(buyTicketsThunk(purchaseData, eventId))
         if (successPurchase) {
             setErrors(successPurchase)
