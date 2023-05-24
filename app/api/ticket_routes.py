@@ -51,7 +51,7 @@ def get_tickets_for_event(event_id):
         "total_tickets": total_tickets,
     }
 
-@event_routes.route("<int:event_id>/tickets/buy", methods=["POST"])
+@event_routes.route("/buy_tickets/<int:event_id>", methods=["POST"])
 def buy_tickets(event_id):
     """
     Query to buy tickets for an event
