@@ -16,7 +16,7 @@ const TicketsDisplay = () => {
     console.log("event => ", event)
     const ticketsObj = useSelector(state => state?.tickets?.ticketsOfEvent)
     console.log("ticketsObj => ", ticketsObj)
-    // console.log("Object.values(ticketsObj) => ", Object.values(ticketsObj))
+    console.log("Object.values(ticketsObj.type) => ", Object.entries(ticketsObj.type))
     // Object.values(ticketsObj).filter()
     // console.log("tickets => ", tickets)
     useEffect(() => {
@@ -24,8 +24,7 @@ const TicketsDisplay = () => {
         dispatch(getTicketsThunk(eventId))
     }, [dispatch, eventId])
 
-    let total;
-    const ticketTypeForCheckout = Object.keys(ticketsObj.type)
+    const ticketTypeForCheckout = Object.keys(ticketsObj.type).toString()
     console.log("ticketTypeForCheckout => ", ticketTypeForCheckout)
     if (!ticketsObj || ticketsObj === undefined || ticketsObj === null) return <h1>Tickets coming soon!</h1>
     // if (ticketsObj === undefined)
@@ -34,22 +33,22 @@ const TicketsDisplay = () => {
         <div className="tickets-modal">
             <ul className="ticket-type-price">
                 {
-                    Object.values(ticketsObj.type).map((t, index) => (
+                    Object.entries(ticketsObj.type).map(([key, value], index) => (
                         <div className="ticket-container">
                             <div className="container">
                                 <div className="type-button">
-                                    <div className="type-ticket">{Object.keys(ticketsObj.type)}</div>
+                                    <div className="type-ticket">{key}</div>
                                     <div className="button-plus-minus">
                                         <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
                                         <div>{ticketCount}</div>
                                         <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
-                                        <div>Price: ${t?.ticket_price}</div>
+                                        <div>Price: ${value?.ticket_price}</div>
                                     </div>
                                 </div>
                             </div>
                             <OpenModalButton className="check-out-button"
-                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={t.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout}/>}
-                                buttonText={`Check out for $${t?.ticket_price * ticketCount}`}
+                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={value.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout}/>}
+                                buttonText={`Check out for $${value?.ticket_price * ticketCount}`}
                             ></OpenModalButton>
                         </div>
                     ))

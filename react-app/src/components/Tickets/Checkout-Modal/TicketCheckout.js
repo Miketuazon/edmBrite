@@ -41,9 +41,6 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
     const updateSecurityCode = (e) => setSecurityCode(e.target.value)
     const updateZipCode = (e) => setZipCode(e.target.value)
 
-    // stationary inputs
-    let ticket_typeInput = ticket_type
-    let ticket_quantityInput = ticket_quantity
     useEffect(() => {
         let e = {}
         setErrors(e)
