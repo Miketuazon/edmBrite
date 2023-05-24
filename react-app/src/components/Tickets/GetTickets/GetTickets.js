@@ -25,7 +25,8 @@ const TicketsDisplay = () => {
     }, [dispatch, eventId])
 
     let total;
-
+    const ticketTypeForCheckout = Object.keys(ticketsObj.type)
+    console.log("ticketTypeForCheckout => ", ticketTypeForCheckout)
     if (!ticketsObj || ticketsObj === undefined || ticketsObj === null) return <h1>Tickets coming soon!</h1>
     // if (ticketsObj === undefined)
     // if (!eventId) return <>Loading....</>
@@ -47,7 +48,7 @@ const TicketsDisplay = () => {
                                 </div>
                             </div>
                             <OpenModalButton className="check-out-button"
-                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={t.ticket_price} ticketCount={ticketCount} />}
+                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={t.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout}/>}
                                 buttonText={`Check out for $${t?.ticket_price * ticketCount}`}
                             ></OpenModalButton>
                         </div>

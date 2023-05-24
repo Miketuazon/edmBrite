@@ -50,6 +50,7 @@ def get_tickets_for_event(event_id):
         "type": tickets,
         "total_tickets": total_tickets,
     }
+
 @event_routes.route("<int:event_id>/tickets/buy", methods=["POST"])
 def buy_tickets(event_id):
     """
@@ -84,9 +85,6 @@ def buy_tickets(event_id):
         db.session.commit()
         return {'message': 'Successfully bought tickets for event', 'ticket': bought_ticket.to_dict_bought()}
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
-
-    # Return a success message.
-    return jsonify({"message": "Tickets purchased successfully"})
 
 @event_routes.route('/<int:event_id>/tickets/create', methods=['GET','POST'])
 @login_required

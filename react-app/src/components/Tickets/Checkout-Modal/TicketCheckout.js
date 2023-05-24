@@ -5,8 +5,9 @@ import { createEventThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
 import { useModal } from "../../../context/Modal";
-import { useParams } from "react-router-dom";
-const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount }) => {
+import { buyTicketsThunk } from "../../../store/tickets";
+
+const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quantity, ticket_type }) => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state?.session?.user)
     const [first_name, setFirst_name] = useState("")
@@ -24,9 +25,10 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount 
     console.log("event => ", event)
     console.log("ticketsObj => ", ticketsObj)
     console.log("ticket_price => ", ticket_price)
-    console.log("ticketCount => ", ticketCount)
-    const eventId2 = useParams()
-    console.log("useParams eventId2", eventId2)
+    console.log("ticket_quantity => ", ticket_quantity)
+    console.log("ticket_type =>", ticket_type)
+
+
     const [errors, setErrors] = useState([]);
     const [hasSubmitted, setHasSubmitted] = useState(false)
 
@@ -39,7 +41,9 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount 
     const updateSecurityCode = (e) => setSecurityCode(e.target.value)
     const updateZipCode = (e) => setZipCode(e.target.value)
 
-
+    // stationary inputs
+    let ticket_typeInput = ticket_type
+    let ticket_quantityInput = ticket_quantity
     useEffect(() => {
         let e = {}
         setErrors(e)
@@ -60,14 +64,16 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount 
         setHasSubmitted(true)
         if (Object.keys(errors).length !== 0) return
         const purchaseData = {
+            ticket_type, ticket_price, ticket_quantity,
             first_name, last_name, email, confirmEmail,
             cardNumber, expirationDate, securityCode, zipCode
         }
-        // const successPurchase = await dispatch(buyTicketThunk(purchaseData))
-        // if (successPurchase) {
-        //     setErrors(successPurchase)
-        // } else closeModal()
-        // dispatch(buyTicketsThunk(purchaseData))
+        debugger
+        const successPurchase = await dispatch(buyTicketsThunk(purchaseData, eventId))
+        if (successPurchase) {
+            setErrors(successPurchase)
+        } else closeModal()
+        dispatch(buyTicketsThunk(purchaseData, eventId))
         closeModal()
     }
 
@@ -160,6 +166,18 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount 
                                         type='number' placeholder='123' min='1'
                                         required value={zipCode} onChange={updateZipCode}
                                     />
+                                    <div className="hidden">
+                                        Ticket quantity
+                                    <input
+                                        type='number' placeholder='123' min='1'
+                                        required value={ticket_quantity}
+                                    />
+                                    Ticket type
+                                    <input
+                                        type='text' placeholder='123' min='1'
+                                        required value={ticket_type}
+                                    />
+                                    </div>
                                 </label>
                             </div>
                             <div className="place-order">
@@ -177,8 +195,9 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount 
                 </div>
                 <div className="subtotal-fees"></div>
                 <div className="total-price">
-                    <div className="total"></div>
-                    <div className="price"></div>
+                    <div className="type-ticket">{ticket_type}</div>
+                    <div className="total-tix">Total # of tickets: {ticket_quantity}</div>
+                    <div className="price">Total price: ${ticket_price * ticket_quantity}</div>
                 </div>
             </div>
         </div>
