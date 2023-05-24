@@ -18,10 +18,10 @@ class Ticket(db.Model):
     last_name = db.Column(db.String, nullable=True)
     email = db.Column(db.String, nullable=True)
     confirmEmail = db.Column(db.String, nullable=True)
-    cardNumber = db.Column(db.Integer, nullable=True)
-    expirationDate = db.Column(db.Integer, nullable=True)
-    securityCode = db.Column(db.Integer, nullable=True)
-    zipCode = db.Column(db.Integer, nullable=True)
+    cardNumber = db.Column(db.String, nullable=True)
+    expirationDate = db.Column(db.String, nullable=True)
+    securityCode = db.Column(db.String, nullable=True)
+    zipCode = db.Column(db.String, nullable=True)
 
     # Foreign keys
     event_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('events.id')), nullable=False)

@@ -31,7 +31,7 @@ function Navigation({ isLoaded }) {
 									</NavLink>
 								</li>
 								<li className="go-to-likes-button">
-									<NavLink className="go-to-likes-button" exact to="/" style={{ "text-decoration": "none" }}><i class="fa-sharp fa-regular fa-heart"></i>
+									<NavLink className="go-to-likes-button" exact to="/current_user/likes" style={{ "text-decoration": "none" }}><i class="fa-sharp fa-regular fa-heart"></i>
 										<div>Likes</div>
 									</NavLink>
 								</li>

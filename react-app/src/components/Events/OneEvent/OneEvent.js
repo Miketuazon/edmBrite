@@ -142,12 +142,16 @@ const OneEvent = () => {
             </div>
             <div className="tickets-container">
                 {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
-                    !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div>
-                        : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
-                            : <div className="ticket-alert-owner">You cannot buy tickets to your own event!</div>
+                    currentUser ?
+                        !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div>
+                            : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
+                                : <div className="ticket-alert-owner">You cannot buy tickets to your own event!</div>
+                        : <h2>Must be logged in to buy tickets</h2>
                 }
-                {   // if there are no tickets and user is event owner, make a link to create events
-                    (!ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
+                {   // if  logged in and
+                    (currentUser &&
+                        // if there are no tickets and user is event owner, make a link to create events
+                        !ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
                         ?
 
                         <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
