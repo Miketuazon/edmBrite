@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 8ceba11ea21c
+Revision ID: 4776ee9f7fab
 Revises:
-Create Date: 2023-05-22 01:36:22.711447
+Create Date: 2023-05-24 11:26:19.660412
 
 """
 from alembic import op
@@ -14,7 +14,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
-revision = '8ceba11ea21c'
+revision = '4776ee9f7fab'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -49,9 +49,11 @@ def upgrade():
     sa.Column('event_name', sa.String(length=50), nullable=False),
     sa.Column('event_dj', sa.String(length=100), nullable=False),
     sa.Column('event_summary', sa.String(length=140), nullable=False),
+    sa.Column('event_preview_image', sa.String(), nullable=True),
+    sa.Column('event_description_image', sa.String(), nullable=True),
     sa.Column('event_description', sa.String(), nullable=False),
-    sa.Column('event_start_date', sa.DateTime(), nullable=True),
-    sa.Column('event_end_date', sa.DateTime(), nullable=True),
+    sa.Column('event_start_date', sa.String(), nullable=True),
+    sa.Column('event_end_date', sa.String(), nullable=True),
     sa.Column('event_venue', sa.String(length=100), nullable=False),
     sa.Column('event_street_address', sa.String(length=100), nullable=False),
     sa.Column('event_city', sa.String(length=100), nullable=False),
@@ -85,6 +87,14 @@ def upgrade():
     sa.Column('ticket_type', sa.String(), nullable=False),
     sa.Column('ticket_price', sa.Integer(), nullable=False),
     sa.Column('ticket_quantity', sa.Integer(), nullable=False),
+    sa.Column('first_name', sa.String(), nullable=True),
+    sa.Column('last_name', sa.String(), nullable=True),
+    sa.Column('email', sa.String(), nullable=True),
+    sa.Column('confirmEmail', sa.String(), nullable=True),
+    sa.Column('cardNumber', sa.Integer(), nullable=True),
+    sa.Column('expirationDate', sa.Integer(), nullable=True),
+    sa.Column('securityCode', sa.Integer(), nullable=True),
+    sa.Column('zipCode', sa.Integer(), nullable=True),
     sa.Column('event_id', sa.Integer(), nullable=False),
     sa.Column('user_id_ticket_creator', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['event_id'], ['events.id'], ),
