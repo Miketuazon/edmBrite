@@ -60,16 +60,8 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
         e.preventDefault();
         setHasSubmitted(true)
         if (Object.keys(errors).length !== 0) return
-        const purchaseData = {
-            ticket_type, ticket_price, ticket_quantity,
-            first_name, last_name, email, confirmEmail,
-            cardNumber, expirationDate, securityCode, zipCode
-        }
+        const purchaseData = {ticket_type, ticket_price, ticket_quantity,first_name, last_name, email, confirmEmail, cardNumber, expirationDate, securityCode, zipCode }
         // debugger
-        const successPurchase = await dispatch(buyTicketsThunk(purchaseData, eventId))
-        if (successPurchase) {
-            setErrors(successPurchase)
-        } else closeModal()
         dispatch(buyTicketsThunk(purchaseData, eventId))
         closeModal()
     }
