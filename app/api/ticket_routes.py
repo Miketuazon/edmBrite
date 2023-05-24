@@ -51,7 +51,7 @@ def get_tickets_for_event(event_id):
         "total_tickets": total_tickets,
     }
 
-@event_routes.route("<int:event_id>/tickets/buy", methods=["GET","POST"])
+@event_routes.route("<int:event_id>/tickets/buy", methods=["POST"])
 def buy_tickets(event_id):
     """
     Query to buy tickets for an event
@@ -65,26 +65,26 @@ def buy_tickets(event_id):
     form = Ticket_Purchase_Form()
     form['csrf_token'].data = request.cookies['csrf_token']
 
-    if form.validate_on_submit():
-        bought_ticket = Ticket(
-            ticket_type=form.data['ticket_type'],
-            ticket_price=form.data['ticket_price'],
-            ticket_quantity=form.data['ticket_quantity'],
-            user_id_ticket_creator=current_user_dict['id'],
-            event_id=event_id,
-            first_name=form.data['first_name'],
-            last_name=form.data['last_name'],
-            email=form.data['email'],
-            confirmEmail=form.data['confirmEmail'],
-            cardNumber=form.data['cardNumber'],
-            expirationDate=form.data['expirationDate'],
-            securityCode=form.data['securityCode'],
-            zipCode=form.data['zipCode'],
-        )
-        db.session.add(bought_ticket)
-        db.session.commit()
-        return {'message': 'Successfully bought tickets for event', 'ticket': bought_ticket.to_dict_bought()}
-    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+    # if form.validate_on_submit():
+    bought_ticket = Ticket(
+        ticket_type=form.data['ticket_type'],
+        ticket_price=form.data['ticket_price'],
+        ticket_quantity=form.data['ticket_quantity'],
+        user_id_ticket_creator=current_user_dict['id'],
+        event_id=event_id,
+        first_name=form.data['first_name'],
+        last_name=form.data['last_name'],
+        email=form.data['email'],
+        confirmEmail=form.data['confirmEmail'],
+        cardNumber=form.data['cardNumber'],
+        expirationDate=form.data['expirationDate'],
+        securityCode=form.data['securityCode'],
+        zipCode=form.data['zipCode'],
+    )
+    db.session.add(bought_ticket)
+    db.session.commit()
+    return {'message': 'Successfully bought tickets for event', 'ticket': bought_ticket.to_dict_bought()}
+    # return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 @event_routes.route('/<int:event_id>/tickets/create', methods=['GET','POST'])
 @login_required
