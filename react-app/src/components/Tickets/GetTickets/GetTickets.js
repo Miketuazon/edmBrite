@@ -4,7 +4,9 @@ import './GetTickets.css'
 import { Link, useParams } from "react-router-dom"
 import { getTicketsThunk } from "../../../store/tickets";
 import { getOneEventThunk } from "../../../store/events";
-const TicketsModal = () => {
+import OpenModalButton from "../../OpenModalButton";
+import TicketCheckout from "../Checkout-Modal/TicketCheckout";
+const TicketsDisplay = () => {
     const dispatch = useDispatch()
     // const event = useSelector(())
     const { eventId } = useParams()
@@ -40,11 +42,14 @@ const TicketsModal = () => {
                                         <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
                                         <div>{ticketCount}</div>
                                         <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
+                                        <div>Price: ${t?.ticket_price}</div>
                                     </div>
                                 </div>
-                                <div>Price: ${t?.ticket_price}</div>
                             </div>
-                            <button className="check-out-button">Check out for ${t?.ticket_price * ticketCount}</button>
+                            <OpenModalButton className="check-out-button"
+                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={t.ticket_price} ticketCount={ticketCount} />}
+                                buttonText={`Check out for $${t?.ticket_price * ticketCount}`}
+                            ></OpenModalButton>
                         </div>
                     ))
                 }
@@ -52,4 +57,4 @@ const TicketsModal = () => {
         </div>
     )
 }
-export default TicketsModal
+export default TicketsDisplay

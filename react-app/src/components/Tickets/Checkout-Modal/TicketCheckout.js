@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import './CreateEvent.css'
 // import { Link } from "react-router-dom"
 import { createEventThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
 import { useModal } from "../../../context/Modal";
-
-const TicketCheckout = ({eventId}) => {
+import { useParams } from "react-router-dom";
+const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticketCount }) => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state?.session?.user)
     const [first_name, setFirst_name] = useState("")
@@ -18,8 +17,16 @@ const TicketCheckout = ({eventId}) => {
     const [expirationDate, setExpirationDate] = useState(0)
     const [securityCode, setSecurityCode] = useState(0)
     const [zipCode, setZipCode] = useState(0)
-    const {closeModal} = useModal()
+    const { closeModal } = useModal()
 
+    // passing in data from parent component
+    console.log("eventId => ", eventId)
+    console.log("event => ", event)
+    console.log("ticketsObj => ", ticketsObj)
+    console.log("ticket_price => ", ticket_price)
+    console.log("ticketCount => ", ticketCount)
+    const eventId2 = useParams()
+    console.log("useParams eventId2", eventId2)
     const [errors, setErrors] = useState([]);
     const [hasSubmitted, setHasSubmitted] = useState(false)
 
@@ -41,8 +48,8 @@ const TicketCheckout = ({eventId}) => {
         if (!last_name) e.last_name = ('Last name is required')
         if (!email) e.email = ('Email is required')
         if (confirmEmail !== email) e.confirmEmail = ('Emails must match')
-        if (!cardNumber) e.cardNumber = ('Card number is required')
-        if (cardNumber.length !== 16) e.cardNumber('Card number needs 16 characters')
+        if (!cardNumber || cardNumber.length !== 16 ) e.cardNumber = ('Card number is required and Card number needs 16 characters')
+        // if (cardNumber.length !== 16) e.cardNumber('Card number needs 16 characters')
         if (!expirationDate) e.expirationDate = ('Expiration Date is required')
         if (!securityCode) e.securityCode = ('Security Code is required')
         if (!zipCode) e.zipCode = ('Zip Code is required')
@@ -56,11 +63,18 @@ const TicketCheckout = ({eventId}) => {
             first_name, last_name, email, confirmEmail,
             cardNumber, expirationDate, securityCode, zipCode
         }
-
+        // const successPurchase = await dispatch(buyTicketThunk(purchaseData))
+        // if (successPurchase) {
+        //     setErrors(successPurchase)
+        // } else closeModal()
         // dispatch(buyTicketsThunk(purchaseData))
-        history.pushState(`/events`)
+        closeModal()
     }
 
+    const handleCancel = (e) => {
+        e.preventDefault()
+        closeModal()
+    }
 
     return (
         <div className="ticket-checkout-modal">
@@ -156,6 +170,7 @@ const TicketCheckout = ({eventId}) => {
                 </form>
             </div>
             <div className="right-side-modal">
+                    <button onClick={handleCancel} className="purchase-close-button">Close</button>
                 <div className="summary-num-tickets">
                     <div className="order-summary"></div>
                     <div className="ticket-price"></div>
