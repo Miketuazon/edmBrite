@@ -11,14 +11,14 @@ const UserLikesPage = () => {
     const eventsObj = useSelector(state => state.events)
     const events = Object.values(eventsObj)
     console.log("events => ", events)
-    const userLikedEvents = currentUser.events_liked
+    const userLikedEvents = currentUser?.events_liked
     console.log("userLikedEvents => ", userLikedEvents)
     useEffect(() => {
         dispatch(getEventsThunk())
     }, [dispatch])
 
-    if (!currentUser) return <h1>Unauthorized. You are not logged in</h1>
-    if (!events) return <h1>Loading...</h1>
+    if (!currentUser) return <h1 style={{color: "red"}}>Unauthorized. You are not logged in</h1>
+    if (!userLikedEvents) return <h1>Loading...</h1>
     return (
         <div className="likes-page">
             <h1>Likes</h1>
