@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 4776ee9f7fab
+Revision ID: 72d23866079e
 Revises:
-Create Date: 2023-05-24 11:26:19.660412
+Create Date: 2023-05-24 13:48:30.242845
 
 """
 from alembic import op
@@ -12,9 +12,8 @@ import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
-
 # revision identifiers, used by Alembic.
-revision = '4776ee9f7fab'
+revision = '72d23866079e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -91,10 +90,10 @@ def upgrade():
     sa.Column('last_name', sa.String(), nullable=True),
     sa.Column('email', sa.String(), nullable=True),
     sa.Column('confirmEmail', sa.String(), nullable=True),
-    sa.Column('cardNumber', sa.Integer(), nullable=True),
-    sa.Column('expirationDate', sa.Integer(), nullable=True),
-    sa.Column('securityCode', sa.Integer(), nullable=True),
-    sa.Column('zipCode', sa.Integer(), nullable=True),
+    sa.Column('cardNumber', sa.String(), nullable=True),
+    sa.Column('expirationDate', sa.String(), nullable=True),
+    sa.Column('securityCode', sa.String(), nullable=True),
+    sa.Column('zipCode', sa.String(), nullable=True),
     sa.Column('event_id', sa.Integer(), nullable=False),
     sa.Column('user_id_ticket_creator', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['event_id'], ['events.id'], ),
