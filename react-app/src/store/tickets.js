@@ -41,8 +41,8 @@ export const getTicketsThunk = (eventId) => async (dispatch) => {
 // Thunk 2: Create tickets
 export const createTicketsThunk = (ticketDetails,eventId) => async (dispatch) => {
     console.log("HIT THE createTicketsThunk ==========>")
-    console.log("ticketDetails", ticketDetails)
-    console.log(" create tickets eventId =>",eventId)
+    // console.log("ticketDetails", ticketDetails)
+    // console.log(" create tickets eventId =>",eventId)
     const res = await fetch(`/api/events/${eventId}/tickets/create`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
