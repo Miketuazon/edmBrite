@@ -5,7 +5,6 @@ import './CreateEvent.css'
 import { createEventThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
-import moment from "moment";
 import DateTimePicker from "react-datetime-picker";
 const CreateEvent = () => {
     // Reminder: Need to learn AWS to serve images

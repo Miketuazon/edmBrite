@@ -3,6 +3,7 @@
 const GET_TICKETS = 'tickets/getTickets'
 const CREATE_TICKETS = 'tickets/createTickets'
 const BUY_TICKETS = 'tickets/buyTickets'
+const GET_BOUGHT_TICKETS = 'tickets/getBoughtTickets'
 // Action creators | tickets
 const getTicketsAction = (tickets) => {
     return {
@@ -11,16 +12,23 @@ const getTicketsAction = (tickets) => {
     }
 }
 
-const createTicketsAction = (tickets) => {
-    return {
-        type: CREATE_TICKETS,
-        tickets
-    }
-}
+// const createTicketsAction = (tickets) => {
+//     return {
+//         type: CREATE_TICKETS,
+//         tickets
+//     }
+// }
 
-const buyTicketsAction = (tickets) => {
+// const buyTicketsAction = (tickets) => {
+//     return {
+//         type: BUY_TICKETS,
+//         tickets
+//     }
+// }
+
+const getBoughtTicketsAction = (tickets) => {
     return {
-        type: BUY_TICKETS,
+        type: GET_BOUGHT_TICKETS,
         tickets
     }
 }
@@ -69,6 +77,18 @@ export const buyTicketsThunk = (purchaseData, eventId) => async (dispatch) => {
     }
 }
 
+// 4. Get bought tickets
+export const getBoughtTicketsThunk = () => async (dispatch) => {
+    console.log("HIT THE getBoughtTicketsThunk ==========>")
+
+    const res = await fetch(`/api/users/current_user/ticketsOwned`)
+    console.log("res => ", res)
+    if (res.ok) {
+        const tickets = await res.json()
+        dispatch(getBoughtTicketsAction(tickets))
+    }
+}
+
 // reducer
 export default function ticketsReducer(state = {}, action) {
     let newState;
@@ -89,6 +109,14 @@ export default function ticketsReducer(state = {}, action) {
             newState = {...state}
             // debugger
             newState[action.boughtTickets] = {...action.tickets}
+            return newState
+        case GET_BOUGHT_TICKETS:
+            console.log("HIT THE ticketsReducer GET_BOUGHT_TICKETS ==========>")
+            newState = {...state}
+            // debugger
+            console.log("newState", newState)
+            newState.orders = {...action.tickets}
+            console.log("newState after GET_BOUGHT_TICKETS", newState)
             return newState
         default:
             return state

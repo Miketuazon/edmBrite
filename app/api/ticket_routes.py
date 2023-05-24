@@ -6,6 +6,7 @@ from flask_login import current_user, login_required
 from datetime import date
 from app.models import Ticket
 from .event_routes import event_routes
+from .user_routes import user_routes
 # import os
 # import requests
 # import random
@@ -172,3 +173,23 @@ def delete_ticket(ticket_id, event_id):
     db.session.commit()
 
     return {'message': 'Ticket deleted successfully'}
+
+@user_routes.route("/current_user/ticketsOwned")
+@login_required
+def get_tickets_bought():
+    """
+    Query to get tickets that user has bought
+    """
+    current_user_dict = current_user.to_dict()
+
+    all_tickets = Ticket.query.all()
+    tickets = []
+    # breakpoint() # [<Ticket 1>, <Ticket 2>, <Ticket 3>, <Ticket 4>, <Ticket 5>, <Ticket 6>, <Ticket 7>, <Ticket 8>, <Ticket 9>]
+    for ticket in all_tickets:
+        ticket_bought = ticket.to_dict_bought()
+        first_name = ticket_bought.get('first_name')
+        # breakpoint()
+        if first_name and ticket_bought['user_id_ticket_buyer'] == current_user_dict['id']:
+            tickets.append(ticket_bought)
+
+    return tickets

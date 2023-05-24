@@ -7,7 +7,7 @@ import "./CreateTickets.css"
 const CreateTicketsForEvent = () => {
     const dispatch = useDispatch()
     const history = useHistory()
-    const currentUser = useSelector(state => state?.session?.user)
+    // const currentUser = useSelector(state => state?.session?.user)
     const { eventId } = useParams()
     console.log(eventId)
     const [ticket_type, setTicket_type] = useState("")
