@@ -13,6 +13,7 @@ import OwnedEventsPage from "./components/Events/OwnedEvents/OwnedEvents";
 import EditEvent from "./components/Events/EditEvent/EditEvent";
 import TicketsModal from "./components/Tickets/GetTickets/GetTickets";
 import CreateTicketsForEvent from "./components/Tickets/CreateTickets/CreateTickets";
+import UserLikesPage from "./components/Likes/UserLikesPage/UserLikesPage";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -52,6 +53,9 @@ function App() {
           <Route path = "/events/:eventId/tickets">
             {/* <TicketsModal /> */}
             <CreateTicketsForEvent />
+          </Route>
+          <Route exact path="/current_user/likes">
+            <UserLikesPage />
           </Route>
         </Switch>
       )}
