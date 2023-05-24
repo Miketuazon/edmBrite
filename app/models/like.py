@@ -20,5 +20,3 @@ likes = db.Table(
 # Remember these 2 lines for production
 if environment == "production":
     likes.schema = SCHEMA
-
-# student identifier
