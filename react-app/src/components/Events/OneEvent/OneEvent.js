@@ -5,7 +5,7 @@ import { useParams, useHistory , Link } from "react-router-dom"
 import { getOneEventThunk } from "../../../store/events";
 import { getGenresThunk } from "../../../store/genres";
 import { getTicketsThunk } from "../../../store/tickets";
-import TicketsModal from "../../Tickets/GetTickets/GetTickets";
+import TicketsDisplay from "../../Tickets/GetTickets/GetTickets";
 const OneEvent = () => {
     console.log("INSIDE ONEEVENT COMPONENT")
     const history = useHistory()
@@ -143,7 +143,7 @@ const OneEvent = () => {
             <div className="tickets-container">
                 {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
                     !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div> :
-                        <div className="tickets-modal"><TicketsModal /></div>
+                        <div className="tickets-modal"><TicketsDisplay /></div>
                 }
                 {   // if there are no tickets and user is event owner, make a link to create events
                     (!ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id

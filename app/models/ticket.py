@@ -13,6 +13,16 @@ class Ticket(db.Model):
     ticket_price = db.Column(db.Integer, nullable=False)
     ticket_quantity = db.Column(db.Integer, nullable=False)
 
+    #Additional columns to bypass
+    first_name = db.Column(db.String, nullable=True)
+    last_name = db.Column(db.String, nullable=True)
+    email = db.Column(db.String, nullable=True)
+    confirmEmail = db.Column(db.String, nullable=True)
+    cardNumber = db.Column(db.Integer, nullable=True)
+    expirationDate = db.Column(db.Integer, nullable=True)
+    securityCode = db.Column(db.Integer, nullable=True)
+    zipCode = db.Column(db.Integer, nullable=True)
+
     # Foreign keys
     event_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('events.id')), nullable=False)
     user_id_ticket_creator = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
@@ -30,4 +40,22 @@ class Ticket(db.Model):
             "ticket_quantity": self.ticket_quantity,
             "user_id_ticket_creator": self.user_id_ticket_creator,
             "event_id": self.event_id,
+        }
+
+    def to_dict_bought(self):
+        return {
+            "id": self.id,
+            "ticket_type": self.ticket_type,
+            "ticket_price": self.ticket_price,
+            "ticket_quantity": self.ticket_quantity,
+            "user_id_ticket_buyer": self.user_id_ticket_creator,
+            "event_id": self.event_id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "email": self.email,
+            "confirmEmail": self.confirmEmail,
+            "cardNumber": self.cardNumber,
+            "expirationDate": self.expirationDate,
+            "securityCode": self.securityCode,
+            "zipCode": self.zipCode,
         }
