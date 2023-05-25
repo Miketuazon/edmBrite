@@ -4,6 +4,7 @@ import './EventsPage.css'
 import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../store/events";
 import stateData from "./locations.json"
+import LikeButton from "../Likes/CreateLike/CreateLike-";
 const EventsPage = () => {
     // Todo: Need to learn AWS to serve images
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ const EventsPage = () => {
 
     // grab coordinates from json
     const stateJsonData = stateData.data
-    const statesNullCity = stateJsonData.filter((state) => state.city === null)
+    const statesNullCity = stateJsonData.filter((state) => state.city === null || state.city === "Washington")
     const reducedStatesObj = statesNullCity.reduce((newObj, state) => {
         newObj[state.state] = {
             state: state.state,
@@ -75,6 +76,7 @@ const EventsPage = () => {
                                         <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         <div className="location">{event.event_city}, {event.event_state}</div>
                                         <div className="owner">Organizer: {event.owner.username}</div>
+                                        {/* <LikeButton event={event}/> */}
                                     </div>
                                 </Link>
                             </li>
