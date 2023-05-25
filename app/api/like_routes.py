@@ -29,5 +29,6 @@ def like_unlike_event(event_id):
     return {
         "message": f"Event {event.id} was liked by {current_user_dict['username']}",
         "eventId": event.id,
-        "userId": current_user_dict['id']
+        "userId": current_user_dict['id'],
+        "userLikes": current_user_dict['events_liked'],
         }
