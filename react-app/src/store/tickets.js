@@ -113,9 +113,8 @@ export default function ticketsReducer(state = {}, action) {
         case GET_BOUGHT_TICKETS:
             console.log("HIT THE ticketsReducer GET_BOUGHT_TICKETS ==========>")
             newState = {...state}
-            // debugger
             console.log("newState", newState)
-            newState.orders = {...action.tickets}
+            action.tickets.forEach(order => newState[order.id] = order )
             console.log("newState after GET_BOUGHT_TICKETS", newState)
             return newState
         default:
