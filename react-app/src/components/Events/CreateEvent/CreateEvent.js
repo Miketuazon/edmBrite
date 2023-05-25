@@ -54,24 +54,27 @@ const CreateEvent = () => {
         let e = {}
         setErrors(e)
 
-        if (event_name.length < 3 || event_name.length > 50) e.event_name = ('Event name needs at least 3 characters and max of 50')
-        if (event_summary.length < 3 || event_summary.length > 140) e.event_summary = ('Event summary needs at least 3 characters and max of 140')
-        if (event_description.length < 3) e.event_description = ('Event description needs to be at least 3 characters.')
-        if (!event_preview_image.length) e.event_preview_image = ('Event preview image is required')
-        if (!event_description_image.length) e.event_description_image = ('Event description image is required')
-        if (!event_genre_id) e.event_genre_id = ('Event Genre is required')
-        if (!event_venue.length) e.event_venue = ('Event Venue is required')
-        if (!event_street_address.length) e.event_street_address = ('Event Street Address is required')
-        if (!event_city.length) e.event_city = ('City is required')
-        if (!event_state.length) e.event_state = ('State is required')
-        if (event_zip_code.length !== 5) e.event_zip_code = ('Zipcode is required and needs 5 numbers')
+        const validExtensions = /\.(jpg|jpeg|png|img)$/i
+        if (event_name.length < 3 || event_name.length > 50) e.event_name = (' Event name needs at least 3 characters and max of 50')
+        if (event_summary.length < 3 || event_summary.length > 140) e.event_summary = (' Event summary needs at least 3 characters and max of 140')
+        if (event_description.length < 3) e.event_description = (' Event description needs to be at least 3 characters.')
+        if (!event_preview_image.length) e.event_preview_image = (' Event preview image is required')
+        if (!validExtensions.test(event_preview_image)) e.event_preview_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
+        if (!validExtensions.test(event_description_image)) e.event_description_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
+        if (!event_description_image.length) e.event_description_image = (' Event description image is required')
+        if (!event_genre_id) e.event_genre_id = (' Event Genre is required')
+        if (!event_venue.length) e.event_venue = (' Event Venue is required')
+        if (!event_street_address.length) e.event_street_address = (' Event Street Address is required')
+        if (!event_city.length) e.event_city = (' City is required')
+        if (!event_state.length) e.event_state = (' State is required')
+        if (event_zip_code.length !== 5) e.event_zip_code = (' Zipcode is required and needs 5 numbers')
 
         let start = new Date(event_start_date)
         let end = new Date(event_end_date)
         let today = new Date()
-        if (start > end) e.event_end_date = ('Event end date is before start date')
-        if (today > end) e.event_end_date = ('Event end date is before today.')
-        if (today > start) e.event_start_date = ('Event start date is before today.')
+        if (start > end) e.event_end_date = (' Event end date is before start date')
+        if (today > end) e.event_end_date = (' Event end date is before today.')
+        if (today > start) e.event_start_date = (' Event start date is before today.')
 
     }, [event_name, event_dj, event_preview_image, event_description_image, event_summary, event_description, event_start_date, event_end_date, event_genre_id, event_venue, event_street_address, event_city, event_state, event_zip_code,])
 
@@ -89,7 +92,7 @@ const CreateEvent = () => {
             event_state, event_zip_code, event_genre_id
         }
         dispatch(createEventThunk(createdEventDetails))
-        history.push(`/events/${createdEventDetails.id}`)
+        history.push(`/events`)
     }
     console.log("errors => ", errors)
     // if (!events.length) return <>Loading.....</>
@@ -101,7 +104,7 @@ const CreateEvent = () => {
                     <div className="Basic-info">
                         <ul className="errors">
                             {hasSubmitted &&
-                                Object.values(errors).map((error, idx) => (
+                                Object.entries(errors).map((error, idx) => (
                                     <li key={idx} style={{ color: "red", background: "yellow" }}>
                                         ERROR!: {error}
                                     </li>
@@ -112,7 +115,7 @@ const CreateEvent = () => {
                         <label>
                             Event Title
                             <input
-                                type='text' placeholder='Be clear and descriptive' min='1'
+                                type='text' placeholder='Be clear and descriptive' min='1' maxLength={50}
                                 required value={event_name} onChange={updateEvent_name}
                             />
                         </label>
@@ -130,7 +133,7 @@ const CreateEvent = () => {
                             <div className="dj">Let the people know who the main DJ is!</div>
                             <input
                                 type='text' placeholder='Input who is playing for your show!' min='1'
-                                required value={event_dj} onChange={updateEvent_dj}
+                                maxLength={100}required value={event_dj} onChange={updateEvent_dj}
                             />
                         </label>
                     </div>
@@ -222,6 +225,7 @@ const CreateEvent = () => {
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
                                     <input
+                                        style={{overflow: "scroll"}} rows="4" cols="50"
                                         type='textarea' placeholder='' min='1' className="description-input"
                                         required value={event_description} onChange={updateEvent_description}
                                     />
