@@ -5,14 +5,19 @@ import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../store/events";
 import stateData from "./locations.json"
 import LikeButton from "../Likes/CreateLike/CreateLike-";
+import { getUserLikesThunk } from "../../store/likes";
 const EventsPage = () => {
     // Todo: Need to learn AWS to serve images
     const dispatch = useDispatch()
     const eventsObj = useSelector((state) => state.events)
     const events = Object.values(eventsObj)
     const currentUser = useSelector(state => state?.session?.user)
+    const likesObj = useSelector(state => state.likes)
+    const likes = Object.values(likesObj)
+    console.log("likes => ", likes)
     useEffect(() => {
         dispatch(getEventsThunk())
+        dispatch(getUserLikesThunk())
     }, [dispatch])
 
     const [edmtrainEvents, setEdmtrainEvents] = useState([])
@@ -78,10 +83,10 @@ const EventsPage = () => {
                                         <div className="location">{event.event_city}, {event.event_state}</div>
                                         <div className="owner">Organizer: {event.owner.username}</div>
                                     </div>
-                                        </Link>
-                                        {
-                                            currentUser ? <LikeButton events={events} currentUser={currentUser} eventId={event.id}/> : <></>
-                                        }
+                                </Link>
+                                {
+                                    currentUser ? <LikeButton events={events} currentUser={currentUser} eventId={event.id} likes={likes} /> : <></>
+                                }
                             </li>
                         ))
                     }
