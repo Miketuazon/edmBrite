@@ -4,6 +4,7 @@ import './UserLikesPage.css'
 import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
+import { likeOneEventThunk } from "../../../store/likes";
 
 const UserLikesPage = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,7 @@ const UserLikesPage = () => {
     console.log("userLikedEvents => ", userLikedEvents)
     useEffect(() => {
         dispatch(getEventsThunk())
-    }, [dispatch])
+    }, [dispatch, currentUser])
 
     if (!currentUser) return <h1 style={{color: "red"}}>Unauthorized. You are not logged in</h1>
     if (!userLikedEvents) return <h1>Loading...</h1>

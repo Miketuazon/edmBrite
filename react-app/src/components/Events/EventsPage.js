@@ -10,6 +10,7 @@ const EventsPage = () => {
     const dispatch = useDispatch()
     const eventsObj = useSelector((state) => state.events)
     const events = Object.values(eventsObj)
+    const currentUser = useSelector(state => state?.session?.user)
     useEffect(() => {
         dispatch(getEventsThunk())
     }, [dispatch])
@@ -67,8 +68,8 @@ const EventsPage = () => {
                 <h2>User created Events</h2>
                 <ul className="user-events-list">
                     {
-                        events?.filter(event => event.event_name)?.map((event, index) => (
-                            <li key={index} className="user-event">
+                        events?.filter(event => event.event_name)?.map((event) => (
+                            <li key={event.id} className="user-event">
                                 <Link className="link-to-event" to={`events/${event.id}`}>
                                     <img className="preview-image-events" src={event.event_preview_image}></img>
                                     <div className="event-info">
@@ -76,9 +77,11 @@ const EventsPage = () => {
                                         <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         <div className="location">{event.event_city}, {event.event_state}</div>
                                         <div className="owner">Organizer: {event.owner.username}</div>
-                                        {/* <LikeButton event={event}/> */}
                                     </div>
-                                </Link>
+                                        </Link>
+                                        {
+                                            currentUser ? <LikeButton events={events} currentUser={currentUser} eventId={event.id}/> : <></>
+                                        }
                             </li>
                         ))
                     }
@@ -94,8 +97,8 @@ const EventsPage = () => {
                 </select>
                 <ul className="edmtrain-list">
                     {edmtrainEvents.success === true ?
-                        apiEvents.filter(event => event.name)?.map((event, index) => (
-                            <li key={index} className="edmtrain-event">
+                        apiEvents.filter(event => event.name)?.map((event) => (
+                            <li key={event.id} className="edmtrain-event">
                                 <a className="event-id-and-name" target="_blank" href={`${event.link}`}>
                                     <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" alt="edmtrain"></img>
                                     <br></br>

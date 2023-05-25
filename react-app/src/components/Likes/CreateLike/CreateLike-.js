@@ -1,36 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { likeOneEventThunk } from "../../../store/likes";
 
-const LikeButton = ({ event }) => {
-  const [liked, setLiked] = useState(false);
+const LikeButton = ({ events, currentUser, eventId }) => {
+  const [liked, setLiked] = useState(null)
   const dispatch = useDispatch()
-  const currentUser = useSelector((state) => state.users.currentUser);
-  const handleClick = () => {
-    setLiked(!liked);
-    if (liked) {
-      // Get the current user.
+  console.log("events =>", events)
+  console.log("currentUser => ", currentUser)
+  console.log("eventId => ", eventId)
 
-      // Get the event.
-      const event = event;
 
-    //   // Add the event to the user's likes.
-    //   const db = useDispatch("db");
-    //   db.session.add({
-    //     user_id: currentUser.id,
-    //     event_id: event.id,
-    //   });
-
-    //   // Commit the changes to the database.
-    //   db.session.commit();
-    // } else {
-    //   // Remove the event from the user's likes.
+  useEffect(() => {
+    if (currentUser.events_liked.includes(eventId)) {
+      setLiked(false);
+    } else {
+      setLiked(true);
     }
+  }, [currentUser.events_liked, eventId]);
+
+  const handleClick = () => {
+    if (liked) {
+      setLiked(false);
+    } else {
+      setLiked(true);
+    }
+    dispatch(likeOneEventThunk(eventId))
   };
 
   return (
-    <button onClick={handleClick}>
-      {liked ? "Unlike" : "Like"}
+    <button onClick={handleClick} className="handle-like-click">
+      {liked ? "Like" : "Unlike"}
     </button>
   );
 };
