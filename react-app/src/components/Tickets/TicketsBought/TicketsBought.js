@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './TicketsBought.css'
 // import { Link } from "react-router-dom"
-// import { getEventsThunk } from "../../../store/events";
+import { getEventsThunk } from "../../../store/events";
 // import { useHistory } from "react-router-dom";
 import { getBoughtTicketsThunk } from "../../../store/tickets";
 const TicketsBoughtPage = () => {
@@ -18,6 +18,7 @@ const TicketsBoughtPage = () => {
   console.log("orders => ", orders)
   useEffect(() => {
     dispatch(getBoughtTicketsThunk());
+    dispatch(getEventsThunk())
   }, [dispatch]);
 
   // const eventForTicket = ({order}) => {
