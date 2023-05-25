@@ -15,6 +15,7 @@ import EditEvent from "./components/Events/EditEvent/EditEvent";
 import CreateTicketsForEvent from "./components/Tickets/CreateTickets/CreateTickets";
 import UserLikesPage from "./components/Likes/UserLikesPage/UserLikesPage";
 import TicketsBoughtPage from "./components/Tickets/TicketsBought/TicketsBought";
+import ResultsPage from "./components/ResultsPage/ResultsPage";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -51,7 +52,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path = "/events/:eventId/tickets">
+          <Route path="/events/:eventId/tickets">
             {/* <TicketsModal /> */}
             <CreateTicketsForEvent />
           </Route>
@@ -60,6 +61,9 @@ function App() {
           </Route>
           <Route exact path="/current_user/tickets">
             <TicketsBoughtPage />
+          </Route>
+          <Route path="/search">
+            <ResultsPage />
           </Route>
         </Switch>
       )}

@@ -89,7 +89,7 @@ const CreateEvent = () => {
             event_state, event_zip_code, event_genre_id
         }
         dispatch(createEventThunk(createdEventDetails))
-        history.push(`/events`)
+        history.push(`/events/${createdEventDetails.id}`)
     }
     console.log("errors => ", errors)
     // if (!events.length) return <>Loading.....</>
@@ -222,7 +222,7 @@ const CreateEvent = () => {
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
                                     <input
-                                        type='textarea' placeholder='' min='1'
+                                        type='textarea' placeholder='' min='1' className="description-input"
                                         required value={event_description} onChange={updateEvent_description}
                                     />
                                 </label>

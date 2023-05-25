@@ -22,8 +22,6 @@ const OwnedEventsPage = () => {
         <div className="events-page">
                 <h2>User created Events</h2>
             <ul className="user-events-list">
-                <header className="events-data-header">
-                </header>
                 {
                     events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
                         <li key={index} className="owned-event">

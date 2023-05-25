@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { likeOneEventThunk } from "../../../store/likes";
 import { deleteLikeThunk } from "../../../store/likes";
 import { getUserLikesThunk } from "../../../store/likes";
+import "./CreateLike.css"
 const LikeButton = ({ currentUser, eventId, likes }) => {
   const [buttonValue, setButtonValue] = useState("Like");
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const LikeButton = ({ currentUser, eventId, likes }) => {
 
   return (
     <button onClick={handleClick} className="handle-like-click">
-      {buttonValue}
+      {buttonValue === "Like" ? <i class="fa-regular fa-heart"></i> : <i class="fa-solid fa-heart"></i>}
     </button>
   );
 };
