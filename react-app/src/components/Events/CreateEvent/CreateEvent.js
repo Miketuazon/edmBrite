@@ -168,7 +168,7 @@ const CreateEvent = () => {
                         <label>
                             Zip Code
                             <input
-                                type='number' placeholder='e.g. 07666' pattern="[0-9]*"
+                                type='number' placeholder='e.g. 07666' pattern="[0-9]*" max="99999"
                                 required value={event_zip_code} onChange={updateEvent_zip_code}
                             />
                         </label>
