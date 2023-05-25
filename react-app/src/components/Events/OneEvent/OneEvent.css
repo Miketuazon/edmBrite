@@ -1,4 +1,5 @@
-.left-side, .description {
+.left-side,
+.description {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
@@ -8,7 +9,27 @@
     margin-bottom: 50px;
 }
 
-.preview-image, .description-image {
+.description-input {
+    overflow-y: auto;
+    height: 100px;
+    clear: both;
+    display:block;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.description-container {
+
+    white-space: normal;
+    width: 100%;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.preview-image,
+.description-image {
     max-width: 75%;
 }
 
