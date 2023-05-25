@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import './EventsPage.css'
 import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../store/events";
-import { useHistory } from "react-router-dom";
 import stateData from "./locations.json"
+import LikeButton from "../Likes/CreateLike/CreateLike-";
 const EventsPage = () => {
     // Todo: Need to learn AWS to serve images
     const dispatch = useDispatch()
@@ -24,7 +24,7 @@ const EventsPage = () => {
 
     // grab coordinates from json
     const stateJsonData = stateData.data
-    const statesNullCity = stateJsonData.filter((state) => state.city === null)
+    const statesNullCity = stateJsonData.filter((state) => state.city === null || state.city === "Washington")
     const reducedStatesObj = statesNullCity.reduce((newObj, state) => {
         newObj[state.state] = {
             state: state.state,
@@ -62,7 +62,7 @@ const EventsPage = () => {
                 <header className="events-data-header">
                 </header>
                 <div classname="image-on-top">
-                    <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg"></img>
+                    <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg" alt="image"></img>
                 </div>
                 <h2>User created Events</h2>
                 <ul className="user-events-list">
@@ -70,12 +70,13 @@ const EventsPage = () => {
                         events?.filter(event => event.event_name)?.map((event, index) => (
                             <li key={index} className="user-event">
                                 <Link className="link-to-event" to={`events/${event.id}`}>
-                                    <img className="preview-image-events" src={event.event_preview_image} alt="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/EDC%20Vegas%20-%20DJ%20MAG.png.jpg"></img>
+                                    <img className="preview-image-events" src={event.event_preview_image}></img>
                                     <div className="event-info">
                                         <div className="event-id-and-name">{event.event_name}</div>
                                         <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         <div className="location">{event.event_city}, {event.event_state}</div>
                                         <div className="owner">Organizer: {event.owner.username}</div>
+                                        {/* <LikeButton event={event}/> */}
                                     </div>
                                 </Link>
                             </li>
@@ -96,7 +97,7 @@ const EventsPage = () => {
                         apiEvents.filter(event => event.name)?.map((event, index) => (
                             <li key={index} className="edmtrain-event">
                                 <a className="event-id-and-name" target="_blank" href={`${event.link}`}>
-                                    <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg"></img>
+                                    <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" alt="edmtrain"></img>
                                     <br></br>
                                     {event.name}
                                     <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.date).toLocaleDateString()}</div>

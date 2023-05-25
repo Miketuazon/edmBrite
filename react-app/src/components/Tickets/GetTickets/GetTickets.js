@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './GetTickets.css'
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { getTicketsThunk } from "../../../store/tickets";
 import { getOneEventThunk } from "../../../store/events";
 import OpenModalButton from "../../OpenModalButton";

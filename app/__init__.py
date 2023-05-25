@@ -10,6 +10,7 @@ from .api.auth_routes import auth_routes
 from .api.event_routes import event_routes
 from .api.genre_routes import genre_routes
 from .api.ticket_routes import ticket_routes
+from .api.like_routes import like_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -34,6 +35,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(event_routes, url_prefix='/api/events')
 app.register_blueprint(genre_routes, url_prefix='/api/genres')
 app.register_blueprint(ticket_routes, url_prefix='/api/tickets')
+app.register_blueprint(like_routes, url_prefix='/api/likes')
 db.init_app(app)
 Migrate(app, db)
 

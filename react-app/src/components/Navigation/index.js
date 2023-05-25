@@ -37,7 +37,7 @@ function Navigation({ isLoaded }) {
 								</li>
 								{/* <NavLink className="createEventButton" to="/events/new">Create an event</NavLink> */}
 								<li className='tickets-button'>
-									<NavLink className='tickets-button' exact to="/" style={{ "text-decoration": "none" }}>
+									<NavLink className='tickets-button' exact to="/current_user/tickets" style={{ "text-decoration": "none" }}>
 										<i class="fa-solid fa-ticket"></i>
 										<div>Tickets</div>
 									</NavLink>

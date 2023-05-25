@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { Link } from "react-router-dom"
-import { createEventThunk } from "../../../store/events";
-import { useHistory } from "react-router-dom";
-import { getGenresThunk } from "../../../store/genres";
+// import { createEventThunk } from "../../../store/events";
+// import { useHistory } from "react-router-dom";
+// import { getGenresThunk } from "../../../store/genres";
 import { useModal } from "../../../context/Modal";
 import { buyTicketsThunk } from "../../../store/tickets";
 

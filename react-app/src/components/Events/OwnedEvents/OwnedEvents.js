@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../../store/events";
-import { useHistory } from "react-router-dom";
-import OpenModalButton from "../../OpenModalButton";
+// import { useHistory } from "react-router-dom";
+// import OpenModalButton from "../../OpenModalButton";
 import DeleteEventModal from "../DeleteEventModal/DeleteEventModal";
 import OpenModalDelete from "./OpenModalDelete";
 import "./OwnedEvents.css"
@@ -28,7 +28,7 @@ const OwnedEventsPage = () => {
                     events?.filter(event => event.owner?.id === sessionUser.id)?.map((event, index) => (
                         <li key={index} className="owned-event">
                             {/* <Link to={`events/${event.id}`}> */}
-                            <img className="preview-image-events" src={event.event_preview_image}></img>
+                            <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
                             <div className="event-id-and-name">{event.id} | {event.event_name}</div>
                             {/* </Link> */}
                             <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>

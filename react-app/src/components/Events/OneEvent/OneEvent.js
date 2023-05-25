@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
-import { useParams, useHistory, Link } from "react-router-dom"
+import { useParams, useHistory} from "react-router-dom"
 import { getOneEventThunk } from "../../../store/events";
 import { getGenresThunk } from "../../../store/genres";
 import { getTicketsThunk } from "../../../store/tickets";
@@ -79,8 +79,8 @@ const OneEvent = () => {
     // Getting hours, mins, day and time of end
     const endDateMonth = months[endDate.getMonth()]
     const endDay = endDate.getDate()
-    const endDayOfWeek = endDate.getDay()
-    const endYear = endDate.getFullYear()
+    // const endDayOfWeek = endDate.getDay()
+    // const endYear = endDate.getFullYear()
     let endMinutes = endDate.getMinutes()
     let endHours = endDate.getHours()
     // AM or PM
@@ -93,8 +93,9 @@ const OneEvent = () => {
     // Adding 0 if minutes < 10
     if (endMinutes < 10) endMinutes = '0' + endMinutes
     let tbaOrNot = timeOfEvent
-    tbaOrNot === NaN ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
+    isNaN(tbaOrNot) ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
     // debugger
+    if (!ticketsObj) return <>Loading....</>
     return (
         <div className="event-details">
             <div className="left-side">

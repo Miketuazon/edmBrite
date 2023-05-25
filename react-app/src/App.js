@@ -1,6 +1,6 @@
 import React, { useState, useEffect, } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
@@ -11,9 +11,10 @@ import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
 import OneEvent from "./components/Events/OneEvent/OneEvent";
 import OwnedEventsPage from "./components/Events/OwnedEvents/OwnedEvents";
 import EditEvent from "./components/Events/EditEvent/EditEvent";
-import TicketsModal from "./components/Tickets/GetTickets/GetTickets";
+// import TicketsModal from "./components/Tickets/GetTickets/GetTickets";
 import CreateTicketsForEvent from "./components/Tickets/CreateTickets/CreateTickets";
 import UserLikesPage from "./components/Likes/UserLikesPage/UserLikesPage";
+import TicketsBoughtPage from "./components/Tickets/TicketsBought/TicketsBought";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -56,6 +57,9 @@ function App() {
           </Route>
           <Route exact path="/current_user/likes">
             <UserLikesPage />
+          </Route>
+          <Route exact path="/current_user/tickets">
+            <TicketsBoughtPage />
           </Route>
         </Switch>
       )}
