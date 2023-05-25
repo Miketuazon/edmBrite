@@ -57,7 +57,7 @@ const CreateEvent = () => {
         const validExtensions = /\.(jpg|jpeg|png|img)$/i
         if (event_name.length < 3 || event_name.length > 50) e.event_name = (' Event name needs at least 3 characters and max of 50')
         if (event_summary.length < 3 || event_summary.length > 140) e.event_summary = (' Event summary needs at least 3 characters and max of 140')
-        if (event_description.length < 3) e.event_description = (' Event description needs to be at least 3 characters.')
+        if (event_description.length < 3 || event_description.length > 500) e.event_description = (' Event description needs to be at least 3 characters and max of 500.')
         if (!event_preview_image.length) e.event_preview_image = (' Event preview image is required')
         if (!validExtensions.test(event_preview_image)) e.event_preview_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
         if (!validExtensions.test(event_description_image)) e.event_description_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
@@ -225,7 +225,7 @@ const CreateEvent = () => {
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
                                     <input
-                                        style={{overflow: "scroll"}} rows="4" cols="50"
+                                        style={{overflow: "scroll"}} rows="4" cols="50" maxLength={500}
                                         type='textarea' placeholder='' min='1' className="description-input"
                                         required value={event_description} onChange={updateEvent_description}
                                     />

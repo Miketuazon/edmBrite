@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
-import { useParams, useHistory} from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 import { getOneEventThunk } from "../../../store/events";
 import { getGenresThunk } from "../../../store/genres";
 import { getTicketsThunk } from "../../../store/tickets";
@@ -116,7 +116,7 @@ const OneEvent = () => {
                             <h3>Date and time</h3>
                             {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
                         </div>
-                        <div className="location" style={{fontSize:16}}>
+                        <div className="location" style={{ fontSize: 16 }}>
                             <h3 >Location</h3>
                             {event.event_venue} {event.event_street_address}
                         </div>
@@ -130,13 +130,15 @@ const OneEvent = () => {
                             <div className="type-ticket"> Mobile eTicket</div>
                         </div>
                     </div>
-                    <div className="description">
+                    <div className="description-event">
                         <img className="description-image" src={event.event_description_image} alt="description image"></img>
                         <div className="description-info">
                             <div className="artist-venue">{event.event_name} at {event.event_venue}</div>
                             <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
                             <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
-                            <div className="description">{event.event_description}</div>
+                            <div className="description-container">
+                                <p className="description-input" cols="50" rows="5" style={{ "overflow": "auto" }}>{event.event_description}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
