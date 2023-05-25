@@ -95,6 +95,7 @@ const OneEvent = () => {
     let tbaOrNot = timeOfEvent
     isNaN(tbaOrNot) ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
     // debugger
+    if (!ticketsObj) return <>Loading....</>
     return (
         <div className="event-details">
             <div className="left-side">
