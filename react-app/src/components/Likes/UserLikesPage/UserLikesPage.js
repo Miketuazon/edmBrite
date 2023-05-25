@@ -4,18 +4,23 @@ import './UserLikesPage.css'
 import { Link } from "react-router-dom"
 import { getEventsThunk } from "../../../store/events";
 import { useHistory } from "react-router-dom";
-
+import { likeOneEventThunk } from "../../../store/likes";
+import { getUserLikesThunk } from "../../../store/likes";
 const UserLikesPage = () => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state?.session?.user)
     const eventsObj = useSelector(state => state.events)
     const events = Object.values(eventsObj)
     console.log("events => ", events)
-    const userLikedEvents = currentUser?.events_liked
+    const userLikedEvents = useSelector(state => state.session.user?.events_liked)
     console.log("userLikedEvents => ", userLikedEvents)
+    const likesObj = useSelector(state => state.likes)
+    const likes = Object.values(likesObj)
+    console.log(likes)
     useEffect(() => {
         dispatch(getEventsThunk())
-    }, [dispatch])
+        dispatch(getUserLikesThunk())
+    }, [dispatch, userLikedEvents])
 
     if (!currentUser) return <h1 style={{color: "red"}}>Unauthorized. You are not logged in</h1>
     if (!userLikedEvents) return <h1>Loading...</h1>
@@ -24,7 +29,7 @@ const UserLikesPage = () => {
             <h1>Likes</h1>
             <ul className="likes-container">
                 {
-                    events.filter(event => userLikedEvents.includes(event.id))
+                    events.filter(event => likes.includes(event.id))
                         .map(event => (
                             <div key={event.id} className="event-liked">
                                 <img className="preview-image-events" src={event.event_preview_image} alt="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/EDC%20Vegas%20-%20DJ%20MAG.png.jpg"></img>

@@ -116,8 +116,8 @@ const OneEvent = () => {
                             <h3>Date and time</h3>
                             {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
                         </div>
-                        <div className="location">
-                            <h3>Location</h3>
+                        <div className="location" style={{fontSize:16}}>
+                            <h3 >Location</h3>
                             {event.event_venue} {event.event_street_address}
                         </div>
                     </div>
@@ -152,7 +152,7 @@ const OneEvent = () => {
                 {   // if  logged in and
                     (currentUser &&
                         // if there are no tickets and user is event owner, make a link to create events
-                        !ticketsObj || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
+                        !ticketsObj || ticketsObj === undefined || Object?.keys(ticketsObj)?.length < 2) && event.owner.id === currentUser.id
                         ?
 
                         <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>

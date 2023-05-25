@@ -47,7 +47,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
 
         if (!first_name) e.first_name = ('First name is required')
         if (!last_name) e.last_name = ('Last name is required')
-        if (!email) e.email = ('Email is required')
+        if (!email || !email.includes("@")) e.email = ('Email is required and needs an @ to be accepted')
         if (confirmEmail !== email) e.confirmEmail = ('Emails must match')
         if (!cardNumber || cardNumber.length !== 16 ) e.cardNumber = ('Card number is required and Card number needs 16 characters')
         // if (cardNumber.length !== 16) e.cardNumber('Card number needs 16 characters')
@@ -124,7 +124,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                             <label className="credit-num">
                                 Card number
                                 <input
-                                    type='number' placeholder='Card number' min='1'
+                                    type='text' placeholder='Card number' maxLength="16"
                                     required value={cardNumber} onChange={updateCardNumber}
                                 />
                             </label>
@@ -134,7 +134,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                                 <label className="exp">
                                     Expiration date
                                     <input
-                                        type='number' placeholder='MM/YY' min='1'
+                                        type='string' placeholder='MM/YY' maxLength="4"
                                         required value={expirationDate} onChange={updateExpirationDate}
                                     />
                                 </label>
@@ -143,7 +143,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                                 <label className="sec">
                                     Security code
                                     <input
-                                        type='number' placeholder='123' min='1'
+                                        type='string' placeholder='123' min='1' maxLength="4"
                                         required value={securityCode} onChange={updateSecurityCode}
                                     />
                                 </label>
@@ -152,7 +152,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                                 <label className="zip">
                                     Zip code
                                     <input
-                                        type='number' placeholder='123' min='1'
+                                        type='string' placeholder='123456' min='1' maxLength='6'
                                         required value={zipCode} onChange={updateZipCode}
                                     />
                                     <div className="hidden">
