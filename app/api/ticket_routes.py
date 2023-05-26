@@ -123,33 +123,41 @@ def create_tickets_for_event(event_id):
 
 @event_routes.route("/<int:event_id>/tickets/<int:ticket_id>/update", methods=["PUT"])
 @login_required
-def update_ticket_price_or_quantity(ticket_id, event_id):
+def update_ticket_price_or_quantity(event_id, ticket_id):
     """
-    Query to update ticket price or quantity
+    Query to update ticket price or quantity of your order
     """
 
-    form = TicketForm()
     current_user_dict = current_user.to_dict()
-    form['csrf_token'].data = request.cookies['csrf_token']
-
-    if not ticket_id:
-        return {'error': 'Ticket ID is required for updating a ticket!'}, 400
+    event = Event.query.get(event_id)
+    if not event.id:
+        return {'error': 'Event not found'}, 404
 
     ticket = Ticket.query.get(ticket_id)
-    if not ticket:
-        return {'error': 'Ticket not found!'}, 404
-
     if current_user_dict['id'] != ticket.user_id_ticket_creator:
-        return {'error': 'You are not the creator of this ticket. You cannot update it.'}, 403
+        return {'error': 'You are not the owner of this ticket. You cannot update it.'}, 403
 
+
+
+    form = Ticket_Purchase_Form()
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    # if form.validate_on_submit():
     ticket.ticket_type=form.data['ticket_type']
     ticket.ticket_price=form.data['ticket_price']
     ticket.ticket_quantity=form.data['ticket_quantity']
     ticket.user_id_ticket_creator=current_user_dict['id']
     ticket.event_id=event_id
-
+    ticket.first_name=form.data['first_name']
+    ticket.last_name=form.data['last_name']
+    ticket.email=form.data['email']
+    ticket.confirmEmail=form.data['confirmEmail']
+    ticket.cardNumber=form.data['cardNumber']
+    ticket.expirationDate=form.data['expirationDate']
+    ticket.securityCode=form.data['securityCode']
+    ticket.zipCode=form.data['zipCode']
     db.session.commit()
-    return {'message': 'Successfully updated tickets for event', 'ticket': ticket.to_dict()}
+    return {'message': 'Successfully updated tickets for event', 'ticket': ticket.to_dict_bought()}
 
 @event_routes.route("/<int:event_id>/tickets/<int:ticket_id>/delete", methods=['DELETE'])
 @login_required

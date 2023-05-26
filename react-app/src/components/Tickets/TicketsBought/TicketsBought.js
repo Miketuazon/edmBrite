@@ -5,6 +5,8 @@ import './TicketsBought.css'
 import { getEventsThunk } from "../../../store/events";
 // import { useHistory } from "react-router-dom";
 import { getBoughtTicketsThunk } from "../../../store/tickets";
+import OpenModalButton from "../../OpenModalButton";
+import UpdateTicketsBought from "../UpdateTicketsBought/UpdateTicketsBought";
 const TicketsBoughtPage = () => {
   const dispatch = useDispatch();
   const current_user = useSelector(state => state.session.user)
@@ -45,13 +47,18 @@ const TicketsBoughtPage = () => {
           orders.filter(order => order.user_id_ticket_buyer === current_user.id)
             .map(order => (
               <div key={order.id}>
-                <h2>Ticket Order#{order.id}</h2>
+                <h2>Ticket Order #{order.id}</h2>
                 {/* <eventForTicket order={order}/> */}
                 <h3>Ticket Type: {order.ticket_type}</h3>
                 <h4>Ticket Quantity: {order.ticket_quantity}</h4>
                 <h5>Ticket Price: ${order.ticket_price}</h5>
                 <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
                 <br></br>
+                <OpenModalButton classname="update-tickets-button"
+                modalComponent={<UpdateTicketsBought ticket_type={order.ticket_type} ticket_quantity={order.ticket_quantity} ticket_price={order.ticket_price}order={order}/>}
+                buttonText={`Update`}
+                >
+                </OpenModalButton>
               </div>
             ))
         }

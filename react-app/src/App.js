@@ -16,6 +16,7 @@ import CreateTicketsForEvent from "./components/Tickets/CreateTickets/CreateTick
 import UserLikesPage from "./components/Likes/UserLikesPage/UserLikesPage";
 import TicketsBoughtPage from "./components/Tickets/TicketsBought/TicketsBought";
 import ResultsPage from "./components/ResultsPage/ResultsPage";
+import UpdateTicketsBought from "./components/Tickets/UpdateTicketsBought/UpdateTicketsBought";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -55,6 +56,9 @@ function App() {
           <Route path="/events/:eventId/tickets">
             {/* <TicketsModal /> */}
             <CreateTicketsForEvent />
+          </Route>
+          <Route path ="/current_user/tickets/update">
+            <UpdateTicketsBought />
           </Route>
           <Route exact path="/current_user/likes">
             <UserLikesPage />

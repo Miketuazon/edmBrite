@@ -17,12 +17,13 @@ const LandingPage = () => {
         <>
             <div className='intro'>
                 <div className="left-intro">
-                    <h1>Hi there!</h1>
-                    <h2>Welcome to</h2>
-                    <img alt='logo' src="https://imgur.com/TbXlJSk.png"></img>
-                    <div className="question">Looking for new edm events? Click the button below!</div>
+                    {/* <img alt='logo' src="https://i.imgur.com/wcU7Hmm.png"></img> */}
+                    <h1>edmBrite</h1>
+                    <h2>Get lost in the music</h2>
+                    {/* <h2>Welcome to</h2> */}
+                    <h2 className="question"></h2>
                     <button className='check-out-events' onClick={onSubmit}>
-                        Check out events!
+                        Find your next event
                     </button>
                 </div>
                 <div className="right-intro">

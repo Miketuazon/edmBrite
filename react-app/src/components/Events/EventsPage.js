@@ -68,7 +68,7 @@ const EventsPage = () => {
                 <header className="events-data-header">
                 </header>
                 <div classname="image-on-top">
-                    <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg" alt="image" className="image-on-top"></img>
+                    <img src="https://wallpaperaccess.com/full/4829413.jpg" alt="image" className="image-on-top"></img>
                 </div>
                 <h2>User created Events</h2>
                 <div className="user-events-list">
