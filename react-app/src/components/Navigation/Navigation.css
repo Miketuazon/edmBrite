@@ -53,7 +53,10 @@
 }
 
 /* take out color of visited and other links */
-:visited, a {color: black;}
+:visited, a {
+  color: black;
+  text-decoration: none;
+}
 
 .create-an-event-button {
   display: flex;

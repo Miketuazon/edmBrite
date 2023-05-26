@@ -68,29 +68,35 @@ const EventsPage = () => {
                 <header className="events-data-header">
                 </header>
                 <div classname="image-on-top">
-                    <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg" alt="image"></img>
+                    <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/248d7e11d9885236625a1b207adf62c6-4_tablet_1067x470.jpg" alt="image" className="image-on-top"></img>
                 </div>
                 <h2>User created Events</h2>
-                <ul className="user-events-list">
+                <div className="user-events-list">
                     {
                         events?.filter(event => event.event_name)?.map((event) => (
-                            <li key={event.id} className="user-event">
+                            <article key={event.id} className="user-event">
                                 <Link className="link-to-event" to={`events/${event.id}`}>
-                                    <img className="preview-image-events" src={event.event_preview_image}></img>
+                                    <div className="image-card-container">
+                                        <img className="preview-image-event" src={event.event_preview_image}></img>
+                                    </div>
                                     <div className="event-info">
-                                        <div className="event-id-and-name">{event.event_name}</div>
-                                        <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
-                                        <div className="location">{event.event_city}, {event.event_state}</div>
-                                        <div className="owner">Organizer: {event.owner.username}</div>
+                                        <div className="name-date">
+                                            <div className="event-id-and-name">{event.event_name}</div>
+                                            <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
+                                        </div>
+                                        <div className="location-owner">
+                                            <div className="location">{event.event_city}, {event.event_state}</div>
+                                            <div className="owner">Organizer: {event.owner.username}</div>
+                                        </div>
                                     </div>
                                 </Link>
                                 {
                                     currentUser ? <LikeButton events={events} currentUser={currentUser} eventId={event.id} likes={likes} /> : <></>
                                 }
-                            </li>
+                            </article>
                         ))
                     }
-                </ul>
+                </div>
                 <h2>EDMTRAIN Events</h2>
                 <h3 className="location-changer">Located: {state}</h3>
                 <select value={state} onChange={handleStateChange}>

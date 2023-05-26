@@ -28,7 +28,7 @@ const LikeButton = ({ currentUser, eventId, likes }) => {
 
   return (
     <button onClick={handleClick} className="handle-like-click">
-      {buttonValue === "Like" ? <i class="fa-regular fa-heart"></i> : <i class="fa-solid fa-heart"></i>}
+      {buttonValue === "Like" ? <i class="fa-regular fa-heart"></i> : <i class="fa-solid fa-heart" style={{color: "#f05537"}}></i>}
     </button>
   );
 };
