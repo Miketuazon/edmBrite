@@ -60,7 +60,7 @@
     display: block;
 }
 
-.preview-image-event {
+.preview-image-event, .preview-image-events-edmtrain {
     display: flex;
     outline: none;
     width: 100%;
