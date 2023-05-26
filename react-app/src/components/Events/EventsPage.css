@@ -1,20 +1,42 @@
+@media screen and (min-width: 960px) {
+    .image-on-top {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 792px) {
+    .image-on-top {
+        width: 100%;
+        /* margin-left: auto;
+        height: auto; */
+    }
+}
+
+@media screen and (min-width: 200px) {
+    .image-on-top {
+        width: 100%;
+
+    }
+}
+
 .image-on-top {
-    width: 100%;
     right: 0;
     margin-left: auto;
     height: auto;
     overflow: hidden;
     bottom: 0;
     z-index: 0;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .edmtrain-events-list,
 .user-events-list {
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
 }
 
 /* .edmtrain-events-list li:hover,
@@ -32,17 +54,45 @@
 }
 
 .preview-image-events {
-    max-width: 221px;
-    max-height: 200px;
-    min-height: 200px;
+    max-width: 280px;
+    /* max-height: 148px; */
+    max-height: 392px;
     display: block;
 }
 
-.edmtrain-event li .event-id-and-name,
-.user-event li .event-id-and-name {
-    font-size: 18px;
+.preview-image-event, .preview-image-events-edmtrain {
+    display: flex;
+    outline: none;
+    width: 100%;
+    max-height: 140px;
+    overflow: hidden;
+    object-fit: cover;
+    /* position: absolute; */
 }
 
+.event-info {
+    height: 180px;
+    padding: 24px 16px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date {
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.event-id-and-name {
+    font-size: 1.125rem;
+    line-height: 22px;
+    font-weight: 400;
+}
 .date {
     font-size: 14px;
     color: #F58800;
@@ -63,8 +113,9 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid lightgray;
-    padding: 10px;
-    margin-bottom: 10px;
+    max-width: 300px;
+    max-height: 406px;
+    box-shadow: -6px 0px 42px 15px rgba(0,0,0,0.07);
 }
 .link-to-event {
     display: flex;
@@ -82,15 +133,5 @@
 
 .edmtrain-event:hover,
 .user-event:hover {
-    box-shadow: 1px 5px 2px 1px lightgray;
-    border-radius: 20px #266867 solid;
-}
-
-.user-events-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 10%;
-    margin-right: 10%;
-    flex-wrap: wrap;
+    box-shadow: 10px 0px 31px 25px #F7F7F9;
 }

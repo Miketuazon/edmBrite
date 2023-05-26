@@ -100,16 +100,17 @@ const CreateEvent = () => {
         <div className="create-event-page">
             <h1>Create an event!</h1>
             <div className="create-form-div">
+                <ul className="errors">
+                    {hasSubmitted &&
+                        Object.entries(errors).map((error, idx) => (
+                            <li key={idx} style={{ color: "red", background: "yellow" }}>
+                                ERROR!: {error}
+                            </li>
+                        ))}
+                </ul>
                 <form className="create-form" onSubmit={handleSubmit}>
+                    <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
-                        <ul className="errors">
-                            {hasSubmitted &&
-                                Object.entries(errors).map((error, idx) => (
-                                    <li key={idx} style={{ color: "red", background: "yellow" }}>
-                                        ERROR!: {error}
-                                    </li>
-                                ))}
-                        </ul>
                         <h2>Basic Info</h2>
                         <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
                         <label>
@@ -133,11 +134,13 @@ const CreateEvent = () => {
                             <div className="dj">Let the people know who the main DJ is!</div>
                             <input
                                 type='text' placeholder='Input who is playing for your show!' min='1'
-                                maxLength={100}required value={event_dj} onChange={updateEvent_dj}
+                                maxLength={100} required value={event_dj} onChange={updateEvent_dj}
                             />
                         </label>
                     </div>
+                    <br></br>
                     <div className="location-date-time">
+                        <div className="fawesome"><i class="fa-solid fa-location-dot"></i></div>
                         <h2>Location</h2>
                         <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
                         <label>
@@ -175,7 +178,9 @@ const CreateEvent = () => {
                                 required value={event_zip_code} onChange={updateEvent_zip_code}
                             />
                         </label>
+                        <br></br>
                         <div className="date-time">
+                            <div className="fawesome"><i class="fa-regular fa-calendar-days"></i></div>
                             <h2>Date and Time</h2>
                             <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
                             <label>
@@ -184,7 +189,7 @@ const CreateEvent = () => {
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
                                 /> */}
-                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date}/>
+                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date} />
                             </label>
                             <label>
                                 Event End Date
@@ -192,9 +197,11 @@ const CreateEvent = () => {
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
                                 /> */}
-                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date}/>
+                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date} />
                             </label>
+                            <br></br>
                             <div className="create-event-details">
+                                <div className="fawesome"><i class="fa-regular fa-lightbulb"></i></div>
                                 <h2>Event details</h2>
                                 <div className="header">Input an amazing image to go along with your description!</div>
                                 <label>
@@ -225,7 +232,7 @@ const CreateEvent = () => {
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
                                     <input
-                                        style={{overflow: "scroll"}} rows="4" cols="50" maxLength={500}
+                                        style={{ overflow: "scroll" }} rows="4" cols="50" maxLength={500}
                                         type='textarea' placeholder='' min='1' className="description-input"
                                         required value={event_description} onChange={updateEvent_description}
                                     />
@@ -236,7 +243,9 @@ const CreateEvent = () => {
                                             * {errors.event_genre_id}
                                         </div>
                                     )}
-                                    Genre
+                                    <br></br>
+                                    <div className="fawesome"><i class="fa-solid fa-list"></i></div>
+                                    <h2>Genre </h2>
                                     <div>Select a genre! If you can't decide, choose the default Electronic!</div>
                                     <select value={event_genre_id} onChange={updateEvent_genre_id}>
                                         {/* need to figure out way to iterate through genres */}
@@ -247,7 +256,7 @@ const CreateEvent = () => {
                                         }
                                     </select>
                                 </label>
-                                <div>
+                                <div className="btn">
                                     <button className='btn' type="submit">Create event!</button>
                                 </div>
                             </div>

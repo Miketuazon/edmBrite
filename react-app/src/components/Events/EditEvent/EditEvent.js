@@ -141,20 +141,23 @@ const EditEvent = () => {
     // if (event?.owner.id !== currentUser.id) return <>UNAUTHORIZED! You are NOT the owner of this spot!</>
     // if (!events.length) return <>Loading.....</>
     return (
-        <div className="edit-event-page">
-            <h1>Edit an event!</h1>
+        <div className="create-event-page">
+            <h1>Create an event!</h1>
             <div className="create-form-div">
+                <ul className="errors">
+                    {hasSubmitted &&
+                        Object.entries(errors).map((error, idx) => (
+                            <li key={idx} style={{ color: "red", background: "yellow" }}>
+                                ERROR!: {error}
+                            </li>
+                        ))}
+                </ul>
                 <form className="create-form" onSubmit={handleSubmit}>
+                    <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
                         <h2>Basic Info</h2>
-                        <h3 className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</h3>
+                        <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
                         <label>
-                            {hasSubmitted &&
-                                Object.entries(errors).map((error, idx) => (
-                                    <li key={idx} style={{ color: "red", background: "yellow" }}>
-                                        ERROR!: {error}
-                                    </li>
-                                ))}
                             Event Title
                             <input
                                 type='text' placeholder='Be clear and descriptive' min='1' maxLength={50}
@@ -165,7 +168,7 @@ const EditEvent = () => {
                         <label>
                             Event Preview Image
                             <input
-                                type='text' placeholder='.jpg, .png., .img' min='1'
+                                type='text' placeholder='.jpeg, .jpg, .png., .img' min='1'
                                 required value={event_preview_image} onChange={updateEvent_preview_image}
                             />
                         </label>
@@ -179,10 +182,11 @@ const EditEvent = () => {
                             />
                         </label>
                     </div>
-                    <hr></hr>
+                    <br></br>
                     <div className="location-date-time">
+                        <div className="fawesome"><i class="fa-solid fa-location-dot"></i></div>
                         <h2>Location</h2>
-                        <h3 className="venue">Help people in the area discover your event and let attendees know where to show up.</h3>
+                        <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
                         <label>
                             Venue
                             <input
@@ -214,77 +218,97 @@ const EditEvent = () => {
                         <label>
                             Zip Code
                             <input
-                                type='number' placeholder='e.g. 07666' pattern="[0-9]*" onKeyPress="if(this.value.length==6) return false;"
+                                type='number' placeholder='e.g. 07666' pattern="[0-9]*" max="99999"
                                 required value={event_zip_code} onChange={updateEvent_zip_code}
                             />
                         </label>
-                    </div>
-                    <hr></hr>
-                    <div className="date-time">
-                        <h2>Date and Time</h2>
-                        <h3>Let your attendees know when your event starts and ends!</h3>
-                        <label>
-                            Event Start Date
-                            {/* <input
+                        <br></br>
+                        <div className="date-time">
+                            <div className="fawesome"><i class="fa-regular fa-calendar-days"></i></div>
+                            <h2>Date and Time</h2>
+                            <h3>Please date/time like this format: 10/24/2023 08:00PM</h3>
+                            <label>
+                                Event Start Date
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_start_date} onChange={updateEvent_start_date}
                                 /> */}
-                            <DateTimePicker value={event_start_date} onChange={updateEvent_start_date} />
-                        </label>
-                        <label>
-                            Event End Date
-                            {/* <input
+                                <DateTimePicker value={event_start_date} onChange={updateEvent_start_date} />
+                            </label>
+                            <label>
+                                Event End Date
+                                {/* <input
                                     type='text' placeholder='mm/dd/yyyy hh:mm AM/PM' min='1'
                                     required value={event_end_date} onChange={updateEvent_end_date}
                                 /> */}
-                            <DateTimePicker value={event_end_date} onChange={updateEvent_end_date} />
-                        </label>
-                    </ div>
-                        <hr></hr>
-                        <div className="create-event-details">
-                            <h2>Event details</h2>
-                            <h3 className="header">Input an amazing image to go along with your description!</h3>
-                            <label>
-                                Event Preview Image
-                                <input
-                                    type='text' placeholder='.jpg, .png., .img' min='1'
-                                    required value={event_description_image} onChange={updateEvent_description_image}
-                                />
+                                <DateTimePicker value={event_end_date} onChange={updateEvent_end_date} />
                             </label>
-                            <label>
-                                Summary
-                                <input
-                                    type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
-                                    required value={event_summary} onChange={updateEvent_summary}
-                                />
-                            </label>
-                            <label>
-                                Description
-                                <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
-                                <input
-                                    type='textarea' placeholder='' min='1' className="description-input" maxLength={500}
-                                    required value={event_description} onChange={updateEvent_description}
-                                />
-                            </label>
-                            <label>
-                                Genre
-                                <div>Select a genre! If you can't decide, choose the default Electronic!</div>
-                                <select value={event_genre_id} onChange={updateEvent_genre_id}>
-                                    {/* need to figure out way to iterate through genres */}
-                                    {
-                                        genres.map(genre => (
-                                            <option key={genre.id} value={genre.id}>{genre.name}</option>
-                                        ))
-                                    }
-                                </select>
-                            </label>
-                            <div>
-                                <button className='btn' type="submit">Update event!</button>
+                            <br></br>
+                            <div className="create-event-details">
+                                <div className="fawesome"><i class="fa-regular fa-lightbulb"></i></div>
+                                <h2>Event details</h2>
+                                <div className="header">Input an amazing image to go along with your description!</div>
+                                <label>
+                                    Event Preview Image
+                                    <input
+                                        type='text' placeholder='.jpg, .png., .img' min='1'
+                                        required value={event_description_image} onChange={updateEvent_description_image}
+                                    />
+                                </label>
+                                <label>
+                                    {hasSubmitted && errors.event_summary && (
+                                        <div className='error'>
+                                            * {errors.event_summary}
+                                        </div>
+                                    )}
+                                    Summary
+                                    <input
+                                        type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
+                                        required value={event_summary} onChange={updateEvent_summary}
+                                    />
+                                </label>
+                                <label>
+                                    {hasSubmitted && errors.event_description && (
+                                        <div className='error'>
+                                            * {errors.event_description}
+                                        </div>
+                                    )}
+                                    Description
+                                    <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
+                                    <input
+                                        style={{ overflow: "scroll" }} rows="4" cols="50" maxLength={500}
+                                        type='textarea' placeholder='' min='1' className="description-input"
+                                        required value={event_description} onChange={updateEvent_description}
+                                    />
+                                </label>
+                                <label>
+                                    {hasSubmitted && errors.event_genre_id && (
+                                        <div className='error'>
+                                            * {errors.event_genre_id}
+                                        </div>
+                                    )}
+                                    <br></br>
+                                    <div className="fawesome"><i class="fa-solid fa-list"></i></div>
+                                    <h2>Genre </h2>
+                                    <div>Select a genre! If you can't decide, choose the default Electronic!</div>
+                                    <select value={event_genre_id} onChange={updateEvent_genre_id}>
+                                        {/* need to figure out way to iterate through genres */}
+                                        {
+                                            genres.map(genre => (
+                                                <option key={genre.id} value={genre.id}>{genre.name}</option>
+                                            ))
+                                        }
+                                    </select>
+                                </label>
+                                <div className="btn">
+                                    <button className='btn' type="submit">Create event!</button>
+                                </div>
                             </div>
                         </div>
+                    </div>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
