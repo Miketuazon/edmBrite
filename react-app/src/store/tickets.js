@@ -4,6 +4,7 @@ const GET_TICKETS = 'tickets/getTickets'
 const CREATE_TICKETS = 'tickets/createTickets'
 const BUY_TICKETS = 'tickets/buyTickets'
 const GET_BOUGHT_TICKETS = 'tickets/getBoughtTickets'
+const UPDATE_BOUGHT_TICKETS = 'tickets/updateBoughtTickets'
 // Action creators | tickets
 const getTicketsAction = (tickets) => {
     return {
@@ -29,6 +30,13 @@ const getTicketsAction = (tickets) => {
 const getBoughtTicketsAction = (tickets) => {
     return {
         type: GET_BOUGHT_TICKETS,
+        tickets
+    }
+}
+
+const updateBoughtTicketsAction = (tickets) => {
+    return {
+        type: UPDATE_BOUGHT_TICKETS,
         tickets
     }
 }
@@ -89,6 +97,27 @@ export const getBoughtTicketsThunk = () => async (dispatch) => {
     }
 }
 
+// 5. Update bought tickets
+export const updateBoughtTicketsThunk = (eventId, ticketId, purchaseData) => async (dispatch) => {
+    console.log("HIT THE updateBoughtTicketsThunk ==========>")
+    console.log("eventId ==========>", eventId)
+    console.log("ticketId ==========>", ticketId)
+    console.log("ticketDetails ==========>", purchaseData)
+
+    const res = await fetch(`/api/events/${eventId}/tickets/${ticketId}/update`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(purchaseData)
+    })
+
+    if (res.ok) {
+    console.log("HIT THE updateBoughtTicketsThunk | RESPONSE IS OK==========>")
+        const updatedTicketOrder = await res.json()
+        dispatch(updateBoughtTicketsAction(updatedTicketOrder))
+        return res
+    }
+}
+
 // reducer
 export default function ticketsReducer(state = {}, action) {
     let newState;
@@ -116,6 +145,11 @@ export default function ticketsReducer(state = {}, action) {
             console.log("newState", newState)
             action.tickets.forEach(order => newState[order.id] = order )
             console.log("newState after GET_BOUGHT_TICKETS", newState)
+            return newState
+        case UPDATE_BOUGHT_TICKETS:
+            console.log("HIT THE ticketsReducer UPDATE_BOUGHT_TICKETS ==========>")
+            newState = {...state}
+            newState[action.tickets.ticket.id] = action.tickets.ticket
             return newState
         default:
             return state

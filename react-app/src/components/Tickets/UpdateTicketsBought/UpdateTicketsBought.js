@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import './UpdateTicketsBought.css'
 // import { Link } from "react-router-dom"
-// import { createEventThunk } from "../../../store/events";
-import { useHistory } from "react-router-dom";
-// import { getGenresThunk } from "../../../store/genres";
+// import { editOneEventThunk, getOneEventThunk } from "../../../store/events";
+import { updateBoughtTicketsThunk, getBoughtTicketsThunk } from "../../../store/tickets";
+import { getEventsThunk } from "../../../store/events";
+import { useHistory, useParams } from "react-router-dom";
+import DateTimePicker from "react-datetime-picker"
 import { useModal } from "../../../context/Modal";
-import { buyTicketsThunk } from "../../../store/tickets";
-
-const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quantity, ticket_type }) => {
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
+const UpdateTicketsBought = ({order, ticket_price}) => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state?.session?.user)
+
+    console.log("order details => ", order)
     const history = useHistory()
-    const [first_name, setFirst_name] = useState("")
-    const [last_name, setLast_name] = useState("")
-    const [email, setEmail] = useState("")
-    const [confirmEmail, setConfirmEmail] = useState("")
-    const [cardNumber, setCardNumber] = useState(0)
-    const [expirationDate, setExpirationDate] = useState(0)
-    const [securityCode, setSecurityCode] = useState(0)
-    const [zipCode, setZipCode] = useState(0)
+    const [first_name, setFirst_name] = useState(order.first_name)
+    const [last_name, setLast_name] = useState(order.last_name)
+    const [email, setEmail] = useState(order.email)
+    const [confirmEmail, setConfirmEmail] = useState(order.confirmEmail)
+    const [cardNumber, setCardNumber] = useState(order.cardNumber)
+    const [expirationDate, setExpirationDate] = useState(order.expirationDate)
+    const [securityCode, setSecurityCode] = useState(order.securityCode)
+    const [zipCode, setZipCode] = useState(order.zipCode)
+    const [ticket_quantity, setTicket_quantity] = useState(order.ticket_quantity)
+    const [ticket_type, setTicket_type] = useState(order.ticket_type)
     const { closeModal } = useModal()
-
-    // passing in data from parent component
-    console.log("eventId => ", eventId)
-    console.log("event => ", event)
-    console.log("ticketsObj => ", ticketsObj)
-    console.log("ticket_price => ", ticket_price)
-    console.log("ticket_quantity => ", ticket_quantity)
-    console.log("ticket_type =>", ticket_type)
-
+    const eventId= order.event_id
 
     const [errors, setErrors] = useState([]);
     const [hasSubmitted, setHasSubmitted] = useState(false)
@@ -41,6 +41,8 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
     const updateExpirationDate = (e) => setExpirationDate(e.target.value)
     const updateSecurityCode = (e) => setSecurityCode(e.target.value)
     const updateZipCode = (e) => setZipCode(e.target.value)
+    const updateTicket_quantity = (e) => setTicket_quantity(e.target.value)
+    const updateTicket_type = (e) => setTicket_type(e.target.value)
 
     useEffect(() => {
         let e = {}
@@ -50,8 +52,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
         if (!last_name) e.last_name = ('Last name is required')
         if (!email || !email.includes("@")) e.email = ('Email is required and needs an @ to be accepted')
         if (confirmEmail !== email) e.confirmEmail = ('Emails must match')
-        if (!cardNumber || cardNumber.length !== 16 ) e.cardNumber = ('Card number is required and Card number needs 16 characters')
-        // if (cardNumber.length !== 16) e.cardNumber('Card number needs 16 characters')
+        if (!cardNumber) e.cardNumber = ('Card number is required and Card number needs 16 characters')
         if (!expirationDate) e.expirationDate = ('Expiration Date is required')
         if (!securityCode) e.securityCode = ('Security Code is required')
         if (!zipCode) e.zipCode = ('Zip Code is required')
@@ -63,7 +64,8 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
         if (Object.keys(errors).length !== 0) return
         const purchaseData = {ticket_type, ticket_price, ticket_quantity,first_name, last_name, email, confirmEmail, cardNumber, expirationDate, securityCode, zipCode }
         // debugger
-        dispatch(buyTicketsThunk(purchaseData, eventId))
+        dispatch(updateBoughtTicketsThunk(eventId, order.id, purchaseData,))
+        dispatch(getBoughtTicketsThunk)
         closeModal()
         history.push('/current_user/tickets')
     }
@@ -72,8 +74,8 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
         e.preventDefault()
         closeModal()
     }
-
     return (
+        // <>Testing</>
         <div className="ticket-checkout-modal">
             <div className="left-side-modal">
                 <h2>DISCLAIMER: Please do not put your actual information</h2>
@@ -157,16 +159,18 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                                         type='string' placeholder='123456' min='1' maxLength='6'
                                         required value={zipCode} onChange={updateZipCode}
                                     />
-                                    <div className="hidden">
-                                        Ticket quantity
+                                    <label>
+                                    Ticket quantity
                                     <input
-                                        type='number' placeholder='123' min='1'
-                                        required value={ticket_quantity}
+                                        type='number' placeholder='123' min='1' max='10'
+                                        required value={ticket_quantity} onChange={updateTicket_quantity}
                                     />
+                                    </label>
+                                    <div className="hidden">
                                     Ticket type
                                     <input
                                         type='text' placeholder='123' min='1'
-                                        required value={ticket_type}
+                                        required value={ticket_type} onChange={updateTicket_type}
                                     />
                                     </div>
                                 </label>
@@ -195,4 +199,4 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
     )
 }
 
-export default TicketCheckout
+export default UpdateTicketsBought
