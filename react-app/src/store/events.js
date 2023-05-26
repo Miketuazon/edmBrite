@@ -119,7 +119,6 @@ export default function eventsReducer(state = {}, action) {
         case GET_EVENTS:
             newState = {...state}
             action.events.db_data.forEach((db_event) => newState[db_event.id] = db_event)
-            // action.events.edmtrain_events.forEach((event) => newState[event.id] = event)
             return newState
         case CREATE_EVENT:
             newState = {...state}
@@ -133,7 +132,7 @@ export default function eventsReducer(state = {}, action) {
         case EDIT_ONE_EVENT:
             console.log("HIT THE REDUCER EDIT_ONE_EVENT ==========>")
             newState = {...state}
-            newState[action.event.event.id] = action.event
+            newState[action.event.event.id] = action.event.event
             return newState
         case DELETE_ONE_EVENT:
             console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")

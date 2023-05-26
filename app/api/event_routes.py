@@ -132,6 +132,8 @@ def update_event(event_id):
     event.event_dj = form.data['event_dj']
     event.event_summary = form.data['event_summary']
     event.event_description = form.data['event_description']
+    event.event_preview_image=form.data['event_preview_image']
+    event.event_description_image=form.data['event_description_image']
     event.event_start_date = form.data['event_start_date']
     event.event_end_date = form.data['event_end_date']
     event.event_venue = form.data['event_venue']

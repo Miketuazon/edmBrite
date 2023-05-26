@@ -22,8 +22,7 @@ const EditEvent = () => {
     const event = useSelector(state => state.events.singleEvent?.event)
     useEffect(() => {
         dispatch(getOneEventThunk(eventId))
-        dispatch(getGenresThunk())
-    }, [dispatch, eventId])
+    }, [dispatch])
 
     const [event_name, setEvent_name] = useState("")
     const [event_dj, setEvent_dj] = useState("")
@@ -130,8 +129,10 @@ const EditEvent = () => {
         }
         console.log("updatedEventDetails => ", updatedEventDetails)
         dispatch(editOneEventThunk(updatedEventDetails, eventId))
+        dispatch(getOneEventThunk())
         history.push(`/events/${eventId}`)
     }
+    console.log(event_preview_image)
     console.log("errors => ", errors)
     // console.log("event_start_date =>", event_start_date?.toISOString())
     // console.log("event_end_date => ", event_end_date?.toISOString())
@@ -301,7 +302,7 @@ const EditEvent = () => {
                                     </select>
                                 </label>
                                 <div className="btn">
-                                    <button className='btn' type="submit">Create event!</button>
+                                    <button className='btn' type="submit">Update your event!</button>
                                 </div>
                             </div>
                         </div>
