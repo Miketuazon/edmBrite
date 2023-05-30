@@ -160,7 +160,7 @@ const OneEvent = () => {
                                 !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <h2 className="ticket-alert-owner">Tickets coming soon!</h2>
                                     : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal"/></div>
                                         : <h2 className="ticket-alert-owner">You cannot buy tickets to your own event!</h2>
-                                : <h2 className="ticket-alert-owner"><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets <i class="fa-solid fa-triangle-exclamation"></i></h2>
+                                : <h2 className="ticket-alert-owner"><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets</h2>
                         }
                         {   // if  logged in and
                             (currentUser &&

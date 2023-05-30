@@ -36,10 +36,15 @@ def seed_likes():
         user_id = 3,
         event_id = 1
     )
+    new_like4 = likes.insert().values(
+        user_id = 1,
+        event_id = 4
+    )
 
     db.session.execute(new_like)
     db.session.execute(new_like2)
     db.session.execute(new_like3)
+    db.session.execute(new_like4)
     db.session.commit()
 
 def undo_likes():
