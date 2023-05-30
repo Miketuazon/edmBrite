@@ -158,6 +158,7 @@ const EditEvent = () => {
                     <div className="Basic-info">
                         <h2>Basic Info</h2>
                         <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
+                        <br></br>
                         <label>
                             Event Title
                             <input
@@ -165,6 +166,7 @@ const EditEvent = () => {
                                 required value={event_name} onChange={updateEvent_name}
                             />
                         </label>
+                        <br></br>
                         <div className="header">Input an amazing image to use as your preview!</div>
                         <label>
                             Event Preview Image
@@ -173,10 +175,13 @@ const EditEvent = () => {
                                 required value={event_preview_image} onChange={updateEvent_preview_image}
                             />
                         </label>
+                        <br></br>
                         <div className="organizer">Organizer: {currentUser?.username}</div>
+                        <br></br>
                         <label>
                             DJ
                             <div className="dj">Let the people know who the main DJ is!</div>
+                            <br></br>
                             <input
                                 type='text' placeholder='Input who is playing for your show!' min='1'
                                 maxLength={100} required value={event_dj} onChange={updateEvent_dj}
@@ -188,6 +193,7 @@ const EditEvent = () => {
                         <div className="fawesome"><i class="fa-solid fa-location-dot"></i></div>
                         <h2>Location</h2>
                         <div className="venue">Help people in the area discover your event and let attendees know where to show up.</div>
+                        <br></br>
                         <label>
                             Venue
                             <input
@@ -274,6 +280,7 @@ const EditEvent = () => {
                                             * {errors.event_description}
                                         </div>
                                     )}
+                                    <br></br>
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
                                     <input

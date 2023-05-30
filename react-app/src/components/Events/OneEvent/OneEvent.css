@@ -30,7 +30,14 @@
 
 .preview-image,
 .description-image {
-    max-width: 75%;
+    max-width: 100%;
+}
+
+.preview-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg");
 }
 
 .when-where {
@@ -57,4 +64,24 @@
 .event-details {
     display: flex;
     justify-content: space-around;
+}
+
+.time-ticket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-details {
+    display: flex;
+}
+
+.tickets-container, .ticket-alert-owner, .tickets-modal {
+    position: sticky;
+    top: 50px;
+}
+
+.go-to-create-tickets {
+    position: sticky;
+    top: 100px;
 }

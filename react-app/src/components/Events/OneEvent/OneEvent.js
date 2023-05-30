@@ -98,57 +98,108 @@ const OneEvent = () => {
     if (!ticketsObj) return <>Loading....</>
     return (
         <div className="event-details">
-            <div className="left-side">
-                <img className="preview-image" src={event.event_preview_image} alt="preview image"></img>
-                <div className="title-to-location-container">
-                    <h3 className="month-day">{startMonth} {startDay}</h3>
-                    <h1 className="title">{event.event_name}</h1>
-                    <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
-                    <div className="summary">{event.event_summary}</div>
-                    <div className="host">By: &nbsp;
-                        {event.owner.username}
-                    </div>
+            <div className="details">
+                <div className="preview-image">
+                    <img className="preview-image-img" src={event.event_preview_image} alt="preview image"></img>
                 </div>
-                <div className="when-and-where-container">
-                    <h2 className="when-where">When and where</h2>
-                    <div className="date-location">
-                        <div className="date-and-time">
-                            <h3>Date and time</h3>
-                            {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
+                <div className="sub-details">
+
+                    <div className="left-side">
+                        <div className="title-to-location-container">
+                            <h3 className="month-day">{startMonth} {startDay}</h3>
+                            <h1 className="title">{event.event_name}</h1>
+                            <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
+                            <div className="summary">{event.event_summary}</div>
+                            <div className="host">By: &nbsp;
+                                {event.owner.username}
+                            </div>
                         </div>
-                        <div className="location" style={{ fontSize: 16 }}>
-                            <h3 >Location</h3>
-                            {event.event_venue} {event.event_street_address}
+                        <div className="when-and-where-container">
+                            <h2 className="when-where">When and where</h2>
+                            <div className="date-location">
+                                <div className="date-and-time">
+                                    <h3><i class="fa-regular fa-calendar"></i> Date and time</h3>
+                                    {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
+                                </div>
+                                <div className="location" style={{ fontSize: 16 }}>
+                                    <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+                                    {event.event_venue} {event.event_street_address}
+                                    <div>{event.event_city}, {event.event_state} {event.event_zip_code}</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="about-container">
-                    <div className="about-this-event">
-                        <h3>About this event</h3>
-                        <div className="time-ticket">
-                            <div className="time">{`${tbaOrNot}`} </div>
-                            <div className="type-ticket"> Mobile eTicket</div>
-                        </div>
-                    </div>
-                    <div className="description-event">
-                        <img className="description-image" src={event.event_description_image} alt="description image"></img>
-                        <div className="description-info">
-                            <div className="artist-venue">{event.event_name} at {event.event_venue}</div>
-                            <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
-                            <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
-                            <div className="description-container">
-                                <p className="description-input" cols="50" rows="5" style={{ "overflow": "auto" }}>{event.event_description}</p>
+                        <div className="about-container">
+                            <div className="about-this-event">
+                                <h3>About this event</h3>
+                                <div className="time-ticket">
+                                    <div className="time"><i class="fa-regular fa-calendar-xmark"></i> {`${tbaOrNot}`} </div>
+                                    <div className="type-ticket"><i class="fa-solid fa-ticket"></i> Mobile eTicket</div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div className="description-event">
+                                <img className="description-image" src={event.event_description_image} alt="description image"></img>
+                                <h2><i class="fa-solid fa-circle-info"></i> Details</h2>
+                                <div className="description-info">
+                                    <div className="artist-venue">{event.event_dj} @ {event.event_venue}</div>
+                                    <br></br>
+                                    <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
+                                    <br></br>
+                                    <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
+                                    <br></br>
+                                    <div className="description-container">
+                                        <p className="description-input" cols="50" rows="5" style={{ "overflow": "auto" }}>{event.event_description}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div className="tickets-container">
+                        {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
+                            currentUser ?
+                                !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <h2 className="ticket-alert-owner">Tickets coming soon!</h2>
+                                    : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal"/></div>
+                                        : <h2 className="ticket-alert-owner">You cannot buy tickets to your own event!</h2>
+                                : <h2 className="ticket-alert-owner"><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets <i class="fa-solid fa-triangle-exclamation"></i></h2>
+                        }
+                        {   // if  logged in and
+                            (currentUser &&
+                                // if there are no tickets and user is event owner, make a link to create events
+                                !ticketsObj || ticketsObj === undefined || Object?.keys(ticketsObj)?.length < 2) && event?.owner?.id === currentUser?.id
+                                ?
+
+                                <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
+
+                                : <></>
+                        }
+                    </div>
                 </div>
+                {/* <div className="tickets-container">
+                    {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
+                        currentUser ?
+                            !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div>
+                                : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
+                                    : <h2 className="ticket-alert-owner">You cannot buy tickets to your own event!</h2>
+                            : <h2>Must be logged in to buy tickets</h2>
+                    }
+                    {   // if  logged in and
+                        (currentUser &&
+                            // if there are no tickets and user is event owner, make a link to create events
+                            !ticketsObj || ticketsObj === undefined || Object?.keys(ticketsObj)?.length < 2) && event?.owner?.id === currentUser?.id
+                            ?
+
+                            <button className="go-to-create-tickets" onClick={() => history.push(`/events/${event.id}/tickets`)}>Create tickets!</button>
+
+                            : <></>
+                    }
+                </div> */}
             </div>
-            <div className="tickets-container">
+            {/* <div className="tickets-container">
                 {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
                     currentUser ?
                         !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <div>Tickets coming soon!</div>
-                            : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
-                                : <div className="ticket-alert-owner">You cannot buy tickets to your own event!</div>
+                        : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay /></div>
+                                : <h2 className="ticket-alert-owner">You cannot buy tickets to your own event!</h2>
                         : <h2>Must be logged in to buy tickets</h2>
                 }
                 {   // if  logged in and
@@ -161,7 +212,7 @@ const OneEvent = () => {
 
                         : <></>
                 }
-            </div>
+            </div> */}
 
         </div>
     )

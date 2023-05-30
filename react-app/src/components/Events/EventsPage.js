@@ -68,9 +68,10 @@ const EventsPage = () => {
                 <header className="events-data-header">
                 </header>
                 <div classname="image-on-top">
-                    <img src="https://wallpaperaccess.com/full/4829413.jpg" alt="image" className="image-on-top"></img>
+                    <img src="https://wallpaperaccess.com/full/3990922.jpg" alt="image" className="image-on-topp"></img>
                 </div>
                 <h2>User created Events</h2>
+                <h3>Find events curated from users like yourself!</h3>
                 <div className="user-events-list">
                     {
                         events?.filter(event => event.event_name)?.map((event) => (
@@ -98,6 +99,7 @@ const EventsPage = () => {
                     }
                 </div>
                 <h2>EDMTRAIN Events</h2>
+                <h3>Want to find events happening in your state? Select your state below!</h3>
                 <h3 className="location-changer">Located: {state}</h3>
                 <select value={state} onChange={handleStateChange}>
                     {reducedStates.map((state) => (

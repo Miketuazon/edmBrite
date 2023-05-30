@@ -27,7 +27,7 @@ const OwnedEventsPage = () => {
                         <li key={index} className="owned-event">
                             {/* <Link to={`events/${event.id}`}> */}
                             <img className="preview-image-events" src={event.event_preview_image} alt="preview image"></img>
-                            <div className="event-id-and-name">{event.id} | {event.event_name}</div>
+                            <div className="event-id-and-name">{event.event_name}</div>
                             {/* </Link> */}
                             <div className="date">{new Date(event.event_start_date).toLocaleDateString()}</div>
                             <div className="location">{event.location}</div>
@@ -47,7 +47,6 @@ const OwnedEventsPage = () => {
                                     </button>
                                 </div>
                             </div>
-                            <br />
                         </li>
                     ))
                 }
