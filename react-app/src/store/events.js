@@ -21,7 +21,7 @@ const createEventAction = (event) => {
 }
 
 const getOneEventAction = (event) => {
-    console.log("HIT THE getOneEventAction ==========>")
+    // console.log("HIT THE getOneEventAction ==========>")
     return {
         type: GET_ONE_EVENT,
         event
@@ -29,7 +29,7 @@ const getOneEventAction = (event) => {
 }
 
 const editOneEventAction = (event) => {
-    console.log("HIT THE editOneEventAction ==========>")
+    // console.log("HIT THE editOneEventAction ==========>")
     return {
         type: EDIT_ONE_EVENT,
         event
@@ -37,7 +37,7 @@ const editOneEventAction = (event) => {
 }
 
 const deleteEventAction = (event) => {
-    console.log("HIT THE deleteEventAction ==========>")
+    // console.log("HIT THE deleteEventAction ==========>")
     return {
         type: DELETE_ONE_EVENT,
         event
@@ -70,7 +70,7 @@ export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
 
 // Thunk 3: Get one event
 export const getOneEventThunk = (eventId) => async (dispatch) => {
-    console.log("HIT THE getOneEventThunk ==========>")
+    // console.log("HIT THE getOneEventThunk ==========>")
     const res = await fetch(`/api/events/${eventId}`)
     if (res.ok) {
         const data = await res.json()
@@ -82,17 +82,17 @@ export const getOneEventThunk = (eventId) => async (dispatch) => {
 
 // Thunk 4: Edit one event
 export const editOneEventThunk = (event, eventId) => async (dispatch) => {
-    console.log("HIT THE editOneEventThunk ==========>")
-    console.log("eventId", eventId)
-    console.log("event", event)
-    console.log("JSON.stringify", JSON.stringify(event))
+    // console.log("HIT THE editOneEventThunk ==========>")
+    // console.log("eventId", eventId)
+    // console.log("event", event)
+    // console.log("JSON.stringify", JSON.stringify(event))
     const res = await fetch(`/api/events/${eventId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(event)
     })
     if (res.ok) {
-    console.log("HIT THE editOneEventThunk | RESPONSE IS OK==========>")
+    // console.log("HIT THE editOneEventThunk | RESPONSE IS OK==========>")
         const editedEvent = await res.json()
         dispatch(editOneEventAction(editedEvent))
         return res
@@ -101,13 +101,13 @@ export const editOneEventThunk = (event, eventId) => async (dispatch) => {
 
 // Thunk 5: Delete one event
 export const deleteEventThunk = (eventId) => async (dispatch) => {
-    console.log("HIT THE deleteEventThunk ==========>")
-    console.log("eventId => ", eventId)
+    // console.log("HIT THE deleteEventThunk ==========>")
+    // console.log("eventId => ", eventId)
     const res = await fetch(`/api/events/${eventId}`, {
         method: 'DELETE'
     })
-    console.log("res => ", res)
-    console.log("res.json() => ", res.json())
+    // console.log("res => ", res)
+    // console.log("res.json() => ", res.json())
     if (res.ok) {
         dispatch(deleteEventAction(eventId))
     }
@@ -125,17 +125,17 @@ export default function eventsReducer(state = {}, action) {
             newState[action.event.db_data.id] = action.event
             return newState
         case GET_ONE_EVENT:
-            console.log("HIT THE REDUCER GET_ONE_EVENT ==========>")
+            // console.log("HIT THE REDUCER GET_ONE_EVENT ==========>")
             newState = {...state}
             newState.singleEvent = {...action.event}
             return newState
         case EDIT_ONE_EVENT:
-            console.log("HIT THE REDUCER EDIT_ONE_EVENT ==========>")
+            // console.log("HIT THE REDUCER EDIT_ONE_EVENT ==========>")
             newState = {...state}
             newState[action.event.event.id] = action.event.event
             return newState
         case DELETE_ONE_EVENT:
-            console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")
+            // console.log("HIT THE REDUCER DELETE_ONE_EVENT ==========>")
             // debugger
             newState = {...state}
             delete newState[action.event]

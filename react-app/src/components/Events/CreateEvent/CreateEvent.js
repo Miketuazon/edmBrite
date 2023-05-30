@@ -94,7 +94,7 @@ const CreateEvent = () => {
         dispatch(createEventThunk(createdEventDetails))
         history.push(`/events`)
     }
-    console.log("errors => ", errors)
+    // console.log("errors => ", errors)
     // if (!events.length) return <>Loading.....</>
     return (
         <div className="create-event-page">

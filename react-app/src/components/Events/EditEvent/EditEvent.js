@@ -12,7 +12,7 @@ import 'react-clock/dist/Clock.css';
 
 const EditEvent = () => {
     // TODO: Need to learn AWS to serve images
-    console.log("INSIDE EDIT EVENT COMPONENT")
+    // console.log("INSIDE EDIT EVENT COMPONENT")
     const dispatch = useDispatch()
     const { eventId } = useParams()
     const history = useHistory()
@@ -127,16 +127,16 @@ const EditEvent = () => {
             event_end_date, event_venue, event_street_address, event_city,
             event_state, event_zip_code, event_genre_id
         }
-        console.log("updatedEventDetails => ", updatedEventDetails)
+        // console.log("updatedEventDetails => ", updatedEventDetails)
         dispatch(editOneEventThunk(updatedEventDetails, eventId))
         dispatch(getOneEventThunk())
         history.push(`/events/${eventId}`)
     }
-    console.log(event_preview_image)
-    console.log("errors => ", errors)
+    // console.log(event_preview_image)
+    // console.log("errors => ", errors)
     // console.log("event_start_date =>", event_start_date?.toISOString())
     // console.log("event_end_date => ", event_end_date?.toISOString())
-    console.log()
+    // console.log()
     if (!event) return <>Loading....</>
     if (!currentUser || currentUser.id !== event?.owner.id) return <h1 className="unauthorized" style={{ color: "red" }}>UNAUTHORIZED. You are either not signed in OR not the owner of this event!</h1>
     // if (event?.owner.id !== currentUser.id) return <>UNAUTHORIZED! You are NOT the owner of this spot!</>

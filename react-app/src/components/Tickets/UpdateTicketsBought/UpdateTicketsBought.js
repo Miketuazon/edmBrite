@@ -15,7 +15,7 @@ const UpdateTicketsBought = ({order, ticket_price}) => {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state?.session?.user)
 
-    console.log("order details => ", order)
+    // console.log("order details => ", order)
     const history = useHistory()
     const [first_name, setFirst_name] = useState(order.first_name)
     const [last_name, setLast_name] = useState(order.last_name)

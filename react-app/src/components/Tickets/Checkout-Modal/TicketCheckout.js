@@ -23,12 +23,12 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
     const { closeModal } = useModal()
 
     // passing in data from parent component
-    console.log("eventId => ", eventId)
-    console.log("event => ", event)
-    console.log("ticketsObj => ", ticketsObj)
-    console.log("ticket_price => ", ticket_price)
-    console.log("ticket_quantity => ", ticket_quantity)
-    console.log("ticket_type =>", ticket_type)
+    // console.log("eventId => ", eventId)
+    // console.log("event => ", event)
+    // console.log("ticketsObj => ", ticketsObj)
+    // console.log("ticket_price => ", ticket_price)
+    // console.log("ticket_quantity => ", ticket_quantity)
+    // console.log("ticket_type =>", ticket_type)
 
 
     const [errors, setErrors] = useState([]);
