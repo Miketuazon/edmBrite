@@ -8,7 +8,7 @@ function DeleteEventModal({ eventId }) {
     const dispatch = useDispatch()
     const { closeModal } = useModal();
     const history = useHistory();
-    console.log("eventId => ", eventId)
+    // console.log("eventId => ", eventId)
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(deleteEventThunk(eventId))

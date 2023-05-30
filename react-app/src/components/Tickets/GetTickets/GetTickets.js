@@ -10,13 +10,13 @@ const TicketsDisplay = () => {
     const dispatch = useDispatch()
     // const event = useSelector(())
     const { eventId } = useParams()
-    console.log(eventId)
+    // console.log(eventId)
     const [ticketCount, setTicketCount] = useState(1)
     const event = useSelector(state => state.events.singleEvent?.event)
-    console.log("event => ", event)
+    // console.log("event => ", event)
     const ticketsObj = useSelector(state => state?.tickets?.ticketsOfEvent)
-    console.log("ticketsObj => ", ticketsObj)
-    console.log("Object.values(ticketsObj.type) => ", Object.entries(ticketsObj.type))
+    // console.log("ticketsObj => ", ticketsObj)
+    // console.log("Object.values(ticketsObj.type) => ", Object.entries(ticketsObj.type))
     // Object.values(ticketsObj).filter()
     // console.log("tickets => ", tickets)
     useEffect(() => {
@@ -25,7 +25,7 @@ const TicketsDisplay = () => {
     }, [dispatch, eventId])
 
     const ticketTypeForCheckout = Object.keys(ticketsObj.type).toString()
-    console.log("ticketTypeForCheckout => ", ticketTypeForCheckout)
+    // console.log("ticketTypeForCheckout => ", ticketTypeForCheckout)
     if (!ticketsObj || ticketsObj === undefined || ticketsObj === null) return <h1>Tickets coming soon!</h1>
     // if (ticketsObj === undefined)
     // if (!eventId) return <>Loading....</>

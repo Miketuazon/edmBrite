@@ -14,11 +14,11 @@ const TicketsBoughtPage = () => {
   const ticketsObj = useSelector((state) => state.tickets);
   const eventsObj = useSelector(state => state.events)
   const events = Object.values(eventsObj)
-  console.log("ticketsObj => ", ticketsObj);
-  console.log("INSIDE TICKETSBOUGHT +=====>");
+  // console.log("ticketsObj => ", ticketsObj);
+  // console.log("INSIDE TICKETSBOUGHT +=====>");
   const orders = Object.values(ticketsObj)
-  console.log("orders => ", orders)
-  console.log("events => ", events)
+  // console.log("orders => ", orders)
+  // console.log("events => ", events)
   useEffect(() => {
     dispatch(getEventsThunk())
     dispatch(getBoughtTicketsThunk(orders));

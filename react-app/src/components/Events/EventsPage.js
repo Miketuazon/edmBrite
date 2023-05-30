@@ -14,7 +14,7 @@ const EventsPage = () => {
     const currentUser = useSelector(state => state?.session?.user)
     const likesObj = useSelector(state => state.likes)
     const likes = Object.values(likesObj)
-    console.log("likes => ", likes)
+    // console.log("likes => ", likes)
     useEffect(() => {
         dispatch(getEventsThunk())
         dispatch(getUserLikesThunk())

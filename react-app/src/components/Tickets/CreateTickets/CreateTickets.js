@@ -9,7 +9,7 @@ const CreateTicketsForEvent = () => {
     const history = useHistory()
     // const currentUser = useSelector(state => state?.session?.user)
     const { eventId } = useParams()
-    console.log(eventId)
+    // console.log(eventId)
     const [ticket_type, setTicket_type] = useState("")
     const [ticket_price, setTicket_price] = useState(0)
     const [ticket_quantity, setTicket_quantity] = useState(1)
@@ -44,7 +44,7 @@ const CreateTicketsForEvent = () => {
     const updateTicket_price = (e) => setTicket_price(e.target.value)
     const updateTicket_quantity = (e) => setTicket_quantity(e.target.value)
 
-    console.log("errors => ", errors)
+    // console.log("errors => ", errors)
     return (
         <div className="create-tickets">
             <h1>Create tickets!</h1>

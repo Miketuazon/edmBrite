@@ -7,7 +7,7 @@ import { getGenresThunk } from "../../../store/genres";
 import { getTicketsThunk } from "../../../store/tickets";
 import TicketsDisplay from "../../Tickets/GetTickets/GetTickets";
 const OneEvent = () => {
-    console.log("INSIDE ONEEVENT COMPONENT")
+    // console.log("INSIDE ONEEVENT COMPONENT")
     const history = useHistory()
     const dispatch = useDispatch()
     const { eventId } = useParams();
@@ -15,18 +15,18 @@ const OneEvent = () => {
     const genresObj = useSelector((state) => state.genres)
     const genres = Object.values(genresObj)
     const currentUser = useSelector(state => state?.session?.user)
-    console.log("genres", genres)
-    console.log("event_genre_id => ", event?.event_genre_id)
+    // console.log("genres", genres)
+    // console.log("event_genre_id => ", event?.event_genre_id)
     const genreIdOfEvent = genres.find(genre => event?.event_genre_id === genre.id)
-    console.log(genreIdOfEvent)
-    console.log("eventDetails => ", event)
+    // console.log(genreIdOfEvent)
+    // console.log("eventDetails => ", event)
     useEffect(() => {
         dispatch(getOneEventThunk(eventId))
         dispatch(getGenresThunk())
         dispatch(getTicketsThunk(eventId))
     }, [dispatch, eventId])
     const ticketsObj = useSelector(state => state?.tickets.ticketsOfEvent)
-    console.log("ticketsObj => ", ticketsObj)
+    // console.log("ticketsObj => ", ticketsObj)
     const months = {
         0: 'January',
         1: 'February',
