@@ -1,0 +1,24 @@
+.ticket-checkout-modal {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-checkout-modal button {
+    color: #FFF;
+    background-color: #877f7c;
+}
+
+.right-side-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.total-price > * {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    align-items: center;
+    margin-left: 10px;
+}

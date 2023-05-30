@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 // import { getGenresThunk } from "../../../store/genres";
 import { useModal } from "../../../context/Modal";
 import { buyTicketsThunk } from "../../../store/tickets";
+import './TicketCheckout.css'
 
 const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quantity, ticket_type }) => {
     const dispatch = useDispatch()
