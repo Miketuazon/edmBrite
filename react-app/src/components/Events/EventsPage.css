@@ -21,7 +21,7 @@
 
 .image-on-top, .image-on-topp {
     right: 0;
-    margin-left: auto;
+    /* margin-left: auto; */
     height: auto;
     overflow: hidden;
     bottom: 0;
@@ -136,4 +136,8 @@
 .edmtrain-event:hover,
 .user-event:hover {
     box-shadow: 10px 0px 31px 25px #F7F7F9;
+}
+
+.events-list {
+    padding-right: 40px;
 }

@@ -37,19 +37,19 @@ const TicketsDisplay = () => {
                         <div className="ticket-container">
                             <div className="container">
                                 <div className="type-button">
-                                    <div className="type-ticket">{key}</div>
                                     <div className="button-plus-minus">
+                                        <div className="type-ticket">{key}</div>
                                         <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
-                                        <div>{ticketCount}</div>
+                                        &nbsp;{ticketCount}&nbsp;
                                         <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
-                                        <div>Price: ${value?.ticket_price}</div>
                                     </div>
+                                    <div className="price-ticket">Price: ${value?.ticket_price}</div>
                                 </div>
+                                <OpenModalButton className="check-out-button"
+                                    modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={value.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout} />}
+                                    buttonText={`Check out for $${value?.ticket_price * ticketCount}`}
+                                ></OpenModalButton>
                             </div>
-                            <OpenModalButton className="check-out-button"
-                                modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={value.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout}/>}
-                                buttonText={`Check out for $${value?.ticket_price * ticketCount}`}
-                            ></OpenModalButton>
                         </div>
                     ))
                 }
