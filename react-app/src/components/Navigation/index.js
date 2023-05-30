@@ -19,6 +19,18 @@ function Navigation({ isLoaded }) {
 				<li className='search-bar'>
 					< SearchBar />
 				</li>
+				<div className='footer'>
+					<ul className='git-linked-link'>
+						<li className='name'>
+							Created by: Michael Tuazon
+						</li>
+						<li className='link'>
+							<a href='https://www.linkedin.com/in/miketuazon/'>LinkedIn</a>
+							&nbsp;&nbsp; |
+							<a href='https://github.com/Miketuazon' className='end'>Github</a>
+						</li>
+					</ul>
+				</div>
 			</ul>
 			{isLoaded && (
 				<ul className='right-side'>
