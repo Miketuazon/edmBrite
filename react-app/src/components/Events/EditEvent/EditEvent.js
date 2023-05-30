@@ -21,6 +21,7 @@ const EditEvent = () => {
     const genres = Object.values(genresObj)
     const event = useSelector(state => state.events.singleEvent?.event)
     useEffect(() => {
+        dispatch(getGenresThunk())
         dispatch(getOneEventThunk(eventId))
     }, [dispatch])
 
@@ -143,7 +144,7 @@ const EditEvent = () => {
     // if (!events.length) return <>Loading.....</>
     return (
         <div className="create-event-page">
-            <h1>Create an event!</h1>
+            <h1>Update your event!</h1>
             <div className="create-form-div">
                 <ul className="errors">
                     {hasSubmitted &&
