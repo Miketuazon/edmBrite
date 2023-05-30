@@ -17,10 +17,10 @@ function ResultsPage() {
     const events = Object.values(eventsObj)
 
     // Creating state and function for sorting posts
-    const [sortOrder, setSortOrder] = useState('desc');
+    const [sortOrder, setSortOrder] = useState('asc');
     function compareEvents(event1, event2) {
-        const timestamp1 = new Date(event1.createdAt).getTime();
-        const timestamp2 = new Date(event2.createdAt).getTime();
+        const timestamp1 = new Date(event1.event_start_date).getTime();
+        const timestamp2 = new Date(event2.event_start_date).getTime();
         if (sortOrder === 'asc') {
             return timestamp1 - timestamp2;
         } else {
@@ -59,7 +59,7 @@ function ResultsPage() {
                     <h2 className='res'>Results: {filteredEvents.length} | Query: {query}</h2>
                     <h2 className='sortt'>Sort by: &nbsp;
                         <button onClick={handleSortClick} className='sort-button'>
-                            {sortOrder === 'asc' ? <i className='fas fa-angle-down'> Older</i> : <i className='fas fa-angle-up'> Newer</i>}
+                            {sortOrder === 'asc' ? <i className='fas fa-angle-down'> Newer</i> : <i className='fas fa-angle-up'> Older</i>}
                         </button>
                     </h2>
                 </div>
@@ -67,9 +67,9 @@ function ResultsPage() {
             <ul className='posts'>
                 {
                     filteredEvents.map(event => (
-                        <li key={event?.id} className="event">
+                        <div key={event?.id} className="event">
                             <ResultsItem event={event} />
-                        </li>
+                        </div>
                     ))
                 }
             </ul>
