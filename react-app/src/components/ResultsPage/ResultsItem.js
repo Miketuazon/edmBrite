@@ -37,7 +37,7 @@ const ResultsItem = ({ event }) => {
     return (
         <>
             {
-                <div>
+                <div className="user-event">
 
                     <Link className="link-to-event" to={`/events/${event.id}`}>
                         <img className="preview-image-events" src={event.event_preview_image}></img>
@@ -49,7 +49,7 @@ const ResultsItem = ({ event }) => {
                         </div>
                     </Link>
                     {
-                        currentUser ? <LikeButton currentUser={currentUser} eventId={event.id} likes={likes} /> : <></>
+                        // currentUser ? <LikeButton currentUser={currentUser} eventId={event.id} likes={likes} /> : <></>
                     }
                 </div>
 

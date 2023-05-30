@@ -64,7 +64,7 @@ function ResultsPage() {
                     </h2>
                 </div>
             </div>
-            <ul className='posts'>
+            <ul className='events-list'>
                 {
                     filteredEvents.map(event => (
                         <div key={event?.id} className="event">
