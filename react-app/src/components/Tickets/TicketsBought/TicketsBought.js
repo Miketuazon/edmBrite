@@ -18,9 +18,10 @@ const TicketsBoughtPage = () => {
   console.log("INSIDE TICKETSBOUGHT +=====>");
   const orders = Object.values(ticketsObj)
   console.log("orders => ", orders)
+  console.log("events => ", events)
   useEffect(() => {
-    dispatch(getBoughtTicketsThunk());
     dispatch(getEventsThunk())
+    dispatch(getBoughtTicketsThunk(orders));
   }, [dispatch]);
 
   // const eventForTicket = ({order}) => {
@@ -46,9 +47,19 @@ const TicketsBoughtPage = () => {
         {
           orders.filter(order => order.user_id_ticket_buyer === current_user.id)
             .map(order => (
-              <div key={order.id}>
+              <div key={order.id} className="order-bought">
                 <h2>Ticket Order #{order.id}</h2>
-                {/* <eventForTicket order={order}/> */}
+                <h3>
+                  {
+                    events.filter(event => event.id === order.event_id).map(e  => (
+                      <li style={{listStyle: "none"}}key={e.id}>
+                        <img className="preview-image-event" src={`${e.event_preview_image}`}></img>
+                        <div>{e.event_name}</div>
+                      </li>
+                    ))
+
+                  }
+                  </h3>
                 <h3>Ticket Type: {order.ticket_type}</h3>
                 <h4>Ticket Quantity: {order.ticket_quantity}</h4>
                 <h5>Ticket Price: ${order.ticket_price}</h5>

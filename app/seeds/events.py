@@ -113,7 +113,7 @@ def seed_events():
         event_zip_code=98848,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=2,
         # user_likes=[1],
     )
     event5 = Event(
@@ -133,7 +133,7 @@ def seed_events():
         event_zip_code=80465,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=2,
         # user_likes=[1],
     )
     event6 = Event(
@@ -153,7 +153,7 @@ def seed_events():
         event_zip_code=37366,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=3,
         # user_likes=[1],
     )
 
@@ -174,7 +174,7 @@ def seed_events():
         event_zip_code=23666,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=3,
         # user_likes=[1],
     )
     event8 = Event(
@@ -215,7 +215,7 @@ def seed_events():
         event_zip_code=94102,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=2,
         # user_likes=[1],
     )
 
@@ -236,7 +236,7 @@ def seed_events():
         event_zip_code=92101,
         createdAt=datetime.datetime.now(),
         updatedAt=datetime.datetime.now(),
-        event_organizer_id=1,
+        event_organizer_id=3,
         # user_likes=[1],
     )
     event11 = Event(
