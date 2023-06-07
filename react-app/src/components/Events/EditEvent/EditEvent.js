@@ -257,7 +257,7 @@ const EditEvent = () => {
                                 <h2>Event details</h2>
                                 <div className="header">Input an amazing image to go along with your description!</div>
                                 <label>
-                                    Event Preview Image
+                                Event Description Image
                                     <input
                                         type='text' placeholder='.jpg, .png., .img' min='1'
                                         required value={event_description_image} onChange={updateEvent_description_image}
