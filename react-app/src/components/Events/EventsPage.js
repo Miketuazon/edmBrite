@@ -76,7 +76,7 @@ const EventsPage = () => {
                     {
                         events?.filter(event => event.event_name)?.map((event) => (
                             <article key={event.id} className="user-event">
-                                <Link className="link-to-event" to={`events/${event.id}`}>
+                                <Link className="link-to-event" to={`events/${event.id}`} target="_blank">
                                     <div className="image-card-container">
                                         <img className="preview-image-event" src={event.event_preview_image}></img>
                                     </div>
