@@ -1,6 +1,7 @@
 .loginPhoto {
     width: 600px;
     /* height: 255px; */
+    border-radius: 10px;
 }
 
 .button-container {
