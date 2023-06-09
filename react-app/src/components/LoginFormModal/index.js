@@ -17,7 +17,7 @@ function LoginFormModal() {
     if (data) {
       setErrors(data);
     } else {
-        closeModal()
+      closeModal()
     }
   };
 
@@ -34,7 +34,11 @@ function LoginFormModal() {
   }
 
   return (
-    <>
+    <div className="logIn">
+      <div className="loginPhotoContainer">
+        <img className="loginPhoto" src="https://edm.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY0NTQ2MTkyMDc4ODA4ODQx/valentino-khan-by-scott-witt---lollapalooza-2018.jpg">
+        </img>
+      </div>
       <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <ul>
@@ -60,12 +64,14 @@ function LoginFormModal() {
             required
           />
         </label>
+        <div className="button-container">
         <button type="submit">Log In</button>
-        <button onClick={demoSignIn} className ="demo-sign-in-button" id='demo-user-button'>
-                  Demo User
-                </button>
+        <button onClick={demoSignIn} className="demo-sign-in-button" id='demo-user-button'>
+          Demo User
+        </button>
+        </div>
       </form>
-    </>
+    </div>
   );
 }
 

@@ -9,7 +9,8 @@ html {
     min-height: 100%;
 }
 
-button {
+button, select {
     background-color: #877f7c;
     color: #FFF;
+    font-weight: bold;
 }

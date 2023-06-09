@@ -25,7 +25,7 @@ z#root {
   }
 
   .sortt, .res, .no-results {
-    background-color: lightblue;
+    background-color: lightgray;
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -34,8 +34,9 @@ z#root {
     border: none;
   }
 
+
   .sort-button {
-    background-color: #0077cc;
+    background-color: darkgray;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -47,7 +48,7 @@ z#root {
   }
 
   .sort-button:hover {
-    background-color: #005ea6;
+    background-color: gray;
     cursor: pointer;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
   }

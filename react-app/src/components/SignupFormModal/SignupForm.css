@@ -1,0 +1,8 @@
+.signUpPhoto {
+    max-width: 600px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
