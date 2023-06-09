@@ -40,7 +40,9 @@ const ResultsItem = ({ event }) => {
                 <div className="user-event">
 
                     <Link className="link-to-event" to={`/events/${event.id}`}>
-                        <img className="preview-image-events" src={event.event_preview_image}></img>
+                        <div className="preview-image-container">
+                        <img className="preview-image-event" src={event.event_preview_image}></img>
+                        </div>
                         <div className="event-info">
                             <div className="event-id-and-name">{event.event_name}</div>
                             <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
