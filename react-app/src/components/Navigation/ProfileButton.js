@@ -4,53 +4,58 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
-import {Link, useHistory} from "react-router-dom"
-import "./Navigation.css"
+import { Link, useHistory } from "react-router-dom";
+import "./Navigation.css";
+
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const ulRef = useRef();
-  const history = useHistory()
+  const history = useHistory();
 
-  const openMenu = () => {
-    if (showMenu) return;
-    setShowMenu(true);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   useEffect(() => {
-    if (!showMenu) return;
-
-    const closeMenu = (e) => {
-      if (!ulRef.current.contains(e.target)) {
-        setShowMenu(false);
-      }
+    const closeMenu = () => {
+      setIsHovered(false);
     };
 
-    document.addEventListener("click", closeMenu);
+    document.addEventListener("mouseleave", closeMenu);
 
-    return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
+    return () => document.removeEventListener("mouseleave", closeMenu);
+  }, []);
 
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout());
-    history.push('/events')
+    history.push("/events");
   };
 
-  const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
-  const closeMenu = () => setShowMenu(false);
+  const ulClassName = "profile-dropdown" + (isHovered ? "" : " hidden");
+  const closeMenu = () => setIsHovered(false);
 
   return (
     <>
-      <button onClick={openMenu}>
+      <div
+        onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
+      >
         <i className="fas fa-user-circle" />
-      </button>
-      <ul className={ulClassName} ref={ulRef}>
+      </div>
+      <ul className={ulClassName} ref={ulRef} onMouseLeave={handleMouseLeave}>
         {user ? (
           <>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
-            <li><Link to={`/events/current`}>Manage your events</Link></li>
+            <li style={{"border-bottom": "1px"}}>User: {user.username}</li>
+            {/* <li>{user.email}</li> */}
+            <li>
+              <Link to={`/events/current`}>Manage your events</Link>
+            </li>
             <li>
               <button onClick={handleLogout}>Log Out</button>
             </li>

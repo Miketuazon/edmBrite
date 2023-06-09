@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import SearchBar from './Searchbar';
 import image from '../../images/logoTitle.png'
+import OpenModalButton from "../OpenModalButton";
+import LoginFormModal from "../LoginFormModal";
+import SignupFormModal from "../SignupFormModal";
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
+	const [isHovered, setIsHovered] = useState(false);
 
+	useEffect(() => {
+		const closeMenu = () => {
+		  setIsHovered(false);
+		};
+
+		document.addEventListener("mouseleave", closeMenu);
+
+		return () => document.removeEventListener("mouseleave", closeMenu);
+	  }, []);
+
+	  const closeMenu = () => setIsHovered(false);
 	return (
 		<ul className='navBar'>
 			<ul className='left-side-nav'>
@@ -25,9 +40,12 @@ function Navigation({ isLoaded }) {
 							Created by: Michael Tuazon
 						</li>
 						<li className='link'>
-							<a href='https://www.linkedin.com/in/miketuazon/'>LinkedIn</a>
+							<a href='https://www.linkedin.com/in/miketuazon/'><i class="fa-brands fa-linkedin"></i></a>
 							&nbsp;&nbsp; |
-							<a href='https://github.com/Miketuazon' className='end'>Github</a>
+							<a href='https://github.com/Miketuazon' className='end'><i class="fa-brands fa-github" style={{"color": "gray"}}></i></a>
+							&nbsp;&nbsp; |
+							<a href='https://wellfound.com/u/michael-tuazon' className='end'><i class="fa-brands fa-angellist" style={{"color": "gray", "listStyle": "none"}}></i></a>
+
 						</li>
 					</ul>
 				</div>
@@ -57,7 +75,31 @@ function Navigation({ isLoaded }) {
 							</>
 							: null
 					}
-					<ProfileButton user={sessionUser}></ProfileButton>
+					{
+				sessionUser ?
+					<div className='dropdown-menu-user'>
+						<ProfileButton user={sessionUser}></ProfileButton>
+						&nbsp;
+						{sessionUser.email}
+						&nbsp;
+						<i classname="arrow-down" class="fa-solid fa-chevron-down"></i>
+					</div>
+					: (
+						<>
+						  <OpenModalButton
+							buttonText="Log In"
+							onItemClick={closeMenu}
+							modalComponent={<LoginFormModal />}
+						  />
+
+						  <OpenModalButton
+							buttonText="Sign Up"
+							onItemClick={closeMenu}
+							modalComponent={<SignupFormModal />}
+						  />
+						</>
+					  )
+					}
 				</ul>
 			)}
 		</ul>

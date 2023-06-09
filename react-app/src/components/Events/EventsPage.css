@@ -31,6 +31,10 @@
     object-fit: contain;
 }
 
+.image-on-top {
+    max-height: 50%;
+}
+
 .edmtrain-events-list,
 .user-events-list {
     display: flex;
@@ -40,6 +44,7 @@
     margin-right: 10%;
     flex-wrap: wrap;
 }
+
 
 /* .edmtrain-events-list li:hover,
 .user-events-list li:hover {
@@ -139,7 +144,9 @@
 }
 
 .events-list {
-    padding-right: 40px;
+    padding-left: 0%;
+    /* padding-right: 2%; */
+    margin-top: 0px;
 }
 
 h5 {

@@ -42,7 +42,11 @@ function SignupFormModal() {
 	};
 
 	return (
-		<>
+		<div className="signup">
+			<div className="signUpPhotoContainer">
+				<img className="signUpPhoto" src="https://edmhousenetwork.com/wp-content/uploads/2022/03/edc.jpg">
+				</img>
+			</div>
 			<h1>Sign Up</h1>
 			<form onSubmit={handleSubmit}>
 				<ul>
@@ -86,9 +90,11 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
+				<div className="submit-container">
 				<button type="submit">Sign Up</button>
+				</div>
 			</form>
-		</>
+		</div>
 	);
 }
 
