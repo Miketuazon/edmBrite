@@ -45,33 +45,39 @@ const TicketsBoughtPage = () => {
       <h1>Ticket orders page</h1>
       <div className="bought-list">
         {
-          orders.filter(order => order.user_id_ticket_buyer === current_user.id)
-            .map(order => (
-              <div key={order.id} className="order-bought">
-                <h2>Ticket Order #{order.id}</h2>
-                <h3>
-                  {
-                    events.filter(event => event.id === order.event_id).map(e  => (
-                      <li style={{listStyle: "none"}}key={e.id}>
-                        <img className="preview-image-event" src={`${e.event_preview_image}`}></img>
-                        <div>{e.event_name}</div>
-                      </li>
-                    ))
+          orders.length > 0 ?
+            orders.filter(order => order.user_id_ticket_buyer === current_user.id)
+              .map(order => (
+                <div key={order.id} className="order-bought">
+                  <h2>Ticket Order #{order.id}</h2>
+                  <h3>
+                    {
+                      events.filter(event => event.id === order.event_id).map(e => (
+                        <li style={{ listStyle: "none" }} key={e.id}>
+                          <img className="preview-image-event" src={`${e.event_preview_image}`}></img>
+                          <div>{e.event_name}</div>
+                        </li>
+                      ))
 
-                  }
+                    }
                   </h3>
-                <h3>Ticket Type: {order.ticket_type}</h3>
-                <h4>Ticket Quantity: {order.ticket_quantity}</h4>
-                <h5>Ticket Price: ${order.ticket_price}</h5>
-                <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
-                <br></br>
-                <OpenModalButton classname="update-tickets-button"
-                modalComponent={<UpdateTicketsBought ticket_type={order.ticket_type} ticket_quantity={order.ticket_quantity} ticket_price={order.ticket_price}order={order}/>}
-                buttonText={`Update`}
-                >
-                </OpenModalButton>
-              </div>
-            ))
+                  <h3>Ticket Type: {order.ticket_type}</h3>
+                  <h4>Ticket Quantity: {order.ticket_quantity}</h4>
+                  <h5>Ticket Price: ${order.ticket_price}</h5>
+                  <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
+                  <br></br>
+                  <OpenModalButton classname="update-tickets-button"
+                    modalComponent={<UpdateTicketsBought ticket_type={order.ticket_type} ticket_quantity={order.ticket_quantity} ticket_price={order.ticket_price} order={order} />}
+                    buttonText={`Update`}
+                  >
+                  </OpenModalButton>
+                </div>
+              ))
+            :
+            <div className="no-tickets-ordered">
+              <h2 className="no-tickets-header">You currently have no orders. </h2>
+              <h3>Go to an event and buy some tickets!</h3>
+            </div>
         }
       </div>
     </div>
