@@ -117,7 +117,7 @@ const EventsPage = () => {
                                     <br></br>
                                     {event.name}
                                     <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.date).toLocaleDateString()}</div>
-                                    <div className="location">{event.venue.location}</div>
+                                    <div className="location">{event.venue.name} &middot; {event.venue.location}</div>
                                 </a>
                                 <br></br>
                                 <br />
