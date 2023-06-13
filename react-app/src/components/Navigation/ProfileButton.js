@@ -50,12 +50,12 @@ function ProfileButton({ user }) {
         &nbsp;
         {user.email}
         &nbsp;
-        <i classname="arrow-down" class="fa-solid fa-chevron-down"></i>
+        <i className="arrow-down fa-solid fa-chevron-down"></i>
       </div>
       <ul className={ulClassName} ref={ulRef} onMouseLeave={handleMouseLeave}>
         {user ? (
           <>
-            <li style={{ "border-bottom": "1px" }}>User: {user.username}</li>
+            <li style={{ borderBottom: "1px" }}>User: {user.username}</li>
             {/* <li>{user.email}</li> */}
             <li>
               <Link to={`/events/current`}>Manage your events</Link>
