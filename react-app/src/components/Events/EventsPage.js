@@ -86,7 +86,7 @@ const EventsPage = () => {
                                             <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         </div>
                                         <div className="location-owner">
-                                            <div className="location">{event.event_city}, {event.event_state}</div>
+                                            <div className="location" style={{"color": "gray"}}>{event.event_venue} &middot; {event.event_city}, {event.event_state}</div>
                                             <div className="owner">Organizer: {event.owner.username}</div>
                                         </div>
                                     </div>
