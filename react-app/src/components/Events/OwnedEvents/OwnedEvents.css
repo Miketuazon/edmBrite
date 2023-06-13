@@ -44,6 +44,7 @@
     max-height: 140px;
     overflow: hidden;
     object-fit: cover;
+    max-width: 300px;
 }
 
 .update-delete-container {

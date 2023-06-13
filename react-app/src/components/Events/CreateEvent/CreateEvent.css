@@ -29,16 +29,24 @@
     overflow:scroll;
 }
 
+@media (max-width: 768px) {
+    .create-form-div {
+      width: 80%;
+    }
+  }
+
 .fawesome {
-    right: 20px;
-    top: 43px;
+    right: 5%;
+    top: 50px;
+    font-size: 30px;
     position: relative;
     color: #DBDAE3;
 }
 
 .fawesome-basic {
-    right: 20px;
-    top: 29px;
+    right: 5%;
+    top: 35px;
+    font-size: 30px;
     position: relative;
     color: #DBDAE3;
 }
@@ -49,4 +57,9 @@
     flex-direction: column;
     margin-top: 10px;
     color: white;
+}
+
+.Basic-info > label, .location-date-time > label, .date-time > label,
+.create-event-details > label {
+    font-weight: bold;
 }
