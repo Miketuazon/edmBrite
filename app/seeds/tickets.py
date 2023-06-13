@@ -8,7 +8,7 @@ def seed_tickets():
         ticket_type="General",
         ticket_price=50,
         ticket_quantity=30,
-        event_id=2,
+        event_id=1,
         user_id_ticket_creator=1,
     )
 
@@ -16,7 +16,7 @@ def seed_tickets():
         ticket_type="General",
         ticket_price=50,
         ticket_quantity=20,
-        event_id=3,
+        event_id=2,
         user_id_ticket_creator=2,
     )
 
@@ -24,7 +24,7 @@ def seed_tickets():
         ticket_type="General",
         ticket_price=50,
         ticket_quantity=50,
-        event_id=1,
+        event_id=3,
         user_id_ticket_creator=3,
     )
     Ga4 = Ticket(
@@ -90,6 +90,90 @@ def seed_tickets():
         event_id=12,
         user_id_ticket_creator=1,
     )
+    Ga13 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=13,
+        user_id_ticket_creator=1,
+    )
+    Ga14 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=14,
+        user_id_ticket_creator=2,
+    )
+    Ga15 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=15,
+        user_id_ticket_creator=2,
+    )
+    Ga16 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=16,
+        user_id_ticket_creator=3,
+    )
+    Ga17 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=17,
+        user_id_ticket_creator=2,
+    )
+    Ga18 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=18,
+        user_id_ticket_creator=3,
+    )
+    Ga19 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=19,
+        user_id_ticket_creator=2,
+    )
+    Ga20 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=20,
+        user_id_ticket_creator=1,
+    )
+    Ga21 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=21,
+        user_id_ticket_creator=1,
+    )
+    Ga22 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=22,
+        user_id_ticket_creator=2,
+    )
+    Ga23 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=23,
+        user_id_ticket_creator=3,
+    )
+    Ga24 = Ticket(
+        ticket_type="General",
+        ticket_price=50,
+        ticket_quantity=100,
+        event_id=24,
+        user_id_ticket_creator=2,
+    )
 
 
 
@@ -105,6 +189,18 @@ def seed_tickets():
     db.session.add(Ga10)
     db.session.add(Ga11)
     db.session.add(Ga12)
+    db.session.add(Ga13)
+    db.session.add(Ga14)
+    db.session.add(Ga15)
+    db.session.add(Ga16)
+    db.session.add(Ga17)
+    db.session.add(Ga18)
+    db.session.add(Ga19)
+    db.session.add(Ga20)
+    db.session.add(Ga21)
+    db.session.add(Ga22)
+    db.session.add(Ga23)
+    db.session.add(Ga24)
 
     db.session.commit()
 
