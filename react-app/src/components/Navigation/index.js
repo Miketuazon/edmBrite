@@ -79,10 +79,6 @@ function Navigation({ isLoaded }) {
 				sessionUser ?
 					<div className='dropdown-menu-user'>
 						<ProfileButton user={sessionUser}></ProfileButton>
-						&nbsp;
-						{sessionUser.email}
-						&nbsp;
-						<i classname="arrow-down" class="fa-solid fa-chevron-down"></i>
 					</div>
 					: (
 						<>
