@@ -120,3 +120,26 @@
 .price-ticket {
     margin-top: 10px;
 }
+
+#fawesome {
+    border: 1px solid #F8F7FA;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(234, 234, 234);
+    color: #3659E3;
+    /* padding-left: 0; */
+}
+
+.host {
+    padding: 10px;
+    /* padding-left: 0px; */
+    background: rgb(234, 234, 234);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 1px solid #F8F7FA;
+    border-radius: 10px;
+}
+
+.summary {
+    color: #39364f;
+}
