@@ -162,7 +162,7 @@ def seed_events():
         event_dj="Skrillex",
         event_summary="Hear and watch one of the best in Dubstep",
         event_preview_image="https://edm.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_xy_center%2Cq_auto:good%2Cw_1200%2Cx_605%2Cy_1161/MTkzNDI0MjY1ODM0NDA3NDkx/fgr8zsmvqaaurdz.jpg",
-        event_description_image="https://cdn.kpbs.org/dims4/default/b623ef3/2147483647/strip/true/crop/1200x675+0+122/resize/1200x675!/quality/90/?url=http%3A%2F%2Fkpbs-brightspot.s3.amazonaws.com%2Fc2%2F12%2Fb13f79494657a6218f71fcea89f6%2Fdvphotovideo2022-0805-225131-2912-as.jpg",
+        event_description_image="https://edmidentity.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-16-at-8.57.44-PM.png",
         event_description="Skrillex comes for a once in a blue moon performance! Get your tickets soon as this will sell out!",
         event_genre_id=5,
         event_start_date=date7,
