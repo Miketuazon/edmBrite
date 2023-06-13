@@ -110,20 +110,20 @@ const OneEvent = () => {
                             <h1 className="title">{event.event_name}</h1>
                             <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
                             <div className="summary">{event.event_summary}</div>
-                            <div className="host">By: &nbsp;
-                                {event.owner.username}
+                            <div className="host">Organizer: &nbsp;
+                                <span style={{"fontWeight": "bold"}}>{event.owner.username}</span>
                             </div>
                         </div>
                         <div className="when-and-where-container">
                             <h2 className="when-where">When and where</h2>
                             <div className="date-location">
                                 <div className="date-and-time">
-                                    <h3><i class="fa-regular fa-calendar"></i> Date and time</h3>
+                                    <h3><i class="fa-regular fa-calendar" id="fawesome"></i> Date and time</h3>
                                     {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
                                 </div>
                                 <div className="location" style={{ fontSize: 16 }}>
-                                    <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
-                                    {event.event_venue} {event.event_street_address}
+                                    <h3><i class="fa-solid fa-location-dot" id="fawesome"></i> Location</h3>
+                                    <span style={{"fontWeight": "550"}}>{event.event_venue}</span> {event.event_street_address}
                                     <div>{event.event_city}, {event.event_state} {event.event_zip_code}</div>
                                 </div>
                             </div>
@@ -132,23 +132,23 @@ const OneEvent = () => {
                             <div className="about-this-event">
                                 <h3>About this event</h3>
                                 <div className="time-ticket">
-                                    <div className="time"><i class="fa-regular fa-calendar-xmark"></i> {`${tbaOrNot}`} </div>
-                                    <div className="type-ticket"><i class="fa-solid fa-ticket"></i> Mobile eTicket</div>
+                                    <div className="time"><i class="fa-regular fa-calendar-xmark" id="fawesome"></i> {`${tbaOrNot}`} </div>
+                                    <div className="type-ticket"><i class="fa-solid fa-ticket" id="fawesome"></i> Mobile eTicket</div>
                                     <div></div>
                                 </div>
                             </div>
                             <div className="description-event">
                                 <img className="description-image" src={event.event_description_image} alt="description image"></img>
-                                <h2><i class="fa-solid fa-circle-info"></i> Details</h2>
+                                <h2><i class="fa-solid fa-circle-info" id="fawesome"></i> Details</h2>
                                 <div className="description-info">
-                                    <div className="artist-venue">{event.event_dj} @ {event.event_venue}</div>
+                                    <div className="artist-venue" style={{"fontWeight": "bold"}}>{event.event_dj} @ {event.event_venue}</div>
                                     <br></br>
                                     <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
                                     <br></br>
                                     <div className="start-hours-end-hours">{startHours}:{startMinutes} {startSession} - {endHours}:{endMinutes}{endSession}</div>
                                     <br></br>
                                     <div className="description-container">
-                                        <p className="description-input" cols="50" rows="5" style={{ "overflow": "auto" }}>{event.event_description}</p>
+                                        <p className="description-input-text" cols="50" rows="5" style={{ "overflow": "auto" }}>{event.event_description}</p>
                                     </div>
                                 </div>
                             </div>
