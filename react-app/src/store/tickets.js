@@ -45,7 +45,7 @@ const updateBoughtTicketsAction = (tickets) => {
 // Thunk 1: Get all tickets
 export const getTicketsThunk = (eventId) => async (dispatch) => {
     // console.log("HIT THE getTicketsThunk ==========>")
-    console.log(eventId)
+    // console.log(eventId)
     const res = await fetch(`/api/events/${eventId}/tickets`)
 
     if (res.ok) {
