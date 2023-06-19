@@ -6,7 +6,9 @@ import { getEventsThunk } from "../../../store/events";
 // import { useHistory } from "react-router-dom";
 import { getBoughtTicketsThunk } from "../../../store/tickets";
 import OpenModalButton from "../../OpenModalButton";
+import OpenModalDelete from "../../Events/OwnedEvents/OpenModalDelete";
 import UpdateTicketsBought from "../UpdateTicketsBought/UpdateTicketsBought";
+import DeleteTicketOrderModal from "../DeleteTicketOrderModal/DeleteTicketOrderModal";
 const TicketsBoughtPage = () => {
   const dispatch = useDispatch();
   const current_user = useSelector(state => state.session.user)
@@ -17,7 +19,6 @@ const TicketsBoughtPage = () => {
   // console.log("ticketsObj => ", ticketsObj);
   // console.log("INSIDE TICKETSBOUGHT +=====>");
   const orders = Object.values(ticketsObj)
-  // console.log("orders => ", orders)
   // console.log("events => ", events)
   useEffect(() => {
     dispatch(getEventsThunk())
@@ -45,7 +46,8 @@ const TicketsBoughtPage = () => {
       <h1>Ticket orders page</h1>
       <div className="bought-list">
         {
-          orders.length > 0 ?
+          // needs to be greater than 1 since orders is also bringing in the created event's tickets
+          orders.length > 1 ?
             orders.filter(order => order.user_id_ticket_buyer === current_user.id)
               .map(order => (
                 <div key={order.id} className="order-bought">
@@ -66,11 +68,24 @@ const TicketsBoughtPage = () => {
                   <h5>Ticket Price: ${order.ticket_price}</h5>
                   <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
                   <br></br>
-                  <OpenModalButton classname="update-tickets-button"
-                    modalComponent={<UpdateTicketsBought ticket_type={order.ticket_type} ticket_quantity={order.ticket_quantity} ticket_price={order.ticket_price} order={order} />}
-                    buttonText={`Update`}
-                  >
-                  </OpenModalButton>
+                  <div className="update-delete-container">
+                    <div className="update">
+                      <OpenModalButton classname="update-tickets-button"
+                        modalComponent={<UpdateTicketsBought ticket_type={order.ticket_type} ticket_quantity={order.ticket_quantity} ticket_price={order.ticket_price} order={order} />}
+                        buttonText={`Update`}
+                      >
+                      </OpenModalButton>
+                    </div>
+                    <div className="delete-order">
+                      <button className="delete-button">
+                        <OpenModalDelete className="delete-tickets-button"
+                          itemText="Delete"
+                          modalComponent={<DeleteTicketOrderModal order={order} orderId={order.id} eventId={order.event_id}
+                          />}
+                        />
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ))
             :

@@ -163,19 +163,18 @@ def update_ticket_price_or_quantity(event_id, ticket_id):
 @login_required
 def delete_ticket(ticket_id, event_id):
     """
-    Delete an event based on the event ID provided in the request
+    Delete an ticket based on the ticket ID provided in the request
     """
-
     if not ticket_id:
-        return {'error': 'Ticket ID is required for updating a ticket!'}, 400
+        return {'error': 'Ticket ID is required for deleting a ticket!'}, 400
 
     ticket = Ticket.query.get(ticket_id)
     if not ticket:
         return {'error': 'Ticket not found!'}, 404
-
     current_user_dict = current_user.to_dict()
-    if current_user_dict['id'] != ticket.user_id_ticket_creator:
-        return {'error': 'You are not the creator of this ticket. You cannot update it.'}, 403
+    # breakpoint()
+    # if current_user_dict['id'] != ticket.user_id_ticket_creator:
+    #     return {'error': 'You are not the creator of this ticket. You cannot deleting it.'}, 403
 
     db.session.delete(ticket)
     db.session.commit()
