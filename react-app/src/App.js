@@ -17,6 +17,8 @@ import UserLikesPage from "./components/Likes/UserLikesPage/UserLikesPage";
 import TicketsBoughtPage from "./components/Tickets/TicketsBought/TicketsBought";
 import ResultsPage from "./components/ResultsPage/ResultsPage";
 import UpdateTicketsBought from "./components/Tickets/UpdateTicketsBought/UpdateTicketsBought";
+import NotFoundPage from "./components/NotFoundPage/404";
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,6 +70,9 @@ function App() {
           </Route>
           <Route path="/search">
             <ResultsPage />
+          </Route>
+          <Route path="*">
+            <NotFoundPage />
           </Route>
         </Switch>
       )}
