@@ -1,0 +1,16 @@
+.error-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-go-home {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: gray;
+    color: white;
+}
+
+.error-404 {
+    color: red;
+}
