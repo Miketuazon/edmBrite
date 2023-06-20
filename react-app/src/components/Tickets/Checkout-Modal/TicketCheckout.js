@@ -89,10 +89,10 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                     </ul>
                     <div className="billing-info">
                         <h2 className="billing-information"><i class="fa-regular fa-circle-question"></i> Billing information</h2>
-                        <div style={{"fontWeight": "lighter"}}>
+                        <div style={{ "fontWeight": "lighter" }}>
                             Logged in as&nbsp;
-                            <span style={{"fontWeight": "bold"}}>
-                            {currentUser.email}
+                            <span style={{ "fontWeight": "bold" }}>
+                                {currentUser.email}
                             </span>
                         </div>
                         <div className="first-last-name">
@@ -191,7 +191,9 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                 </form>
             </div>
             <div className="right-side-modal">
-                <button onClick={handleCancel} className="purchase-close-button">Close</button>
+                <div className="close-container">
+                    <button onClick={handleCancel} className="purchase-close-button">Close</button>
+                </div>
                 <div className="summary-num-tickets">
                     <div className="order-summary"></div>
                     <div className="ticket-price"></div>

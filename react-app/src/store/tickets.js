@@ -5,6 +5,8 @@ const CREATE_TICKETS = 'tickets/createTickets'
 const BUY_TICKETS = 'tickets/buyTickets'
 const GET_BOUGHT_TICKETS = 'tickets/getBoughtTickets'
 const UPDATE_BOUGHT_TICKETS = 'tickets/updateBoughtTickets'
+const DELETE_BOUGHT_TICKETS = 'tickets/deleteBoughtTickets'
+const EDIT_TICKET_REGISTRATION = 'tickets/editTicketRegistration'
 // Action creators | tickets
 const getTicketsAction = (tickets) => {
     return {
@@ -37,6 +39,20 @@ const getBoughtTicketsAction = (tickets) => {
 const updateBoughtTicketsAction = (tickets) => {
     return {
         type: UPDATE_BOUGHT_TICKETS,
+        tickets
+    }
+}
+
+const deleteBoughtTicketsAction = (tickets) => {
+    return {
+        type:DELETE_BOUGHT_TICKETS,
+        tickets
+    }
+}
+
+const editTicketRegistrationAction = (tickets) => {
+    return {
+        type: EDIT_TICKET_REGISTRATION,
         tickets
     }
 }
@@ -118,6 +134,32 @@ export const updateBoughtTicketsThunk = (eventId, ticketId, purchaseData) => asy
     }
 }
 
+// 6. Delete bought ticket order
+export const deleteTicketOrderThunk = (ticketId, eventId) => async (dispatch) => {
+    // console.log("eventId => ", eventId)
+    // console.log("ticketId => ", ticketId)
+    const res = await fetch(`/api/events/${eventId}/tickets/${ticketId}/delete`, {
+        method: 'DELETE'
+    })
+    // console.log("res => ", res)
+    // console.log("res.json() => ", res.json())
+    if (res.ok) {
+        dispatch(deleteBoughtTicketsAction(ticketId))
+    }
+}
+
+// 7. Edit ticket registration
+export const editTicketRegistrationThunk = (ticketDetails, eventId, ticketId) => async (dispatch) => {
+    console.log("ticketDetails => ", ticketDetails)
+    console.log("eventId => ", eventId)
+    console.log("ticketId => ", ticketId)
+    const res = await fetch(`/api/events/${eventId}/ticket_registration/${ticketId}/update`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(ticketDetails)
+    })
+}
+
 // reducer
 export default function ticketsReducer(state = {}, action) {
     let newState;
@@ -150,6 +192,13 @@ export default function ticketsReducer(state = {}, action) {
             // console.log("HIT THE ticketsReducer UPDATE_BOUGHT_TICKETS ==========>")
             newState = {...state}
             newState[action.tickets.ticket.id] = action.tickets.ticket
+            return newState
+        case DELETE_BOUGHT_TICKETS:
+            // console.log("HIT THE REDUCER DELETE_BOUGHT_TICKETS ==========>")
+            newState = {...state}
+            // console.log("newState", newState)
+            delete newState[action.tickets]
+            // console.log("newState after DELETE_BOUGHT_TICKETS", newState)
             return newState
         default:
             return state

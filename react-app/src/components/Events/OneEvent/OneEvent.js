@@ -52,7 +52,10 @@ const OneEvent = () => {
         6: 'Saturday'
     }
 
-    if (event === undefined) return <>Loading...</>
+    if (event === undefined) return <h1 style={{ "display": "flex", "alignItems": "center", "flexDirection": "column", "color": "red" }}>
+        404
+        <div>EVENT IS NOT LISTED</div>
+    </h1>
 
     // Getting hours, mins, day and time of start
     const startDate = new Date(event.event_start_date)
@@ -111,7 +114,7 @@ const OneEvent = () => {
                             <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
                             <div className="summary">{event.event_summary}</div>
                             <div className="host">Organizer: &nbsp;
-                                <span style={{"fontWeight": "bold"}}>{event.owner.username}</span>
+                                <span style={{ "fontWeight": "bold" }}>{event.owner.username}</span>
                             </div>
                         </div>
                         <div className="when-and-where-container">
@@ -123,7 +126,8 @@ const OneEvent = () => {
                                 </div>
                                 <div className="location" style={{ fontSize: 16 }}>
                                     <h3><i class="fa-solid fa-location-dot" id="fawesome"></i> Location</h3>
-                                    <span style={{"fontWeight": "550"}}>{event.event_venue}</span> {event.event_street_address}
+                                    <span style={{ "fontWeight": "550" }}>{event.event_venue}</span>
+                                    <div>{event.event_street_address}</div>
                                     <div>{event.event_city}, {event.event_state} {event.event_zip_code}</div>
                                 </div>
                             </div>
@@ -141,7 +145,7 @@ const OneEvent = () => {
                                 <img className="description-image" src={event.event_description_image} alt="description image"></img>
                                 <h2><i class="fa-solid fa-circle-info" id="fawesome"></i> Details</h2>
                                 <div className="description-info">
-                                    <div className="artist-venue" style={{"fontWeight": "bold"}}>{event.event_dj} @ {event.event_venue}</div>
+                                    <div className="artist-venue" style={{ "fontWeight": "bold" }}>{event.event_dj} @ {event.event_venue}</div>
                                     <br></br>
                                     <div className="day-month-dd-yyyy">{startDayOfWeek} {startMonth} {startDay}, {startYear} </div>
                                     <br></br>
@@ -158,8 +162,11 @@ const OneEvent = () => {
                         {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
                             currentUser ?
                                 !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <h2 className="ticket-alert-owner">Tickets coming soon!</h2>
-                                    : event.owner.id !== currentUser.id ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal"/></div>
-                                        : <h2 className="ticket-alert-owner">You cannot buy tickets to your own event!</h2>
+                                    : event.owner.id !== currentUser.id
+                                        ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal" /></div>
+                                        : <h2 className="ticket-alert-owner">
+                                            You cannot buy tickets to your own event!
+                                        </h2>
                                 : <h2 className="ticket-alert-owner"><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets</h2>
                         }
                         {   // if  logged in and

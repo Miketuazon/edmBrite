@@ -42,7 +42,9 @@ function ResultsPage() {
         (event?.event_name?.toLowerCase())?.includes(query.toLowerCase()) ||
         (event?.event_venue?.toLowerCase())?.includes(query.toLowerCase()) ||
         (event?.event_description?.toLowerCase())?.includes(query.toLowerCase()) ||
-        (event?.owner?.username?.toLowerCase()?.includes(query.toLowerCase()))
+        (event?.owner?.username?.toLowerCase()?.includes(query.toLowerCase())) ||
+        (event?.event_city.toLowerCase()?.includes(query.toLowerCase())) ||
+        (event?.event_state.toLowerCase()?.includes(query.toLowerCase()))
         )
 
         useEffect(() => {
