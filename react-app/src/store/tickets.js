@@ -6,6 +6,7 @@ const BUY_TICKETS = 'tickets/buyTickets'
 const GET_BOUGHT_TICKETS = 'tickets/getBoughtTickets'
 const UPDATE_BOUGHT_TICKETS = 'tickets/updateBoughtTickets'
 const DELETE_BOUGHT_TICKETS = 'tickets/deleteBoughtTickets'
+const EDIT_TICKET_REGISTRATION = 'tickets/editTicketRegistration'
 // Action creators | tickets
 const getTicketsAction = (tickets) => {
     return {
@@ -45,6 +46,13 @@ const updateBoughtTicketsAction = (tickets) => {
 const deleteBoughtTicketsAction = (tickets) => {
     return {
         type:DELETE_BOUGHT_TICKETS,
+        tickets
+    }
+}
+
+const editTicketRegistrationAction = (tickets) => {
+    return {
+        type: EDIT_TICKET_REGISTRATION,
         tickets
     }
 }
@@ -138,6 +146,18 @@ export const deleteTicketOrderThunk = (ticketId, eventId) => async (dispatch) =>
     if (res.ok) {
         dispatch(deleteBoughtTicketsAction(ticketId))
     }
+}
+
+// 7. Edit ticket registration
+export const editTicketRegistrationThunk = (ticketDetails, eventId, ticketId) => async (dispatch) => {
+    console.log("ticketDetails => ", ticketDetails)
+    console.log("eventId => ", eventId)
+    console.log("ticketId => ", ticketId)
+    const res = await fetch(`/api/events/${eventId}/ticket_registration/${ticketId}/update`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(ticketDetails)
+    })
 }
 
 // reducer

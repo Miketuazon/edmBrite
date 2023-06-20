@@ -200,3 +200,39 @@ def get_tickets_bought():
             tickets.append(ticket_bought)
 
     return tickets
+
+@event_routes.route("/<int:event_id>/ticket_registration/<int:ticket_id>/update", methods=["PUT"])
+@login_required
+def update_ticket_registration(ticket_id, event_id):
+    """
+    Query to update an event's ticket registration details
+    """
+
+    current_user_dict = current_user.to_dict()
+    event = Event.query.get(event_id)
+    ticket = Ticket.query.get(ticket_id)
+
+    if not event.id:
+        return {'error': 'Event not found'}, 404
+
+    if current_user_dict['id'] != event.event_organizer_id:
+        return {'error': 'You are not the owner of this event. You cannot update it.'}, 403
+
+    if ticket.user_id_ticket_creator != current_user.id:
+        return {'error': 'You are not the owner of this order. You cannot update it.'}, 403
+    # ticket = Ticket.query.get(ticket_id)
+    # if current_user_dict['id'] != ticket.user_id_ticket_creator:
+    #     return {'error': 'You are not the owner of this ticket. You cannot update it.'}, 403
+
+
+
+    form = TicketForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    # if form.validate_on_submit():
+    ticket.ticket_type=form.data['ticket_type']
+    ticket.ticket_price=form.data['ticket_price']
+    ticket.ticket_quantity=form.data['ticket_quantity']
+
+    db.session.commit()
+    return {'message': 'Successfully updated tickets for event', 'ticket': ticket.to_dict_bought()}

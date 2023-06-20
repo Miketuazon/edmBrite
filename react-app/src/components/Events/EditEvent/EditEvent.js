@@ -274,6 +274,7 @@ const EditEvent = () => {
                                         type='text' placeholder='Write a short event summary to get attendees excited.' min='1'
                                         required value={event_summary} onChange={updateEvent_summary}
                                     />
+                                    {event_summary.length} / 140
                                 </label>
                                 <label>
                                     {hasSubmitted && errors.event_description && (
@@ -284,11 +285,12 @@ const EditEvent = () => {
                                     <br></br>
                                     Description
                                     <div>Add more details to your event like your schedule, sponsors, or featured guests.</div>
-                                    <input
-                                        style={{ overflow: "scroll" }} rows="4" cols="50" maxLength={500}
-                                        type='textarea' placeholder='' min='1' className="description-input"
+                                    <textarea
+                                        rows="4" cols="50" maxLength={500}
+                                        type='text' placeholder='' min='1' id="description-input-box"
                                         required value={event_description} onChange={updateEvent_description}
                                     />
+                                    {event_description.length} / 500
                                 </label>
                                 <label>
                                     {hasSubmitted && errors.event_genre_id && (

@@ -64,12 +64,12 @@ const EventsPage = () => {
     if (!events.length) return <>Loading.....</>
     return (
         <div className="events-page">
-            <ul className="events-list">
-                <header className="events-data-header">
-                </header>
                 <div classname="image-on-top">
                     <img src="https://wallpaperaccess.com/full/3990922.jpg" alt="image" className="image-on-topp"></img>
                 </div>
+            <ul className="events-list">
+                <header className="events-data-header">
+                </header>
                 <h2>User created Events</h2>
                 <h3>Find events curated from users like yourself!</h3>
                 <div className="user-events-list">
@@ -87,7 +87,7 @@ const EventsPage = () => {
                                         </div>
                                         <div className="location-owner">
                                             <div className="location" style={{"color": "gray"}}>{event.event_venue} &middot; {event.event_city}, {event.event_state}</div>
-                                            <div className="owner">Organizer: {event.owner.username}</div>
+                                            <div className="owner" style={{"color": "#3659E3", "fontWeight": "bold"}}>Organizer: {event.owner.username}</div>
                                         </div>
                                     </div>
                                 </Link>
