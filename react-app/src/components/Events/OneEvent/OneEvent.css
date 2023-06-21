@@ -84,6 +84,7 @@
 
 .sub-details {
     display: flex;
+    padding: 1%;
 }
 
 .tickets-container, .ticket-alert-owner, .tickets-modal {
