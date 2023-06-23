@@ -34,11 +34,15 @@ const UserLikesPage = () => {
                         events.filter(event => likes.includes(event.id))
                             .map(event => (
                                 <div key={event.id} className="event-liked">
-                                    <img className="preview-image-events" src={event.event_preview_image} alt="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/EDC%20Vegas%20-%20DJ%20MAG.png.jpg"></img>
-                                    <div className="event-id-and-name">{event.event_name}</div>
-                                    <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
-                                    <div className="location">{event.event_city}, {event.event_state}</div>
-                                    <div className="owner">Organizer: {event.owner.username}</div>
+                                    <Link to={`/events/${event.id}`} target="_blank">
+                                        <img className="preview-image-events" src={event.event_preview_image} alt="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/EDC%20Vegas%20-%20DJ%20MAG.png.jpg"></img>
+                                        <div className="event-details-container">
+                                            <div className="event-id-and-name">{event.event_name}</div>
+                                            <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
+                                            <div className="location">{event.event_city}, {event.event_state}</div>
+                                            <div className="owner">Organizer: {event.owner.username}</div>
+                                        </div>
+                                    </Link>
                                 </div>
                             ))
                         :

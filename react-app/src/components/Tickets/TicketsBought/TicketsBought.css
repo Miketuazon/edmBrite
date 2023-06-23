@@ -1,12 +1,30 @@
 .bought-list {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .order-bought {
-    margin: 10px;
+    margin: 4px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc(24% - 8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    max-width: 400px;
+    max-height: 700px;
+    box-shadow: -6px 0px 42px 15px rgba(0,0,0,0.07);
     list-style: none;
+    padding-bottom: 10px;
+}
+
+.order-bought:hover {
+    box-shadow: 10px 0px 31px 25px #c8c8c8;
+}
+
+.event-container {
+    padding-left: 10px;
 }
