@@ -9,6 +9,7 @@ import OpenModalButton from "../../OpenModalButton";
 import OpenModalDelete from "../../Events/OwnedEvents/OpenModalDelete";
 import UpdateTicketsBought from "../UpdateTicketsBought/UpdateTicketsBought";
 import DeleteTicketOrderModal from "../DeleteTicketOrderModal/DeleteTicketOrderModal";
+import { Link } from "react-router-dom";
 const TicketsBoughtPage = () => {
   const dispatch = useDispatch();
   const current_user = useSelector(state => state.session.user)
@@ -19,6 +20,7 @@ const TicketsBoughtPage = () => {
   // console.log("ticketsObj => ", ticketsObj);
   // console.log("INSIDE TICKETSBOUGHT +=====>");
   const orders = Object.values(ticketsObj)
+  // console.log("orders => ", orders)
   // console.log("events => ", events)
   useEffect(() => {
     dispatch(getEventsThunk())
@@ -46,27 +48,36 @@ const TicketsBoughtPage = () => {
       <h1>Ticket orders page</h1>
       <div className="bought-list">
         {
-          // needs to be greater than 1 since orders is also bringing in the created event's tickets
-          orders.length > 1 ?
+          // needs to be greater than 0 since orders is also bringing in the created event's tickets
+          orders.length ?
             orders.filter(order => order.user_id_ticket_buyer === current_user.id)
               .map(order => (
                 <div key={order.id} className="order-bought">
-                  <h2>Ticket Order #{order.id}</h2>
-                  <h3>
+                  <div>
                     {
                       events.filter(event => event.id === order.event_id).map(e => (
-                        <li style={{ listStyle: "none" }} key={e.id}>
-                          <img className="preview-image-event" src={`${e.event_preview_image}`}></img>
-                          <div>{e.event_name}</div>
-                        </li>
+                        <Link style={{ listStyle: "none" }} key={e.id} to={`/events/${order.event_id}`} target="_blank">
+                          <div className="preview-image-container">
+                            <img className="preview-image-event" src={`${e.event_preview_image}`}></img>
+                          </div>
+                          <div className="event-container">
+                            <h2 style={{ "fontWeight": "bold" }}>Ticket Order #{order.id}</h2>
+                            <br></br>
+                            <div>{e.event_name}</div>
+                          </div>
+                        </Link>
                       ))
 
                     }
-                  </h3>
-                  <h3>Ticket Type: {order.ticket_type}</h3>
-                  <h4>Ticket Quantity: {order.ticket_quantity}</h4>
-                  <h5>Ticket Price: ${order.ticket_price}</h5>
-                  <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
+                  </div>
+                  <Link to={`/events/${order.event_id}`} target="_blank">
+                    <div className="event-container">
+                      <h3>Ticket Type: {order.ticket_type}</h3>
+                      <h4>Ticket Quantity: {order.ticket_quantity}</h4>
+                      <h5>Ticket Price: ${order.ticket_price}</h5>
+                      <div>Total Price: ${order.ticket_price * order.ticket_quantity}</div>
+                    </div>
+                  </Link>
                   <br></br>
                   <div className="update-delete-container">
                     <div className="update">

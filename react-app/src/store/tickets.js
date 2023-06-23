@@ -150,9 +150,9 @@ export const deleteTicketOrderThunk = (ticketId, eventId) => async (dispatch) =>
 
 // 7. Edit ticket registration
 export const editTicketRegistrationThunk = (ticketDetails, eventId, ticketId) => async (dispatch) => {
-    console.log("ticketDetails => ", ticketDetails)
-    console.log("eventId => ", eventId)
-    console.log("ticketId => ", ticketId)
+    // console.log("ticketDetails => ", ticketDetails)
+    // console.log("eventId => ", eventId)
+    // console.log("ticketId => ", ticketId)
     const res = await fetch(`/api/events/${eventId}/ticket_registration/${ticketId}/update`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
