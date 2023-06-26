@@ -62,6 +62,9 @@ function ProfileButton({ user }) {
               <Link to={`/events/current`}>Manage your events</Link>
             </li>
             <li>
+              <Link to={`/genres/create`}>Create a genre</Link>
+            </li>
+            <li>
               <button onClick={handleLogout}>Log Out</button>
             </li>
           </>

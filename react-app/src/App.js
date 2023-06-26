@@ -18,6 +18,7 @@ import TicketsBoughtPage from "./components/Tickets/TicketsBought/TicketsBought"
 import ResultsPage from "./components/ResultsPage/ResultsPage";
 import UpdateTicketsBought from "./components/Tickets/UpdateTicketsBought/UpdateTicketsBought";
 import NotFoundPage from "./components/NotFoundPage/404";
+import CreateGenre from "./components/Genres/CreateGenre";
 
 function App() {
   const dispatch = useDispatch();
@@ -70,6 +71,9 @@ function App() {
           </Route>
           <Route path="/search">
             <ResultsPage />
+          </Route>
+          <Route path="/genres/create">
+            <CreateGenre />
           </Route>
           <Route path="*">
             <NotFoundPage />

@@ -13,3 +13,27 @@
 .demo-sign-in-button {
     margin-left: 10px;
 }
+
+.email-pw-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.email-pw-input > label {
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.button-container > button {
+    color: white;
+}
+
+.login-head {
+    padding-left: 10px;
+}
