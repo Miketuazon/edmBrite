@@ -60,13 +60,25 @@ const EventsPage = () => {
             .catch(err => console.log(err))
     }, [latitude, longitude, state, apiKey])
     // console.log("edmtrainEvents =>", edmtrainEvents)
+
+    const addOneDay = (date) => {
+        const originalDate = new Date(date)
+        originalDate.setDate(originalDate.getDate() + 1)
+        const day = originalDate.getDate();
+        const month = originalDate.getMonth() + 1;
+        const year = originalDate.getFullYear();
+
+        const formattedDate = `${month}/${day}/${year}`
+        return formattedDate
+    }
+
     const apiEvents = edmtrainEvents.data
     if (!events.length) return <>Loading.....</>
     return (
         <div className="events-page">
-                <div classname="image-on-top">
-                    <img src="https://wallpaperaccess.com/full/3990922.jpg" alt="image" className="image-on-topp"></img>
-                </div>
+            <div classname="image-on-top">
+                <img src="https://wallpaperaccess.com/full/3990922.jpg" alt="image" className="image-on-topp"></img>
+            </div>
             <ul className="events-list">
                 <header className="events-data-header">
                 </header>
@@ -86,8 +98,8 @@ const EventsPage = () => {
                                             <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.event_start_date).toLocaleDateString()}</div>
                                         </div>
                                         <div className="location-owner">
-                                            <div className="location" style={{"color": "gray"}}>{event.event_venue} &middot; {event.event_city}, {event.event_state}</div>
-                                            <div className="owner" style={{"color": "#3659E3", "fontWeight": "bold"}}>Organizer: {event.owner.username}</div>
+                                            <div className="location" style={{ "color": "gray" }}>{event.event_venue} &middot; {event.event_city}, {event.event_state}</div>
+                                            <div className="owner" style={{ "color": "#3659E3", "fontWeight": "bold" }}>Organizer: {event.owner.username}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -116,7 +128,7 @@ const EventsPage = () => {
                                     <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" alt="edmtrain"></img>
                                     <br></br>
                                     {event.name}
-                                    <div className="date" style={{ fontWeight: "bold" }}>{new Date(event.date).toLocaleDateString()}</div>
+                                    <div className="date" style={{ fontWeight: "bold" }}>{addOneDay(event.date)}</div>
                                     <div className="location">{event.venue.name} &middot; {event.venue.location}</div>
                                 </a>
                                 <br></br>
