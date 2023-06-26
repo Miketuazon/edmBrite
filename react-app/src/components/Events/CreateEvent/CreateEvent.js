@@ -98,7 +98,7 @@ const CreateEvent = () => {
     // if (!events.length) return <>Loading.....</>
     return (
         <div className="create-event-page">
-            <h1>Create an event!</h1>
+            <h1 style={{"paddingLeft": "10px"}}>Create an event!</h1>
             <div className="create-form-div">
                 <ul className="errors">
                     {hasSubmitted &&

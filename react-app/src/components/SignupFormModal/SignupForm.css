@@ -7,3 +7,19 @@
     display: flex;
     justify-content: center;
 }
+
+.email-username, .passwords {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.submit-container > button {
+    color: white;
+}
+
+.submit-container {
+    padding-bottom: 10px;
+}

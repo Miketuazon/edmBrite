@@ -11,17 +11,17 @@ function SignupFormModal() {
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [errors, setErrors] = useState([]);
-    const [hasSubmitted, setHasSubmitted] = useState(false)
+	const [hasSubmitted, setHasSubmitted] = useState(false)
 	const { closeModal } = useModal();
 
 	useEffect(() => {
-        let e = {}
-        setErrors(e)
+		let e = {}
+		setErrors(e)
 
 
-        if (!email.includes("@")) e.email = ('Email is required and needs an @ to be accepted')
+		if (!email.includes("@")) e.email = ('Email is required and needs an @ to be accepted')
 		if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) e.email = ('Please input an actual Email')
-    }, [email])
+	}, [email])
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -47,51 +47,55 @@ function SignupFormModal() {
 				<img className="signUpPhoto" src="https://edmhousenetwork.com/wp-content/uploads/2022/03/edc.jpg">
 				</img>
 			</div>
-			<h1>Sign Up</h1>
+			<h1 className="login-head">Sign Up</h1>
 			<form onSubmit={handleSubmit}>
-				<ul>
-					{hasSubmitted && Object.values(errors).map((error, idx) => (
-						<li style={{color: "red", backgroundColor: "yellow"}}key={idx}>{error}</li>
-					))}
-				</ul>
-				<label>
-					Email
-					<input
-						type="text"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
-					/>
-				</label>
-				<label>
-					Username
-					<input
-						type="text"
-						value={username}
-						onChange={(e) => setUsername(e.target.value)}
-						required
-					/>
-				</label>
-				<label>
-					Password
-					<input
-						type="password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-						required
-					/>
-				</label>
-				<label>
-					Confirm Password
-					<input
-						type="password"
-						value={confirmPassword}
-						onChange={(e) => setConfirmPassword(e.target.value)}
-						required
-					/>
-				</label>
+					<ul>
+						{hasSubmitted && Object.values(errors).map((error, idx) => (
+							<li style={{ color: "red", backgroundColor: "yellow" }} key={idx}>{error}</li>
+						))}
+					</ul>
+				<section className="email-username">
+					<label>
+						Email
+						<input
+							type="text"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+							required
+						/>
+					</label>
+					<label>
+						Username
+						<input
+							type="text"
+							value={username}
+							onChange={(e) => setUsername(e.target.value)}
+							required
+						/>
+					</label>
+				</section>
+				<section className="passwords">
+					<label>
+						Password
+						<input
+							type="password"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+							required
+						/>
+					</label>
+					<label>
+						Confirm Password
+						<input
+							type="password"
+							value={confirmPassword}
+							onChange={(e) => setConfirmPassword(e.target.value)}
+							required
+						/>
+					</label>
+				</section>
 				<div className="submit-container">
-				<button type="submit">Sign Up</button>
+					<button type="submit">Sign Up</button>
 				</div>
 			</form>
 		</div>

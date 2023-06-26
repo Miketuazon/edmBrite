@@ -45,8 +45,8 @@ const TicketsBoughtPage = () => {
   if (!current_user) return <h1>UNAUTHORIZED! YOU ARE NOT LOGGED IN</h1>
   return (
     <div className="tickets-bought-page">
-      <h1>Ticket orders page</h1>
-      <div className="bought-list">
+      <h1 style={{"paddingLeft": "10px"}}>Ticket orders page</h1>
+      <div className="bought-list" style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
         {
           // needs to be greater than 0 since orders is also bringing in the created event's tickets
           orders.length ?

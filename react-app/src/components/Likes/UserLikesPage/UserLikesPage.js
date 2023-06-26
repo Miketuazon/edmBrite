@@ -26,7 +26,7 @@ const UserLikesPage = () => {
     if (!userLikedEvents) return <h1>Loading...</h1>
     return (
         <div className="likes-page">
-            <h1>Likes</h1>
+            <h1 style={{"paddingLeft": "10px"}}>Likes</h1>
             <ul className="likes-container">
                 {
                     likes.length > 0 ?
