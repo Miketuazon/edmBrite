@@ -2,6 +2,7 @@
 const GET_GENRES = 'genres/getGenres'
 const CREATE_GENRE = 'genres/createGenre'
 const UPDATE_GENRE = 'genres/updateGenre'
+const DELETE_GENRE = 'genres/deleteGenre'
 
 // Store - action creators | genres
 const getGenresAction = (genres) => {
@@ -21,6 +22,13 @@ const createGenreAction = (genre) => {
 const updateGenreAction = (genre) => {
     return {
         type: UPDATE_GENRE,
+        genre
+    }
+}
+
+const deleteGenreAction = (genre) => {
+    return {
+        type: DELETE_GENRE,
         genre
     }
 }
@@ -63,6 +71,18 @@ export const updateGenreThunk = (genreDetails, genreId) => async (dispatch) => {
         return res
     }
 }
+
+// Thunk 4: Delete genre
+export const deleteGenreThunk = (genreId) => async (dispatch) => {
+    const res = await fetch(`/api/genres/${genreId}`, {
+        method: 'DELETE'
+    })
+
+    if (res.ok) {
+        dispatch(deleteGenreAction(genreId))
+    }
+}
+
 export default function genresReducer(state = {}, action) {
     let newState;
     switch (action.type) {
@@ -77,6 +97,10 @@ export default function genresReducer(state = {}, action) {
         case UPDATE_GENRE:
             newState = {...state}
             newState[action.genre.genre.id] = action.genre.genre
+            return newState
+        case DELETE_GENRE:
+            newState = {...state}
+            delete newState[action.genre]
             return newState
         default:
             return state
