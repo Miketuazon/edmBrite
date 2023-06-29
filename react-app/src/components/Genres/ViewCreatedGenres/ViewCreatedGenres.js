@@ -6,6 +6,8 @@ import { useHistory } from "react-router-dom";
 import { createGenreThunk, getGenresThunk } from "../../../store/genres";
 import OpenModalButton from "../../OpenModalButton";
 import UpdateGenreModal from "../UpdateGenre/UpdateGenre";
+import DeleteGenreModal from "../DeleteGenreModal/DeleteGenreModal";
+import OpenModalDelete from "../../Events/OwnedEvents/OpenModalDelete";
 
 const ViewCreatedGenres = () => {
 
@@ -18,34 +20,52 @@ const ViewCreatedGenres = () => {
         dispatch(getGenresThunk())
     }, [dispatch])
 
+    const userCreatedGenres = genres.filter(genre => genre?.user_created === currentUser.id)
+    console.log(userCreatedGenres)
+
     return (
         <div className="view-genres">
-            <section className="user-created-genres" style={{"paddingLeft": "1%"}}>
-                <h1>Your created genres</h1>
-                    {
-                        genres.filter(genre => genre?.user_created === currentUser.id).map(genre =>
-                            (
-                            <div className="genre-created">
-                                <div className="genre-name">{genre.name}</div>
-                                <div className="update-delete-buttons">
-                                    <div className="update-container">
-                                        <OpenModalButton className="update-genre-button"
-                                        modalComponent={<UpdateGenreModal genre={genre}/>}
+            <h2 style={{ "paddingLeft": "1%" }}>Your created genres</h2>
+            <section className="user-created-genres" style={{ "paddingLeft": "1%" }}>
+                {
+                    userCreatedGenres.length ? userCreatedGenres.map(genre =>
+                    (
+                        <div className="genre-created">
+                            <div className="genre-name">{genre.name}</div>
+                            <div className="update-delete-container">
+                                <div className="update-container">
+                                    <OpenModalButton className="update-genre-button"
+                                        modalComponent={<UpdateGenreModal genre={genre} />}
                                         buttonText={'Update'}
+                                    />
+                                </div>
+                                <div className="delete-container">
+                                    <button className="delete-button">
+                                        <OpenModalDelete
+                                            itemText='Delete'
+                                            modalComponent={<DeleteGenreModal genre={genre}
+                                            />}
                                         />
-                                    </div>
-                                    <div className="delete-container">Delete</div>
+                                    </button>
                                 </div>
                             </div>
-                        ))
-                    }
+                        </div>
+                    ))
+                        :
+                        <div className="no-genres">
+                            <div>Oh no, you don't have any created genres.</div>
+                            <div>Create a genre above!</div>
+                        </div>
+                }
             </section>
-            <section className="view-created-genres" style={{"paddingLeft": "1%"}}>
+            <section className="view-created-genres" style={{ "paddingLeft": "1%" }}>
                 <h1>All genres</h1>
                 <div className="all-genres-container">
                     {
                         genres.map(genre => (
-                            <h3 className="genre-name">{genre.name}</h3>
+                            <div className="genre-container">
+                                <div className="genre-name">{genre.name}</div>
+                            </div>
                         ))
                     }
                 </div>

@@ -27,7 +27,9 @@ const CreateGenre = () => {
     useEffect(() => {
         let e = {}
         setErrors(e)
-
+        for (let genre of genres) {
+            if (genre.name.toLowerCase() === name.toLowerCase()) e.name = ('Genre name is already made!')
+        }
         if (genres.includes(name)) e.name = ('Genre name is already made!')
         if (name.length > 40 || name.length < 3) e.name = ('Genre name must be between 3 and 40 characters')
 
@@ -51,7 +53,7 @@ const CreateGenre = () => {
                 {hasSubmitted &&
                     Object.entries(errors).map((error, idx) => (
                         <li key={idx} style={{ color: "red", background: "yellow" }}>
-                            ERROR!: {error}
+                            ERROR!: {Object.entries(error)[1].slice(1, error.length)}
                         </li>
                     ))}
             </ul>
