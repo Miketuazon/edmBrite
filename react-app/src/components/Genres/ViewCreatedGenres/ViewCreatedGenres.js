@@ -4,6 +4,8 @@ import './viewCreatedGenres.css'
 // import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom";
 import { createGenreThunk, getGenresThunk } from "../../../store/genres";
+import OpenModalButton from "../../OpenModalButton";
+import UpdateGenreModal from "../UpdateGenre/UpdateGenre";
 
 const ViewCreatedGenres = () => {
 
@@ -18,7 +20,7 @@ const ViewCreatedGenres = () => {
 
     return (
         <div className="view-genres">
-            <section className="user-created-genres">
+            <section className="user-created-genres" style={{"paddingLeft": "1%"}}>
                 <h1>Your created genres</h1>
                     {
                         genres.filter(genre => genre?.user_created === currentUser.id).map(genre =>
@@ -26,19 +28,24 @@ const ViewCreatedGenres = () => {
                             <div className="genre-created">
                                 <div className="genre-name">{genre.name}</div>
                                 <div className="update-delete-buttons">
-                                    <div className="update-container">Update</div>
+                                    <div className="update-container">
+                                        <OpenModalButton className="update-genre-button"
+                                        modalComponent={<UpdateGenreModal genre={genre}/>}
+                                        buttonText={'Update'}
+                                        />
+                                    </div>
                                     <div className="delete-container">Delete</div>
                                 </div>
                             </div>
                         ))
                     }
             </section>
-            <section className="view-created-genres">
+            <section className="view-created-genres" style={{"paddingLeft": "1%"}}>
                 <h1>All genres</h1>
                 <div className="all-genres-container">
                     {
                         genres.map(genre => (
-                            <div>{genre.name}</div>
+                            <h3 className="genre-name">{genre.name}</h3>
                         ))
                     }
                 </div>

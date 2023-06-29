@@ -1,6 +1,8 @@
 // Declare POJO action creator
 const GET_GENRES = 'genres/getGenres'
 const CREATE_GENRE = 'genres/createGenre'
+const UPDATE_GENRE = 'genres/updateGenre'
+
 // Store - action creators | genres
 const getGenresAction = (genres) => {
     return {
@@ -12,6 +14,13 @@ const getGenresAction = (genres) => {
 const createGenreAction = (genre) => {
     return {
         type: CREATE_GENRE,
+        genre
+    }
+}
+
+const updateGenreAction = (genre) => {
+    return {
+        type: UPDATE_GENRE,
         genre
     }
 }
@@ -39,6 +48,21 @@ export const createGenreThunk = (genreDetails) => async (dispatch) => {
     }
 }
 
+// Thunk 3: Update genre
+export const updateGenreThunk = (genreDetails, genreId) => async (dispatch) => {
+    console.log(genreId, genreDetails)
+    const res = await fetch(`/api/genres/${genreId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(genreDetails)
+    })
+
+    if (res.ok) {
+        const editedGenre = await res.json()
+        dispatch(updateGenreAction(editedGenre))
+        return res
+    }
+}
 export default function genresReducer(state = {}, action) {
     let newState;
     switch (action.type) {
@@ -49,6 +73,10 @@ export default function genresReducer(state = {}, action) {
         case CREATE_GENRE:
             newState = { ...state }
             newState[action.genre.id] = action.genre
+            return newState
+        case UPDATE_GENRE:
+            newState = {...state}
+            newState[action.genre.genre.id] = action.genre.genre
             return newState
         default:
             return state
