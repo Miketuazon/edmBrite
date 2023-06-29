@@ -26,6 +26,7 @@ class User(db.Model, UserMixin):
     # One to Many
     events = db.relationship('Event', back_populates='owner')
     tickets_created = db.relationship('Ticket', back_populates='ticket_creator')
+    genres_created = db.relationship('Genre', back_populates='genre_creator')
 
     @property
     def password(self):
@@ -47,4 +48,5 @@ class User(db.Model, UserMixin):
             'events_liked': [event.id for event in self.event_likes],
             'events_owned': [event.id for event in self.events],
             'ticket_orders_owned': [tickets_created.id for tickets_created in self.tickets_created],
+            'genres_created': [genres_created.id for genres_created in self.genres_created]
         }

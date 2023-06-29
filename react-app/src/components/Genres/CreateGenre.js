@@ -4,6 +4,7 @@ import './CreateGenre.css'
 // import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom";
 import { createGenreThunk, getGenresThunk } from "../../store/genres";
+import ViewCreatedGenres from "./ViewCreatedGenres/ViewCreatedGenres";
 
 const CreateGenre = () => {
 
@@ -72,6 +73,7 @@ const CreateGenre = () => {
                     </div>
                 </form>
             </section>
+            < ViewCreatedGenres />
         </div>
     )
 }
