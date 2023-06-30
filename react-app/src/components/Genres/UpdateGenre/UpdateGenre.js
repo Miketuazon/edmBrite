@@ -15,7 +15,7 @@ const UpdateGenreModal = (genre) => {
     // useEffect(() => {
     //     dispatch(getGenresThunk())
     // }, [dispatch])
-    console.log(genre)
+    // console.log(genre)
     const [name, setName] = useState(genre.genre.name)
     const { closeModal } = useModal()
 

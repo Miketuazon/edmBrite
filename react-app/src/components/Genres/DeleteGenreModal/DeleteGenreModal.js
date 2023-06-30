@@ -8,7 +8,7 @@ function DeleteGenreModal({ genre }) {
     const dispatch = useDispatch()
     const { closeModal } = useModal();
     const history = useHistory();
-    console.log("genre => ", genre)
+    // console.log("genre => ", genre)
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(deleteGenreThunk(genre.id))
