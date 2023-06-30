@@ -58,7 +58,7 @@ export const createGenreThunk = (genreDetails) => async (dispatch) => {
 
 // Thunk 3: Update genre
 export const updateGenreThunk = (genreDetails, genreId) => async (dispatch) => {
-    console.log(genreId, genreDetails)
+    // console.log(genreId, genreDetails)
     const res = await fetch(`/api/genres/${genreId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
