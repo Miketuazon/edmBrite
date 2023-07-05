@@ -152,6 +152,7 @@
 
 .profile-dropdown>*:hover, .right-side > li:hover {
   background-color: lightgray;
+  font-weight: bold;
   /* border: solid 2px #1A4645; */
 }
 .navBar > * {
@@ -215,4 +216,18 @@
   margin-left: 10px;
   color: blue;
   cursor: pointer
+}
+
+#logOut-button {
+  background-color: #D2420D;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#logOut-button:hover {
+  background-color: #F05537;
+  color: black;
 }
