@@ -195,3 +195,14 @@ h5 {
 #edmtrain {
     padding-top: .3rem;
 }
+
+.top-of-events {
+    display: flex;
+    justify-content: space-between;
+}
+
+.click-container-edm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

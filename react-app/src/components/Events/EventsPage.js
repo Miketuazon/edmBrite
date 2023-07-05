@@ -80,13 +80,17 @@ const EventsPage = () => {
                 <img src="https://wallpaperaccess.com/full/3990922.jpg" alt="image" className="image-on-topp"></img>
             </div>
             <ul className="events-list">
-                <header className="events-data-header">
-                </header>
-                <h2>User created Events</h2>
-                <h3>Find events curated from users like yourself!</h3>
-                <div className="click-here">
-                    <h2>Want to find real events?</h2>
-                    <a href="#edmtrain" className="click-edmtrain">Click here!</a>
+                <div className="top-of-events">
+                    <div className="left-side-events">
+                        <h2>User created Events</h2>
+                        <h3>Find events curated from users like yourself!</h3>
+                    </div>
+                    <div className="click-here">
+                        <h2>Want to find real events?</h2>
+                        <div className="click-container-edm">
+                        <a href="#edmtrain" className="click-edmtrain">Click here!</a>
+                        </div>
+                    </div>
                 </div>
                 <div className="user-events-list">
                     {
@@ -124,8 +128,8 @@ const EventsPage = () => {
                     ))}
                 </select>
                 <div className="location-changer">
-                <h3>Current state selected:</h3>
-                <h3>{state}</h3>
+                    <h3>Current state selected:</h3>
+                    <h3>{state}</h3>
                 </div>
                 <ul className="edmtrain-list">
                     {edmtrainEvents.success === true ?
