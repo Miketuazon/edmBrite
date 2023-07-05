@@ -1,7 +1,9 @@
 .loginPhoto {
-    width: 600px;
+    /* width: 600px; */
     /* height: 255px; */
     border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .button-container {
@@ -36,4 +38,59 @@
 
 .login-head {
     padding-left: 10px;
+    font-weight: bold;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+.logIn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 50rem;
+    justify-content: space-between;
+}
+
+.loginPhotoContainer {
+    width: 50%;
+}
+
+.left-side-login {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+}
+
+.title-head-login {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    color: #f05537;
+    font-weight: bold;
+}
+
+#login-button {
+    width: 100%;
+    background-color: #D2420D;
+    border: 0;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.demo-sign-in-button {
+    width: 100%;
+    background-color: #D2420D;
+    border: 0;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.right-side > button {
+    border-radius: 10px;
+    padding: .5rem;
+    background-color: #D2420D;
+    border: 0;
+}
+
+.right-side > button:hover {
+    background-color: #F05537;
 }

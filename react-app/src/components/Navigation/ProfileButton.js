@@ -4,7 +4,7 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 function ProfileButton({ user }) {
@@ -44,8 +44,8 @@ function ProfileButton({ user }) {
     <>
       <div
         onMouseEnter={handleMouseEnter}
-        style={{"fontWeight": "bold"}}
-      onMouseLeave={handleMouseLeave}
+        style={{ "fontWeight": "bold" }}
+        onMouseLeave={handleMouseLeave}
       >
         <i className="fas fa-user-circle" />
         &nbsp;
@@ -58,15 +58,24 @@ function ProfileButton({ user }) {
         onMouseLeave={handleMouseLeave}>
         {user ? (
           <>
-            <li style={{ "borderBottom": "1px lightgray solid"}}><span style={{"fontWeight": "bold"}}>Username:</span> {user.username}</li>
+            <li style={{ "borderBottom": "1px lightgray solid" }}><span style={{ "fontWeight": "bold" }}>Username:</span> {user.username}</li>
             {/* <li>{user.email}</li> */}
             <li>
               <Link to={`/events/current`}>Manage your Events</Link>
             </li>
-            <li>
+            <li style={{ borderBottom: "1px solid lightgray" }}>
               <Link to={`/genres/create`}>Manage your Genres</Link>
             </li>
-            <li>
+            <li className="button-dropdown">
+              <Link to="/events/new">Create an event</Link>
+            </li>
+            <li className="button-dropdown">
+              <Link to="/current_user/likes" style={{ "text-decoration": "none" }}>Like</Link>
+            </li>
+            <li className="button-dropdown">
+              <Link to="/current_user/tickets">Tickets</Link>
+            </li>
+            <li style={{ borderTop: "1px solid lightgray" }}>
               <button onClick={handleLogout}>Log Out</button>
             </li>
           </>
