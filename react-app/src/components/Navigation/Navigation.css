@@ -27,7 +27,7 @@
 }
 
 .homeButton {
-  padding-right: 5px;
+  padding-right: 24px;
 }
 
 .left-side-nav {
@@ -77,18 +77,27 @@
 }
 
 .search-bar-component {
-  border: 1px black solid;
+  border: 1px #F8F7FA solid;
+  background-color: #F8F7FA;
   /* color: gray; */
   /* background-color: gray; */
+  height: 2rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
 }
 
 .edmBrite-search-button {
-  background-color: white;
+  background-color: #F8F7FA;
   border: white;
+  color: lightgray;
 }
 
 .input-search {
   border: white;
+  background-color: #F8F7FA;
+  height: 2rem;
+  width: 20rem;
 }
 
 .go-to-likes-button {
