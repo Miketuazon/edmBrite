@@ -1,0 +1,7 @@
+.delete-genre-modal {
+    padding: 2rem;
+}
+
+.delete-genre-modal > .submit {
+    padding-right: 1rem;
+}

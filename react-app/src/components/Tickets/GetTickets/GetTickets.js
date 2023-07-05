@@ -40,7 +40,7 @@ const TicketsDisplay = () => {
                                     <div className="button-plus-minus">
                                         <div className="type-ticket">{key}</div>
                                         <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
-                                        &nbsp;{ticketCount}&nbsp;
+                                        <div className="ticket-count">{ticketCount}</div>
                                         <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
                                     </div>
                                     <div className="price-ticket">Price: ${value?.ticket_price}</div>

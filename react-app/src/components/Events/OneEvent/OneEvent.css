@@ -94,8 +94,13 @@
 }
 
 .container > button {
-    background-color: #877f7c;
+    background-color: #D1410C;
     color: #FFF;
+    font-size: 1.2rem;
+}
+
+.container > button:hover {
+    background-color: #f7ab8f;
 }
 
 .go-to-create-tickets {

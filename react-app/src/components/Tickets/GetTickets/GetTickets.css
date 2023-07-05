@@ -40,7 +40,7 @@
 
 .container {
     margin-bottom: 5px;
-    border: 2px solid #304fc9;
+    /* border: 2px solid #304fc9; */
     border-radius: 8px;
     padding: 5px
 }
@@ -51,5 +51,28 @@
 
 .check-out-button {
     margin-top: 5px;
+    background-color: #f05537;
     font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;;
+}
+
+
+.btn-plus {
+    background-color: #3D64FF;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-minus {
+    font-size: 1.5rem;
+}
+
+.type-ticket, .price-ticket, .ticket-count {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.ticket-count {
+    padding-left: .4rem;
+    padding-right: .4rem;
 }

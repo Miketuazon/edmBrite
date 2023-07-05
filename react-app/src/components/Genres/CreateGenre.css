@@ -17,3 +17,7 @@
     align-items: center;
     flex-direction: column;
 }
+
+.create-genre {
+    border-top: 1px solid #EEEDF2;
+}

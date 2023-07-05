@@ -8,11 +8,13 @@ function SearchBar() {
     };
 
     return (
-        <div>
+        <div className='search-bar-component'>
+            <button className="edmBrite-search-button" onClick={handleSearch}><i className="fa">&#xf002;</i></button>
             <input
+                className='input-search'
                 type="text"
                 value={query}
-                placeholder=" Search Events"
+                placeholder=" Search events"
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyPress={(e) => {
                     if (e.key === 'Enter') {
@@ -20,7 +22,6 @@ function SearchBar() {
                     }
                 }}
             />
-            <button className="edmBrite-search-button" onClick={handleSearch}><i className="fa">&#xf002;</i></button>
 
         </div>
     );

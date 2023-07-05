@@ -84,6 +84,10 @@ const EventsPage = () => {
                 </header>
                 <h2>User created Events</h2>
                 <h3>Find events curated from users like yourself!</h3>
+                <div className="click-here">
+                    <h2>Want to find real events?</h2>
+                    <a href="#edmtrain" className="click-edmtrain">Click here!</a>
+                </div>
                 <div className="user-events-list">
                     {
                         events?.filter(event => event.event_name)?.map((event) => (
@@ -99,7 +103,7 @@ const EventsPage = () => {
                                         </div>
                                         <div className="location-owner">
                                             <div className="location" style={{ "color": "gray" }}>{event.event_venue} &middot; {event.event_city}, {event.event_state}</div>
-                                            <div className="owner" style={{ "color": "#3659E3", "fontWeight": "bold" }}>Organizer: {event.owner.username}</div>
+                                            <div className="owner" style={{ "color": "#39364F", "fontWeight": "bold" }}>Organizer: {event.owner.username}</div>
                                         </div>
                                     </div>
                                 </Link>
@@ -110,16 +114,19 @@ const EventsPage = () => {
                         ))
                     }
                 </div>
-                <h2>EDMTRAIN Events</h2>
-                <h3>Want to find events happening in your state? Select your state below!</h3>
-                <h3 className="location-changer">Located: {state}</h3>
-                <select value={state} onChange={handleStateChange}>
+                <h2 id="edmtrain">EDMTRAIN Events</h2>
+                <h3>Select your state below to find real events!</h3>
+                <select className="selected-state" value={state} onChange={handleStateChange}>
                     {reducedStates.map((state) => (
                         <option key={state.id} value={state.state}>
                             {state.state}
                         </option>
                     ))}
                 </select>
+                <div className="location-changer">
+                <h3>Current state selected:</h3>
+                <h3>{state}</h3>
+                </div>
                 <ul className="edmtrain-list">
                     {edmtrainEvents.success === true ?
                         apiEvents.filter(event => event.name)?.map((event) => (
@@ -128,7 +135,7 @@ const EventsPage = () => {
                                     <img className="preview-image-events-edmtrain" src="https://edmtrain.s3.amazonaws.com/img/logo/logo-web.svg" alt="edmtrain"></img>
                                     <br></br>
                                     {event.name}
-                                    <div className="date" style={{ fontWeight: "bold" }}>{addOneDay(event.date)}</div>
+                                    <div className="date" style={{ fontWeight: "bold" }}>{(addOneDay(event.date))}</div>
                                     <div className="location">{event.venue.name} &middot; {event.venue.location}</div>
                                 </a>
                                 <br></br>

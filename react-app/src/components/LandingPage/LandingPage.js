@@ -40,7 +40,7 @@ const LandingPage = () => {
                 <div className="right-intro">
                     {/* <img src="https://wallpaperset.com/w/full/6/d/e/515404.jpg" alt="intro img" className="intro-image"></img> */}
                     <div className="carousel-container">
-                        <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000} className="carousel-selector">
+                        <Carousel autoPlay={true} infiniteLoop showThumbs={false} interval={3000} className="carousel-selector">
                             {
                                 events.map((e, index) => (
                                     <div key={index} className="image-container-landing">

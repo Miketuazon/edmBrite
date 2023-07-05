@@ -3,6 +3,10 @@
     list-style: none;
 }
 
+.events-page {
+    border-top: 1px solid #EEEDF2;
+}
+
 .user-events-list {
     display: flex;
     flex-direction: row;

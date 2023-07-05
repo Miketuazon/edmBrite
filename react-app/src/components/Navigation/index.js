@@ -28,7 +28,10 @@ function Navigation({ isLoaded }) {
 			<ul className='left-side-nav'>
 				<li className='homeButton'>
 					<NavLink exact to="/events">
-						<img alt="icon" src={image} style={{ width: '50px', height: '50px' }}></img>
+						<h2 className='header' style={{color: "#f05537"}}>
+							<span className="e">e</span>
+							dmBrite
+							</h2>
 					</NavLink>
 				</li>
 				<li className='search-bar'>
@@ -69,7 +72,7 @@ function Navigation({ isLoaded }) {
 								<li className='tickets-button'>
 									<NavLink className='tickets-button' exact to="/current_user/tickets" style={{ "text-decoration": "none" }}>
 										<i class="fa-solid fa-ticket"></i>
-										<div>Tickets</div>
+										<div style={{fontWeight: "bold"}}>Tickets</div>
 									</NavLink>
 								</li>
 							</>

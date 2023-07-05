@@ -98,16 +98,8 @@ const CreateEvent = () => {
     // if (!events.length) return <>Loading.....</>
     return (
         <div className="create-event-page">
-            <h1 style={{"paddingLeft": "10px"}}>Create an event!</h1>
+            <h1 style={{ "paddingLeft": "10px" }}>Create an event!</h1>
             <div className="create-form-div">
-                <ul className="errors">
-                    {hasSubmitted &&
-                        Object.entries(errors).map((error, idx) => (
-                            <li key={idx} style={{ color: "red", background: "yellow" }}>
-                                ERROR!: {error}
-                            </li>
-                        ))}
-                </ul>
                 <form className="create-form" onSubmit={handleSubmit}>
                     <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
@@ -256,7 +248,7 @@ const CreateEvent = () => {
                                     <div className="fawesome"><i class="fa-solid fa-list"></i></div>
                                     <h2>Genre </h2>
                                     <div>Select a genre! If you can't decide, choose the default Electronic!</div>
-                                    <select value={event_genre_id} onChange={updateEvent_genre_id}>
+                                    <select value={event_genre_id} onChange={updateEvent_genre_id} className="select-genre">
                                         {/* need to figure out way to iterate through genres */}
                                         {
                                             genres.map(genre => (
@@ -265,6 +257,14 @@ const CreateEvent = () => {
                                         }
                                     </select>
                                 </label>
+                                <ul className="errors">
+                                    {hasSubmitted &&
+                                        Object.entries(errors).map((error, idx) => (
+                                            <li key={idx} style={{ color: "red", background: "yellow" }}>
+                                                ERROR!: {error}
+                                            </li>
+                                        ))}
+                                </ul>
                                 <div className="btn">
                                     <button className='btn' type="submit">Create event!</button>
                                 </div>
