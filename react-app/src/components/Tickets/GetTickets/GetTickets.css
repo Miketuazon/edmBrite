@@ -6,13 +6,13 @@
 }
 
 .check-out-button {
-    background-color: #f05537;
+    background-color: #D2420D;
     color: white;
     font: 1em arial;
 }
 
 .check-out-button:hover {
-    background-color: #f05537;
+    background-color: #F05537;
 }
 
 .type-button {

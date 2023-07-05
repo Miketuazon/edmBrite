@@ -70,13 +70,13 @@ function ProfileButton({ user }) {
               <Link to="/events/new">Create an event</Link>
             </li>
             <li className="button-dropdown">
-              <Link to="/current_user/likes" style={{ "text-decoration": "none" }}>Like</Link>
+              <Link to="/current_user/likes" style={{ "text-decoration": "none" }}>Likes</Link>
             </li>
             <li className="button-dropdown">
               <Link to="/current_user/tickets">Tickets</Link>
             </li>
             <li style={{ borderTop: "1px solid lightgray" }}>
-              <button onClick={handleLogout}>Log Out</button>
+              <button onClick={handleLogout} id="logOut-button">Log Out</button>
             </li>
           </>
         ) : (

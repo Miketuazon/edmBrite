@@ -1,9 +1,12 @@
+
+
 .loginPhoto {
     /* width: 600px; */
     /* height: 255px; */
     border-radius: 10px;
     object-fit: cover;
-    width: 100%;
+    max-width: 100%;
+    height: 303px;
 }
 
 .button-container {
@@ -52,6 +55,7 @@
 
 .loginPhotoContainer {
     width: 50%;
+    height: 303px;
 }
 
 .left-side-login {
@@ -92,5 +96,12 @@
 }
 
 .right-side > button:hover {
+    border-radius: 10px;
+    padding: .5rem;
+    background-color: #F05537;
+    border: 0;
+}
+
+#login-button:hover, #demo-user-button:hover {
     background-color: #F05537;
 }
