@@ -45,7 +45,7 @@ function ProfileButton({ user }) {
       <div
         onMouseEnter={handleMouseEnter}
         style={{"fontWeight": "bold"}}
-      // onMouseLeave={handleMouseLeave}
+      onMouseLeave={handleMouseLeave}
       >
         <i className="fas fa-user-circle" />
         &nbsp;
@@ -53,7 +53,9 @@ function ProfileButton({ user }) {
         &nbsp;
         <i className="arrow-down fa-solid fa-chevron-down"></i>
       </div>
-      <ul className={ulClassName} ref={ulRef} onMouseLeave={handleMouseLeave}>
+      <ul className={ulClassName} ref={ulRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
         {user ? (
           <>
             <li style={{ "borderBottom": "1px lightgray solid"}}><span style={{"fontWeight": "bold"}}>Username:</span> {user.username}</li>
