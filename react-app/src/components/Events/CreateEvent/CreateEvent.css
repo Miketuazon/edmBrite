@@ -57,6 +57,7 @@
     flex-direction: column;
     margin-top: 10px;
     color: white;
+    font-size: 1.5rem;
 }
 
 .Basic-info > label, .location-date-time > label, .date-time > label,
@@ -79,4 +80,14 @@
     overflow-y: scroll;
     white-space: pre-wrap;
     font-family: Neue Plak, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.create-event-page {
+    border-top: 1px solid #EEEDF2;
+
+}
+
+.select-genre {
+    font-size: 1.2rem;
+    color: white;
 }

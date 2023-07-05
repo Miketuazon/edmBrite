@@ -146,14 +146,6 @@ const EditEvent = () => {
         <div className="create-event-page">
             <h1>Update your event!</h1>
             <div className="create-form-div">
-                <ul className="errors">
-                    {hasSubmitted &&
-                        Object.entries(errors).map((error, idx) => (
-                            <li key={idx} style={{ color: "red", background: "yellow" }}>
-                                ERROR!: {error}
-                            </li>
-                        ))}
-                </ul>
                 <form className="create-form" onSubmit={handleSubmit}>
                     <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
@@ -257,7 +249,7 @@ const EditEvent = () => {
                                 <h2>Event details</h2>
                                 <div className="header">Input an amazing image to go along with your description!</div>
                                 <label>
-                                Event Description Image
+                                    Event Description Image
                                     <input
                                         type='text' placeholder='.jpg, .png., .img' min='1'
                                         required value={event_description_image} onChange={updateEvent_description_image}
@@ -311,6 +303,14 @@ const EditEvent = () => {
                                         }
                                     </select>
                                 </label>
+                                <ul className="errors">
+                                    {hasSubmitted &&
+                                        Object.entries(errors).map((error, idx) => (
+                                            <li key={idx} style={{ color: "red", background: "yellow" }}>
+                                                ERROR!: {error}
+                                            </li>
+                                        ))}
+                                </ul>
                                 <div className="btn">
                                     <button className='btn' type="submit">Update your event!</button>
                                 </div>

@@ -59,7 +59,7 @@ function ProfileButton({ user }) {
             <li style={{ "borderBottom": "1px lightgray solid"}}><span style={{"fontWeight": "bold"}}>Username:</span> {user.username}</li>
             {/* <li>{user.email}</li> */}
             <li>
-              <Link to={`/events/current`}>Manage your events</Link>
+              <Link to={`/events/current`}>Manage your Events</Link>
             </li>
             <li>
               <Link to={`/genres/create`}>Manage your Genres</Link>

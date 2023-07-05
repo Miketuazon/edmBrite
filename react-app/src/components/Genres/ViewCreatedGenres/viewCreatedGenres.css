@@ -54,3 +54,11 @@
     margin: 5px;
     padding: 5px;
 }
+
+.update-container > button {
+    background-color: #94AF9F;
+}
+
+.btn-genre > .btn {
+    font-size: 1rem;
+}

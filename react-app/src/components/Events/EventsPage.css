@@ -99,7 +99,7 @@
 .event-id-and-name {
     font-size: 1.125rem;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: bold;
 }
 .date {
     font-size: 14px;
@@ -138,7 +138,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    object-fit: contain;
+    /* object-fit: contain; */
     background-color: #e1dddd;
 }
 
@@ -156,4 +156,42 @@
 
 h5 {
     margin-bottom: 0px;
+}
+
+.click-here {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 1rem;
+}
+
+.click-edmtrain {
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #F58800;
+    color: white;
+}
+
+.click-edmtrain:hover {
+    background-color: #f5ae57;
+}
+
+.location-changer {
+    display: flex;
+}
+
+.location-changer > * {
+    padding: 1px 1px;
+}
+
+.selected-state {
+    height: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#edmtrain {
+    padding-top: .3rem;
 }

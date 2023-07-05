@@ -32,3 +32,7 @@
 .event-details-container {
     padding: 10%;
 }
+
+.likes-page {
+    border-top: 1px solid #EEEDF2;
+}

@@ -1,5 +1,5 @@
 .profile-dropdown {
-  position: absolute;
+  position: inherit;
 }
 
 .hidden {
@@ -57,6 +57,10 @@
   margin-right: 10px;
 }
 
+.right-side > button {
+  color: white;
+}
+
 /* take out color of visited and other links */
 :visited, a {
   color: black;
@@ -68,6 +72,23 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  color: #3659E3;
+  font-weight: bold;
+}
+
+.search-bar-component {
+  border: 1px black solid;
+  /* color: gray; */
+  /* background-color: gray; */
+}
+
+.edmBrite-search-button {
+  background-color: white;
+  border: white;
+}
+
+.input-search {
+  border: white;
 }
 
 .go-to-likes-button {
@@ -76,6 +97,7 @@
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  font-weight: bold;
 }
 
 .tickets-button {
@@ -109,10 +131,13 @@
   position: sticky;
   font-weight: 400;
   margin: 0px;
+  padding-right: 40px;
 }
 
 .dropdown-menu-user {
   display: flex;
+  flex-direction: column;
+  height: 1rem;
 }
 
 .footer {
