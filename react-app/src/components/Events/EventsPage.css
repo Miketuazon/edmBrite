@@ -163,6 +163,7 @@ h5 {
     flex-direction: column;
     align-items: end;
     padding: 1rem;
+    padding-top: 0;
 }
 
 .click-edmtrain {
