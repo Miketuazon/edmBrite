@@ -8,7 +8,7 @@ function SearchBar() {
     };
 
     return (
-        <div className='search-bar-component'>
+        <div className='search-bar-component' id="s">
             <button className="edmBrite-search-button" onClick={handleSearch}><i className="fa">&#xf002;</i></button>
             <input
                 className='input-search'
