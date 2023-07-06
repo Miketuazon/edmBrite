@@ -8,11 +8,18 @@
 }
 
 .check-out-events {
-    background-color: #877f7c;
+    background-color: #D2420D;
     color: #FFF;
     font-family: sans-serif;
     font-size: 1em;
     font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.check-out-events:hover {
+    background-color: #F05537;
 }
 
 .left-intro {
@@ -81,4 +88,8 @@
 
 .carousel .carousel-slider {
     height: 50%;
+}
+
+.left-intro > h1 {
+    color: rgb(240, 85, 55);
 }
