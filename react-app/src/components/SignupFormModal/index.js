@@ -42,62 +42,65 @@ function SignupFormModal() {
 	};
 
 	return (
-		<div className="signup">
+		<div className="signup-modal">
 			<div className="signUpPhotoContainer">
 				<img className="signUpPhoto" src="https://edmhousenetwork.com/wp-content/uploads/2022/03/edc.jpg">
 				</img>
 			</div>
-			<h1 className="login-head">Sign Up</h1>
-			<form onSubmit={handleSubmit}>
+			<section className="left-side-signUp">
+				<h2 className="edmBrite">edmBrite</h2>
+				<h1 className="login-head">Sign Up</h1>
+				<form onSubmit={handleSubmit}>
 					<ul>
 						{hasSubmitted && Object.values(errors).map((error, idx) => (
 							<li style={{ color: "red", backgroundColor: "yellow" }} key={idx}>{error}</li>
 						))}
 					</ul>
-				<section className="email-username">
-					<label>
-						Email
-						<input
-							type="text"
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-							required
-						/>
-					</label>
-					<label>
-						Username
-						<input
-							type="text"
-							value={username}
-							onChange={(e) => setUsername(e.target.value)}
-							required
-						/>
-					</label>
-				</section>
-				<section className="passwords">
-					<label>
-						Password
-						<input
-							type="password"
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
-							required
-						/>
-					</label>
-					<label>
-						Confirm Password
-						<input
-							type="password"
-							value={confirmPassword}
-							onChange={(e) => setConfirmPassword(e.target.value)}
-							required
-						/>
-					</label>
-				</section>
-				<div className="submit-container">
-					<button type="submit">Sign Up</button>
-				</div>
-			</form>
+					<section className="email-username">
+						<label>
+							Email
+							<input
+								type="text"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								required
+							/>
+						</label>
+						<label>
+							Username
+							<input
+								type="text"
+								value={username}
+								onChange={(e) => setUsername(e.target.value)}
+								required
+							/>
+						</label>
+					</section>
+					<section className="passwords">
+						<label>
+							Password
+							<input
+								type="password"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+								required
+							/>
+						</label>
+						<label>
+							Confirm Password
+							<input
+								type="password"
+								value={confirmPassword}
+								onChange={(e) => setConfirmPassword(e.target.value)}
+								required
+							/>
+						</label>
+					</section>
+					<div className="submit-container">
+						<button type="submit">Sign Up</button>
+					</div>
+				</form>
+			</section>
 		</div>
 	);
 }
