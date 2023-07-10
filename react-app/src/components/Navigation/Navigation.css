@@ -25,6 +25,24 @@
   }
 }
 
+.header:hover {
+  animation: left-to-right 4s infinite ease-in-out;
+}
+
+@keyframes left-to-right {
+  0% {
+      transform: translateX(-10px);
+  }
+
+  50% {
+      transform: translateX(10px);
+  }
+
+  100% {
+      transform: translateX(-10px);
+  }
+}
+
 .profile-dropdown {
   position: inherit;
 }
