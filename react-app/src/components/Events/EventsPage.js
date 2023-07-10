@@ -88,7 +88,7 @@ const EventsPage = () => {
                     <div className="click-here">
                         <h2>Want to find real events?</h2>
                         <div className="click-container-edm">
-                        <a href="#edmtrain" className="click-edmtrain">Click here!</a>
+                        <a href="#edmtrain-header" className="click-edmtrain">Click here!</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ const EventsPage = () => {
                         ))
                     }
                 </div>
-                <h2 id="edmtrain">EDMTRAIN Events</h2>
+                <h2 id="edmtrain-header">EDMTRAIN Events</h2>
                 <h3>Select your state below to find real events!</h3>
                 <select className="selected-state" value={state} onChange={handleStateChange}>
                     {reducedStates.map((state) => (

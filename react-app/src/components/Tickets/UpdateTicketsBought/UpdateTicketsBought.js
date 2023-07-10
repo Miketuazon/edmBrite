@@ -189,7 +189,7 @@ const UpdateTicketsBought = ({ order, ticket_price }) => {
                         </div>
                     </div>
                     <div className="place-order">
-                        <button className="place-button" type="submit">Place Order</button>
+                        <button className="place-button" type="submit">Update Order</button>
                     </div>
                 </form>
             </div>

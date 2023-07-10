@@ -137,7 +137,7 @@ const OneEvent = () => {
                                 <h3>About this event</h3>
                                 <div className="time-ticket">
                                     <div className="time"><i class="fa-regular fa-calendar-xmark" id="fawesome"></i> {`${tbaOrNot}`} </div>
-                                    <div className="type-ticket"><i class="fa-solid fa-ticket" id="fawesome"></i> Mobile eTicket</div>
+                                    <div className="type-ticket-details"><i class="fa-solid fa-ticket" id="fawesome"></i> Mobile eTicket</div>
                                     <div></div>
                                 </div>
                             </div>

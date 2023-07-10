@@ -1,0 +1,13 @@
+.delete-keep-order-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#delete-order-button {
+    margin-right: 1rem;
+}
+
+.delete-ticket-modal {
+    padding: 1rem;
+}

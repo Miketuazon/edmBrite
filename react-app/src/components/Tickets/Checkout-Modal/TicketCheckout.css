@@ -5,7 +5,14 @@
 
 .ticket-checkout-modal button {
     color: #FFF;
-    background-color: #877f7c;
+    background-color: #D2420D;
+    border: 0;
+    padding: 1rem;
+    border-radius: 9px;
+}
+
+.ticket-checkout-modal button:hover {
+    background-color: #F05537;
 }
 
 .right-side-modal {
@@ -75,4 +82,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+
+.left-side-modal {
+    padding: 1rem 1rem 1rem;
 }

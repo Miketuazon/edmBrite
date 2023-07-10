@@ -75,7 +75,7 @@ function ProfileButton({ user }) {
             <li className="button-dropdown">
               <Link to="/current_user/tickets">Tickets</Link>
             </li>
-            <li style={{ borderTop: "1px solid lightgray" }}>
+            <li>
               <button onClick={handleLogout} id="logOut-button">Log Out</button>
             </li>
           </>
