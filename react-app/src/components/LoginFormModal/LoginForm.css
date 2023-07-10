@@ -95,6 +95,15 @@
     border: 0;
 }
 
+.btn > .btn {
+    background-color: #D2420D;
+    border-radius: 10px;
+    padding: .3rem;
+}
+
+.btn > .btn:hover {
+    background-color: #F05537;
+}
 .right-side > button:hover {
     border-radius: 10px;
     padding: .5rem;

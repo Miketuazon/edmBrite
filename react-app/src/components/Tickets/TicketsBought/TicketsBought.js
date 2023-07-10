@@ -88,7 +88,7 @@ const TicketsBoughtPage = () => {
                       </OpenModalButton>
                     </div>
                     <div className="delete-order">
-                      <button className="delete-button">
+                      <button className="delete-button-order">
                         <OpenModalDelete className="delete-tickets-button"
                           itemText="Delete"
                           modalComponent={<DeleteTicketOrderModal order={order} orderId={order.id} eventId={order.event_id}

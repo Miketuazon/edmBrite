@@ -138,8 +138,8 @@
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    /* object-fit: contain; */
-    background-color: #e1dddd;
+    object-fit: contain;
+    background-color: black;
 }
 
 .edmtrain-event:hover,

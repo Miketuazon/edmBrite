@@ -186,7 +186,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
 
                     </div>
                     <div className="place-order">
-                        <button className="place-button" type="submit">Place Order</button>
+                        <button id="place-button" type="submit">Place Order</button>
                     </div>
                 </form>
             </div>

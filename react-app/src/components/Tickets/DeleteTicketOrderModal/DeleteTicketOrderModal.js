@@ -1,10 +1,10 @@
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../../context/Modal";
 import './DeleteTicketOrderModal.css'
 import { deleteTicketOrderThunk } from "../../../store/tickets";
 
-function DeleteTicketOrderModal({orderId, eventId}) {
+function DeleteTicketOrderModal({ orderId, eventId }) {
     const dispatch = useDispatch()
     const { closeModal } = useModal();
     const history = useHistory();
@@ -20,8 +20,10 @@ function DeleteTicketOrderModal({orderId, eventId}) {
             <form onSubmit={handleSubmit}>
                 <h1 className="confirm-delete">Confirm Delete</h1>
                 <h2 className="warning">Are you sure you want to remove this order?</h2>
-                <button type="submit" className="submit">Yes (Delete Order) </button>
-                <button onClick={closeModal} className="no">No (Keep Order)</button>
+                <div className="delete-keep-order-container">
+                    <button id="delete-order-button" type="submit" className="submit">Yes (Delete Order) </button>
+                    <button onClick={closeModal} className="no">No (Keep Order)</button>
+                </div>
             </form>
         </div>
     );

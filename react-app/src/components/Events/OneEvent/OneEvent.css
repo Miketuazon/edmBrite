@@ -119,8 +119,25 @@
     margin-bottom: 5px;
 }
 
-.type-ticket {
-    margin-right: 20px;
+.type-ticket-details, .time-ticket > .time {
+    font-weight: bold;
+}
+
+.button-plus-minus > .type-ticket {
+    padding-right: .4rem;
+}
+
+.container > button {
+    padding: .4rem;
+    border-radius: 20px;
+}
+
+.btn-minus:hover {
+    background-color: rgb(93, 93, 93);
+}
+
+.btn-plus:hover {
+    background-color: blue;
 }
 
 .price-ticket {
