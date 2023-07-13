@@ -26,7 +26,7 @@
 }
 
 .header:hover {
-  animation: left-to-right 4s infinite ease-in-out;
+  animation: left-to-right 3s infinite ease-in-out;
 }
 
 @keyframes left-to-right {
