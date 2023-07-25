@@ -71,6 +71,8 @@ const EventsPage = () => {
         const formattedDate = `${month}/${day}/${year}`
         return formattedDate
     }
+    // variable to hold today's date as a string to compare if event is past or not
+    const todayDateStr = new Date().toISOString()
 
     const apiEvents = edmtrainEvents.data
     if (!events.length) return <>Loading.....</>
@@ -94,7 +96,7 @@ const EventsPage = () => {
                 </div>
                 <div className="user-events-list">
                     {
-                        events?.filter(event => event.event_name)?.map((event) => (
+                        events?.filter(event => event.event_name && event.event_end_date > todayDateStr)?.map((event) => (
                             <article key={event.id} className="user-event">
                                 <Link className="link-to-event" to={`events/${event.id}`} target="_blank">
                                     <div className="image-card-container">
