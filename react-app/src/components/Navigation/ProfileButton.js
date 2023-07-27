@@ -64,7 +64,7 @@ function ProfileButton({ user }) {
               <Link to={`/events/current`}>Manage your Events</Link>
             </li>
             <li style={{ borderBottom: "1px solid lightgray" }}>
-              <Link to={`/genres/create`}>Manage your Genres</Link>
+              <Link to={`/genres/create`}>View/Create Genres</Link>
             </li>
             <li className="button-dropdown">
               <Link to="/events/new">Create an event</Link>

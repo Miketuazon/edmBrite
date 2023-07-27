@@ -8,10 +8,16 @@
     margin-right: 10%;
 }
 
+.genre-container {
+    flex: 23%;
+    max-width: 24%;
+    padding: 10px;
+}
+
 .genre-name {
     flex-wrap: wrap;
     margin: 4px;
-    max-width: 140px;
+    /* max-width: 140px; */
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: calc(24% - 8px);
@@ -27,13 +33,16 @@
     align-items: center;
     font-weight: bold;
     object-fit: contain;
-    height: 120px;
-    width: 120px;
+    /* height: 120px;
+    width: 120px; */
     border-radius: 10px;
     transition: transform .2s;
     /* margin-right: 20px; */
     position: relative;
     word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .no-genres {
@@ -60,5 +69,14 @@
 }
 
 .btn-genre > .btn {
+    background-color: #D2420D;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: white;
     font-size: 1rem;
+    padding: 10px
+}
+
+.btn-genre > .btn:hover {
+    background-color: #F05537;
 }

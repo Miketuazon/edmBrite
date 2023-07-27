@@ -125,6 +125,10 @@ const OneEvent = () => {
     let tbaOrNot = timeOfEvent
     isNaN(tbaOrNot) ? tbaOrNot = 'TBA' : tbaOrNot = Math.ceil(tbaOrNot) + ' hours'
     // debugger
+
+    // variable to hold today's date as a string to compare if event is past or not
+    const todayDateStr = new Date().toISOString()
+
     if (!ticketsObj) return <>Loading....</>
     return (
         <div className="event-details">
@@ -159,7 +163,7 @@ const OneEvent = () => {
                                     <br></br>
                                     <div className="map-button-toggle">
                                         <button onClick={handleMapsClick} className="handle-show-map-click"
-                                            style={{backgroundColor: "#F3F4F3", color: "#3659E3"}}
+                                            style={{ backgroundColor: "#F3F4F3", color: "#3659E3" }}
                                         >
                                             {showMapValue === "Show map"
                                                 ? <div>
@@ -178,14 +182,14 @@ const OneEvent = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={showMapDiv}>
-                                <iframe
-                                    style={{ width: "100%", height: "23.5rem", margin: "1rem", borderRadius: "8px", border: "1px solid #F3F4F3" }}
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                    src={`${mapsAPI}/place?key=${apiKey}&q=${replaceSpaces(event.event_venue)},${event.event_street_address}${event.event_city}+${event.event_state}`}
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
+                        </div>
+                        <div className={showMapDiv}>
+                            <iframe
+                                style={{ width: "100%", height: "23.5rem", margin: "1rem", marginLeft: "0", borderRadius: "8px", border: "1px solid #F3F4F3" }}
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src={`${mapsAPI}/place?key=${apiKey}&q=${replaceSpaces(event.event_venue)},${event.event_street_address}${event.event_city}+${event.event_state}`}
+                                allowfullscreen>
+                            </iframe>
                         </div>
                         <div className="about-container">
                             <div className="about-this-event">
@@ -217,12 +221,14 @@ const OneEvent = () => {
                         {   // if there are no tickets yet, render in tickets coming soon. else render Tickets
                             currentUser ?
                                 !ticketsObj || Object?.keys(ticketsObj)?.length < 2 ? <h2 className="ticket-alert-owner">Tickets coming soon!</h2>
-                                    : event.owner.id !== currentUser.id
-                                        ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal" /></div>
-                                        : <h2 className="ticket-alert-owner">
-                                            You cannot buy tickets to your own event!
-                                        </h2>
-                                : <h2 className="ticket-alert-owner"><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets</h2>
+                                    // if event date is in past, render error message unable to buy tickets
+                                    : event.event_end_date < todayDateStr ? <h2 style={{ color: "red" }}><i class="fa-solid fa-triangle-exclamation"></i>Event is in the past, unable to buy tickets</h2>
+                                        : event.owner.id !== currentUser.id
+                                            ? <div className="tickets-modal"><TicketsDisplay className="tickets-modal" /></div>
+                                            : <h2 className="ticket-alert-owner" style={{ color: "red" }}>
+                                                You cannot buy tickets to your own event!
+                                            </h2>
+                                : <h2 className="ticket-alert-owner" style={{ color: "red" }}><i class="fa-solid fa-triangle-exclamation"></i> Must be logged in to buy tickets</h2>
                         }
                         {   // if  logged in and
                             (currentUser &&

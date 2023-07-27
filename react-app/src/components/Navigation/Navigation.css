@@ -4,7 +4,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   #l {
     display: none
   }
@@ -13,15 +13,6 @@
 @media screen and (max-width: 750px) {
   #t {
     display: none
-  }
-}
-
-@media screen and (max-width: 750px) {
-  /* #s {
-    width: 20%;
-  } */
-  .left-side-nav{
-    width: 50%;
   }
 }
 
@@ -249,4 +240,28 @@
 #logOut-button:hover {
   background-color: #F05537;
   color: black;
+}
+
+@media screen and (max-width: 750px) {
+  /* #s {
+    width: 20%;
+  } */
+  .left-side-nav{
+    width: 50%;
+  }
+  .search-bar-component {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  /* #s {
+    width: 20%;
+  } */
+  .left-side-nav{
+    width: 50%;
+  }
+  .search-bar-component {
+    display: none;
+  }
 }
