@@ -7,6 +7,7 @@ import './ResultsPage.css'
 import ResultsErrorMessage from './ResultsError'
 import ResultsItem from './ResultsItem'
 import { getUserLikesThunk } from '../../store/likes'
+import Loader from '../Loader/Loader'
 
 function ResultsPage() {
     const dispatch = useDispatch()
@@ -55,7 +56,10 @@ function ResultsPage() {
             dispatch(getEventsThunk())
             dispatch(getUserLikesThunk())
         }, [dispatch, JSON.stringify(filteredEvents)])
-    // If query is empty or filteredPosts is empty
+
+    // Loading for events
+    if (!filteredEvents.length === 0) return < Loader/>
+    // If query is empty or filteredEvents is empty return no results message
     if (!query || query.length === 0 || (filteredEvents && filteredEvents.length === 0) ) return <ResultsErrorMessage />
 
     return (
