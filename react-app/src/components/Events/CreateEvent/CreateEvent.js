@@ -104,7 +104,7 @@ const CreateEvent = () => {
                     <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
                         <h2>Basic Info</h2>
-                        <div className="header">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
+                        <div className="header-create">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique</div>
                         <br></br>
                         <label>
                             Event Title
@@ -114,7 +114,7 @@ const CreateEvent = () => {
                             />
                         </label>
                         <br></br>
-                        <div className="header">Input an amazing image to use as your preview!</div>
+                        <div className="header-create">Input an amazing image to use as your preview!</div>
                         <label>
                             Event Preview Image
                             <input
@@ -200,7 +200,7 @@ const CreateEvent = () => {
                             <div className="create-event-details">
                                 <div className="fawesome"><i class="fa-regular fa-lightbulb"></i></div>
                                 <h2>Event details</h2>
-                                <div className="header">Input an amazing image to go along with your description!</div>
+                                <div className="header-create">Input an amazing image to go along with your description!</div>
                                 <br></br>
                                 <label>
                                     Event Description Image
