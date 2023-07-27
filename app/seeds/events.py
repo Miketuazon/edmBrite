@@ -450,7 +450,7 @@ def seed_events():
         event_genre_id=7,
         event_start_date=datetime.datetime.strptime("2023-08-18T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_end_date=datetime.datetime.strptime("2023-08-19T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_venue="Azura Amphitheater",
+        event_venue="Exchange LA",
         event_street_address="618 S Spring St",
         event_city="Los Angeles",
         event_state="California",

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './OneEvent.css'
 import { useParams, useHistory } from "react-router-dom"
@@ -15,6 +15,33 @@ const OneEvent = () => {
     const genresObj = useSelector((state) => state.genres)
     const genres = Object.values(genresObj)
     const currentUser = useSelector(state => state?.session?.user)
+
+    // Code for mapsApi
+    const apiKey = process.env.REACT_APP_GOOGLE_M_KEY
+    const mapsAPI = "https://www.google.com/maps/embed/v1"
+    const [showMapValue, setShowMapValue] = useState("Show map")
+    const [showMap, setShowMap] = useState(false)
+    // code to show/hide mapsButton
+    const handleMapsClick = () => {
+        if (showMapValue === "Show map") {
+            setShowMapValue("Hide Map")
+            setShowMap(true)
+        }
+        else {
+            setShowMapValue("Show map")
+            setShowMap(false)
+        }
+    }
+    // code to hide and show maps
+    const showMapDiv = "google-map-container" + (showMap ? "" : " hidden")
+
+    // code to convert string
+    function replaceSpaces(str) {
+        let convertedStr = str.replace(/ /g, "+")
+        return convertedStr
+    }
+    // mapsApi end
+
     // console.log("genres", genres)
     // console.log("event_genre_id => ", event?.event_genre_id)
     const genreIdOfEvent = genres.find(genre => event?.event_genre_id === genre.id)
@@ -129,7 +156,35 @@ const OneEvent = () => {
                                     <span style={{ "fontWeight": "550" }}>{event.event_venue}</span>
                                     <div>{event.event_street_address}</div>
                                     <div>{event.event_city}, {event.event_state} {event.event_zip_code}</div>
+                                    <br></br>
+                                    <div className="map-button-toggle">
+                                        <button onClick={handleMapsClick} className="handle-show-map-click"
+                                            style={{backgroundColor: "#F3F4F3", color: "#3659E3"}}
+                                        >
+                                            {showMapValue === "Show map"
+                                                ? <div>
+                                                    Show map
+                                                    &nbsp;
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                :
+                                                <div>
+                                                    Hide map
+                                                    &nbsp;
+                                                    <i class="fa-solid fa-angle-up"></i>
+                                                </div>
+                                            }
+                                        </button>
+                                    </div>
                                 </div>
+                            </div>
+                            <div className={showMapDiv}>
+                                <iframe
+                                    style={{ width: "100%", height: "23.5rem", margin: "1rem", borderRadius: "8px", border: "1px solid #F3F4F3" }}
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    src={`${mapsAPI}/place?key=${apiKey}&q=${replaceSpaces(event.event_venue)},${event.event_street_address}${event.event_city}+${event.event_state}`}
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
                         <div className="about-container">
