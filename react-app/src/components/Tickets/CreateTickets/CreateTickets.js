@@ -85,8 +85,8 @@ const CreateTicketsForEvent = () => {
                                 required value={ticket_price} onChange={updateTicket_price}
                             ></input>
                         </label>
-                        <div>
-                            <button className='btn' type="submit">Create tickets!</button>
+                        <div className="create-tickets-container">
+                            <button className='create-tickets-btn' type="submit">Create tickets!</button>
                         </div>
                     </div>
                 </form>

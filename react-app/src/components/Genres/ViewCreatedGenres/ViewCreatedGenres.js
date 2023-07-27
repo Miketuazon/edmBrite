@@ -21,7 +21,6 @@ const ViewCreatedGenres = () => {
     }, [dispatch])
 
     const userCreatedGenres = genres.filter(genre => genre?.user_created === currentUser.id)
-    console.log(userCreatedGenres)
 
     return (
         <div className="view-genres">

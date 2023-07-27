@@ -36,6 +36,10 @@ function ResultsPage() {
             setSortOrder('asc');
         }
     }
+
+    // variable to hold today's date as a string to compare if event is past or not
+    const todayDateStr = new Date().toISOString()
+
     // Filter posts if it matches query
     const filteredEvents = sortedEvents?.filter(event =>
         (event?.event_summary?.toLowerCase())?.includes(query.toLowerCase()) ||
@@ -45,7 +49,7 @@ function ResultsPage() {
         (event?.owner?.username?.toLowerCase()?.includes(query.toLowerCase())) ||
         (event?.event_city.toLowerCase()?.includes(query.toLowerCase())) ||
         (event?.event_state.toLowerCase()?.includes(query.toLowerCase()))
-        )
+        ).filter(event => event.event_end_date > todayDateStr)
 
         useEffect(() => {
             dispatch(getEventsThunk())
@@ -66,7 +70,7 @@ function ResultsPage() {
                     </h2>
                 </div>
             </div>
-            <ul className='events-list'>
+            <ul className='events-list-search'>
                 {
                     filteredEvents.map(event => (
                         <div key={event?.id} className="event">

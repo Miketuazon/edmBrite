@@ -12,9 +12,12 @@ z#root {
   }
 
   .results-of-search, .no-results {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 0 auto;
     font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sort-container {
@@ -62,4 +65,15 @@ z#root {
 
 .preview-image-events {
   width: 100%;
+}
+
+.event {
+  flex: 24%;
+  padding: .2rem;
+}
+
+.events-list-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
