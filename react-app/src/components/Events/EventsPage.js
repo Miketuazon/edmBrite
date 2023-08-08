@@ -84,7 +84,7 @@ const EventsPage = () => {
             <ul className="events-list">
                 <div className="top-of-events">
                     <div className="left-side-events">
-                        <h2>User created Events</h2>
+                        <h2><i class="fa-solid fa-ticket"></i> User Created Events</h2>
                         <h3>Find events curated from users like yourself!</h3>
                     </div>
                     <div className="click-here">
@@ -120,8 +120,9 @@ const EventsPage = () => {
                         ))
                     }
                 </div>
-                <h2 id="edmtrain-header">EDMTRAIN Events</h2>
-                <h3>Select your state below to find real events!</h3>
+                <h2 id="edmtrain-header"><i class="fa-solid fa-ticket"></i> EDMTRAIN Events</h2>
+                <h3>Click below to select a state!</h3>
+                <h3>Events in &nbsp;
                 <select className="selected-state" value={state} onChange={handleStateChange}>
                     {reducedStates.map((state) => (
                         <option key={state.id} value={state.state}>
@@ -129,10 +130,12 @@ const EventsPage = () => {
                         </option>
                     ))}
                 </select>
+                </h3>
                 <div className="location-changer">
-                    <h3>Current state selected:</h3>
-                    <h3>{state}</h3>
+                    {/* <h3>Current state selected:</h3>
+                    <h3>{state}</h3> */}
                 </div>
+                <br></br>
                 <ul className="edmtrain-list">
                     {edmtrainEvents.success === true ?
                         apiEvents.filter(event => event.name)?.map((event) => (
