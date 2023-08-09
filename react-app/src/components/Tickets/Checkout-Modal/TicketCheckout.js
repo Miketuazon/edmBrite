@@ -77,6 +77,9 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
     return (
         <div className="ticket-checkout-modal">
             <div className="left-side-modal">
+                <div className="checkout-holder">
+                <h1 style={{display: "flex", justifyContent: "center"}}>Checkout</h1>
+                </div>
                 <h3 style={{ "color": "red" }}>DISCLAIMER: Please do not put your actual information</h3>
                 <form className="purchase-form" onSubmit={handleSubmit}>
                     <ul className="errors">
@@ -128,7 +131,7 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
                             </label>
                         </div>
                     </div>
-                    <h3><i class="fa-regular fa-credit-card"></i>&nbsp;Pay with</h3>
+                    <h3 style={{marginBottom: "0"}}><i class="fa-regular fa-credit-card"></i>&nbsp;Pay with</h3>
                     <div className="credit-info">
                         <div className="credit-exp">
                             <label className="credit-num">
@@ -186,24 +189,42 @@ const TicketCheckout = ({ eventId, event, ticketsObj, ticket_price, ticket_quant
 
                     </div>
                     <div className="place-order">
-                        <button id="place-button" type="submit">Place Order</button>
+                        <button id="place-button" type="submit">Register</button>
                     </div>
+                    <hr></hr>
+                    <br></br>
+                    <div style={{color: "gray"}}>Powered by <span style={{fontWeight: "bold", color: "gray"}}>edmBrite</span></div>
                 </form>
             </div>
             <div className="right-side-modal">
                 <div className="close-container">
-                    <button onClick={handleCancel} className="purchase-close-button">Close</button>
+                    <div className="preview-checkout-img-container">
+                        <img className="preview-checkout-img" src={event.event_preview_image}></img>
+                    </div>
+                    <button onClick={handleCancel} className="purchase-close-button">X</button>
                 </div>
                 <div className="summary-num-tickets">
-                    <div className="order-summary"></div>
-                    <div className="ticket-price"></div>
+                    <h3 className="order-summary">Order summary</h3>
+                    <div className="below-order-summary">
+                        <div className="ticket-price">
+                            Price per ticket:
+                            <div>${ticket_price}</div>
+                        </div>
+                        <div className="ordered">Ordered:
+                            <div>{ticket_quantity}x</div>
+                        </div>
+                        <div className="total-checkout">
+                            Total
+                            <div>${ticket_price * ticket_quantity}</div>
+                        </div>
+                    </div>
                 </div>
-                <div className="subtotal-fees"></div>
-                <div className="total-price">
+                {/* <div className="subtotal-fees"></div> */}
+                {/* <div className="total-price">
                     <div className="type-ticket">{ticket_type}</div>
                     <div className="total-tix">Total # of tickets: {ticket_quantity}</div>
                     <div className="price">Total price: ${ticket_price * ticket_quantity}</div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
