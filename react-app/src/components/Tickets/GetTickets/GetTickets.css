@@ -1,5 +1,5 @@
 .tickets-modal {
-    border: 2px solid #e3e3e3;
+    border: 1px solid #e3e3e3;
     border-radius: 10px;
     /* max-width: 25%; */
     position: sticky;
@@ -19,6 +19,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 3px solid #3659E3;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .button-plus-minus {
@@ -68,6 +71,7 @@
 
 .type-ticket, .price-ticket, .ticket-count {
     font-size: 1.5rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -75,4 +79,9 @@
 .ticket-count {
     padding-left: .4rem;
     padding-right: .4rem;
+}
+
+.ticket-count-buttons-container {
+    display: flex;
+    align-items: center;
 }

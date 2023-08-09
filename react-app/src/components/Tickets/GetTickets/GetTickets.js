@@ -39,11 +39,20 @@ const TicketsDisplay = () => {
                                 <div className="type-button">
                                     <div className="button-plus-minus">
                                         <div className="type-ticket">{key}</div>
-                                        <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
-                                        <div className="ticket-count">{ticketCount}</div>
-                                        <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
+                                        <div className="ticket-count-buttons-container">
+                                            <button className="btn-minus" disabled={ticketCount === 1} onClick={() => setTicketCount(ticketCount - 1)}>-</button>
+                                            &nbsp;
+                                            <div className="ticket-count">{ticketCount}</div>
+                                            &nbsp;
+                                            <button className="btn-plus" disabled={ticketCount === 10} onClick={() => setTicketCount(ticketCount + 1)}>+</button>
+                                        </div>
                                     </div>
-                                    <div className="price-ticket">Price: ${value?.ticket_price}</div>
+                                    <div className="price-ticket">
+                                        Price:
+                                        <div className="price-of-ticket">
+                                            ${value?.ticket_price}
+                                        </div>
+                                    </div>
                                 </div>
                                 <OpenModalButton className="check-out-button"
                                     modalComponent={<TicketCheckout eventId={eventId} event={event} ticketsObj={ticketsObj} ticket_price={value.ticket_price} ticket_quantity={ticketCount} ticket_type={ticketTypeForCheckout} />}
