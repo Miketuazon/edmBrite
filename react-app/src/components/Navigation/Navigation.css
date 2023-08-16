@@ -184,6 +184,7 @@
   font-weight: 400;
   margin: 0px;
   padding-right: 40px;
+  z-index: 1;
 }
 
 .dropdown-menu-user {

@@ -8,6 +8,7 @@ import image from '../../images/logoTitle.png'
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import Footer from './Footer';
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector(state => state.session.user);
 	const [isHovered, setIsHovered] = useState(false);
@@ -37,21 +38,7 @@ function Navigation({ isLoaded }) {
 				<li className='search-bar' id="s">
 					< SearchBar />
 				</li>
-				<div className='footer'>
-					<ul className='git-linked-link'>
-						<li className='name'>
-							Created by: Michael Tuazon
-						</li>
-						<li className='link'>
-							<a href='https://www.linkedin.com/in/miketuazon/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-							&nbsp;&nbsp; |
-							<a href='https://github.com/Miketuazon' target="_blank" className='end'><i class="fa-brands fa-github" style={{"color": "gray"}}></i></a>
-							&nbsp;&nbsp; |
-							<a href='https://wellfound.com/u/michael-tuazon' target="_blank" className='end'><i class="fa-brands fa-angellist" style={{"color": "gray", "listStyle": "none"}}></i></a>
-
-						</li>
-					</ul>
-				</div>
+					< Footer/>
 			</ul>
 			{isLoaded && (
 				<ul className='right-side'>
