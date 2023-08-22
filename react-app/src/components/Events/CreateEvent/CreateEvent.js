@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import { getGenresThunk } from "../../../store/genres";
 import DateTimePicker from "react-datetime-picker";
 const CreateEvent = () => {
-    // Reminder: Need to learn AWS to serve images
+
     const dispatch = useDispatch()
     const history = useHistory()
     const currentUser = useSelector(state => state?.session?.user)
@@ -20,8 +20,8 @@ const CreateEvent = () => {
     const [event_name, setEvent_name] = useState("")
     const [event_dj, setEvent_dj] = useState("")
     const [event_summary, setEvent_summary] = useState("")
-    const [event_preview_image, setEvent_preview_image] = useState("")
-    const [event_description_image, setEvent_description_image] = useState("")
+    const [event_preview_image, setEvent_preview_image] = useState(null)
+    const [event_description_image, setEvent_description_image] = useState(null)
     const [event_description, setEvent_description] = useState("")
     const [event_start_date, setEvent_start_date] = useState(new Date())
     const [event_end_date, setEvent_end_date] = useState(new Date())
@@ -38,8 +38,6 @@ const CreateEvent = () => {
     const updateEvent_name = (e) => setEvent_name(e.target.value)
     const updateEvent_dj = (e) => setEvent_dj(e.target.value)
     const updateEvent_summary = (e) => setEvent_summary(e.target.value)
-    const updateEvent_preview_image = (e) => setEvent_preview_image(e.target.value)
-    const updateEvent_description_image = (e) => setEvent_description_image(e.target.value)
     const updateEvent_description = (e) => setEvent_description(e.target.value)
     const updateEvent_start_date = (date) => setEvent_start_date(date)
     const updateEvent_end_date = (date) => setEvent_end_date(date)
@@ -50,18 +48,25 @@ const CreateEvent = () => {
     const updateEvent_state = (e) => setEvent_state(e.target.value)
     const updateEvent_zip_code = (e) => setEvent_zip_code(e.target.value)
 
+    // Helper function to validate if image upload follows correct extensions
+    function fileValidation(fileInput){
+
+        let filePath = fileInput.value;
+        let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+        if(!allowedExtensions.exec(filePath)){
+            alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+            fileInput.value = '';
+            return false;
+        }
+        return true
+    }
+
     useEffect(() => {
         let e = {}
         setErrors(e)
 
-        const validExtensions = /\.(jpg|jpeg|png|img)$/i
         if (event_name.length < 3 || event_name.length > 50) e.event_name = (' Event name needs at least 3 characters and max of 50')
         if (event_summary.length < 3 || event_summary.length > 140) e.event_summary = (' Event summary needs at least 3 characters and max of 140')
-        if (event_description.length < 3 || event_description.length > 500) e.event_description = (' Event description needs to be at least 3 characters and max of 500.')
-        if (!event_preview_image.length) e.event_preview_image = (' Event preview image is required')
-        if (!validExtensions.test(event_preview_image)) e.event_preview_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
-        if (!validExtensions.test(event_description_image)) e.event_description_image = (' Only .jpg, .jpeg, .png, or .img extensions are allowed.')
-        if (!event_description_image.length) e.event_description_image = (' Event description image is required')
         if (!event_genre_id) e.event_genre_id = (' Event Genre is required')
         if (!event_venue.length) e.event_venue = (' Event Venue is required')
         if (!event_street_address.length) e.event_street_address = (' Event Street Address is required')
@@ -85,13 +90,25 @@ const CreateEvent = () => {
             return
         }
 
-        const createdEventDetails = {
-            event_name, event_dj, event_summary, event_preview_image,
-            event_description_image, event_description, event_start_date,
-            event_end_date, event_venue, event_street_address, event_city,
-            event_state, event_zip_code, event_genre_id
-        }
-        dispatch(createEventThunk(createdEventDetails))
+        const formData = new FormData();
+        formData.append("event_name", event_name)
+        formData.append("event_dj", event_dj)
+        formData.append("event_summary", event_summary)
+        formData.append("event_preview_image", event_preview_image)
+        formData.append("event_description_image", event_description_image)
+        formData.append("event_description", event_description)
+        formData.append("event_start_date", event_start_date)
+        formData.append("event_end_date", event_end_date)
+        formData.append("event_venue", event_venue)
+        formData.append("event_street_address", event_street_address)
+        formData.append("event_city", event_city)
+        formData.append("event_state", event_state)
+        formData.append("event_zip_code", event_zip_code)
+        formData.append("event_genre_id", event_genre_id)
+
+
+        // dispatch(createEventThunk(createdEventDetails))
+        await dispatch(createEventThunk(formData))
         history.push(`/events`)
     }
     // console.log("errors => ", errors)
@@ -100,7 +117,10 @@ const CreateEvent = () => {
         <div className="create-event-page">
             <h1 style={{ "paddingLeft": "10px" }}>Create an event!</h1>
             <div className="create-form-div">
-                <form className="create-form" onSubmit={handleSubmit}>
+                <form className="create-form"
+                    onSubmit={handleSubmit}
+                    encType="multipart/form-data"
+                >
                     <div className="fawesome-basic"><i class="fa-solid fa-circle-info"></i></div>
                     <div className="Basic-info">
                         <h2>Basic Info</h2>
@@ -118,8 +138,14 @@ const CreateEvent = () => {
                         <label>
                             Event Preview Image
                             <input
-                                type='text' placeholder='.jpeg, .jpg, .png., .img' min='1'
-                                required value={event_preview_image} onChange={updateEvent_preview_image}
+                                // type='text' placeholder='.jpeg, .jpg, .png., .img' min='1'
+                                type="file"
+                                accept="image/"
+                                // value={event_preview_image}
+                                onChange={(e) => {
+                                    fileValidation(e.target)
+                                    setEvent_preview_image(e.target.files[0])
+                                }}
                             />
                         </label>
                         <br></br>
@@ -205,8 +231,14 @@ const CreateEvent = () => {
                                 <label>
                                     Event Description Image
                                     <input
-                                        type='text' placeholder='.jpg, .png., .img' min='1'
-                                        required value={event_description_image} onChange={updateEvent_description_image}
+                                        // type='text' placeholder='.jpg, .png., .img' min='1'
+                                        // required value={event_description_image} onChange={updateEvent_description_image}
+                                        accept="image/"
+                                        type="file"
+                                        onChange={(e) => {
+                                            fileValidation(e.target)
+                                            setEvent_description_image(e.target.files[0])
+                                        }}
                                     />
                                 </label>
                                 <label>

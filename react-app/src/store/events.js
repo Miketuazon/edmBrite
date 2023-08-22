@@ -58,8 +58,9 @@ export const getEventsThunk = () => async (dispatch) => {
 export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
     const res = await fetch('/api/events/create', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(detailsOfEvent)
+        // headers: {'Content-Type': 'application/json'},
+        // body: JSON.stringify(detailsOfEvent)
+        body: detailsOfEvent
     });
 
     if (res.ok) {
