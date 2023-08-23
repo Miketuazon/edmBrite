@@ -58,8 +58,9 @@ export const getEventsThunk = () => async (dispatch) => {
 export const createEventThunk = (detailsOfEvent) => async (dispatch) => {
     const res = await fetch('/api/events/create', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(detailsOfEvent)
+        // headers: {'Content-Type': 'application/json'},
+        // body: JSON.stringify(detailsOfEvent)
+        body: detailsOfEvent
     });
 
     if (res.ok) {
@@ -88,8 +89,9 @@ export const editOneEventThunk = (event, eventId) => async (dispatch) => {
     // console.log("JSON.stringify", JSON.stringify(event))
     const res = await fetch(`/api/events/${eventId}`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(event)
+        // headers: { 'Content-Type': 'application/json' },
+        // body: JSON.stringify(event)
+        body: event
     })
     if (res.ok) {
     // console.log("HIT THE editOneEventThunk | RESPONSE IS OK==========>")

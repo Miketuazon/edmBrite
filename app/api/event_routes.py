@@ -8,6 +8,7 @@ from app.models import Event, Ticket
 import os
 import requests
 import random
+from app.api.aws_helpers import get_unique_filename, upload_file_to_s3, remove_file_from_s3
 
 event_routes = Blueprint('events', __name__)
 
@@ -83,14 +84,39 @@ def create_an_event():
     form = EventForm()
     current_user_dict = current_user.to_dict()
     form['csrf_token'].data = request.cookies['csrf_token']
+    # breakpoint()
 
     if form.validate_on_submit():
+        # aws uploading both images
+        preview_image = form.data['event_preview_image']
+        description_image = form.data['event_description_image']
+
+        preview_image.filename = get_unique_filename(preview_image.filename)
+        description_image.filename = get_unique_filename(description_image.filename)
+
+        preview_upload = upload_file_to_s3(preview_image)
+        description_upload = upload_file_to_s3(description_image)
+
+        if "url" not in preview_upload:
+            # if the dictionary doesn't have a url key
+            # it means that there was an error when we tried to upload
+            # so we send back that error message
+            return preview_upload["errors"]
+
+        if "url" not in description_upload:
+            return description_upload["errors"]
+
+        preview_url = preview_upload["url"]
+        description_url = description_upload["url"]
+
+
+        # adding event to db
         new_event = Event(
             event_name=form.data['event_name'],
             event_summary=form.data['event_summary'],
             event_description=form.data['event_description'],
-            event_preview_image=form.data['event_preview_image'],
-            event_description_image=form.data['event_description_image'],
+            event_preview_image=preview_url,
+            event_description_image=description_url,
             event_start_date=form.data['event_start_date'],
             event_end_date=form.data['event_end_date'],
             event_venue=form.data['event_venue'],
@@ -128,12 +154,33 @@ def update_event(event_id):
 
     if current_user_dict['id'] != event.event_organizer_id:
         return {'error': 'You are not the owner of this event. You cannot update it.'}, 403
+
+    # aws uploading both images
+    preview_image = form.data['event_preview_image']
+    description_image = form.data['event_description_image']
+    preview_image.filename = get_unique_filename(preview_image.filename)
+    description_image.filename = get_unique_filename(description_image.filename)
+    preview_upload = upload_file_to_s3(preview_image)
+    description_upload = upload_file_to_s3(description_image)
+
+    if "url" not in preview_upload:
+        # if the dictionary doesn't have a url key
+        # it means that there was an error when we tried to upload
+        # so we send back that error message
+        return preview_upload["errors"]
+
+    if "url" not in description_upload:
+        return description_upload["errors"]
+
+    preview_url = preview_upload["url"]
+    description_url = description_upload["url"]
+
     event.event_name = form.data['event_name']
     event.event_dj = form.data['event_dj']
     event.event_summary = form.data['event_summary']
     event.event_description = form.data['event_description']
-    event.event_preview_image=form.data['event_preview_image']
-    event.event_description_image=form.data['event_description_image']
+    event.event_preview_image=preview_url
+    event.event_description_image=description_url
     event.event_start_date = form.data['event_start_date']
     event.event_end_date = form.data['event_end_date']
     event.event_venue = form.data['event_venue']
