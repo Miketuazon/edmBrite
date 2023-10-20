@@ -44,7 +44,7 @@ function SignupFormModal() {
 	return (
 		<div className="signup-modal">
 			<div className="signUpPhotoContainer">
-				<img className="signUpPhoto" src="https://edmhousenetwork.com/wp-content/uploads/2022/03/edc.jpg">
+				<img className="signUpPhoto" src="https://edmbrite-bucket.s3.amazonaws.com/signupPhoto.jpg">
 				</img>
 			</div>
 			<section className="left-side-signUp">

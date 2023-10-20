@@ -80,8 +80,7 @@ const OneEvent = () => {
     }
 
     if (event === undefined) return <h1 style={{ "display": "flex", "alignItems": "center", "flexDirection": "column", "color": "red" }}>
-        404
-        <div>EVENT IS NOT LISTED</div>
+        <div>Loading....</div>
     </h1>
 
     // Getting hours, mins, day and time of start
