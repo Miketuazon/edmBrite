@@ -95,6 +95,10 @@
     /* border-left: 10px; */
 }
 
+.tickets-container {
+    margin-left: 1rem;
+}
+
 .container > button {
     background-color: #D2420D;
     color: #FFF;
