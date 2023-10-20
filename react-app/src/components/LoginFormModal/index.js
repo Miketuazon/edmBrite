@@ -36,7 +36,7 @@ function LoginFormModal() {
   return (
     <div className="logIn">
       <div className="loginPhotoContainer">
-        <img className="loginPhoto" src="https://edm.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY0NTQ2MTkyMDc4ODA4ODQx/valentino-khan-by-scott-witt---lollapalooza-2018.jpg">
+        <img className="loginPhoto" src="https://edmbrite-bucket.s3.amazonaws.com/loginPhoto.jpg">
         </img>
       </div>
       <div className="left-side-login">
