@@ -59,7 +59,7 @@
 .when-and-where-container {
     display: flex;
     flex-flow: column;
-    width: 75%;
+    width: 80%;
     justify-content: space-between;
 }
 
