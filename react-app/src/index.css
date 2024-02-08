@@ -16,3 +16,12 @@ button, select {
     font-weight: bold;
     cursor: pointer;
 }
+/* home page clearing out dots and status of pictures */
+.carousel-status, .control-dots {
+    display: none;
+}
+
+.image-container-landing {
+    display: flex;
+    padding: 5%;
+}
