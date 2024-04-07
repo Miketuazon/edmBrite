@@ -38,6 +38,16 @@
 /* .preview-image {
     max-width: 1200px;
 } */
+.title {
+    font-size: 3rem;
+}
+.artist-venue, .month-day {
+    font-size: 1.2rem;
+}
+
+.day-month-dd-yyyy, .start-hours-end-hours, .description-input-text, .starts, .summary {
+    font-size: 1.1rem;
+}
 
 .description-image {
     max-width: 100%;
@@ -69,6 +79,10 @@
     justify-content: space-between;
     padding-left: calc(8*var(--base-unit));
     padding-right: calc(8*var(--base-unit));
+}
+
+.date-and-time {
+    font-weight: bold;
 }
 
 .event-details {
@@ -180,15 +194,17 @@
     margin-bottom: 10%;
     border: 1px solid #F8F7FA;
     border-radius: 10px;
+    font-size: 1.1rem;
 }
 
-.summary {
-    color: #39364f;
+.summary  {
+    color: #6f7287;
+    font-weight: bold;
 }
 
 .handle-show-map-click {
     border: none;
-    background-color: none;
+    background-color: #F3F4F3;
 }
 
 .google-map-container {
