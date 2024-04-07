@@ -143,7 +143,7 @@ const OneEvent = () => {
                             <h1 className="title">{event.event_name}</h1>
                             <h2 className="genre-event">Genre: {genreIdOfEvent?.name ? genreIdOfEvent.name : "Electronic"}</h2>
                             <div className="summary">{event.event_summary}</div>
-                            <div className="host">Organizer: &nbsp;
+                            <div className="host">Hosted by: &nbsp;
                                 <span style={{ "fontWeight": "bold" }}>{event.owner.username}</span>
                             </div>
                         </div>
@@ -152,7 +152,10 @@ const OneEvent = () => {
                             <div className="date-location">
                                 <div className="date-and-time">
                                     <h3><i class="fa-regular fa-calendar" id="fawesome"></i> Date and time</h3>
-                                    {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession}
+                                    {/* {startMonth} {startDay} &middot; {startHours}{startSession} - {endDateMonth} {endDay} &middot; {endHours}{endSession} */}
+                                    <div className="starts">
+                                        Starts on {startMonth} {startDay}, {startHours}{startSession}
+                                    </div>
                                 </div>
                                 <div className="location" style={{ fontSize: 16 }}>
                                     <h3><i class="fa-solid fa-location-dot" id="fawesome"></i> Location</h3>
