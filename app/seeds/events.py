@@ -14,26 +14,26 @@ from random import sample
 # end_date = random_date(start_date, )
 
 # Creating datetime objects
-date1 = datetime.datetime.strptime("8/10/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date1 = datetime.datetime.strptime("8/11/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date2 = datetime.datetime.strptime("7/15/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date2 = datetime.datetime.strptime("7/16/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date3 = datetime.datetime.strptime("5/31/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date3 = datetime.datetime.strptime("6/01/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date4 = datetime.datetime.strptime("8/02/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date4 = datetime.datetime.strptime("8/03/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date5 = datetime.datetime.strptime("8/09/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date5 = datetime.datetime.strptime("8/10/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date6 = datetime.datetime.strptime("8/10/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date6 = datetime.datetime.strptime("8/11/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date7 = datetime.datetime.strptime("8/16/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date7 = datetime.datetime.strptime("8/17/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date8 = datetime.datetime.strptime("8/17/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date8 = datetime.datetime.strptime("8/18/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date9 = datetime.datetime.strptime("8/23/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date9 = datetime.datetime.strptime("8/24/2024 02:00am", "%m/%d/%Y %I:%M%p")
-date10 = datetime.datetime.strptime("8/26/2024 10:00pm", "%m/%d/%Y %I:%M%p")
-end_date10 = datetime.datetime.strptime("8/27/2024 02:00am", "%m/%d/%Y %I:%M%p")
+date1 = datetime.datetime.strptime("8/10/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date1 = datetime.datetime.strptime("8/11/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date2 = datetime.datetime.strptime("7/15/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date2 = datetime.datetime.strptime("7/16/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date3 = datetime.datetime.strptime("5/31/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date3 = datetime.datetime.strptime("6/01/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date4 = datetime.datetime.strptime("8/02/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date4 = datetime.datetime.strptime("8/03/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date5 = datetime.datetime.strptime("8/09/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date5 = datetime.datetime.strptime("8/10/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date6 = datetime.datetime.strptime("8/10/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date6 = datetime.datetime.strptime("8/11/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date7 = datetime.datetime.strptime("8/16/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date7 = datetime.datetime.strptime("8/17/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date8 = datetime.datetime.strptime("8/17/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date8 = datetime.datetime.strptime("8/18/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date9 = datetime.datetime.strptime("8/23/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date9 = datetime.datetime.strptime("8/24/2025 02:00am", "%m/%d/%Y %I:%M%p")
+date10 = datetime.datetime.strptime("8/26/2025 10:00pm", "%m/%d/%Y %I:%M%p")
+end_date10 = datetime.datetime.strptime("8/27/2025 02:00am", "%m/%d/%Y %I:%M%p")
 
 def seed_events():
     event1 = Event(
@@ -307,8 +307,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E14D.jpg",
         event_description="Don't miss out R3hab at one of the best clubs in NYC! Tickets will definitely sell out.",
         event_genre_id=1,
-        event_start_date=datetime.datetime.strptime("2024-06-23T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-06-24T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-06-23T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-06-24T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="Marquee",
         event_street_address="289 10th Ave",
         event_city="New York",
@@ -327,8 +327,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E15D.jpg",
         event_description="Don't miss out Carl Cox at one of the best clubs in Austin! Tickets will definitely sell out.",
         event_genre_id=2,
-        event_start_date=datetime.datetime.strptime("2024-08-12T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-8-13T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-08-12T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-8-13T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="The Concourse Project",
         event_street_address="289 10th Ave",
         event_city="Austin",
@@ -347,8 +347,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E16D.jpg",
         event_description="Don't miss out Above & Beyond at one of the best venues in Boston! Tickets will definitely sell out.",
         event_genre_id=3,
-        event_start_date=datetime.datetime.strptime("2024-08-13T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-8-14T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-08-13T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-8-14T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="The Grand Boston",
         event_street_address="58 Seaport Blvd",
         event_city="Boston",
@@ -447,8 +447,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E21D.jpeg",
         event_description="Don't miss out on Knock2! Tickets are limited, buy them soon!",
         event_genre_id=7,
-        event_start_date=datetime.datetime.strptime("2024-08-18T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-08-19T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-08-18T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-08-19T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="Exchange LA",
         event_street_address="618 S Spring St",
         event_city="Los Angeles",
@@ -467,8 +467,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E22D.jpeg",
         event_description="Don't miss out on John Summit! Tickets are limited, buy them soon!",
         event_genre_id=8,
-        event_start_date=datetime.datetime.strptime("2024-01-24T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-01-25T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-01-24T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-01-25T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="Port Of Miami",
         event_street_address="1015 N America Way",
         event_city="Miami",
@@ -487,8 +487,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E23D.jpg",
         event_description="Don't miss out on Alesso! Tickets are limited, buy them soon!",
         event_genre_id=9,
-        event_start_date=datetime.datetime.strptime("2024-07-01T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-07-02T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-07-01T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-07-02T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="The Midway",
         event_street_address="1015 N America Way",
         event_city="San Francisco",
@@ -507,8 +507,8 @@ def seed_events():
         event_description_image="https://edmbrite-bucket.s3.amazonaws.com/E24D.jpeg",
         event_description="Don't miss out on San Holo! Tickets are limited, buy them soon!",
         event_genre_id=10,
-        event_start_date=datetime.datetime.strptime("2024-07-01T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-        event_end_date=datetime.datetime.strptime("2024-07-02T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_start_date=datetime.datetime.strptime("2025-07-01T20:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+        event_end_date=datetime.datetime.strptime("2025-07-02T00:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
         event_venue="Roseland Theater",
         event_street_address="8 NW 6th Ave",
         event_city="Portland",
